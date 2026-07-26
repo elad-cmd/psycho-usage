@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785095985897,
+  "savedAt": 1785100110564,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -16,20 +16,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 0,
-          "resetsAt": null
+          "pct": 5,
+          "resetsAt": "2026-07-27T02:00:00.075893+00:00"
         },
         "weeklyAll": {
-          "pct": 14,
-          "resetsAt": "2026-07-29T06:00:00.081282+00:00"
+          "pct": 16,
+          "resetsAt": "2026-07-29T06:00:00.075918+00:00"
         },
         "weeklyFable": {
-          "pct": 20,
-          "resetsAt": "2026-07-29T06:00:00.081608+00:00"
+          "pct": 22,
+          "resetsAt": "2026-07-29T06:00:00.076202+00:00"
         }
       },
-      "lastSyncAt": 1785095985897,
-      "updatedAt": 1785095985897
+      "lastSyncAt": 1785100110564,
+      "updatedAt": 1785100110564
     },
     {
       "id": "acc-claudepsycho",
@@ -53,15 +53,15 @@
         },
         "weeklyAll": {
           "pct": 83,
-          "resetsAt": "2026-07-28T18:59:59.869292+00:00"
+          "resetsAt": "2026-07-28T18:59:59.820505+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-28T18:59:59.869596+00:00"
+          "resetsAt": "2026-07-28T18:59:59.820828+00:00"
         }
       },
-      "lastSyncAt": 1785095985897,
-      "updatedAt": 1785095985897
+      "lastSyncAt": 1785100110564,
+      "updatedAt": 1785100110564
     },
     {
       "id": "acc-elad",
@@ -69,6 +69,10 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "(שיחה ללא שם)",
+          "u": "https://claude.ai/chat/1806df22-1e21-409b-8bc6-9c1c9bf4649e"
+        },
         {
           "t": "בדיחות על עורכי דין",
           "u": "https://claude.ai/chat/d891740b-2acc-4551-bd90-bc2edeac6b23"
@@ -84,28 +88,24 @@
         {
           "t": "אפליקציית פליפ קארד ללימוד מילים",
           "u": "https://claude.ai/chat/50c05017-04cc-4adf-966f-7965bc08fba0"
-        },
-        {
-          "t": "עיצוב Sweep",
-          "u": "https://claude.ai/chat/29372e27-8abf-4abf-b95a-dcfc4a87ae6a"
         }
       ],
       "usage": {
         "session": {
-          "pct": 41,
-          "resetsAt": "2026-07-26T20:49:59.726209+00:00"
+          "pct": 0,
+          "resetsAt": null
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-07-30T23:59:59.726232+00:00"
+          "resetsAt": "2026-07-31T00:00:00.414980+00:00"
         },
         "weeklyFable": {
           "pct": 96,
-          "resetsAt": "2026-07-30T23:59:59.726526+00:00"
+          "resetsAt": "2026-07-31T00:00:00.415311+00:00"
         }
       },
-      "lastSyncAt": 1785095985897,
-      "updatedAt": 1785095985897
+      "lastSyncAt": 1785100110564,
+      "updatedAt": 1785100110564
     },
     {
       "id": "acc-elad362",
@@ -136,20 +136,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 2,
-          "resetsAt": "2026-07-26T20:19:59.640590+00:00"
+          "pct": 0,
+          "resetsAt": null
         },
         "weeklyAll": {
           "pct": 54,
-          "resetsAt": "2026-07-29T02:59:59.640610+00:00"
+          "resetsAt": "2026-07-29T03:00:00.257239+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-29T02:59:59.640851+00:00"
+          "resetsAt": "2026-07-29T03:00:00.257469+00:00"
         }
       },
-      "lastSyncAt": 1785095985897,
-      "updatedAt": 1785095985897
+      "lastSyncAt": 1785100110564,
+      "updatedAt": 1785100110564
     }
   ]
 }
