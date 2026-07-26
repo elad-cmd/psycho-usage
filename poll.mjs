@@ -46,7 +46,18 @@ async function syncOne(sk) {
   const usage = { session: pick("session"), weeklyAll: pick("weekly_all"),
     weeklyFable: pick("weekly_scoped") || pick("weekly_all") };
   if (!usage.weeklyAll && !usage.weeklyFable) throw new Error("ה-usage לא כלל weekly");
-  return { email, usage };
+  let sessions = null;
+  try {
+    const convos = await claudeGet("/api/organizations/" + org.uuid + "/chat_conversations", sk);
+    if (Array.isArray(convos)) {
+      sessions = convos
+        .slice()
+        .sort((a, b) => new Date(b.updated_at || b.created_at || 0) - new Date(a.updated_at || a.created_at || 0))
+        .slice(0, 5)
+        .map((c) => ({ t: (c.name && c.name.trim()) || "(שיחה ללא שם)", u: "https://claude.ai/chat/" + c.uuid }));
+    }
+  } catch (e) { sessions = null; }
+  return { email, usage, sessions };
 }
 async function main() {
   const keys = loadKeys();
@@ -68,6 +79,7 @@ async function main() {
     let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
     if (!acc) { acc = { id: "acc-" + r.email.replace(/[^a-z0-9]/gi, "").slice(0, 14), label: r.email, plan: "Max (20x)", notes: "", sessions: [] }; accounts.push(acc); }
     acc.usage = r.usage; acc.lastSyncAt = now; acc.updatedAt = now;
+    if (Array.isArray(r.sessions)) acc.sessions = r.sessions;
   }
   writeFileSync(STORE, JSON.stringify({ v: 2, savedAt: now, savedBy: "poller:github", accounts }, null, 2));
   console.log(`✓ usage.json עודכן — ${fresh.length}/${keys.length} חשבונות סונכרנו.`);
