@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785127763677,
+  "savedAt": 1785140509911,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -16,20 +16,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 0,
-          "resetsAt": null
+          "pct": 10,
+          "resetsAt": "2026-07-27T10:39:59.951529+00:00"
         },
         "weeklyAll": {
-          "pct": 22,
-          "resetsAt": "2026-07-29T05:59:59.831687+00:00"
+          "pct": 25,
+          "resetsAt": "2026-07-29T05:59:59.951558+00:00"
         },
         "weeklyFable": {
-          "pct": 30,
-          "resetsAt": "2026-07-29T05:59:59.831955+00:00"
+          "pct": 34,
+          "resetsAt": "2026-07-29T05:59:59.951824+00:00"
         }
       },
-      "lastSyncAt": 1785127763677,
-      "updatedAt": 1785127763677
+      "lastSyncAt": 1785140509911,
+      "updatedAt": 1785140509911
     },
     {
       "id": "acc-claudepsycho",
@@ -53,15 +53,15 @@
         },
         "weeklyAll": {
           "pct": 83,
-          "resetsAt": "2026-07-28T18:59:59.922418+00:00"
+          "resetsAt": "2026-07-28T18:59:59.752274+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-28T18:59:59.922839+00:00"
+          "resetsAt": "2026-07-28T18:59:59.752535+00:00"
         }
       },
-      "lastSyncAt": 1785127763677,
-      "updatedAt": 1785127763677
+      "lastSyncAt": 1785140509911,
+      "updatedAt": 1785140509911
     },
     {
       "id": "acc-elad",
@@ -71,41 +71,41 @@
       "sessions": [
         {
           "t": "(שיחה ללא שם)",
+          "u": "https://claude.ai/chat/da5ff068-fa99-4b59-9dba-51c5f0e6e4a3"
+        },
+        {
+          "t": "פודקאסט של AI שמתכננים השתלטות עולמית",
+          "u": "https://claude.ai/chat/fcff6986-cfad-41b9-afc9-388278a012ac"
+        },
+        {
+          "t": "ילדי ירח וקבוצות נאורות",
+          "u": "https://claude.ai/chat/d4fc51fb-ad8e-41f0-a158-e420ac8a87bd"
+        },
+        {
+          "t": "(שיחה ללא שם)",
           "u": "https://claude.ai/chat/1806df22-1e21-409b-8bc6-9c1c9bf4649e"
         },
         {
           "t": "בדיחות על עורכי דין",
           "u": "https://claude.ai/chat/d891740b-2acc-4551-bd90-bc2edeac6b23"
-        },
-        {
-          "t": "חיבור קלוד לקבוצות וואטסאפ עם מספר טלפון",
-          "u": "https://claude.ai/chat/707f3261-aa46-436e-a6b6-12b761b34af0"
-        },
-        {
-          "t": "בעיית ניקוז במדיח הכלים",
-          "u": "https://claude.ai/chat/be9464d0-364c-44cb-89cd-cd4aae6d9602"
-        },
-        {
-          "t": "אפליקציית פליפ קארד ללימוד מילים",
-          "u": "https://claude.ai/chat/50c05017-04cc-4adf-966f-7965bc08fba0"
         }
       ],
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": null
+          "resetsAt": "2026-07-27T12:00:00.485201+00:00"
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-07-31T00:00:00.010880+00:00"
+          "resetsAt": "2026-07-31T00:00:00.485221+00:00"
         },
         "weeklyFable": {
           "pct": 96,
-          "resetsAt": "2026-07-31T00:00:00.011228+00:00"
+          "resetsAt": "2026-07-31T00:00:00.485434+00:00"
         }
       },
-      "lastSyncAt": 1785127763677,
-      "updatedAt": 1785127763677
+      "lastSyncAt": 1785140509911,
+      "updatedAt": 1785140509911
     },
     {
       "id": "acc-elad362",
@@ -141,15 +141,15 @@
         },
         "weeklyAll": {
           "pct": 54,
-          "resetsAt": "2026-07-29T03:00:00.119567+00:00"
+          "resetsAt": "2026-07-29T03:00:00.457411+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-29T03:00:00.119920+00:00"
+          "resetsAt": "2026-07-29T03:00:00.457761+00:00"
         }
       },
-      "lastSyncAt": 1785127763677,
-      "updatedAt": 1785127763677
+      "lastSyncAt": 1785140509911,
+      "updatedAt": 1785140509911
     }
   ]
 }
