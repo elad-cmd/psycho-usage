@@ -49,11 +49,12 @@ function loadToken() {
   return readFileSync(p, "utf8").trim();
 }
 
-async function claudeGet(path, sk, extraHeaders) {
+async function claudeGet(path, sk, extraHeaders, extraCookies) {
+  const cookie = "sessionKey=" + sk + (extraCookies ? "; " + extraCookies : "");
   const r = await fetch("https://claude.ai" + path, {
     method: "GET",
     headers: Object.assign({
-      Cookie: "sessionKey=" + sk,
+      Cookie: cookie,
       Accept: "application/json",
       "User-Agent": UA,
       "Accept-Language": "en-US,en;q=0.9,he;q=0.8",
@@ -69,15 +70,23 @@ async function claudeGet(path, sk, extraHeaders) {
 }
 
 /* שיחות Cowork אחרונות.
-   כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null, והקורא משאיר
-   את רשימת השיחות הקודמת כמו שהיא. */
-async function fetchCoworkSessions(sk) {
+   שים לב לאימות: ה-endpoints תחת /v1/ (השער של Claude Code/Cowork) לא מקבלים את
+   עוגיית sessionKey של הווב — היא מחזירה 401. הם דורשים את העוגייה הנפרדת
+   **sessionKeyLC**. היא לא HttpOnly, כלומר נראית ב-document.cookie בדפדפן.
+   לכן keys.json תומך בשדה נוסף אופציונלי keyLC לכל חשבון:
+     [{"hint":"office","key":"sk-ant-sid-…","keyLC":"…"}]
+   בלי keyLC פשוט לא יהיו שיחות Cowork (ה-usage ימשיך לעבוד רגיל).
+
+   כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null. */
+async function fetchCoworkSessions(sk, skLC) {
+  if (!skLC) return null;                 // בלי עוגיית /v1 אין טעם לנסות
   const V1 = { "anthropic-version": "2023-06-01" };
+  const COOKIES = "sessionKeyLC=" + skLC;
   const byId = new Map();
   let anyOk = false;
   for (const tag of COWORK_TAGS) {
     try {
-      const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1);
+      const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1, COOKIES);
       anyOk = true;
       for (const s of (res && res.data) || []) if (s && s.id) byId.set(s.id, s);
     } catch (e) {
@@ -94,7 +103,7 @@ async function fetchCoworkSessions(sk) {
     }));
 }
 
-async function syncOne(sk) {
+async function syncOne(sk, skLC) {
   const boot = await claudeGet("/api/bootstrap", sk);
   const email = boot && boot.account && (boot.account.email_address || boot.account.email);
   if (!email) throw new Error("לא נמצא מייל (מפתח לא תקין/פג?)");
@@ -112,7 +121,7 @@ async function syncOne(sk) {
     weeklyFable: pick("weekly_scoped") || pick("weekly_all"),
   };
   if (!usage.weeklyAll && !usage.weeklyFable) throw new Error("ה-usage לא כלל weekly");
-  const sessions = await fetchCoworkSessions(sk);
+  const sessions = await fetchCoworkSessions(sk, skLC);
   return { email, usage, sessions };
 }
 
@@ -144,6 +153,9 @@ function merge(accounts, fresh) {
     acc.lastSyncAt = now;
     acc.updatedAt = now;
     if (Array.isArray(r.sessions)) acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
+    // ניקוי: מציגים אך ורק שיחות Cowork אמיתיות. רשומות ישנות של שיחות צ׳אט
+    // (‎/chat/…) נשארו במאגר מגרסה קודמת והוצגו בטעות ככותרת "שיחות Cowork".
+    acc.sessions = (acc.sessions || []).filter((x) => x && typeof x.u === "string" && x.u.includes("/cowork/"));
   }
   return { v: 2, savedAt: now, savedBy: PUSH ? "poller:local" : "poller:github", accounts };
 }
@@ -169,7 +181,7 @@ async function main() {
   for (const item of keys) {
     const hint = (item && item.hint) || "(ללא תווית)";
     try {
-      const r = await syncOne(item.key);
+      const r = await syncOne(item.key, item.keyLC || item.sessionKeyLC || null);
       fresh.push(r);
       const nS = Array.isArray(r.sessions) ? r.sessions.length : "—";
       console.log(`✓ ${hint} → ${r.email}  (weeklyAll ${r.usage.weeklyAll?.pct ?? "?"}%, Fable ${r.usage.weeklyFable?.pct ?? "?"}%, Cowork ${nS})`);
