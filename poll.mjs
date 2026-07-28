@@ -1,7 +1,19 @@
 /**
- * פסיכו — פולר מכסות (Node) · רץ ב-GitHub Actions וגם מקומית
- * קורא usage אמיתי צד-שרת מ-claude.ai (בלי דפדפן/CORS) וכותב usage.json.
- * מפתחות: SESSION_KEYS (Secret) או keys.json מקומי. שומר label/plan/notes/sessions.
+ * פסיכו — פולר מכסות + שיחות Cowork (Node) · רץ ב-GitHub Actions וגם מקומית
+ * ---------------------------------------------------------------------------
+ * קורא צד-שרת מ-claude.ai (בלי דפדפן, בלי CORS) עם sessionKey בלבד:
+ *   1. usage אמיתי           → /api/organizations/{org}/usage
+ *   2. שיחות Cowork אחרונות  → /v1/code/sessions?tags=cowork-remote | cowork-local
+ *
+ * שיחות Cowork הן "code sessions" (מזהה cse_…), לא chat_conversations.
+ * chat_conversations מחזיר שיחות צ׳אט רגילות (platform=CLAUDE_AI) — לא להשתמש בו כאן.
+ * ה-endpoint של /v1/ דורש כותרת anthropic-version.
+ *
+ * מצבי הרצה:
+ *   node poll.mjs           → כותב usage.json לדיסק (זה מה ש-GitHub Actions צריך; ה-workflow מבצע commit)
+ *   node poll.mjs --push    → דוחף ישירות ל-GitHub API (הרצה מקומית מ-IP ביתי)
+ *
+ * מפתחות: SESSION_KEYS (Secret/env) או keys.json מקומי — מערך [{hint,key}].
  */
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -9,28 +21,79 @@ import { dirname, join } from "node:path";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const STORE = join(HERE, "usage.json");
-const UA =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+const PUSH = process.argv.includes("--push") || process.env.PUSH_TO_GITHUB === "1";
+const OWNER = "elad-cmd", REPO = "psycho-usage", GH_PATH = "usage.json";
+const GH_API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${GH_PATH}`;
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+           "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+const MAX_SESSIONS = 5;
+const COWORK_TAGS = ["cowork-remote", "cowork-local"];
+
+/* רשימת החשבונות הקנונית — משמשת רק להקמה ראשונה של קובץ שלא קיים.
+   אחרי זה הקובץ הקיים הוא המקור, ולעולם לא מוחקים ממנו חשבון. */
+const SEED = [
+  { id: "acc-office",       label: "office@psycho.co.il" },
+  { id: "acc-claudepsycho", label: "claude.psycho.co.il@gmail.com" },
+  { id: "acc-elad",         label: "elad@psycho.co.il" },
+  { id: "acc-elad362",      label: "elad362@gmail.com" },
+].map((a) => ({ ...a, plan: "Max (20x)", notes: "", sessions: [], usage: null, lastSyncAt: null, updatedAt: 0 }));
 
 function loadKeys() {
   if (process.env.SESSION_KEYS) return JSON.parse(process.env.SESSION_KEYS);
   return JSON.parse(readFileSync(join(HERE, "keys.json"), "utf8"));
 }
-async function claudeGet(path, sk) {
+function loadToken() {
+  if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
+  const p = join(HERE, "github-token.txt");
+  if (!existsSync(p)) throw new Error("חסר github-token.txt (טוקן GitHub עם Contents:write)");
+  return readFileSync(p, "utf8").trim();
+}
+
+async function claudeGet(path, sk, extraHeaders) {
   const r = await fetch("https://claude.ai" + path, {
     method: "GET",
-    headers: {
-      Cookie: "sessionKey=" + sk, Accept: "application/json", "User-Agent": UA,
+    headers: Object.assign({
+      Cookie: "sessionKey=" + sk,
+      Accept: "application/json",
+      "User-Agent": UA,
       "Accept-Language": "en-US,en;q=0.9,he;q=0.8",
-      "anthropic-client-platform": "web_claude_ai", Referer: "https://claude.ai/",
-    },
+      "anthropic-client-platform": "web_claude_ai",
+      Referer: "https://claude.ai/",
+    }, extraHeaders || {}),
   });
   const text = await r.text();
-  if (!r.ok) throw new Error(path + " -> " + r.status + " " + text.slice(0, 120));
+  const label = path.split("?")[0];
+  if (!r.ok) throw new Error(label + " -> " + r.status + " " + text.slice(0, 120));
   try { return JSON.parse(text); }
-  catch { throw new Error(path + " -> לא-JSON (דף אתגר/התחברות): " + text.slice(0, 120)); }
+  catch { throw new Error(label + " -> לא-JSON (דף אתגר/התחברות): " + text.slice(0, 120)); }
 }
+
+/* שיחות Cowork אחרונות.
+   כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null, והקורא משאיר
+   את רשימת השיחות הקודמת כמו שהיא. */
+async function fetchCoworkSessions(sk) {
+  const V1 = { "anthropic-version": "2023-06-01" };
+  const byId = new Map();
+  let anyOk = false;
+  for (const tag of COWORK_TAGS) {
+    try {
+      const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1);
+      anyOk = true;
+      for (const s of (res && res.data) || []) if (s && s.id) byId.set(s.id, s);
+    } catch (e) {
+      console.log(`   · תגית ${tag}: ${(e && e.message) || e}`);
+    }
+  }
+  if (!anyOk) return null;
+  return [...byId.values()]
+    .sort((a, b) => new Date(b.last_event_at || 0) - new Date(a.last_event_at || 0))
+    .slice(0, MAX_SESSIONS)
+    .map((s) => ({
+      t: (s.title && String(s.title).trim()) || "(שיחה ללא שם)",
+      u: "https://claude.ai/cowork/" + s.id,
+    }));
+}
+
 async function syncOne(sk) {
   const boot = await claudeGet("/api/bootstrap", sk);
   const email = boot && boot.account && (boot.account.email_address || boot.account.email);
@@ -43,45 +106,99 @@ async function syncOne(sk) {
     const l = (u.limits || []).find((x) => x.kind === k);
     return l ? { pct: Math.round(l.percent || 0), resetsAt: l.resets_at || null } : null;
   };
-  const usage = { session: pick("session"), weeklyAll: pick("weekly_all"),
-    weeklyFable: pick("weekly_scoped") || pick("weekly_all") };
+  const usage = {
+    session: pick("session"),
+    weeklyAll: pick("weekly_all"),
+    weeklyFable: pick("weekly_scoped") || pick("weekly_all"),
+  };
   if (!usage.weeklyAll && !usage.weeklyFable) throw new Error("ה-usage לא כלל weekly");
-  let sessions = null;
-  try {
-    const convos = await claudeGet("/api/organizations/" + org.uuid + "/chat_conversations", sk);
-    if (Array.isArray(convos)) {
-      sessions = convos
-        .slice()
-        .sort((a, b) => new Date(b.updated_at || b.created_at || 0) - new Date(a.updated_at || a.created_at || 0))
-        .slice(0, 5)
-        .map((c) => ({ t: (c.name && c.name.trim()) || "(שיחה ללא שם)", u: "https://claude.ai/chat/" + c.uuid }));
-    }
-  } catch (e) { sessions = null; }
+  const sessions = await fetchCoworkSessions(sk);
   return { email, usage, sessions };
 }
+
+/* קריאת המאגר הקיים. ההבחנה כאן קריטית:
+   קובץ שלא קיים → מתחילים מה-SEED (הקמה ראשונה).
+   קובץ פגום     → זורקים שגיאה ולא כותבים כלום. אסור להתחיל מרשימה ריקה,
+                   כי אז כל חשבון שהמפתח שלו מת באותו רגע נמחק מהקובץ ו"נעלם"
+                   מהדשבורד עד שהמפתח שלו יחזור לעבוד. */
+function readStore(raw) {
+  if (raw === null) { console.log("usage.json לא קיים — הקמה ראשונה מה-SEED."); return SEED.map((a) => ({ ...a })); }
+  let blob;
+  try { blob = JSON.parse(raw); }
+  catch (e) { throw new Error("usage.json פגום (JSON לא תקין) — לא כותבים, כדי לא לאבד חשבונות: " + ((e && e.message) || e)); }
+  if (!blob || !Array.isArray(blob.accounts) || !blob.accounts.length) {
+    throw new Error("usage.json בלי accounts — לא כותבים, כדי לא לאבד חשבונות.");
+  }
+  return blob.accounts;
+}
+
+function merge(accounts, fresh) {
+  const now = Date.now();
+  for (const r of fresh) {
+    let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
+    if (!acc) {
+      acc = { id: "acc-" + r.email.replace(/[^a-z0-9]/gi, "").slice(0, 14), label: r.email, plan: "Max (20x)", notes: "", sessions: [] };
+      accounts.push(acc);
+    }
+    acc.usage = r.usage;
+    acc.lastSyncAt = now;
+    acc.updatedAt = now;
+    if (Array.isArray(r.sessions)) acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
+  }
+  return { v: 2, savedAt: now, savedBy: PUSH ? "poller:local" : "poller:github", accounts };
+}
+
+async function ghGet(token) {
+  const r = await fetch(GH_API + "?ref=main", { headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json", "User-Agent": "psycho-poller" } });
+  if (r.status === 404) return { sha: null, raw: null };
+  if (!r.ok) throw new Error("GitHub GET " + r.status + " " + (await r.text()).slice(0, 120));
+  const j = await r.json();
+  return { sha: j.sha, raw: Buffer.from(j.content, "base64").toString("utf8") };
+}
+async function ghPut(token, obj, sha) {
+  const body = { message: "update usage (local)", content: Buffer.from(JSON.stringify(obj, null, 2)).toString("base64"), branch: "main" };
+  if (sha) body.sha = sha;
+  return fetch(GH_API, { method: "PUT", headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json", "Content-Type": "application/json", "User-Agent": "psycho-poller" }, body: JSON.stringify(body) });
+}
+
 async function main() {
   const keys = loadKeys();
   if (!Array.isArray(keys) || !keys.length) throw new Error("רשימת המפתחות ריקה");
+
   const fresh = [];
   for (const item of keys) {
     const hint = (item && item.hint) || "(ללא תווית)";
     try {
-      const r = await syncOne(item.key); fresh.push(r);
-      console.log(`✓ ${hint} → ${r.email}  (weeklyAll ${r.usage.weeklyAll?.pct ?? "?"}%, Fable ${r.usage.weeklyFable?.pct ?? "?"}%)`);
-    } catch (e) { console.log(`✗ ${hint}: ${(e && e.message) || e}`); }
+      const r = await syncOne(item.key);
+      fresh.push(r);
+      const nS = Array.isArray(r.sessions) ? r.sessions.length : "—";
+      console.log(`✓ ${hint} → ${r.email}  (weeklyAll ${r.usage.weeklyAll?.pct ?? "?"}%, Fable ${r.usage.weeklyFable?.pct ?? "?"}%, Cowork ${nS})`);
+    } catch (e) {
+      console.log(`✗ ${hint}: ${(e && e.message) || e}`);
+    }
   }
   if (!fresh.length) { console.log("אף חשבון לא סונכרן — לא נוגעים ב-usage.json."); process.exit(1); }
-  let blob = null;
-  if (existsSync(STORE)) { try { blob = JSON.parse(readFileSync(STORE, "utf8")); } catch {} }
-  const accounts = blob && Array.isArray(blob.accounts) ? blob.accounts : [];
-  const now = Date.now();
-  for (const r of fresh) {
-    let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
-    if (!acc) { acc = { id: "acc-" + r.email.replace(/[^a-z0-9]/gi, "").slice(0, 14), label: r.email, plan: "Max (20x)", notes: "", sessions: [] }; accounts.push(acc); }
-    acc.usage = r.usage; acc.lastSyncAt = now; acc.updatedAt = now;
-    if (Array.isArray(r.sessions)) acc.sessions = r.sessions;
+
+  if (!PUSH) {
+    const raw = existsSync(STORE) ? readFileSync(STORE, "utf8") : null;
+    const payload = merge(readStore(raw), fresh);
+    writeFileSync(STORE, JSON.stringify(payload, null, 2));
+    console.log(`✓ usage.json עודכן — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`);
+    return;
   }
-  writeFileSync(STORE, JSON.stringify({ v: 2, savedAt: now, savedBy: "poller:github", accounts }, null, 2));
-  console.log(`✓ usage.json עודכן — ${fresh.length}/${keys.length} חשבונות סונכרנו.`);
+
+  const token = loadToken();
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const { sha, raw } = await ghGet(token);
+    const payload = merge(readStore(raw), fresh);
+    const put = await ghPut(token, payload, sha);
+    if (put.ok) { console.log(`✓ נדחף ל-GitHub — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`); return; }
+    if (put.status === 409) { console.log(`התנגשות (ניסיון ${attempt}) — מנסה שוב...`); continue; }
+    console.log("כתיבה ל-GitHub נכשלה: " + put.status + " " + (await put.text()).slice(0, 160));
+    process.exit(1);
+  }
+  console.log("נכשל אחרי 3 ניסיונות (התנגשויות).");
+  process.exit(1);
 }
-main().catch((e) => { console.error("שגיאה כללית:", e); process.exit(1); });
+
+main().catch((e) => { console.error("שגיאה כללית:", (e && e.message) || e); process.exit(1); });
