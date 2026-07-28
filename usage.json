@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785266611347,
+  "savedAt": 1785266917345,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -10,26 +10,30 @@
       "notes": "",
       "sessions": [
         {
+          "t": "פתרון בשלבים",
+          "u": "https://claude.ai/chat/3b6a755b-a3a0-45d3-bfa3-bcefcbe050dd"
+        },
+        {
           "t": "ניהול יוזרים - 4",
           "u": "https://claude.ai/chat/4b24410c-f551-45f5-a672-b3444952658d"
         }
       ],
       "usage": {
         "session": {
-          "pct": 9,
-          "resetsAt": "2026-07-28T22:49:59.677665+00:00"
+          "pct": 10,
+          "resetsAt": "2026-07-28T22:49:59.787843+00:00"
         },
         "weeklyAll": {
           "pct": 73,
-          "resetsAt": "2026-07-29T05:59:59.677736+00:00"
+          "resetsAt": "2026-07-29T05:59:59.787864+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-29T05:59:59.678011+00:00"
+          "resetsAt": "2026-07-29T05:59:59.788110+00:00"
         }
       },
-      "lastSyncAt": 1785266611347,
-      "updatedAt": 1785266611347
+      "lastSyncAt": 1785266917345,
+      "updatedAt": 1785266917345
     },
     {
       "id": "acc-claudepsycho",
@@ -49,7 +53,7 @@
       "usage": {
         "session": {
           "pct": 4,
-          "resetsAt": "2026-07-28T22:50:00.384009+00:00"
+          "resetsAt": "2026-07-28T22:49:59.716827+00:00"
         },
         "weeklyAll": {
           "pct": 0,
@@ -60,8 +64,8 @@
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785266611347,
-      "updatedAt": 1785266611347
+      "lastSyncAt": 1785266917345,
+      "updatedAt": 1785266917345
     },
     {
       "id": "acc-elad",
@@ -97,15 +101,15 @@
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-07-30T23:59:59.522136+00:00"
+          "resetsAt": "2026-07-30T23:59:59.727510+00:00"
         },
         "weeklyFable": {
           "pct": 96,
-          "resetsAt": "2026-07-30T23:59:59.522405+00:00"
+          "resetsAt": "2026-07-30T23:59:59.727743+00:00"
         }
       },
-      "lastSyncAt": 1785266611347,
-      "updatedAt": 1785266611347
+      "lastSyncAt": 1785266917345,
+      "updatedAt": 1785266917345
     },
     {
       "id": "acc-elad362",
@@ -141,15 +145,15 @@
         },
         "weeklyAll": {
           "pct": 54,
-          "resetsAt": "2026-07-29T02:59:59.627168+00:00"
+          "resetsAt": "2026-07-29T02:59:59.901459+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-29T02:59:59.627416+00:00"
+          "resetsAt": "2026-07-29T02:59:59.901706+00:00"
         }
       },
-      "lastSyncAt": 1785266611347,
-      "updatedAt": 1785266611347
+      "lastSyncAt": 1785266917345,
+      "updatedAt": 1785266917345
     }
   ]
 }
