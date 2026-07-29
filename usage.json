@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785352340819,
+  "savedAt": 1785352645447,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -37,15 +37,15 @@
         },
         "weeklyAll": {
           "pct": 58,
-          "resetsAt": "2026-08-05T05:59:59.743321+00:00"
+          "resetsAt": "2026-08-05T05:59:59.614373+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.743745+00:00"
+          "resetsAt": "2026-08-05T05:59:59.614617+00:00"
         }
       },
-      "lastSyncAt": 1785352340819,
-      "updatedAt": 1785352340819
+      "lastSyncAt": 1785352645447,
+      "updatedAt": 1785352645447
     },
     {
       "id": "acc-claudepsycho",
@@ -53,6 +53,10 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "ספרי אנלוגיות פסיכו",
+          "u": "https://claude.ai/cowork/cse_01PehHYEFwM1Bjjp9Ff4A3KH"
+        },
         {
           "t": "עצירה רגעית",
           "u": "https://claude.ai/cowork/cse_01Mu8P1zMS3HwMSVrZYw7BbS"
@@ -68,10 +72,6 @@
         {
           "t": "פרוטוקול 3 - סגור",
           "u": "https://claude.ai/cowork/cse_01Xr1dq8rCE2JipTpbwAoCCA"
-        },
-        {
-          "t": "אנלוגיות 1 - סגור",
-          "u": "https://claude.ai/cowork/cse_01LBrP8VE8C3wYeq28qefozm"
         }
       ],
       "usage": {
@@ -81,15 +81,15 @@
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-08-04T18:59:59.690110+00:00"
+          "resetsAt": "2026-08-04T19:00:00.459789+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.690550+00:00"
+          "resetsAt": "2026-08-04T19:00:00.460105+00:00"
         }
       },
-      "lastSyncAt": 1785352340819,
-      "updatedAt": 1785352340819
+      "lastSyncAt": 1785352645447,
+      "updatedAt": 1785352645447
     },
     {
       "id": "acc-elad",
@@ -125,15 +125,15 @@
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-07-30T23:59:59.538635+00:00"
+          "resetsAt": "2026-07-31T00:00:00.427384+00:00"
         },
         "weeklyFable": {
           "pct": 96,
-          "resetsAt": "2026-07-30T23:59:59.538931+00:00"
+          "resetsAt": "2026-07-31T00:00:00.427647+00:00"
         }
       },
-      "lastSyncAt": 1785352340819,
-      "updatedAt": 1785352340819
+      "lastSyncAt": 1785352645447,
+      "updatedAt": 1785352645447
     },
     {
       "id": "acc-elad362",
@@ -144,19 +144,19 @@
       "usage": {
         "session": {
           "pct": 100,
-          "resetsAt": "2026-07-29T19:50:00.553020+00:00"
+          "resetsAt": "2026-07-29T19:50:00.195593+00:00"
         },
         "weeklyAll": {
           "pct": 31,
-          "resetsAt": "2026-08-05T03:00:00.553043+00:00"
+          "resetsAt": "2026-08-05T03:00:00.195623+00:00"
         },
         "weeklyFable": {
           "pct": 52,
-          "resetsAt": "2026-08-05T03:00:00.553296+00:00"
+          "resetsAt": "2026-08-05T03:00:00.195866+00:00"
         }
       },
-      "lastSyncAt": 1785352340819,
-      "updatedAt": 1785352340819
+      "lastSyncAt": 1785352645447,
+      "updatedAt": 1785352645447
     }
   ]
 }
