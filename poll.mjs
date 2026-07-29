@@ -21,6 +21,7 @@ import { dirname, join } from "node:path";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const STORE = join(HERE, "usage.json");
+const WEEK_MS = 7 * 24 * 3600e3;
 const PUSH = process.argv.includes("--push") || process.env.PUSH_TO_GITHUB === "1";
 const OWNER = "elad-cmd", REPO = "psycho-usage", GH_PATH = "usage.json";
 const GH_API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${GH_PATH}`;
@@ -119,7 +120,10 @@ async function syncOne(sk) {
     weeklyAll: pick("weekly_all"),
     weeklyFable: pick("weekly_scoped") || pick("weekly_all"),
   };
-  if (!usage.weeklyAll && !usage.weeklyFable) throw new Error("ה-usage לא כלל weekly");
+  // לא זורקים כשה-weekly חסר: מיד אחרי איפוס claude.ai עשוי להשמיט את המכסה
+  // או להחזיר resets_at=null. במקרה כזה merge() משלים את שעת האיפוס מהמחזור
+  // השבועי הידוע, במקום שהחשבון "ייעלם" מהלוח עד שיהיה בשימוש שוב.
+  if (!Array.isArray(u.limits)) throw new Error("תשובת usage לא תקינה (אין limits)");
   const sessions = await fetchCoworkSessions(sk, org.uuid);
   return { email, usage, sessions };
 }
@@ -140,6 +144,31 @@ function readStore(raw) {
   return blob.accounts;
 }
 
+/* גלגול שעת איפוס שבועית קדימה. המחזור קבוע (7 ימים), אז אם השעה הידועה
+   כבר בעבר — מוסיפים שבועות עד שהיא בעתיד. */
+function rollWeekly(iso, now) {
+  if (!iso) return null;
+  let t = new Date(iso).getTime();
+  if (isNaN(t)) return null;
+  let guard = 0;
+  while (t <= now && guard++ < 520) t += WEEK_MS;
+  return new Date(t).toISOString();
+}
+
+/* אף פעם לא מאבדים שעת איפוס ידועה. אחרי איפוס שבועי claude.ai מחזיר
+   resets_at=null (או משמיט את המכסה) עד לשימוש הבא — וזה מה שגרם לחשבון
+   להיעלם מהלוח לכמה שעות. כאן שומרים את השעה הקודמת, מגולגלת קדימה. */
+function carryUsage(prev, next, now) {
+  const out = { ...(next || {}) };
+  for (const k of ["weeklyAll", "weeklyFable"]) {
+    const p = prev && prev[k], n = out[k];
+    const carried = rollWeekly(p && p.resetsAt, now);
+    if (!n) { if (carried) out[k] = { pct: 0, resetsAt: carried, estimated: true }; continue; }
+    if (!n.resetsAt && carried) out[k] = { ...n, resetsAt: carried, estimated: true };
+  }
+  return out;
+}
+
 function merge(accounts, fresh) {
   const now = Date.now();
   for (const r of fresh) {
@@ -148,7 +177,7 @@ function merge(accounts, fresh) {
       acc = { id: "acc-" + r.email.replace(/[^a-z0-9]/gi, "").slice(0, 14), label: r.email, plan: "Max (20x)", notes: "", sessions: [] };
       accounts.push(acc);
     }
-    acc.usage = r.usage;
+    acc.usage = carryUsage(acc.usage, r.usage, now);
     acc.lastSyncAt = now;
     acc.updatedAt = now;
     if (Array.isArray(r.sessions)) acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
