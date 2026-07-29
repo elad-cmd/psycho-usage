@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785326938129,
+  "savedAt": 1785327244983,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -32,20 +32,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 41,
-          "resetsAt": "2026-07-29T13:29:59.278721+00:00"
+          "pct": 46,
+          "resetsAt": "2026-07-29T13:29:59.721521+00:00"
         },
         "weeklyAll": {
-          "pct": 13,
-          "resetsAt": "2026-08-05T05:59:59.278750+00:00"
+          "pct": 14,
+          "resetsAt": "2026-08-05T05:59:59.721543+00:00"
         },
         "weeklyFable": {
-          "pct": 21,
-          "resetsAt": "2026-08-05T05:59:59.279030+00:00"
+          "pct": 24,
+          "resetsAt": "2026-08-05T06:00:00.721806+00:00"
         }
       },
-      "lastSyncAt": 1785326938129,
-      "updatedAt": 1785326938129
+      "lastSyncAt": 1785327244983,
+      "updatedAt": 1785327244983
     },
     {
       "id": "acc-claudepsycho",
@@ -54,12 +54,16 @@
       "notes": "",
       "sessions": [
         {
+          "t": "קמפוס - HE",
+          "u": "https://claude.ai/cowork/cse_017BUG6U9ZK9LvBBuj9L5e4N"
+        },
+        {
           "t": "פרוטוקול 3",
           "u": "https://claude.ai/cowork/cse_01Xr1dq8rCE2JipTpbwAoCCA"
         },
         {
-          "t": "קמפוס - HE",
-          "u": "https://claude.ai/cowork/cse_017BUG6U9ZK9LvBBuj9L5e4N"
+          "t": "פסיכו-כיס 3",
+          "u": "https://claude.ai/cowork/cse_01WjpSBbthJMGyu9YnR3Ax2V"
         },
         {
           "t": "אנלוגיות 1 - סגור",
@@ -68,28 +72,24 @@
         {
           "t": "הבנת הנקרא 3 - סגור",
           "u": "https://claude.ai/cowork/cse_01PG7JgzpzqJSjge1X2MVBcF"
-        },
-        {
-          "t": "דשבורד - סגור",
-          "u": "https://claude.ai/cowork/cse_01GDiCMneAhv4B7iEiSzKjLu"
         }
       ],
       "usage": {
         "session": {
           "pct": 3,
-          "resetsAt": "2026-07-29T14:09:59.540143+00:00"
+          "resetsAt": "2026-07-29T14:09:59.879354+00:00"
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-08-04T18:59:59.540165+00:00"
+          "resetsAt": "2026-08-04T18:59:59.879370+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.540440+00:00"
+          "resetsAt": "2026-08-04T18:59:59.879574+00:00"
         }
       },
-      "lastSyncAt": 1785326938129,
-      "updatedAt": 1785326938129
+      "lastSyncAt": 1785327244983,
+      "updatedAt": 1785327244983
     },
     {
       "id": "acc-elad",
@@ -125,15 +125,15 @@
         },
         "weeklyAll": {
           "pct": 64,
-          "resetsAt": "2026-07-30T23:59:59.639185+00:00"
+          "resetsAt": "2026-07-31T00:00:00.002577+00:00"
         },
         "weeklyFable": {
           "pct": 96,
-          "resetsAt": "2026-07-30T23:59:59.639549+00:00"
+          "resetsAt": "2026-07-31T00:00:00.002913+00:00"
         }
       },
-      "lastSyncAt": 1785326938129,
-      "updatedAt": 1785326938129
+      "lastSyncAt": 1785327244983,
+      "updatedAt": 1785327244983
     },
     {
       "id": "acc-elad362",
@@ -155,8 +155,8 @@
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785326938129,
-      "updatedAt": 1785326938129
+      "lastSyncAt": 1785327244983,
+      "updatedAt": 1785327244983
     }
   ]
 }
