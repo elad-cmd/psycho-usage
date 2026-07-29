@@ -7,7 +7,7 @@
  *
  * שיחות Cowork הן "code sessions" (מזהה cse_…), לא chat_conversations.
  * chat_conversations מחזיר שיחות צ׳אט רגילות (platform=CLAUDE_AI) — לא להשתמש בו כאן.
- * ה-endpoint של /v1/ דורש כותרת anthropic-version.
+ * ה-endpoint של /v1/ דורש כותרת anthropic-version וגם את עוגיית lastActiveOrg (ראה למטה).
  *
  * מצבי הרצה:
  *   node poll.mjs           → כותב usage.json לדיסק (זה מה ש-GitHub Actions צריך; ה-workflow מבצע commit)
@@ -70,18 +70,17 @@ async function claudeGet(path, sk, extraHeaders, extraCookies) {
 }
 
 /* שיחות Cowork אחרונות.
-   שים לב לאימות: ה-endpoints תחת /v1/ (השער של Claude Code/Cowork) לא מקבלים את
-   עוגיית sessionKey של הווב — היא מחזירה 401. הם דורשים את העוגייה הנפרדת
-   **sessionKeyLC**. היא לא HttpOnly, כלומר נראית ב-document.cookie בדפדפן.
-   לכן keys.json תומך בשדה נוסף אופציונלי keyLC לכל חשבון:
-     [{"hint":"office","key":"sk-ant-sid-…","keyLC":"…"}]
-   בלי keyLC פשוט לא יהיו שיחות Cowork (ה-usage ימשיך לעבוד רגיל).
+   המלכודת שעלתה בריצה חיה: `/v1/code/sessions` החזיר 401 authentication_error בזמן
+   ש-`/api/…/usage` עבד מצוין עם אותו sessionKey בדיוק. הסיבה אינה מפתח פג — השער של
+   `/v1/` דורש גם את עוגיית **lastActiveOrg**, שהיא פשוט ה-uuid של הארגון (לא סוד, ואנחנו
+   ממילא שולפים אותו שורה קודם). בלעדיה: 401. איתה: 200. אומת בבידוד בדפדפן — מחיקת
+   העוגייה הפילה ל-401, החזרתה הקפיצה חזרה ל-200, וכל שאר העוגיות לא השפיעו.
 
-   כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null. */
-async function fetchCoworkSessions(sk, skLC) {
-  if (!skLC) return null;                 // בלי עוגיית /v1 אין טעם לנסות
+   כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null, והקורא משאיר את הרשימה הקודמת. */
+async function fetchCoworkSessions(sk, orgUuid) {
+  if (!orgUuid) return null;
   const V1 = { "anthropic-version": "2023-06-01" };
-  const COOKIES = "sessionKeyLC=" + skLC;
+  const COOKIES = "lastActiveOrg=" + orgUuid;      // חובה — בלעדיה השער מחזיר 401
   const byId = new Map();
   let anyOk = false;
   for (const tag of COWORK_TAGS) {
@@ -103,7 +102,7 @@ async function fetchCoworkSessions(sk, skLC) {
     }));
 }
 
-async function syncOne(sk, skLC) {
+async function syncOne(sk) {
   const boot = await claudeGet("/api/bootstrap", sk);
   const email = boot && boot.account && (boot.account.email_address || boot.account.email);
   if (!email) throw new Error("לא נמצא מייל (מפתח לא תקין/פג?)");
@@ -121,7 +120,7 @@ async function syncOne(sk, skLC) {
     weeklyFable: pick("weekly_scoped") || pick("weekly_all"),
   };
   if (!usage.weeklyAll && !usage.weeklyFable) throw new Error("ה-usage לא כלל weekly");
-  const sessions = await fetchCoworkSessions(sk, skLC);
+  const sessions = await fetchCoworkSessions(sk, org.uuid);
   return { email, usage, sessions };
 }
 
@@ -181,7 +180,7 @@ async function main() {
   for (const item of keys) {
     const hint = (item && item.hint) || "(ללא תווית)";
     try {
-      const r = await syncOne(item.key, item.keyLC || item.sessionKeyLC || null);
+      const r = await syncOne(item.key);
       fresh.push(r);
       const nS = Array.isArray(r.sessions) ? r.sessions.length : "—";
       console.log(`✓ ${hint} → ${r.email}  (weeklyAll ${r.usage.weeklyAll?.pct ?? "?"}%, Fable ${r.usage.weeklyFable?.pct ?? "?"}%, Cowork ${nS})`);
