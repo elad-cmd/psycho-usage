@@ -35,6 +35,7 @@ const COWORK_TAGS = ["cowork-remote", "cowork-local"];
 const SEED = [
   { id: "acc-office",       label: "office@psycho.co.il" },
   { id: "acc-claudepsycho", label: "claude.psycho.co.il@gmail.com" },
+  { id: "acc-claude2",      label: "claude2.psycho.co.il@gmail.com" },
   { id: "acc-elad",         label: "elad@psycho.co.il" },
   { id: "acc-elad362",      label: "elad362@gmail.com" },
 ].map((a) => ({ ...a, plan: "Max (20x)", notes: "", sessions: [], usage: null, lastSyncAt: null, updatedAt: 0 }));
@@ -169,8 +170,17 @@ function carryUsage(prev, next, now) {
   return out;
 }
 
+function ensureRoster(accounts) {
+  for (const seed of SEED) {
+    const exists = accounts.some((a) => (a.label || "").toLowerCase().trim() === seed.label.toLowerCase().trim());
+    if (!exists) accounts.push({ ...seed });
+  }
+  return accounts;
+}
+
 function merge(accounts, fresh) {
   const now = Date.now();
+  ensureRoster(accounts);
   for (const r of fresh) {
     let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
     if (!acc) {
