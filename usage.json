@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785406797520,
+  "savedAt": 1785407104235,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -37,15 +37,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T05:59:59.852143+00:00"
+          "resetsAt": "2026-08-05T06:00:00.337899+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.852495+00:00"
+          "resetsAt": "2026-08-05T06:00:00.338175+00:00"
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     },
     {
       "id": "acc-claudepsycho",
@@ -81,15 +81,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T18:59:59.773358+00:00"
+          "resetsAt": "2026-08-04T19:00:00.214733+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.773657+00:00"
+          "resetsAt": "2026-08-04T19:00:00.215011+00:00"
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     },
     {
       "id": "acc-elad",
@@ -121,19 +121,19 @@
       "usage": {
         "session": {
           "pct": 3,
-          "resetsAt": "2026-07-30T11:50:00.035410+00:00"
+          "resetsAt": "2026-07-30T11:49:59.921954+00:00"
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-07-31T00:00:00.035428+00:00"
+          "resetsAt": "2026-07-30T23:59:59.921976+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-31T00:00:00.035628+00:00"
+          "resetsAt": "2026-07-30T23:59:59.922218+00:00"
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     },
     {
       "id": "acc-elad362",
@@ -148,15 +148,15 @@
         },
         "weeklyAll": {
           "pct": 31,
-          "resetsAt": "2026-08-05T03:00:00.292552+00:00"
+          "resetsAt": "2026-08-05T02:59:59.986414+00:00"
         },
         "weeklyFable": {
           "pct": 52,
-          "resetsAt": "2026-08-05T03:00:00.292858+00:00"
+          "resetsAt": "2026-08-05T02:59:59.986844+00:00"
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     },
     {
       "id": "acc-claude2",
@@ -165,7 +165,11 @@
       "notes": "",
       "sessions": [
         {
-          "t": "ניהול משתמשים וDropbox מרובים",
+          "t": "דניאל ברנר - ספר תרגול מילולי",
+          "u": "https://claude.ai/cowork/cse_01MvGdw8RHhKXPtANwdUJRZx"
+        },
+        {
+          "t": "יצירת ארכיטקטורת יוזרים",
           "u": "https://claude.ai/cowork/cse_015gFnDNgMjUSXJh1jeVELrb"
         },
         {
@@ -176,19 +180,19 @@
       "usage": {
         "session": {
           "pct": 20,
-          "resetsAt": "2026-07-30T11:50:00.608848+00:00"
+          "resetsAt": "2026-07-30T11:50:00.382975+00:00"
         },
         "weeklyAll": {
           "pct": 39,
-          "resetsAt": "2026-08-02T03:59:59.608870+00:00"
+          "resetsAt": "2026-08-02T04:00:00.382995+00:00"
         },
         "weeklyFable": {
           "pct": 75,
-          "resetsAt": "2026-08-02T03:59:59.609159+00:00"
+          "resetsAt": "2026-08-02T04:00:00.383284+00:00"
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     },
     {
       "id": "acc-claude3",
@@ -210,8 +214,8 @@
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785406797520,
-      "updatedAt": 1785406797520
+      "lastSyncAt": 1785407104235,
+      "updatedAt": 1785407104235
     }
   ]
 }
