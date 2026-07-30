@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785416902346,
+  "savedAt": 1785417211976,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -37,15 +37,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.011698+00:00"
+          "resetsAt": "2026-08-05T05:59:59.776949+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.011948+00:00"
+          "resetsAt": "2026-08-05T05:59:59.777205+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     },
     {
       "id": "acc-claudepsycho",
@@ -81,15 +81,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T19:00:00.312976+00:00"
+          "resetsAt": "2026-08-04T18:59:59.690238+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.313289+00:00"
+          "resetsAt": "2026-08-04T18:59:59.690537+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     },
     {
       "id": "acc-elad",
@@ -125,15 +125,15 @@
         },
         "weeklyAll": {
           "pct": 71,
-          "resetsAt": "2026-07-31T00:00:00.446448+00:00"
+          "resetsAt": "2026-07-31T00:00:00.166483+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-07-31T00:00:00.446713+00:00"
+          "resetsAt": "2026-07-31T00:00:00.166825+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     },
     {
       "id": "acc-elad362",
@@ -148,15 +148,15 @@
         },
         "weeklyAll": {
           "pct": 31,
-          "resetsAt": "2026-08-05T02:59:59.984296+00:00"
+          "resetsAt": "2026-08-05T02:59:59.616063+00:00"
         },
         "weeklyFable": {
           "pct": 52,
-          "resetsAt": "2026-08-05T02:59:59.984483+00:00"
+          "resetsAt": "2026-08-05T02:59:59.616306+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     },
     {
       "id": "acc-claude2",
@@ -169,53 +169,58 @@
           "u": "https://claude.ai/cowork/cse_01MvGdw8RHhKXPtANwdUJRZx"
         },
         {
-          "t": "יצירת ארכיטקטורת יוזרים",
-          "u": "https://claude.ai/cowork/cse_015gFnDNgMjUSXJh1jeVELrb"
-        },
-        {
           "t": "אנלוגיות - סדר פסח 1",
           "u": "https://claude.ai/cowork/cse_01LKH9e4CNc7BYCodt6bvwmZ"
+        },
+        {
+          "t": "יצירת ארכיטקטורת יוזרים",
+          "u": "https://claude.ai/cowork/cse_015gFnDNgMjUSXJh1jeVELrb"
         }
       ],
       "usage": {
         "session": {
           "pct": 25,
-          "resetsAt": "2026-07-30T16:50:00.555948+00:00"
+          "resetsAt": "2026-07-30T16:49:59.729331+00:00"
         },
         "weeklyAll": {
           "pct": 49,
-          "resetsAt": "2026-08-02T04:00:00.555968+00:00"
+          "resetsAt": "2026-08-02T03:59:59.729356+00:00"
         },
         "weeklyFable": {
           "pct": 88,
-          "resetsAt": "2026-08-02T04:00:00.556286+00:00"
+          "resetsAt": "2026-08-02T04:00:00.729632+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     },
     {
       "id": "acc-claude3",
       "label": "claude3.psycho.co.il@gmail.com",
       "plan": "Max (20x)",
       "notes": "",
-      "sessions": [],
+      "sessions": [
+        {
+          "t": "הגאות ספר בעיות פסיכו",
+          "u": "https://claude.ai/cowork/cse_0171L3CHq3ZD9wm1HP9o8zxj"
+        }
+      ],
       "usage": {
         "session": {
-          "pct": 0,
-          "resetsAt": null
+          "pct": 2,
+          "resetsAt": "2026-07-30T18:10:00.045336+00:00"
         },
         "weeklyAll": {
           "pct": 0,
-          "resetsAt": null
+          "resetsAt": "2026-08-04T12:00:00.045359+00:00"
         },
         "weeklyFable": {
-          "pct": 0,
-          "resetsAt": null
+          "pct": 1,
+          "resetsAt": "2026-08-04T12:00:00.045609+00:00"
         }
       },
-      "lastSyncAt": 1785416902346,
-      "updatedAt": 1785416902346
+      "lastSyncAt": 1785417211976,
+      "updatedAt": 1785417211976
     }
   ]
 }
