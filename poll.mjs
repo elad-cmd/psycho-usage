@@ -36,6 +36,7 @@ const SEED = [
   { id: "acc-office",       label: "office@psycho.co.il" },
   { id: "acc-claudepsycho", label: "claude.psycho.co.il@gmail.com" },
   { id: "acc-claude2",      label: "claude2.psycho.co.il@gmail.com" },
+  { id: "acc-claude3",      label: "claude3.psycho.co.il@gmail.com" },
   { id: "acc-elad",         label: "elad@psycho.co.il" },
   { id: "acc-elad362",      label: "elad362@gmail.com" },
 ].map((a) => ({ ...a, plan: "Max (20x)", notes: "", sessions: [], usage: null, lastSyncAt: null, updatedAt: 0 }));
