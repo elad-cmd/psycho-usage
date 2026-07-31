@@ -1,0 +1,25 @@
+{
+  "v": 1,
+  "users": [
+    {
+      "u": "daniel",
+      "name": "דניאל",
+      "role": "student",
+      "salt": "7896c194a3a2be3bd5b47e4d0ec5cecf",
+      "hash": "5a664b55b03ed57a06d0e042da63d265e4420a3b1e08c3af36899fcfb9a2e872",
+      "active": true,
+      "createdAt": 1785456133928,
+      "lastLogin": 0
+    },
+    {
+      "u": "elad",
+      "name": "אלעד",
+      "role": "admin",
+      "salt": "982455ac897c7221d22b0fa122e07da6",
+      "hash": "561c9531e756c347d6a9b89c2ddf9c94f5745497f1d86a364b23e74953621853",
+      "active": true,
+      "createdAt": 1785456133928,
+      "lastLogin": 0
+    }
+  ]
+}
