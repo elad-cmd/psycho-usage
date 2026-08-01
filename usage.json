@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785583292413,
+  "savedAt": 1785583598063,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -57,15 +57,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T05:59:59.717816+00:00"
+          "resetsAt": "2026-08-05T06:00:00.152110+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.718006+00:00"
+          "resetsAt": "2026-08-05T06:00:00.152307+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-claudepsycho",
@@ -121,15 +121,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T19:00:00.382026+00:00"
+          "resetsAt": "2026-08-04T18:59:59.899920+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.382258+00:00"
+          "resetsAt": "2026-08-04T18:59:59.900223+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-elad",
@@ -138,11 +138,27 @@
       "notes": "",
       "sessions": [
         {
+          "t": "משימות פתוחות לביצוע",
+          "u": "https://claude.ai/cowork/cse_01UjvXeS8qnjDg8wHvmS1cet",
+          "st": "active",
+          "sb": "working",
+          "ev": "2026-08-01T11:26:35.686623Z",
+          "tag": "remote"
+        },
+        {
           "t": "X_תרשימים",
           "u": "https://claude.ai/cowork/cse_01QKBAWMogA7SxMyPPmdSR9p",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-01T11:21:19.524863Z",
+          "ev": "2026-08-01T11:26:30.962991Z",
+          "tag": "remote"
+        },
+        {
+          "t": "X_חשיבה מילולית - הבנה והסקה + השמש",
+          "u": "https://claude.ai/cowork/cse_019PtezyvjLCYYGLAAboKv5S",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-08-01T11:24:29.490639Z",
           "tag": "remote"
         },
         {
@@ -154,46 +170,30 @@
           "tag": "remote"
         },
         {
-          "t": "X_חשיבה מילולית - הבנה והסקה + השמש",
-          "u": "https://claude.ai/cowork/cse_019PtezyvjLCYYGLAAboKv5S",
-          "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-01T11:08:58.788095Z",
-          "tag": "remote"
-        },
-        {
           "t": "אנלוגיות - מומחה בקרה - סגור",
           "u": "https://claude.ai/cowork/cse_01XueadFiLf4TDHZqZJLYhPb",
           "st": "active",
           "sb": "review_ready",
           "ev": "2026-07-29T22:55:41.020735Z",
           "tag": "remote"
-        },
-        {
-          "t": "הגהה אנלוגיות - סגור",
-          "u": "https://claude.ai/cowork/cse_01R3ZoXf4LbNVfKSbv94pBbb",
-          "st": "active",
-          "sb": "blocked",
-          "ev": "2026-07-29T22:43:22.262911Z",
-          "tag": "remote"
         }
       ],
       "usage": {
         "session": {
-          "pct": 13,
-          "resetsAt": "2026-08-01T14:30:00.487223+00:00"
+          "pct": 14,
+          "resetsAt": "2026-08-01T14:30:00.864281+00:00"
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-07T00:00:00.487243+00:00"
+          "resetsAt": "2026-08-07T00:00:00.864299+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-07T00:00:00.487500+00:00"
+          "resetsAt": "2026-08-06T23:59:59.864541+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-elad362",
@@ -208,15 +208,15 @@
         },
         "weeklyAll": {
           "pct": 40,
-          "resetsAt": "2026-08-05T03:00:00.215355+00:00"
+          "resetsAt": "2026-08-05T02:59:59.817416+00:00"
         },
         "weeklyFable": {
           "pct": 63,
-          "resetsAt": "2026-08-05T03:00:00.215583+00:00"
+          "resetsAt": "2026-08-05T02:59:59.817628+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-claude2",
@@ -268,19 +268,19 @@
       "usage": {
         "session": {
           "pct": 1,
-          "resetsAt": "2026-08-01T14:20:00.205229+00:00"
+          "resetsAt": "2026-08-01T14:19:59.561318+00:00"
         },
         "weeklyAll": {
           "pct": 62,
-          "resetsAt": "2026-08-02T04:00:00.205249+00:00"
+          "resetsAt": "2026-08-02T03:59:59.561340+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-02T04:00:00.205531+00:00"
+          "resetsAt": "2026-08-02T03:59:59.561698+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-claude3",
@@ -304,15 +304,15 @@
         },
         "weeklyAll": {
           "pct": 50,
-          "resetsAt": "2026-08-04T11:59:59.927572+00:00"
+          "resetsAt": "2026-08-04T12:00:00.246475+00:00"
         },
         "weeklyFable": {
           "pct": 97,
-          "resetsAt": "2026-08-04T11:59:59.927909+00:00"
+          "resetsAt": "2026-08-04T12:00:00.246846+00:00"
         }
       },
-      "lastSyncAt": 1785583292413,
-      "updatedAt": 1785583292413
+      "lastSyncAt": 1785583598063,
+      "updatedAt": 1785583598063
     },
     {
       "id": "acc-claude4",
