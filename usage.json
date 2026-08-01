@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785605761275,
+  "savedAt": 1785606068682,
   "savedBy": "poller:github",
   "accounts": [
     {
@@ -57,15 +57,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T05:59:59.557859+00:00"
+          "resetsAt": "2026-08-05T06:00:00.468850+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.558240+00:00"
+          "resetsAt": "2026-08-05T06:00:00.469138+00:00"
         }
       },
-      "lastSyncAt": 1785605761275,
-      "updatedAt": 1785605761275
+      "lastSyncAt": 1785606068682,
+      "updatedAt": 1785606068682
     },
     {
       "id": "acc-claudepsycho",
@@ -121,15 +121,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T18:59:59.784464+00:00"
+          "resetsAt": "2026-08-04T18:59:59.745460+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.784703+00:00"
+          "resetsAt": "2026-08-04T18:59:59.745647+00:00"
         }
       },
-      "lastSyncAt": 1785605761275,
-      "updatedAt": 1785605761275
+      "lastSyncAt": 1785606068682,
+      "updatedAt": 1785606068682
     },
     {
       "id": "acc-elad",
@@ -208,15 +208,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T03:00:00.945927+00:00"
+          "resetsAt": "2026-08-05T03:00:00.362136+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T03:00:00.946134+00:00"
+          "resetsAt": "2026-08-05T03:00:00.362390+00:00"
         }
       },
-      "lastSyncAt": 1785605761275,
-      "updatedAt": 1785605761275
+      "lastSyncAt": 1785606068682,
+      "updatedAt": 1785606068682
     },
     {
       "id": "acc-claude2",
@@ -272,15 +272,15 @@
         },
         "weeklyAll": {
           "pct": 62,
-          "resetsAt": "2026-08-02T03:59:59.852718+00:00"
+          "resetsAt": "2026-08-02T03:59:59.944669+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-02T03:59:59.852962+00:00"
+          "resetsAt": "2026-08-02T03:59:59.944910+00:00"
         }
       },
-      "lastSyncAt": 1785605761275,
-      "updatedAt": 1785605761275
+      "lastSyncAt": 1785606068682,
+      "updatedAt": 1785606068682
     },
     {
       "id": "acc-claude3",
@@ -288,6 +288,14 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "__warming__",
+          "u": "https://claude.ai/cowork/cse_011N8oLZ4fBvvFcFjhM14MUL",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-08-01T17:40:30.058509Z",
+          "tag": "remote"
+        },
         {
           "t": "בעיות פסיכו 1",
           "u": "https://claude.ai/cowork/cse_0171L3CHq3ZD9wm1HP9o8zxj",
@@ -300,19 +308,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": null
+          "resetsAt": "2026-08-01T22:30:00.856837+00:00"
         },
         "weeklyAll": {
           "pct": 50,
-          "resetsAt": "2026-08-04T11:59:59.814440+00:00"
+          "resetsAt": "2026-08-04T12:00:00.856858+00:00"
         },
         "weeklyFable": {
           "pct": 97,
-          "resetsAt": "2026-08-04T11:59:59.814688+00:00"
+          "resetsAt": "2026-08-04T11:59:59.857057+00:00"
         }
       },
-      "lastSyncAt": 1785605761275,
-      "updatedAt": 1785605761275
+      "lastSyncAt": 1785606068682,
+      "updatedAt": 1785606068682
     },
     {
       "id": "acc-claude4",
