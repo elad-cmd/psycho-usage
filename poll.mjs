@@ -37,8 +37,16 @@ const SEED = [
   { id: "acc-claudepsycho", label: "claude.psycho.co.il@gmail.com" },
   { id: "acc-claude2",      label: "claude2.psycho.co.il@gmail.com" },
   { id: "acc-claude3",      label: "claude3.psycho.co.il@gmail.com" },
+  { id: "acc-claude4",      label: "claude4.psycho.co.il@gmail.com" },
   { id: "acc-elad",         label: "elad@psycho.co.il" },
   { id: "acc-elad362",      label: "elad362@gmail.com" },
+  // חשבונות רזרבה — נוצרים כרשומות ריקות ("טרם סונכרן") כדי שיופיעו בדשבורד
+  // עוד לפני שרכשו להם מנוי ולפני שיש להם מפתח. סדר העדיפות להפעלה שאלעד
+  // קבע: info → essay → psychoshop → essaymanager.
+  { id: "acc-info",         label: "info@psycho.co.il" },
+  { id: "acc-essay",        label: "essay@psycho.co.il" },
+  { id: "acc-shop",         label: "psychoshop@psycho.co.il" },
+  { id: "acc-essaymgr",     label: "essaymanager@psycho.co.il" },
 ].map((a) => ({ ...a, plan: "Max (20x)", notes: "", sessions: [], usage: null, lastSyncAt: null, updatedAt: 0 }));
 
 function loadKeys() {
@@ -90,7 +98,7 @@ async function fetchCoworkSessions(sk, orgUuid) {
     try {
       const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1, COOKIES);
       anyOk = true;
-      for (const s of (res && res.data) || []) if (s && s.id) byId.set(s.id, s);
+      for (const s of (res && res.data) || []) if (s && s.id) { dumpSessionShape(s); byId.set(s.id, s); }
     } catch (e) {
       console.log(`   · תגית ${tag}: ${(e && e.message) || e}`);
     }
@@ -99,10 +107,51 @@ async function fetchCoworkSessions(sk, orgUuid) {
   return [...byId.values()]
     .sort((a, b) => new Date(b.last_event_at || 0) - new Date(a.last_event_at || 0))
     .slice(0, MAX_SESSIONS)
-    .map((s) => ({
-      t: (s.title && String(s.title).trim()) || "(שיחה ללא שם)",
-      u: "https://claude.ai/cowork/" + s.id,
-    }));
+    .map((s) => {
+      const rec = {
+        t: (s.title && String(s.title).trim()) || "(שיחה ללא שם)",
+        u: "https://claude.ai/cowork/" + s.id,
+      };
+      // מטא-דאטה שימושי שה-API כן מחזיר
+      if (s.status) rec.st = String(s.status).slice(0, 32);
+      if (s.status_bucket) rec.sb = String(s.status_bucket).slice(0, 32);
+      if (s.last_event_at) rec.ev = s.last_event_at;
+      if (Array.isArray(s.tags)) rec.tag = s.tags.includes("cowork-local") ? "local" : "remote";
+      // עומס השיחה: ה-API טרם תועד כמחזיר נתון כזה. במקום לנחש — סורקים
+      // שדות מספריים ששמם מרמז על ניצול הקשר, ורק אם נמצא כזה כותבים `load`.
+      // אם לא נמצא — אין שדה, והדשבורד יציג טבעת אפורה עם "?" ולא מספר מומצא.
+      const lv = findLoad(s);
+      if (lv !== null) rec.load = lv;
+      return rec;
+    });
+}
+
+/* ---- עומס שיחה: גישוש זהיר -----------------------------------------
+   מחפש בעץ התשובה שדה מספרי ששמו מרמז על ניצול חלון ההקשר
+   (context/token/usage/window + used/pct/percent/ratio/fraction).
+   מנרמל: 0-1 → אחוזים; 0-100 → כמו שהוא. לא נמצא ⇒ null, ואז הדשבורד
+   מציג "לא ידוע" במפורש. בנוסף, בריצה הראשונה מדפיסים פעם אחת את שמות
+   השדות שה-API החזיר, כדי שנדע אם בכלל יש שדה כזה בלי לנחש.
+   -------------------------------------------------------------------- */
+const LOAD_HINT = /(context|token|usage|window).*(used|pct|percent|ratio|fraction|remaining)|(used|pct|percent).*(context|token|window)/i;
+let dumpedSessionKeys = false;
+function findLoad(obj, depth = 0) {
+  if (!obj || typeof obj !== "object" || depth > 3) return null;
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v === "number" && isFinite(v) && LOAD_HINT.test(k)) {
+      if (v >= 0 && v <= 1) return Math.round(v * 100);
+      if (v >= 0 && v <= 100) return Math.round(v);
+    }
+  }
+  for (const v of Object.values(obj)) {
+    if (v && typeof v === "object") { const r = findLoad(v, depth + 1); if (r !== null) return r; }
+  }
+  return null;
+}
+function dumpSessionShape(s) {
+  if (dumpedSessionKeys || !s) return;
+  dumpedSessionKeys = true;
+  console.log("   · שדות שהוחזרו לשיחת Cowork:", Object.keys(s).join(", "));
 }
 
 async function syncOne(sk) {
