@@ -27,7 +27,11 @@ const OWNER = "elad-cmd", REPO = "psycho-usage", GH_PATH = "usage.json";
 const GH_API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${GH_PATH}`;
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
            "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
-const MAX_SESSIONS = 5;
+/* כמה שיחות Cowork נשמרות לכל חשבון ב-usage.json.
+   היה 5 — ויוזר עם יותר מחמש שיחות היה מפיל שיחה מגל 0 בדשבורד
+   (הרשימה נחתכת כאן, כך שהדשבורד פשוט לא רואה אותה). 10 מכסה
+   בנוחות את המצב בפועל. אותו מספר מוגדר גם בדשבורד: _src/quota-control.source.html. */
+const MAX_SESSIONS = 10;
 const COWORK_TAGS = ["cowork-remote", "cowork-local"];
 
 /* רשימת החשבונות הקנונית — משמשת רק להקמה ראשונה של קובץ שלא קיים.
