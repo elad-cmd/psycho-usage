@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785773839334,
+  "savedAt": 1785774139094,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -57,15 +57,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.454154+00:00"
+          "resetsAt": "2026-08-05T05:59:59.786923+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.454412+00:00"
+          "resetsAt": "2026-08-05T05:59:59.787257+00:00"
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-claudepsycho",
@@ -121,15 +121,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T18:59:59.552767+00:00"
+          "resetsAt": "2026-08-04T18:59:59.666285+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.553091+00:00"
+          "resetsAt": "2026-08-04T18:59:59.666641+00:00"
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-elad",
@@ -208,15 +208,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T03:00:00.068176+00:00"
+          "resetsAt": "2026-08-05T03:00:00.080442+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T03:00:00.068446+00:00"
+          "resetsAt": "2026-08-05T03:00:00.080708+00:00"
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-claude2",
@@ -225,19 +225,19 @@
       "notes": "",
       "sessions": [
         {
-          "t": "M_ספרי פסיכו - הכרעות",
-          "u": "https://claude.ai/cowork/cse_01C9vMgS7pKGcMktMXo2S9Hn",
-          "st": "active",
-          "sb": "failed",
-          "ev": "2026-08-03T16:14:03.601663Z",
-          "tag": "remote"
-        },
-        {
           "t": "M_מנהל הגהה פסיכו",
           "u": "https://claude.ai/cowork/cse_01W44MHu3CjYrKntiRzYvMLj",
           "st": "active",
+          "sb": "working",
+          "ev": "2026-08-03T16:18:58.177375Z",
+          "tag": "remote"
+        },
+        {
+          "t": "M_ספרי פסיכו - הכרעות",
+          "u": "https://claude.ai/cowork/cse_01C9vMgS7pKGcMktMXo2S9Hn",
+          "st": "active",
           "sb": "blocked",
-          "ev": "2026-08-03T16:10:37.522591Z",
+          "ev": "2026-08-03T16:16:10.087551Z",
           "tag": "remote"
         },
         {
@@ -268,19 +268,19 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-08-03T20:20:00.325953+00:00"
+          "resetsAt": "2026-08-03T20:19:59.716318+00:00"
         },
         "weeklyAll": {
-          "pct": 58,
-          "resetsAt": "2026-08-09T04:00:00.325977+00:00"
+          "pct": 59,
+          "resetsAt": "2026-08-09T04:00:00.716349+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T04:00:00.326367+00:00"
+          "resetsAt": "2026-08-09T04:00:00.716659+00:00"
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-claude3",
@@ -312,15 +312,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T12:00:00.253684+00:00"
+          "resetsAt": "2026-08-04T11:59:59.676008+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T12:00:00.254077+00:00"
+          "resetsAt": "2026-08-04T11:59:59.676353+00:00"
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-claude4",
@@ -372,19 +372,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-03T19:09:59.743946+00:00"
+          "resetsAt": "2026-08-03T19:09:59.588285+00:00"
         },
         "weeklyAll": {
           "pct": 0,
-          "resetsAt": "2026-08-10T02:59:59.743966+00:00"
+          "resetsAt": "2026-08-10T02:59:59.588309+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785773839334,
-      "updatedAt": 1785773839334
+      "lastSyncAt": 1785774139094,
+      "updatedAt": 1785774139094
     },
     {
       "id": "acc-info",
