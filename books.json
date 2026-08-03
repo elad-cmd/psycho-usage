@@ -1,14 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1785755695619,
+  "savedAt": 1785755696596,
   "savedBy": "אלעד 362",
   "books": [
-    {
-      "id": "geometry",
-      "owner": "acc-info",
-      "stages": {},
-      "updatedAt": 1785585540873
-    },
     {
       "id": "hibur",
       "owner": "acc-info",
@@ -118,6 +112,18 @@
         "בדיקה חזותית של 285 סרטוטים טרם בוצעה",
         "25 תיקונים דורשים עריכה ידנית בוורד (עוגן בתוך נוסחה)"
       ]
+    },
+    {
+      "id": "geometry",
+      "owner": "acc-info",
+      "stages": {
+        "proof": {
+          "s": "r",
+          "t": "0"
+        }
+      },
+      "updatedAt": 1785755696596,
+      "updatedBy": "אלעד 362"
     }
   ]
 }
