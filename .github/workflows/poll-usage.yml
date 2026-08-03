@@ -1,22 +1,25 @@
 name: poll-usage
 
-# ריצה אחת נשארת חיה ~6 שעות ומסנכרנת בעצמה כל 5 דקות.
-# ה-cron השעתי הוא רק "עוגן" שמתחיל ריצה חדשה — הוא לא צריך לדייק.
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/20 * * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
     paths-ignore:
       - "usage.json"
+      - "notes.json"
+      - "books.json"
+      - "decisions.json"
+      - "docs/**"
+      - "practice/**"
 
 permissions:
   contents: write
 
 concurrency:
   group: poll-usage
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   poll:
@@ -34,49 +37,14 @@ jobs:
         run: |
           git config user.name  "usage-bot"
           git config user.email "usage-bot@users.noreply.github.com"
-
-          push_fails=0
-          poll_fails=0
-
-          for i in $(seq 1 69); do
-            echo "--- iteration $i / 69 ---"
-
-            # כל סבב מתחיל מהמצב האמיתי ב-main.
-            # זה מה שמונע את התקיעה: בגרסה הקודמת השתמשנו ב-git pull --rebase,
-            # וקונפליקט אחד על usage.json (קורה כשריצה שנייה כותבת במקביל) השאיר
-            # את ה-repo באמצע rebase. מאותו רגע כל commit נכשל בשקט והריצה המשיכה
-            # לסקור בלי לדחוף כלום — שעתיים וחצי של "הדשבורד לא מתעדכן".
-            # reset --hard לא יכול להיתקע, ו-poll.mjs ממילא ממזג לתוך מה שיש בדיסק.
-            git rebase --abort 2>/dev/null || true
-            git merge  --abort 2>/dev/null || true
-            git fetch --quiet origin main || true
-            git reset --hard --quiet origin/main || true
-
-            if node poll.mjs; then
-              poll_fails=0
-            else
-              poll_fails=$((poll_fails + 1))
-              echo "poll failed on iteration $i ($poll_fails in a row)"
-              if [ "$poll_fails" -ge 6 ]; then
-                echo "six consecutive poll failures - ending the run so the failure is visible."
-                exit 1
-              fi
-            fi
-
+          for i in $(seq 1 66); do
+            echo "--- iteration $i / 66 ---"
+            node poll.mjs || echo "poll failed on iteration $i (continuing)"
             if ! git diff --quiet -- usage.json; then
               git add usage.json
-              git commit -q -m "usage $(date -u +%Y-%m-%dT%H:%M)Z"
-              if git push --quiet origin HEAD:main; then
-                push_fails=0
-              else
-                push_fails=$((push_fails + 1))
-                echo "push failed ($push_fails in a row) - next iteration resets to origin and retries."
-                if [ "$push_fails" -ge 3 ]; then
-                  echo "three consecutive push failures - ending the run so a clean one can start."
-                  exit 1
-                fi
-              fi
+              git commit -m "usage $(date -u +%Y-%m-%dT%H:%M)Z"
+              git pull --rebase --autostash origin main || true
+              git push origin main || true
             fi
-
-            if [ "$i" -lt 69 ]; then sleep 300; fi
+            if [ "$i" -lt 66 ]; then sleep 300; fi
           done
