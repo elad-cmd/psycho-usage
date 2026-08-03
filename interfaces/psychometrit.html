@@ -1,0 +1,1149 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ממשק הכרעות — חשיבה פסיכומטרית · אחרי סבב הנוסחאות</title><style>
+*{box-sizing:border-box}body{font-family:"Segoe UI",Arial,sans-serif;background:#f4f5f7;color:#1b1f23;margin:0;padding:18px;line-height:1.6}
+header{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+h1{margin:0 0 6px;font-size:22px}.sub{color:#5b6470;font-size:14px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.stat{background:#eef1f5;border-radius:8px;padding:7px 13px;font-size:13px}.stat b{font-size:17px;display:block}
+.stat.good{background:#e8f6ec}.stat.warn{background:#fff4e0}
+.note{background:#fff8e1;border-right:4px solid #e0a800;border-radius:8px;padding:11px 15px;margin-bottom:14px;font-size:14px}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0;position:sticky;top:0;background:#f4f5f7;padding:10px 0;z-index:5}
+button{border:0;border-radius:8px;padding:8px 15px;background:#2f6fd0;color:#fff;cursor:pointer;font-size:14px}
+button.sec{background:#dfe3e8;color:#1b1f23}button.go{background:#1a7f37}button.exp{background:#8a5a00}
+.issue{background:#fff;border-radius:10px;margin-bottom:11px;box-shadow:0 1px 3px rgba(0,0,0,.07);overflow:hidden}
+.ihead{display:flex;gap:10px;align-items:center;padding:12px 15px;cursor:pointer;border-right:5px solid #ccc}
+.issue[data-kind=omml] .ihead{border-right-color:#8a5a00}
+.issue[data-kind=f4] .ihead{border-right-color:#2f6fd0}
+.issue[data-kind=t4] .ihead{border-right-color:#d13c3c}
+.tag{font-size:11px;padding:2px 8px;border-radius:20px;color:#fff;white-space:nowrap}
+.tag.omml{background:#8a5a00}.tag.f4{background:#2f6fd0}.tag.t4{background:#d13c3c}
+.num{background:#eef1f5;border-radius:6px;padding:1px 8px;font-size:12px;color:#5b6470}
+.title{flex:1;font-weight:600;font-size:15px}.cnt{font-size:12px;color:#5b6470;white-space:nowrap}
+.body{display:none;padding:6px 18px 16px;border-top:1px solid #eef1f5}.issue.open .body{display:block}
+.row{display:flex;gap:12px;margin:9px 0;font-size:14px}
+.row>b{min-width:92px;color:#5b6470;font-weight:600;font-size:13px}
+.rec{background:#fff8e1}
+.code{font-family:Consolas,monospace;background:#f4f5f7;padding:6px 10px;border-radius:6px;unicode-bidi:plaintext;white-space:pre-wrap}
+.ctx{font-size:13px;background:#f7f8fa;padding:5px 9px;border-radius:5px;margin-bottom:4px;unicode-bidi:plaintext}
+.ctx span{display:inline-block;min-width:48px;color:#8a929c;font-size:11px}
+.decide{margin-top:13px;padding-top:12px;border-top:1px dashed #dfe3e8;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.decide label{font-size:13px;cursor:pointer}
+textarea{flex:1;min-width:230px;min-height:34px;border:1px solid #dfe3e8;border-radius:6px;padding:6px;font-family:inherit;font-size:13px}
+.done .ihead{background:#f0f9f2}
+#toast{position:fixed;bottom:22px;left:22px;background:#1b1f23;color:#fff;padding:11px 18px;border-radius:9px;font-size:14px;opacity:0;transition:.25s;pointer-events:none;z-index:99}#toast.on{opacity:1}
+</style></head><body>
+<header>
+<h1>ממשק הכרעות — חשיבה פסיכומטרית</h1>
+<div class="sub">01.08.2026 · אלעד 362 · X1 · חמישה סבבים: הגהה → אימות יריב → הכרעות → נוסחאות → <b>בדיקה חזותית</b></div>
+<div class="stats">
+<div class="stat"><b>118</b>סוגיות פתוחות</div>
+<div class="stat"><b>31</b>עריכה ידנית בוורד</div>
+<div class="stat"><b>36</b>נוסחאות רמה 3-4</div>
+<div class="stat"><b>51</b>רמה 4 מההגהה</div>
+<div class="stat good"><b>571</b>תיקונים שהוחלו</div>
+<div class="stat good"><b>0</b>שינויים לא צפויים</div>
+</div></header>
+<div class="note"><b>שני סבבים אחרונים מנעו תשע טעויות והוסיפו שלוש תפיסות.</b>
+סבב הנוסחאות המיר 1,102 נוסחאות מה-XML לצורה קריאה; תשעה ממצאים שטענו שמספר התשובה שגוי <b>נדחו כולם</b> — השורה "תשובה (X) נכונה" היא <b>כותרת הפתרון הבא</b>, לא סיכום הקודם.
+הסבב החזותי רינדר את הספר ל-230 עמודים ובדק את הסרטוטים: <b>10 סוגיות נסגרו</b> (בהן הוכח ש-21 "סימנים חסרים" קיימים כ-<code>w:sym</code>, ושהסרטוט בעמ׳ 227 אכן מסמן AE=a ו-FC=a),
+ו<b>שלוש שגיאות אמיתיות נתפסו</b>: מרובע מוצלב <code>AEBG←AEGB</code>, יחס הפוך <code>1:2←2:1</code>, וסדר תצוגה שבור בשורת סדרה.</div>
+<div class="bar">
+<button onclick="openAll(1)">פתח הכל</button>
+<button class="sec" onclick="openAll(0)">סגור הכל</button>
+<button class="sec" onclick="filt('all')">הכל</button>
+<button class="sec" onclick="filt('omml')">עריכה ידנית</button>
+<button class="sec" onclick="filt('f4')">נוסחאות</button>
+<button class="sec" onclick="filt('t4')">רמה 4</button>
+<button class="sec" onclick="filt('open')">מה שנשאר</button>
+<span style="flex-basis:100%;height:0"></span>
+<button class="go" onclick="bulk('t4','check')">✔ סמן "לבדוק מול המקור" בכל רמה 4 שטרם הוכרעה</button>
+<button class="go" onclick="bulk('f4','check')">✔ אותו דבר לנוסחאות</button>
+<span style="flex-basis:100%;height:0"></span>
+<button class="exp" onclick="exportFile()">⬇ שמור את ההכרעות לקובץ</button>
+<button class="sec" onclick="copyAll()">העתק ללוח</button>
+<button class="sec" onclick="clearAll()">נקה הכל</button>
+<span id="prog" style="font-size:13px;color:#5b6470;font-weight:600"></span>
+</div>
+<div class="issue" data-kind="omml" data-id="F01-003">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">1</span>
+<span class="title">F01-003 · פסקה 459</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(-2)^(2) – 2 ⋅ (-2) – 7 = 1</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לא ניתן להכריע בלי נוסח השאלה</div></div>
+<div class="row"><b>למה</b><div>אריתמטית ‎(-2)² − 2·(-2) − 7 = 1‎ נכון, אך שורת ההמשך משווה &#x27;1 = -1&#x27;. אם הסיומת &#x27;= 1&#x27; היא הערך המחושב — הנוסחה תקינה; אם היא אגף ימין של המשוואה המקורית (בסגנון פסקה 875) — צריך &#x27;= -1&#x27;. ההכרעה דורשת את נוסח השאלה המקורית.</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>457</span>טיפ: לאחר שמצאנו תשובה נכונה, אין צורך לבדוק את יתר התשובות.  אך למען שלמות ההסבר נפסול אותן:</div><div class="ctx"><span>459</span>★  (1) ⟦(-2)^(2) – 2 ⋅ (-2) – 7 = 1⟧</div><div class="ctx"><span>460</span> 1 = -1                        התשובה נפסלת</div><div class="ctx"><span>461</span>★  (2) ⟦2^(2) – 2 ⋅ 2 – 7 = 1⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-003" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-003" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-003" value="later"> לדחות</label>
+<textarea name="n_F01-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F01-004">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">2</span>
+<span class="title">F01-004 · פסקה 461</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">2^(2) – 2 ⋅ 2 – 7 = 1</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">2^(2) – 2 ⋅ 2 – 7 = -7</div></div>
+<div class="row"><b>למה</b><div>‎2² − 2·2 − 7 = 4 − 4 − 7 = −7 ולא 1; שורת ההמשך (פס&#x27; 462) אכן משווה &#x27;‎-7 = -1&#x27; ומאשרת שהערך המחושב הוא ‎-7. הנוסחה כפי שהיא כתובה שגויה אריתמטית בכל קריאה אפשרית (אם הסיומת היא אגף המשוואה המקורית, אז צ&quot;ל &#x27;= -1&#x27; — ראו F01-003).</div></div>
+<div class="row"><b>אימות</b><div>התיקון משנה ערך בתוך הנוסחה (=1→=−7); הכיוון נכון (4−4−7=−7, עקבי עם &#x27;‎-7 = -1&#x27; בפס&#x27; 462) אך שינוי ערך מחייב רמה 4.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>459</span>★  (1) ⟦(-2)^(2) – 2 ⋅ (-2) – 7 = 1⟧</div><div class="ctx"><span>460</span> 1 = -1                        התשובה נפסלת</div><div class="ctx"><span>461</span>★  (2) ⟦2^(2) – 2 ⋅ 2 – 7 = 1⟧</div><div class="ctx"><span>462</span> -7 = -1                        התשובה נפסלת</div><div class="ctx"><span>463</span>★  (3) ⟦(-4)^(2) – 2 ⋅ (-4) – 7 = 1⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-004" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-004" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-004" value="later"> לדחות</label>
+<textarea name="n_F01-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F01-005">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">3</span>
+<span class="title">F01-005 · פסקה 463</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(-4)^(2) – 2 ⋅ (-4) – 7 = 1</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">(-4)^(2) – 2 ⋅ (-4) – 7 = 17</div></div>
+<div class="row"><b>למה</b><div>‎(-4)² − 2·(-4) − 7 = 16 + 8 − 7 = 17 ולא 1; שורת ההמשך (פס&#x27; 464) משווה &#x27;17 = -1&#x27; ומאשרת שהערך המחושב הוא 17. שגויה אריתמטית בכל קריאה (החלופה: &#x27;= -1&#x27;, ראו F01-003).</div></div>
+<div class="row"><b>אימות</b><div>התיקון משנה ערך בתוך הנוסחה (=1→=17); הכיוון נכון (16+8−7=17, עקבי עם &#x27;17 = -1&#x27; בפס&#x27; 464) אך שינוי ערך מחייב רמה 4.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>461</span>★  (2) ⟦2^(2) – 2 ⋅ 2 – 7 = 1⟧</div><div class="ctx"><span>462</span> -7 = -1                        התשובה נפסלת</div><div class="ctx"><span>463</span>★  (3) ⟦(-4)^(2) – 2 ⋅ (-4) – 7 = 1⟧</div><div class="ctx"><span>464</span> 17 = -1                        התשובה נפסלת</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-005" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-005" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-005" value="later"> לדחות</label>
+<textarea name="n_F01-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F01-009">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">4</span>
+<span class="title">F01-009 · פסקה 740</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(350)/(600) = (35)/(60) = (5)/(12)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">(350)/(600) = (35)/(60) = (7)/(12)</div></div>
+<div class="row"><b>למה</b><div>‎35/60 מצטמצם ב-5 ל-7/12, לא ל-5/12 (‎35 ÷ 5 = 7‎). המסקנה — פסילת תשובה (1) — נותרת בעינה כי 7/12 ≠ 6/13.</div></div>
+<div class="row"><b>אימות</b><div>התיקון משנה ערך בתוך הנוסחה (5/12→7/12); אומת ב-XML שכתוב 512, הכיוון נכון (35÷5=7) אך שינוי ערך מחייב רמה 4.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>738</span>נציב את תשובה (1): </div><div class="ctx"><span>739</span>(1)  אם 100 גולות הועברו ממגירה א&#x27; למגירה ב&#x27;, כעת במגירה א&#x27; יש 350 גולות ובמגירה ב&#x27; 600 גולות.  היחס ביניהן הוא 350 : 600. נצמצם את היחס:</div><div class="ctx"><span>740</span>★ ⟦(350)/(600) = (35)/(60) = (5)/(12)⟧                         התשובה נפסלת.  נעבור לתשובה הנוחה הבאה.</div><div class="ctx"><span>742</span>נציב את תשובה (2): </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-009" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-009" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-009" value="later"> לדחות</label>
+<textarea name="n_F01-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F01-010">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">5</span>
+<span class="title">F01-010 · פסקה 880</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(1)/(3) = (1)/(2) + (3)/(1)          (1)/(3) ≠ 3.5</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">(1)/(3) = (1)/(2) + (1)/(1)          (1)/(3) ≠ 1.5</div></div>
+<div class="row"><b>למה</b><div>בתשובה (3) מציבים a = 1 (לא 3): ‎a/y = 1/1 ולא 3/1, ולכן אגף ימין = ‎1/2 + 1/1 = 1.5 ולא 3.5. המונה 3 נגרר כנראה מהצבת תשובה (2) שבה a = 3. הפסילה נותרת בעינה כי 1/3 ≠ 1.5.</div></div>
+<div class="row"><b>אימות</b><div>התיקון משנה שני ערכים בנוסחה (3/1→1/1, ‏3.5→1.5); הכיוון נכון (a=1 בתשובה (3)) אך שינוי ערך מחייב רמה 4.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>879</span> (3)  נציב x = 2, y = 1 ⟸ a = 1</div><div class="ctx"><span>880</span>★ ⟦(1)/(3) = (1)/(2) + (3)/(1)          (1)/(3) ≠ 3.5⟧</div><div class="ctx"><span>881</span>ניתן לראות כי שני האגפים לא שווים זה לזה. התשובה נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-010" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-010" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-010" value="later"> לדחות</label>
+<textarea name="n_F01-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F01-011">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">6</span>
+<span class="title">F01-011 · פסקה 895</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">a[(xy- (x+y)^(2)]=0</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">a[xy – (x+y)^(2)] = 0</div></div>
+<div class="row"><b>למה</b><div>סוגריים לא מאוזנים: אחרי &#x27;[&#x27; נפתח סוגר עגול מיותר לפני xy שאינו נסגר. יש למחוק את הסוגר העגול המיותר (או לחלופין לסגור אותו). הערך המתמטי אינו משתנה — זהו בדיוק הוצאת הגורם המשותף מפסקה 894.</div></div>
+<div class="row"><b>אימות</b><div>אומת ב-XML: הסוגר העגול המיותר אחרי &#x27;[&#x27; קיים בפועל ב-m:t‏ (a(xy-...) ואינו נסגר; מחיקתו אינה משנה ערך — תיקון ידני בתוך הנוסחה.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>893</span>מפני שאסור לחלק ב-a (ייתכן שהוא אפס), נחסר בין האגפים:</div><div class="ctx"><span>894</span>★ ⟦axy-a (x+y)^(2)=0⟧</div><div class="ctx"><span>895</span>★ ⟦a[(xy- (x+y)^(2)]=0⟧</div><div class="ctx"><span>897</span>★ מכיוון שכל המכפלה שווה ל-0, לפחות אחד מאיבריה הוא אפס.  לפיכך, אפשרות אחת היא כי a = 0. אפשרות נוספת היא: ⟦xy – (x + y)^(2) = 0⟧  , כלומר, ⟦xy=(x+y)^(2)⟧  נפתח את המשוואה:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-011" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F01-011" value="skip"> להשאיר</label><label><input type="radio" name="d_F01-011" value="later"> לדחות</label>
+<textarea name="n_F01-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F02-001">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">7</span>
+<span class="title">F02-001 · פסקה 912</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(סך הכסף בתוכניות החסכון של ביל)/(סך הכסף בתוכניות החסכון של גייטס) = ?⟧</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">⟦(סך הכסף בתוכניות החיסכון של ביל)/(סך הכסף בתוכניות החיסכון של גייטס) = ?⟧</div></div>
+<div class="row"><b>למה</b><div>בתוך נוסחת ה-OMML כתוב &#x27;החסכון&#x27; פעמיים, בעוד שבטקסט הסובב (910, 1043, 1049) הכתיב הוא &#x27;חיסכון&#x27; — יש לתקן את שני המופעים בתוך הנוסחה (replace all).</div></div>
+<div class="row"><b>אימות</b><div>אומת ב-XML: &#x27;החסכון&#x27; כתוב פעמיים בתוך m:t בניגוד ל&#x27;חיסכון&#x27; בטקסט הסובב; תיקון כתיב בתוך נוסחה, ידני, ללא שינוי ערך.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>910</span>★ לביל מספר תוכניות חיסכון שבכל אחת מהן 2.5 מיליון שקלים.   לגייטס מספר זהה של תוכניות חיסכון שבכל אחת מהן  ⟦(1)/(4)⟧  מיליון שקלים.</div><div class="ctx"><span>912</span>★ ⟦(סך הכסף בתוכניות החסכון של ביל)/(סך הכסף בתוכניות החסכון של גייטס) = ?⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F02-001" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F02-001" value="skip"> להשאיר</label><label><input type="radio" name="d_F02-001" value="later"> לדחות</label>
+<textarea name="n_F02-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F03-001">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">8</span>
+<span class="title">F03-001 · פסקה 1463</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(20)/(200) = (1)/(5)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">(20)/(100) = (1)/(5)</div></div>
+<div class="row"><b>למה</b><div>לפי ההצבה a=100, b=20 תשובה (3) היא 20/100=1/5; השבר הכתוב 20/200 שווה 1/10 והמספר 200 אינו קיים בנתוני השאלה — התוצאה 1/5 והתשובה הסופית אינן משתנות</div></div>
+<div class="row"><b>אימות</b><div>התיקון משנה ערך בתוך הנוסחה (200→100); אומת ב-XML שכתוב 20200, הכיוון נכון (a=100) אך שינוי ערך מחייב רמה 4.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1461</span>★ ⟦100 ∙ 20 = 2000⟧</div><div class="ctx"><span>1463</span>★ ⟦(20)/(200) = (1)/(5)⟧</div><div class="ctx"><span>1465</span>★ ⟦(100)/(20)⟧ = 5</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F03-001" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F03-001" value="skip"> להשאיר</label><label><input type="radio" name="d_F03-001" value="later"> לדחות</label>
+<textarea name="n_F03-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F03-003">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">9</span>
+<span class="title">F03-003 · פסקה 1518</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">דרך א&#x27; מסתיימת בנוסחה ⟦√(√(0+0+1)-0+15)=√(16)=4⟧ ללא משפט סיכום, ומיד אחריה כותרת דרך ב&#x27;</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec"></div></div>
+<div class="row"><b>למה</b><div>הנוסחה עצמה תקינה לחלוטין; חסר רק משפט הסיכום הנהוג בסוף דרך א&#x27; — אין להמציא נוסח, להשלים ידנית</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1516</span>עלינו לפשט את הביטוי שבשאלה לכדי אחד מהביטויים המוצגים בתשובות.  מכיוון שיש לנו ארבע תשובות מספריות, כלומר הן כבר מובחנות זו מזו, נוכל להציב כל מספר שנרצה.  נציב x = 0:</div><div class="ctx"><span>1518</span>★ ⟦√(√(0 +0 + 1)-0 + 15)= √(16)=4⟧</div><div class="ctx"><span>1520</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F03-003" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F03-003" value="skip"> להשאיר</label><label><input type="radio" name="d_F03-003" value="later"> לדחות</label>
+<textarea name="n_F03-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F03-004">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">10</span>
+<span class="title">F03-004 · פסקה 1879</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(3) 2 ∙ (1)² + 2 ∙ (2)² = 2 + 8 = 10</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec"></div></div>
+<div class="row"><b>למה</b><div>תשובות (1), (2) ו-(4) מציבות 3 ו-7, ואילו תשובה (3) מציבה 1 ו-2; החשבון עצמו נכון אך אי אפשר לאמת את ההצבה בלי נוסחי התשובות המקוריים שאינם בקובץ</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1877</span>★ (1)	⟦4 ∙ 3 ∙ 7 = 84⟧</div><div class="ctx"><span>1878</span>(2)	2 ∙ (3)² + 2 ∙ (7)² = 18 + 98 = 116</div><div class="ctx"><span>1879</span>(3)	2 ∙ (1)² + 2 ∙ (2)² = 2 + 8 = 10</div><div class="ctx"><span>1880</span>(4)	(3)² - (7)² = –40</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F03-004" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F03-004" value="skip"> להשאיר</label><label><input type="radio" name="d_F03-004" value="later"> לדחות</label>
+<textarea name="n_F03-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F04-001">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">11</span>
+<span class="title">F04-001 · פסקה 2114</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">סדר האסימונים המאוחסן: &#x27;נתונה הסדרה: &#x27; + &#x27;, 3&#x27;⟦(1)/(9)⟧ + &#x27;, 1&#x27;⟦(1)/(27)⟧ + &#x27;, … &#x27; + &#x27;9&#x27;⟦(1)/(3)⟧ — פסיק תועה מיד אחרי הנקודתיים, ו-9⅓ מאוחסן אחרון אחרי שלוש הנקודות</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec"></div></div>
+<div class="row"><b>למה</b><div>ערכי האיברים נכונים ועקביים עם הפתרון (9⅓, 3⅑, 1 1/27 — כל איבר קטן פי 3, הבא 28/81), אך סדר האחסון החריג הוא כנראה כוונון-יד ל-bidi ואי אפשר להכריע בלי לראות את התצוגה בפועל; אם השורה מוצגת &#x27;נתונה הסדרה: ,3⅑ ,1 1/27 ,… 9⅓&#x27; — הסדר והפיסוק שגויים</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2112</span>הערכת סדר גודל, אמצע+</div><div class="ctx"><span>2114</span>★ נתונה הסדרה: , 3⟦(1)/(9)⟧  , 1⟦(1)/(27)⟧  , …  9⟦(1)/(3)⟧</div><div class="ctx"><span>2116</span>מה האיבר הבא בסדרה?</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F04-001" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F04-001" value="skip"> להשאיר</label><label><input type="radio" name="d_F04-001" value="later"> לדחות</label>
+<textarea name="n_F04-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F04-001">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">12</span>
+<span class="title">F04-001 · פסקה 2114</span><span class="cnt">רמה 3</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">נתונה הסדרה: (סדר תצוגה שבור)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לסדר מחדש כך שיוצג &#x27;נתונה הסדרה: 9⅓ , 3⅑ , 1 1/27 , …&#x27; ולהסיר את הפסיק התועה מיד אחרי הנקודתיים. דורש סידור ידני של אובייקטי הנוסחה בוורד</div></div>
+<div class="row"><b>למה</b><div>בדפוס השורה מוצגת כך שקורא עברית סורק מימין לשמאל ורואה: 3⅑ , 1 1/27 , … , 9⅓ — כלומר 9⅓ מופיע אחרון במקום ראשון, והסדרה נראית לא-מונוטונית</div></div>
+<div class="row"><b>אימות</b><div>אומת חזותית בעמוד 83</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2112</span>הערכת סדר גודל, אמצע+</div><div class="ctx"><span>2114</span>★ נתונה הסדרה: , 3⟦(1)/(9)⟧  , 1⟦(1)/(27)⟧  , …  9⟦(1)/(3)⟧</div><div class="ctx"><span>2116</span>מה האיבר הבא בסדרה?</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F04-001" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F04-001" value="skip"> להשאיר</label><label><input type="radio" name="d_F04-001" value="later"> לדחות</label>
+<textarea name="n_F04-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F05-001">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">13</span>
+<span class="title">F05-001 · פסקה 2465</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(השטח הכהה)/(השטח המלבן)= ?</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">(השטח הכהה)/(שטח המלבן)= ?</div></div>
+<div class="row"><b>למה</b><div>במכנה נדרשת צורת סמיכות &#x27;שטח המלבן&#x27;; &#x27;השטח המלבן&#x27; שגוי דקדוקית, בהתאם לתבנית &#x27;שטח המקבילית&#x27; בפסקה 2476, והפתרון (2621-2627) מאשר שהמכנה הוא שטח המלבן.</div></div>
+<div class="row"><b>אימות</b><div>אומת ב-XML: במכנה כתוב &#x27;השטח המלבן&#x27; — שגיאת סמיכות; תיקון ל&#x27;שטח המלבן&#x27; בתוך הנוסחה, ללא שינוי ערך או תשובה.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2463</span>לפי נתונים אלה והנתונים שבסרטוט, </div><div class="ctx"><span>2465</span>★ ⟦(השטח הכהה)/(השטח המלבן)= ?⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F05-001" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F05-001" value="skip"> להשאיר</label><label><input type="radio" name="d_F05-001" value="later"> לדחות</label>
+<textarea name="n_F05-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F05-003">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">14</span>
+<span class="title">F05-003 · פסקה 2795</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(4) 0 — מופיע כתשובה (4) סמוך לפריט 11·12·13·14, שפתרונו (2895, 2899) קובע &#x27;תשובה (4) נכונה&#x27; עם ספרת אחדות 4</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec"></div></div>
+<div class="row"><b>למה</b><div>11·12·13·14=24,024 (אחדות 4); סביר ש-(4)=24,024 ושורת &#x27;(4) 0&#x27; שייכת לשאלה חבויה בפסקאות 2785-2794 (התג 2796 מציין &#x27;חלוקה ושארית&#x27;), בדומה ל-&#x27;(4) 224&#x27; בפסקה 2821 השייכת לשאלת הסכום 21..29=225 — אך אין לכך אימות בחילוץ.</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2793</span>			(2) 2</div><div class="ctx"><span>2794</span>			(3) 3</div><div class="ctx"><span>2795</span>			(4) 0</div><div class="ctx"><span>2796</span>אחדות 9 חלוקה ושארית א / חשיבה פסיכומטרית, אחדות, קל</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F05-003" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F05-003" value="skip"> להשאיר</label><label><input type="radio" name="d_F05-003" value="later"> לדחות</label>
+<textarea name="n_F05-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F05-002">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">15</span>
+<span class="title">F05-002 · פסקה 2956</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">19∙18+21∙22= ..2 ∙  ..2  = ..4</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">19∙18+21∙22= ..2 + ..2 = ..4</div></div>
+<div class="row"><b>למה</b><div>ספרות האחדות של שתי המכפלות (342 ו-462) מתחברות בהתאם לפעולת החיבור שבתרגיל, ולא נכפלות; התוצאה 4 זהה במקרה (2·2=4 וגם 2+2=4), כך שהתשובה (3) אינה משתנה.</div></div>
+<div class="row"><b>אימות</b><div>אומת ב-XML: סימן ה-∙ האמצעי הוא תו אמיתי ב-m:t (לא w:sym) ושגוי — הפעולה בין ספרות האחדות היא חיבור; התוצאה ..4 והתשובה (3) אינן משתנות.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2954</span>ספרת האחדות בתוצאת מכפלה, מושפעת אך ורק ממכפלת ספרות האחדות:</div><div class="ctx"><span>2956</span>★ ⟦19∙18+21∙22= ..2 ∙  ..2  = ..4⟧</div><div class="ctx"><span>2958</span>לפיכך, ספרת האחדות בתוצאת התרגיל תהיה 4. ניתן לראות כי רק תשובה (3) מתאימה.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F05-002" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F05-002" value="skip"> להשאיר</label><label><input type="radio" name="d_F05-002" value="later"> לדחות</label>
+<textarea name="n_F05-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F06-006">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">16</span>
+<span class="title">F06-006 · פסקה 3235</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">3235: המינוס של ⟦(1)/(2)⟧- יושב בראן טקסט נפרד אחרי אזור המתמטיקה · 3375: הראן &#x27;+ 1&#x27; קודם לוגית לשבר ⟦(a)/(2)⟧</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">בדיקה ויזואלית בוורד שהרינדור מציג &#x27;-½&#x27; ו-&#x27;a/2 + 1&#x27; כמצופה</div></div>
+<div class="row"><b>למה</b><div>סימן הצמוד לאזור מתמטיקה בפסקת RTL עלול להתהפך ויזואלית; מהחישוב התשובה ל-3231 היא אכן −½ (היחיד שמקיים את אי-השוויון) ולכן חובה שהמינוס יוצג משמאל... לפני השבר</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3233</span>															איזה מהערכים הבאים של x מקיים את אי-השוויון?</div><div class="ctx"><span>3235</span>★ (1) 1	(2) -2	(3) -3	(4)     ⟦(1)/(2)⟧ -</div><div class="ctx"><span>3236</span>							הצבת תשובות, אמצע</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F06-006" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F06-006" value="skip"> להשאיר</label><label><input type="radio" name="d_F06-006" value="later"> לדחות</label>
+<textarea name="n_F06-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F06-005">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">17</span>
+<span class="title">F06-005 · פסקה 3433</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">מסיחים (1) ⟦12√(x)⟧ ו-(2) ⟦18√(x)⟧ (אומת ב-XML: ה-x בתוך השורש)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לא מתקנים — לוודא מול המקור אם הכוונה ל-12√x/18√x או לביטויים מסוג 12/√3·x</div></div>
+<div class="row"><b>למה</b><div>היקף משושה כפונקציה של אורך x צפוי להיות ליניארי ב-x; √x חריג ממדית לעומת (3) 6x/√2 ו-(4) 6x/√3, אך המסיחים מובחנים והתשובה הסבירה (4)=2√3·x קיימת</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3431</span>מה היקף המשושה?</div><div class="ctx"><span>3433</span>★ (1)    ⟦12√(x)⟧</div><div class="ctx"><span>3435</span>★ (2)    ⟦18√(x)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F06-005" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F06-005" value="skip"> להשאיר</label><label><input type="radio" name="d_F06-005" value="later"> לדחות</label>
+<textarea name="n_F06-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F06-004">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">18</span>
+<span class="title">F06-004 · פסקה 3480</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">מסיח (3): ⟦4π – 24√(2)⟧ ≈ −21.4 — ערך שלילי לשטח</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לא מתקנים — ייתכן מסיח פסילה מכוון בשאלת הערכת סדר גודל, וייתכן ערך שגוי</div></div>
+<div class="row"><b>למה</b><div>שטח מקווקו אינו יכול להיות שלילי; המובחנות מהמסיחים האחרים תקינה</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3478</span>		מהו גודל השטח המקווקו (בסמ״ר)?</div><div class="ctx"><span>3480</span>★ 	(1)	⟦4π – 6√(3)⟧(2)	⟦16π – 20√(3)⟧(3)	⟦4π – 24√(2)⟧(4)	לא ניתן לדעת מהנתונים		</div><div class="ctx"><span>3481</span>הערכת סדר גודל, אמצע</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F06-004" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F06-004" value="skip"> להשאיר</label><label><input type="radio" name="d_F06-004" value="later"> לדחות</label>
+<textarea name="n_F06-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F06-003">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">19</span>
+<span class="title">F06-003 · פסקה 3603</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">מסיח (1): ⟦(r)/(3)–r⟧ = −2r/3 (המינוס בתוך אזור המתמטיקה, סדר התצוגה ודאי)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לא מתקנים — ייתכן שהמסיח מכוון (פסילה בהערכת סדר גודל: אורך שלילי), וייתכן שהכוונה הייתה r − r/3</div></div>
+<div class="row"><b>למה</b><div>ED הוא אורך ומסיח (1) שלילי; לא ניתן להכריע בין &#x27;מסיח פסילה מכוון&#x27; לשגיאת סדר בלי הפתרון הרשמי</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3601</span>ED = ?</div><div class="ctx"><span>3603</span>★ (1)    ⟦(r)/(3)– r⟧</div><div class="ctx"><span>3605</span>★ (2) r + ⟦(r)/(√(3))⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F06-003" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F06-003" value="skip"> להשאיר</label><label><input type="radio" name="d_F06-003" value="later"> לדחות</label>
+<textarea name="n_F06-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F07-002">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">20</span>
+<span class="title">F07-002 · פסקה 3675</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(3)  ⟦(π)/(3)⟧  ⟦(√(3))/(2)⟧ — שני אובייקטי OMML ללא אופרטור ביניהם</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">ככל הנראה חסר סימן פעולה בין π/3 ל-√3/2; במסיחים (1),(2) של אותה שאלה המינוס מופיע בתוך ה-OMML (&quot;√(3 )-&quot;)</div></div>
+<div class="row"><b>למה</b><div>ייתכן שהאופרטור הוא הרצת טקסט רגילה בין האובייקטים שאינה נקלטת בחילוץ — אי-אפשר להכריע מהקובץ</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3673</span>★ (2)  ⟦(π)/(2)⟧ ⟦2√(3 )-⟧ </div><div class="ctx"><span>3675</span>★ (3)  ⟦(π)/(3)⟧  ⟦(√(3))/(2)⟧</div><div class="ctx"><span>3677</span>★ (4)	⟦π - √(3)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F07-002" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F07-002" value="skip"> להשאיר</label><label><input type="radio" name="d_F07-002" value="later"> לדחות</label>
+<textarea name="n_F07-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F07-010">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">21</span>
+<span class="title">F07-010 · פסקה 3723</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">שאלת &quot;איזו טענה נכונה בהכרח&quot; על a ו-b (מסיחים 3723-3726) — פסקת הפתיח עם התנאים על a ו-b איננה בחילוץ</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">לוודא מול הפתיח שרק טענה אחת נכונה בהכרח</div></div>
+<div class="row"><b>למה</b><div>בשתי ההצבות של הערת המורה (a=2,b=4 ואז a=6,b=2) שורדות גם (1) &quot;ab אינו מתחלק ב-16&quot; (8, 12) וגם (2) &quot;a/2+b אי-זוגי&quot; (5, 5) — ההכרעה בין שתיהן תלויה בתנאי הפתיח החסר</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3723</span>★ (1)    ⟦ab⟧ אינו מתחלק ב-16.</div><div class="ctx"><span>3724</span>★ (2)   ⟦+ b⟧  ⟦(a)/(2)⟧  אי-זוגי.</div><div class="ctx"><span>3725</span>★ (3) אם  ⟦(a^(2))/(b)⟧  שלם, אז הוא זוגי.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F07-010" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F07-010" value="skip"> להשאיר</label><label><input type="radio" name="d_F07-010" value="later"> לדחות</label>
+<textarea name="n_F07-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F07-006">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">22</span>
+<span class="title">F07-006 · פסקה 3803</span><span class="cnt">רמה 4</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(3)  ⟦(1)/(4π^(2)  2)⟧ — אופרטור חסר במכנה</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">כנראה 1/(4π² ± 2)</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום אופרטור, זהה לדפוס בשאר הפריטים הפגומים</div></div>
+<div class="row"><b>אימות</b><div>לא עבר אימות יריב (רמה 3/4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3801</span>★ (2)   ⟦√(2π^(2)  2)⟧</div><div class="ctx"><span>3803</span>★ (3)   ⟦(1)/(4π^(2)  2)⟧</div><div class="ctx"><span>3805</span>★ (4)   ⟦(1)/(2π^(2) + 4)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F07-006" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F07-006" value="skip"> להשאיר</label><label><input type="radio" name="d_F07-006" value="later"> לדחות</label>
+<textarea name="n_F07-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F09-002">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">23</span>
+<span class="title">F09-002 · פסקה 4818</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦2  משכורת עורך דין = 7  משכורת מתמחה⟧</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">⟦2 ∙ משכורת עורך דין בכיר = 7 ∙ משכורת מתמחה⟧</div></div>
+<div class="row"><b>למה</b><div>במשוואה המילולית חסרה המילה &#x27;בכיר&#x27; — בכל הפתרון (4815-4817) מדובר על עורך דין בכיר מול מתמחה; אושר בהמרה. בנוסף חסר סימן כפל בין המקדם למונח (ראו דפוס F09-007..010).</div></div>
+<div class="row"><b>אימות</b><div>סימני הכפל כבר קיימים כ-w:sym Symbol F0D7 ואין לגעת בהם; התיקון האמיתי היחיד הוא הוספת המילה &#x27;בכיר&#x27; בתוך הנוסחה, בהתאם לפס&#x27; 4815-4817, ללא שינוי ערך.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4816</span>נתון שעורך דין בכיר מרוויח 50,000 שקלים יותר מאשר עורך דין מתמחה, ומכאן כי שכר מתמחה הוא (x – 50,000).</div><div class="ctx"><span>4817</span>לפי נתוני השאלה סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים. ניצור משוואה:</div><div class="ctx"><span>4818</span>★ ⟦2  משכורת עורך דין = 7  משכורת מתמחה⟧</div><div class="ctx"><span>4819</span>★ ⟦2x = 7(x – 50,000)⟧</div><div class="ctx"><span>4820</span>★ ⟦2x = 7x –  350,000⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-002" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F09-002" value="skip"> להשאיר</label><label><input type="radio" name="d_F09-002" value="later"> לדחות</label>
+<textarea name="n_F09-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="omml" data-id="F10-003">
+<div class="ihead"><span class="tag omml">עריכה ידנית בוורד</span><span class="num">24</span>
+<span class="title">F10-003 · פסקה 5186</span><span class="cnt">רמה 1</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">...יחס הצלעות בתוך כל משולש הוא 1 : ⟦√(3) :2⟧ — ה-&#x27;1 :&#x27; בטקסט רגיל, ובתוך ה-OMML אין רווח אחרי הנקודתיים (&#x27;√(3) :2&#x27;)</div></div>
+<div class="row"><b>צריך להיות</b><div class="code rec">⟦1 : √(3) : 2⟧ בריווח אחיד סביב שני זוגות הנקודתיים, כמו במופעים המקבילים 4993 ו-4997</div></div>
+<div class="row"><b>למה</b><div>היחס נכון מתמטית וסדרו תואם את הטקסט (ניצב קטן : ניצב גדול : יתר — BO=r, AO=√3r, כפל ב-√3 מקטן לגדול); הליקוי טיפוגרפי בלבד ואינו משנה ערך.</div></div>
+<div class="row"><b>אימות</b><div>אומת ב-XML: בתוך הנוסחה כתוב &#x27;3 :2&#x27; עם ריווח לא אחיד וה&#x27;1 :&#x27; בטקסט רגיל; יישור טיפוגרפי בלבד, היחס ‎1:√3:2‎ נכון ואינו משתנה — ידני בנוסחה.</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5185</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>5186</span>★ AO הוא גובה במשולש שווה-צלעות, ולפיכך מחלק אותו ל-2 משולשי זהב, כך שיחס הצלעות בתוך כל משולש הוא 1 : ⟦√(3) :2⟧ . נבחן את משולש AOB : BO (הניצב הקטן) שווה ל-r. כדי לעבור מהניצב הקטן לגדול נכפול ב-⟦√(3)⟧ , כך ש-AO שווה ל-⟦√(3)r⟧.</div><div class="ctx"><span>5188</span>נחשב את אורכו של AD באמצעות חיסור הרדיוס מ-AO:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-003" value="done"> ✔ תיקנתי בוורד</label><label><input type="radio" name="d_F10-003" value="skip"> להשאיר</label><label><input type="radio" name="d_F10-003" value="later"> לדחות</label>
+<textarea name="n_F10-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F01-001">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 4</span><span class="num">25</span>
+<span class="title">F01-001 · פסקה 363</span><span class="cnt">F01</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(4) אם הלל בן 32.5, ינון בן 17.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">(4) אם הלל בן 32.5, ינון בן 17.5. ההפרש ביניהם הוא 15 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 15. התשובה נפסלת.</div></div>
+<div class="row"><b>למה</b><div>‎32.5 − 17.5 = 15 ולא 5; המסקנה (פסילה) נותרת נכונה כי 15 ≠ 10, אך המספר 5 שגוי בשני מופעיו בפסקה. הנוסחה ⟦(1)/(5)⟧ עצמה תקינה — השגיאה בטקסט הסובב.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>361</span>התשובה נפסלת.</div><div class="ctx"><span>362</span>★ (2) אם הלל בן 27.5, ינון בן 22.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>363</span>★ (4) אם הלל בן 32.5, ינון בן 17.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>365</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-001" value="fix"> לתקן</label><label><input type="radio" name="d_F01-001" value="ok"> תקין</label><label><input type="radio" name="d_F01-001" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F01-001" value="later"> לדחות</label>
+<textarea name="n_F01-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F01-006">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">26</span>
+<span class="title">F01-006 · פסקה 460</span><span class="cnt">F01</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">1 = -1 / -7 = -1 / 17 = -1 (פסקאות 460, 462, 464)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">1 ≠ -1 / -7 ≠ -1 / 17 ≠ -1</div></div>
+<div class="row"><b>למה</b><div>שורות הפסילה כותבות שוויון בין ערכים שאינם שווים; מוסכמת הספר (פסקה 875) משתמשת ב-≠ בהשוואות פסילה. ייתכן שסימן ה-≠ הושטח בחילוץ — יש לוודא מול המסמך.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>459</span>★  (1) ⟦(-2)^(2) – 2 ⋅ (-2) – 7 = 1⟧</div><div class="ctx"><span>460</span> 1 = -1                        התשובה נפסלת</div><div class="ctx"><span>461</span>★  (2) ⟦2^(2) – 2 ⋅ 2 – 7 = 1⟧</div><div class="ctx"><span>462</span> -7 = -1                        התשובה נפסלת</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-006" value="fix"> לתקן</label><label><input type="radio" name="d_F01-006" value="ok"> תקין</label><label><input type="radio" name="d_F01-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F01-006" value="later"> לדחות</label>
+<textarea name="n_F01-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F01-008">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">27</span>
+<span class="title">F01-008 · פסקה 723</span><span class="cnt">F01</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">הכדורים הלבנים x%) מתוך 30( פחות 5 כדורים, שווים ל-(x – 10%) מתוך 25.</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">הכדורים הלבנים (x% מתוך 30) פחות 5 כדורים, שווים ל-(x – 10%) מתוך 25.</div></div>
+<div class="row"><b>למה</b><div>הסוגריים סביב &#x27;x% מתוך 30&#x27; הפוכים/שבורים — ככל הנראה תקלת כיווניות (RTL) של סוגריים סביב תוכן לטיני; ייתכן שזהו ארטיפקט חילוץ בלבד — יש לוודא מול המסמך. הנוסחה בפסקה 725 עצמה תקינה (x = 50).</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>722</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>723</span>הכדורים הלבנים x%) מתוך 30( פחות 5 כדורים, שווים ל-(x – 10%) מתוך 25.</div><div class="ctx"><span>725</span>★ ⟦(x)/(100) ∙ 30 – 5 = (x – 10)/(100) ∙ 25⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F01-008" value="fix"> לתקן</label><label><input type="radio" name="d_F01-008" value="ok"> תקין</label><label><input type="radio" name="d_F01-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F01-008" value="later"> לדחות</label>
+<textarea name="n_F01-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F02-005">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">28</span>
+<span class="title">F02-005 · פסקה 1064</span><span class="cnt">F02</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">&#x27;היחס הוא 5: 3.&#x27; מיד אחרי הנוסחה (1063) שמחשבת ⟦(3x/4)/(5x/4)=3/5⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">&#x27;היחס הוא 3 : 5.&#x27; (או היפוך סדר השבר בנוסחה — תלוי בניסוח השאלה)</div></div>
+<div class="row"><b>למה</b><div>הנוסחה בפסקה 1063 מחשבת את היחס יואב:מאיר ומקבלת 3/5, אך המסקנה המילולית קובעת &#x27;5: 3&#x27; — סתירה פנימית; ייתכן היפוך ספרות סביב הנקודתיים בהמרת RTL (השווה 1103/1106 שם &#x27;3:4&#x27; תואם את החישוב 4x/3).</div></div>
+<div class="row"><b>מה חסר</b><div>פסקת השאלה של יואב ומאיר (כיוון היחס המבוקש) אינה בקובץ החילוץ</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1063</span>★ ⟦(  (3x)/(4)  )/((5x)/(4))=(3x·4)/(5x·4)=(3)/(5)⟧</div><div class="ctx"><span>1064</span>היחס הוא 5: 3. </div><div class="ctx"><span>1066</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F02-005" value="fix"> לתקן</label><label><input type="radio" name="d_F02-005" value="ok"> תקין</label><label><input type="radio" name="d_F02-005" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F02-005" value="later"> לדחות</label>
+<textarea name="n_F02-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F02-006">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">29</span>
+<span class="title">F02-006 · פסקה 1092</span><span class="cnt">F02</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">&#x27;הנפח הכולל הוא: 5⟦(1)/(3)x⟧&#x27; — הספרה 5 של המספר המעורב מחוץ ל-OMML, ואין נקודה בסוף</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">&#x27;הנפח הכולל הוא ⟦5(1)/(3)x⟧.&#x27; — המספר המעורב 5⅓x שלם בתוך נוסחה אחת, כמו בפסקאות 1093 ו-1094</div></div>
+<div class="row"><b>למה</b><div>הערך נכון (4x+4/3x=16/3x=5⅓x, תואם 16 בדרך א&#x27;), אבל פיצול המספר המעורב בין טקסט לנוסחה שביר ב-RTL ואינו עקבי עם 1093/1094 שבהן המספר המעורב כולו בתוך ה-OMML.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1091</span>תשובה (1): נפח 5 פחיות ירוקות הוא 5x. </div><div class="ctx"><span>1092</span>★ תשובה (2): נפח 4 פחיות ירוקות הוא 4x, נפח פחית כתומה הוא ⟦(4)/(3)⟧x. הנפח הכולל הוא: 5⟦(1)/(3)x⟧</div><div class="ctx"><span>1093</span>★ תשובה (3): נפח 3 פחיות ירוקות הוא 3x ו-2 פחיות כתומות הוא ⟦2(2)/(3)x⟧ הנפח הכולל הוא ⟦5(2)/(3)x⟧ </div><div class="ctx"><span>1094</span>★ תשובה (4): נפח 4 פחיות כתומות הוא ⟦5(1)/(3)x⟧.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F02-006" value="fix"> לתקן</label><label><input type="radio" name="d_F02-006" value="ok"> תקין</label><label><input type="radio" name="d_F02-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F02-006" value="later"> לדחות</label>
+<textarea name="n_F02-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F02-007">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">30</span>
+<span class="title">F02-007 · פסקה 1106</span><span class="cnt">F02</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">&#x27;היחס בין  x ל-x ⟦(4)/(3)⟧  הוא 3: 4&#x27; — המקדם 4/3 כנוסחה נפרדת אחרי x שמחוץ לה</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">&#x27;היחס בין x ל-⟦(4)/(3)x⟧ הוא 3 : 4&#x27; — ה-x בתוך הנוסחה, כמו במופע הראשון באותה פסקה (&#x27;כעת לבכור יש ⟦(4)/(3)x⟧&#x27;)</div></div>
+<div class="row"><b>למה</b><div>הערך נכון (x ל-4x/3 הוא 3:4, עקבי עם דרך א&#x27; בפסקה 1103), אך במופע השני המשתנה x נותר מחוץ ל-OMML והמקדם אחריו — שביר ב-RTL ולא עקבי עם המופע הראשון באותה פסקה.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1105</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>1106</span>★ נציב את הסכום שקיבל כל אחד מהאחים כ-x. אם האח הצעיר העביר לבכור ⟦(x)/(3)⟧ מהסכום שקיבל, כעת לבכור יש ⟦(4)/(3)x⟧. היחס בין  x ל-x ⟦(4)/(3)⟧  הוא 3: 4  (מכיוון שמדובר ביחס הכולל שבר, מרחיבים הכל פי 3).  </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F02-007" value="fix"> לתקן</label><label><input type="radio" name="d_F02-007" value="ok"> תקין</label><label><input type="radio" name="d_F02-007" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F02-007" value="later"> לדחות</label>
+<textarea name="n_F02-007" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F02-008">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">31</span>
+<span class="title">F02-008 · פסקה 1313</span><span class="cnt">F02</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">הערת-מורה: &#x27;הצבת מספר במקום כל נעלם שמופיע בתשובות, (α = 140, β = 40)&#x27;</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">הצבה שבה α+β ≠ 180 (למשל α = 140, β = 60)</div></div>
+<div class="row"><b>למה</b><div>בהצבה המוצעת α+β=180 ולכן תשובה (1) 180°−α/2−β/2 ותשובה (2) α/2+β/2 מקבלות אותו ערך (90°) — ההצבה אינה מבחינה בין המסיחים ומכשילה את שיטת הפתרון שההערה עצמה מציעה. הערת-מורה — לא הוגה, מדווח כהערה בלבד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1311</span>★ (3) 180° – ⟦(α)/(2)⟧ + ⟦(β)/(2)⟧	</div><div class="ctx"><span>1312</span>★ (4)    ⟦(α)/(2)-(β)/(2)⟧</div><div class="ctx"><span>1313</span>הצבת מספר במקום כל נעלם שמופיע בתשובות, (α = 140, β = 40), אמצע</div><div class="ctx"><span>1315</span>[IMG]בסרטוט שלפניכם: </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F02-008" value="fix"> לתקן</label><label><input type="radio" name="d_F02-008" value="ok"> תקין</label><label><input type="radio" name="d_F02-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F02-008" value="later"> לדחות</label>
+<textarea name="n_F02-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F03-006">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">32</span>
+<span class="title">F03-006 · פסקה 1862</span><span class="cnt">F03</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(a ∙ b)/(a ∙ c) = (x)/((x)/(2)) = (b)/(c) = (2x)/(x) = 2</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">(a ∙ b)/(a ∙ c) = (b)/(c) = (x)/((x)/(2)) = (2x)/(x) = 2</div></div>
+<div class="row"><b>למה</b><div>כל השוויונות נכונים מספרית (הכול שווה 2), אך b/c נטוע באמצע החישוב המספרי במקום מיד אחרי הצמצום של (ab)/(ac) — סדר מבלבל אך לא שגוי</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1861</span>ניתן לראות כי נוכל לחלק בין המשוואות:</div><div class="ctx"><span>1862</span>★ ⟦(a ∙ b)/(a ∙ c) = (  x  )/((x)/(2)) = (b)/(c) = (2x)/(x) = 2⟧</div><div class="ctx"><span>1864</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F03-006" value="fix"> לתקן</label><label><input type="radio" name="d_F03-006" value="ok"> תקין</label><label><input type="radio" name="d_F03-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F03-006" value="later"> לדחות</label>
+<textarea name="n_F03-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F03-005">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">33</span>
+<span class="title">F03-005 · פסקה 1945</span><span class="cnt">F03</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">4 ∙ 1x – 25x – 2 ∙ 1 = –5</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">4 ∙ 1^(2) ∙ x – 25x – 2 ∙ 1 = –5</div></div>
+<div class="row"><b>למה</b><div>המשוואה המקורית מכילה 4a²x (ראו פסקה 1955: x∙(4a²–25)=2a–5), ולכן בהצבת a=1 ראוי להראות 1²; הערך המספרי זהה (1²=1) וההמשך 3=21x, x=1/7 נכון</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1943</span>התקבלו ארבע תשובות מובחנות זו מזו, לכן נמשיך ונציב a = 1 בביטוי שבשאלה:</div><div class="ctx"><span>1945</span>★ ⟦4 ∙ 1x – 25x – 2 ∙ 1 = –5⟧</div><div class="ctx"><span>1947</span>★ ⟦3 = 21x⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F03-005" value="fix"> לתקן</label><label><input type="radio" name="d_F03-005" value="ok"> תקין</label><label><input type="radio" name="d_F03-005" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F03-005" value="later"> לדחות</label>
+<textarea name="n_F03-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F04-003">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">34</span>
+<span class="title">F04-003 · פסקה 2060</span><span class="cnt">F04</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">הערת-מורה בפסקה 2049 (שאלת מעגל שרדיוסו 2, שטח שלם) והערת-מורה בפסקה 2060 (שאלת גזרה 60° ברדיוס √2) נושאות שתיהן את קוד המקור &#x27;1110/17&#x27;</div></div>
+<div class="row"><b>הצעה</b><div class="code rec"></div></div>
+<div class="row"><b>למה</b><div>קוד מקור אחד לשתי שאלות שונות (רדיוס 2 לעומת √2) — ייתכן פיצול מכוון של שאלת מבחן אחת לשתיים, אך ייתכן שקוד אחד שגוי; הערות-מורה אינן מוגהות — מצוין כהערה בלבד</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2058</span>			(3) בין 3 ל-4	</div><div class="ctx"><span>2059</span>			(4) בין 0 ל-1</div><div class="ctx"><span>2060</span>1110/17 הערכת סדר גודל, קל+</div><div class="ctx"><span>2062</span>★ 1 ‒  ⟦(π)/(4)⟧ = ?</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F04-003" value="fix"> לתקן</label><label><input type="radio" name="d_F04-003" value="ok"> תקין</label><label><input type="radio" name="d_F04-003" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F04-003" value="later"> לדחות</label>
+<textarea name="n_F04-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F04-002">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">35</span>
+<span class="title">F04-002 · פסקה 2209</span><span class="cnt">F04</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">(R^(2)π)/(6) = (√(2)^(2)π)/(6) = (2π)/(6) = (π)/(3) = (3.14)/(3)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">(R^(2)π)/(6) = (√(2)^(2)π)/(6) = (2π)/(6) = (π)/(3) = (3.14…)/(3) = 1.04…</div></div>
+<div class="row"><b>למה</b><div>השוויון האחרון π/3 = 3.14/3 אינו מדויק (חסר &#x27;…&#x27; אחרי 3.14, ואומת ב-XML שאין שם סימן ≈), והשרשרת נקטעת בלי הערך הסופי — בניגוד לנוסחה המקבילה בפסקה 2193 שכתובה &#x27;4 ∙ 3.14… = 12.56…&#x27;; אין שינוי ערך או תשובה</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2207</span>נחשב את שטח הגזרה על פי נוסחת השטח:</div><div class="ctx"><span>2209</span>★ ⟦(R^(2)π)/(6) = (√(2)^(2)π)/(6) = (2π)/(6) = (π)/(3) = (3.14)/(3)⟧</div><div class="ctx"><span>2211</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F04-002" value="fix"> לתקן</label><label><input type="radio" name="d_F04-002" value="ok"> תקין</label><label><input type="radio" name="d_F04-002" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F04-002" value="later"> לדחות</label>
+<textarea name="n_F04-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F06-002">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">36</span>
+<span class="title">F06-002 · פסקה 3222</span><span class="cnt">F06</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">ב-29 מקומות תווים מתמטיים מאוחסנים כ-w:sym בגופן Symbol: מינוס F02D ב-3222,3226,3244,3248,3302,3304,3306,3308,3384-3387,3423(×2),3424,3456-3459,3585 · π F070 ב-3206-3209 · כפל F0D7 ב-3585,3587 · ° F0B0 ב-3111</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">אין שגיאת תוכן — המסמך מרונדר נכון בוורד. אופציונלי (החלטת עורך): החלפה ידנית בתווי Unicode רגילים (−, π, ⋅, °) לעמידות בפני החלפת גופנים/העתקה/חילוץ</div></div>
+<div class="row"><b>למה</b><div>תווי ה-Symbol נשמטים בחילוץ ויצרו בסבבים קודמים דיווחי שווא על &#x27;מינוס חסר&#x27;; אומת מול ה-XML שכולם קיימים במסמך</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3220</span>לפי נתונים אלה ונתוני הסרטוט, מה סכום השטחים הכהים (בסמ״ר)?</div><div class="ctx"><span>3222</span>★ ‎(1)‎	⟦r^(2)(4  π)⟧</div><div class="ctx"><span>3224</span>★ ‎(2)‎	⟦πr^(2)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F06-002" value="fix"> לתקן</label><label><input type="radio" name="d_F06-002" value="ok"> תקין</label><label><input type="radio" name="d_F06-002" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F06-002" value="later"> לדחות</label>
+<textarea name="n_F06-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F07-009">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">37</span>
+<span class="title">F07-009 · פסקה 3664</span><span class="cnt">F07</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">מסיח (3) מסודר כטקסט רגיל &quot;x²  –  y²&quot; (תווי כתב עילי) בעוד (1),(2),(4) הם אובייקטי OMML</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">להמיר את x²−y² לאובייקט OMML לאחידות תצוגתית; הערך עצמו נכון כמסיח</div></div>
+<div class="row"><b>למה</b><div>אי-אחידות עריכתית ודאית שאינה משנה ערך — בהצבת x=2,y=1 המסיח נותן 3 לעומת התשובה הנכונה xy/2=1</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3662</span>★ ⟦((x^(2) + xy)(xy – y^(2))(x + y)^(2))/((2x^(2) + 2y^(2) + 4xy)(x^(2) – y^(2))) = ?⟧</div><div class="ctx"><span>3664</span>★ (1)    ⟦(x + y)^(2)⟧	(2)    ⟦(x · y)/(2)⟧(3)    	x²  –  y²(4)    	⟦(1)/(4xy)⟧</div><div class="ctx"><span>3665</span>1404/16 הצבת מספר במקום נעלם, (x = 2, y = 1), סוף</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F07-009" value="fix"> לתקן</label><label><input type="radio" name="d_F07-009" value="ok"> תקין</label><label><input type="radio" name="d_F07-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F07-009" value="later"> לדחות</label>
+<textarea name="n_F07-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F08-005">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">38</span>
+<span class="title">F08-005 · פסקה 3951</span><span class="cnt">F08</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(1)/(3)  2pr = (2)/(3)  pr⟧ — רווח כפול במקום סימן כפל; אותה תופעה בפס׳ 3926 (2  3 = 6), 4237 (π  (√2/2)²), 4336, 4339, 4350, 4357, 4361 (1/6  450 וכו׳), ובפס׳ 4169-4170 חסר סימן ≈ (√(2)  1.4, √(3)  1.7)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">סימן כפל מפורש (∙) בכל המופעים, וסימן ≈ בפס׳ 4169-4170: √2 ≈ 1.4, √3 ≈ 1.7</div></div>
+<div class="row"><b>למה</b><div>גליפי ∙ ו-≈ (גופן Symbol) נשמטו בהמרה — ככל הנראה ארטיפקט חילוץ ולא שגיאה במסמך, אך מומלץ לוודא בוורד; הערכים המספריים בכל השרשראות נכונים.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3949</span>★ ⟦(120)/(360) = (1)/(3)⟧</div><div class="ctx"><span>3950</span>נציב את הנתונים בנוסחת היקף המעגל ונחשב מהו שליש מתוך ההיקף:</div><div class="ctx"><span>3951</span>★ ⟦(1)/(3)  2pr = (2)/(3)  pr⟧</div><div class="ctx"><span>3952</span>כעת נסכום את אורך הקשת והרדיוסים ונמצא את היקף הצורה המודגשת:</div><div class="ctx"><span>3953</span>★ ⟦(2)/(3)pr + 2⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F08-005" value="fix"> לתקן</label><label><input type="radio" name="d_F08-005" value="ok"> תקין</label><label><input type="radio" name="d_F08-005" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F08-005" value="later"> לדחות</label>
+<textarea name="n_F08-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F08-004">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">39</span>
+<span class="title">F08-004 · פסקה 4002</span><span class="cnt">F08</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦4r^(2)  πr^(2) = r^(2)(4  π)⟧ — רווח כפול במקום סימן חיסור; אותה תופעה בפס׳ 4054 (√(AB²  CB²)), 4056 (√(AB²  4)), 4068 (AC² = 4π²  4), 4070 (√(4π²  4)), 4243 (π/4  1/2), וכן בטקסט 3931, 4124, 4338, 4348, 4360</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">סימן חיסור מפורש בכל המופעים: 4r² − πr² = r²(4 − π), √(AB² − CB²), √(AB² − 4), AC² = 4π² − 4, √(4π² − 4), π/4 − 1/2</div></div>
+<div class="row"><b>למה</b><div>המינוס (כנראה גליף בגופן Symbol/en-dash) נשמט בהמרה בכל המופעים הללו — ככל הנראה ארטיפקט חילוץ, אך יש לוודא בוורד שהמינוס אכן מוצג בכל אחת מהנוסחאות; המתמטיקה עצמה נכונה בהנחת מינוס.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4000</span>★ בתוך המלבן הפנימי כלואים חצי המעגל האמצעי ושני רבעי המעגלים הצדדיים.  רדיוס כל אחד מהמעגלים הוא ‎r‎, לכן שטחי חלקי המעגלים יחד הם מעגל שלם ששטחו ⟦πr^(2)⟧.</div><div class="ctx"><span>4001</span>סכום השטחים הכהים שווה למלבן הפנימי פחות המעגל, ולכן:</div><div class="ctx"><span>4002</span>★ ⟦4r^(2)  πr^(2) = r^(2)(4  π)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F08-004" value="fix"> לתקן</label><label><input type="radio" name="d_F08-004" value="ok"> תקין</label><label><input type="radio" name="d_F08-004" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F08-004" value="later"> לדחות</label>
+<textarea name="n_F08-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-006">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">40</span>
+<span class="title">F09-006 · פסקה 4535</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦a  a = a^(2)⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦a ∙ a = a^(2)⟧</div></div>
+<div class="row"><b>למה</b><div>בין שני הגורמים מופיע רווח כפול במקום סימן כפל; ייתכן שתו כפל (×) נשמט בהמרה — לוודא בוורד, ואם חסר להוסיף ∙.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4533</span>נתון כי כל מקצועות המנסרה שווים באורכם, ולכן שני בסיסי המנסרה הם משולשים שווי-צלעות שאורך צלעם ‎a‎, ושלוש פאות הצד הן ריבועים שאורך צלעם ‎a‎.</div><div class="ctx"><span>4534</span>★ לפי נוסחת שטח משולש שווה-צלעות, שטח בסיס המנסרה:  ⟦(a^(2)√(3))/(4)⟧</div><div class="ctx"><span>4535</span>★ שטח הריבוע: ⟦a  a = a^(2)⟧. </div><div class="ctx"><span>4536</span>שטח הפנים של המנסרה מורכב מסכום שטחי שלוש פאות הצד הריבועיות ושני הבסיסים המשולשים.  נחשב:</div><div class="ctx"><span>4537</span>★ ⟦(3 · a^(2)) + (2 · (a^(2)√(3))/(4))⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-006" value="fix"> לתקן</label><label><input type="radio" name="d_F09-006" value="ok"> תקין</label><label><input type="radio" name="d_F09-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-006" value="later"> לדחות</label>
+<textarea name="n_F09-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-007">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">41</span>
+<span class="title">F09-007 · פסקה 4781</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦2  80,000 = 7  30,000⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦2 ∙ 80,000 = 7 ∙ 30,000⟧</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום סימן כפל בין המקדם למספר; אותו דפוס גם בשורות הטקסט הסמוכות (4782: &#x27;2  8 = 7  3&#x27;) — לוודא בוורד אם תו × נשמט בהמרה או חסר במקור.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4779</span>	(2)	עורך דין בכיר בחברה מרוויח 80,000 שקלים, מתמחה מרוויח 50,000 שקלים פחות ממנו, כלומר 30,000 שקלים.  </div><div class="ctx"><span>4780</span>		לפי נתוני השאלה סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים.  ניצור משוואה:</div><div class="ctx"><span>4781</span>★ ⟦2  80,000 = 7  30,000⟧  / : 10,000</div><div class="ctx"><span>4782</span>2  8 = 7  3</div><div class="ctx"><span>4783</span>16 = 21</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-007" value="fix"> לתקן</label><label><input type="radio" name="d_F09-007" value="ok"> תקין</label><label><input type="radio" name="d_F09-007" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-007" value="later"> לדחות</label>
+<textarea name="n_F09-007" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-008">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">42</span>
+<span class="title">F09-008 · פסקה 4791</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦2  70,000 = 7  20,000⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦2 ∙ 70,000 = 7 ∙ 20,000⟧</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום סימן כפל, כמו ב-F09-007; החשבון נכון (140,000=140,000, פסוק אמת).</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4789</span>		סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים.  כלומר:</div><div class="ctx"><span>4791</span>★ ⟦2  70,000 = 7  20,000⟧  /  : 10,000</div><div class="ctx"><span>4792</span>2  7 = 7  2</div><div class="ctx"><span>4793</span>14 = 14</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-008" value="fix"> לתקן</label><label><input type="radio" name="d_F09-008" value="ok"> תקין</label><label><input type="radio" name="d_F09-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-008" value="later"> לדחות</label>
+<textarea name="n_F09-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-009">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">43</span>
+<span class="title">F09-009 · פסקה 4801</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦2  90,000 = 7  40,000⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦2 ∙ 90,000 = 7 ∙ 40,000⟧</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום סימן כפל, כמו ב-F09-007; החשבון נכון (180,000≠280,000).</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4799</span>		סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים.  כלומר:</div><div class="ctx"><span>4801</span>★ ⟦2  90,000 = 7  40,000⟧  /  : 10,000</div><div class="ctx"><span>4802</span>2  9 = 7  4</div><div class="ctx"><span>4803</span>18 = 28</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-009" value="fix"> לתקן</label><label><input type="radio" name="d_F09-009" value="ok"> תקין</label><label><input type="radio" name="d_F09-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-009" value="later"> לדחות</label>
+<textarea name="n_F09-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-010">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">44</span>
+<span class="title">F09-010 · פסקה 4809</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦2  60,000 = 7  10,000⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦2 ∙ 60,000 = 7 ∙ 10,000⟧</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום סימן כפל, כמו ב-F09-007; החשבון נכון (120,000≠70,000).</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4807</span>		סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים.  כלומר:</div><div class="ctx"><span>4809</span>★ ⟦2  60,000 = 7  10,000⟧  /  : 10,000</div><div class="ctx"><span>4810</span>2  6 = 7  1</div><div class="ctx"><span>4811</span>12 = 7</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-010" value="fix"> לתקן</label><label><input type="radio" name="d_F09-010" value="ok"> תקין</label><label><input type="radio" name="d_F09-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-010" value="later"> לדחות</label>
+<textarea name="n_F09-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-013">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">45</span>
+<span class="title">F09-013 · פסקה 4837</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">pr2 = p 22 = 4p (טקסט רגיל, לא OMML)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">πr² = π ∙ 2² = 4π</div></div>
+<div class="row"><b>למה</b><div>השורה אינה נוסחת OMML ולכן לא הומרה; ה-p במקום π הוא כנראה ארטיפקט גופן מהסבב הקודם, אך יש לוודא בוורד שהחזקות (r², 2²) מעוצבות ככתב עילי ושמופיע סימן כפל — המתמטיקה עצמה נכונה.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4835</span>נתון כי קוטר המעגל הוא 4 ס״מ, לפיכך רדיוס המעגל הוא 2 ס״מ.  נציב בנוסחת שטח מעגל:</div><div class="ctx"><span>4837</span>pr2 = p 22 = 4p</div><div class="ctx"><span>4839</span>אם כן, נצפה שהתשובה הנכונה תכיל ביטוי שבו הגורם הראשון הוא 4p, תשובה (2) נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-013" value="fix"> לתקן</label><label><input type="radio" name="d_F09-013" value="ok"> תקין</label><label><input type="radio" name="d_F09-013" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-013" value="later"> לדחות</label>
+<textarea name="n_F09-013" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-011">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">46</span>
+<span class="title">F09-011 · פסקה 4853</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦6  (2^(2)√(3))/(4) = (24√(3))/(4) = 6√(3)⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦6 ∙ (2^(2)√(3))/(4) = (24√(3))/(4) = 6√(3)⟧</div></div>
+<div class="row"><b>למה</b><div>רווח כפול במקום סימן כפל בין 6 לשבר (אותו דפוס כמו F09-007); שרשרת השוויון עצמה נכונה.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4851</span>קוטר המעגל משמש גם כאלכסון ראשי במשושה המשוכלל, הגדול פי 2 מצלע המשושה.  </div><div class="ctx"><span>4852</span>כמו כן, בחלוקה למשולשים שווי צלעות ניתן להבחין שצלע המשולש היא גם רדיוס המעגל.  לפיכך, צלע המשושה שווה 2 ס״מ.  נחשב באמצעות הצבת אורך הצלע בנוסחת שטח משולש שווה צלעות, ונכפיל פי 6 לחישוב שטח המשושה:</div><div class="ctx"><span>4853</span>★ ⟦6  (2^(2)√(3))/(4) = (24√(3))/(4) = 6√(3)⟧</div><div class="ctx"><span>4854</span>לפיכך גודל השטח המקווקו: </div><div class="ctx"><span>4855</span>★ ⟦4π – 6√(3)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-011" value="fix"> לתקן</label><label><input type="radio" name="d_F09-011" value="ok"> תקין</label><label><input type="radio" name="d_F09-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-011" value="later"> לדחות</label>
+<textarea name="n_F09-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F09-014">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">47</span>
+<span class="title">F09-014 · פסקה 4923</span><span class="cnt">F09</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">נפח הקובייה הוא x3 לפי נוסחת הנפח (טקסט רגיל, לא OMML)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">נפח הקובייה הוא x³ לפי נוסחת הנפח</div></div>
+<div class="row"><b>למה</b><div>ה-x3 מופיע בטקסט רגיל שלא הומר; יש לוודא בוורד שה-3 מעוצב ככתב עילי (x³) — בהמשך הפתרון (4930, 4932) החזקה מופיעה תקין בתוך OMML.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4921</span>דרך ב׳ - חישוב מתמטי</div><div class="ctx"><span>4922</span>עלינו למצוא את ההפרש בין נפח הקובייה לנפח הגליל, נחשב את נפחי הצורות ונחסר בין הנפחים.</div><div class="ctx"><span>4923</span>נפח הקובייה הוא x3 לפי נוסחת הנפח.</div><div class="ctx"><span>4924</span>★ על מנת לחשב את נפח הגליל עלינו לחשב את שטח המעגל שמהווה את בסיס הגליל, לצורך כך יש למצוא את אורך רדיוס המעגל.  קוטר המעגל שווה באורכו למקצוע הקובייה, לפיכך רדיוס המעגל הוא חצי מאורך המקצוע, כלומר  ⟦(x)/(2)⟧ . נחשב את שטח הבסיס:</div><div class="ctx"><span>4925</span>★  ⟦π ∙ ((x)/(2))^(2)= (πx^(2))/(4)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F09-014" value="fix"> לתקן</label><label><input type="radio" name="d_F09-014" value="ok"> תקין</label><label><input type="radio" name="d_F09-014" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F09-014" value="later"> לדחות</label>
+<textarea name="n_F09-014" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-013">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">48</span>
+<span class="title">F10-013 · פסקה 5140</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦-(8)/((2 – 1)  2  (2 + 1)) = -(8)/(6) = -(4)/(3)⟧ — חסרים סימני כפל במכנה (וכך גם ב-5142)</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦-(8)/((2 – 1) ∙ 2 ∙ (2 + 1)) = -(8)/(6) = -(4)/(3)⟧ (ובהתאמה ב-5142: (2)/((2 – 1) ∙ 2 ∙ (2 + 1)))</div></div>
+<div class="row"><b>למה</b><div>החשבון נכון (מכנה 1∙2∙3=6) אך סימני הכפל בין הגורמים חסרים בחילוץ, בעוד שבמקומות אחרים בקובץ (5336, 5340) הם קיימים; כנראה ארטיפקט — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5138</span>נתון ש-x גדול מ-1 ולכן נציב x = 2. נוודא שהתשובות מובחנות:</div><div class="ctx"><span>5140</span>★ (1)	⟦-(8)/((2 – 1)  2  (2 + 1)) = -(8)/(6) = -(4)/(3)⟧</div><div class="ctx"><span>5142</span>★ (2)	⟦(2)/((2 – 1)  2  (2 + 1)) = (2)/(6) = (1)/(3)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-013" value="fix"> לתקן</label><label><input type="radio" name="d_F10-013" value="ok"> תקין</label><label><input type="radio" name="d_F10-013" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-013" value="later"> לדחות</label>
+<textarea name="n_F10-013" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-005">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">49</span>
+<span class="title">F10-005 · פסקה 5156</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(x  (x)  (x + 1)  2(x + 1)  (x  1)  x  (x)  (x  1))/((x  1)  (x)  (x + 1)) =⟧ — סימני חיסור וכפל חסרים</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(x ∙ x ∙ (x + 1) − 2(x + 1)(x − 1) − x ∙ x ∙ (x − 1))/((x − 1) ∙ x ∙ (x + 1)) =⟧</div></div>
+<div class="row"><b>למה</b><div>השחזור נקבע חד-משמעית מהביטוי המקורי x/(x−1) − 2/x − x/(x+1) (הצבת x=2 ב-5150) ומהפיתוח ב-5159; ככל הנראה ארטיפקט חילוץ — לוודא שהסימנים אכן קיימים בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5154</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>5155</span>	נייצר מכנה משותף לשלושת האיברים:</div><div class="ctx"><span>5156</span>★ ⟦(x  (x)  (x + 1)  2(x + 1)  (x  1)  x  (x)  (x  1))/((x  1)  (x)  (x + 1)) =⟧</div><div class="ctx"><span>5158</span>	נפתח סוגריים ונכנס איברים:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-005" value="fix"> לתקן</label><label><input type="radio" name="d_F10-005" value="ok"> תקין</label><label><input type="radio" name="d_F10-005" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-005" value="later"> לדחות</label>
+<textarea name="n_F10-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-006">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">50</span>
+<span class="title">F10-006 · פסקה 5159</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(x^(3) + x^(2)  2x^(2) + 2  x^(3) + x^(2))/((x  1)  (x)  (x + 1)) = (2)/((x  1)  (x)  (x + 1))⟧ — סימני חיסור חסרים</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(x^(3) + x^(2) − 2x^(2) + 2 − x^(3) + x^(2))/((x − 1) ∙ x ∙ (x + 1)) = (2)/((x − 1) ∙ x ∙ (x + 1))⟧</div></div>
+<div class="row"><b>למה</b><div>רק עם סימני המינוס המונה מצטמצם ל-2 (x³+x²−2x²+2−x³+x²=2), בהתאמה לתשובה (2) ולהצבה x=2 → 1/3; כנראה ארטיפקט חילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5158</span>	נפתח סוגריים ונכנס איברים:</div><div class="ctx"><span>5159</span>★ ⟦(x^(3) + x^(2)  2x^(2) + 2  x^(3) + x^(2))/((x  1)  (x)  (x + 1)) = (2)/((x  1)  (x)  (x + 1))⟧</div><div class="ctx"><span>5161</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-006" value="fix"> לתקן</label><label><input type="radio" name="d_F10-006" value="ok"> תקין</label><label><input type="radio" name="d_F10-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-006" value="later"> לדחות</label>
+<textarea name="n_F10-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-007">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">51</span>
+<span class="title">F10-007 · פסקה 5169</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(r)/(3)  r = -(2)/(3)r⟧ — חסר סימן חיסור בין r/3 ל-r</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(r)/(3) − r = -(2)/(3)r⟧</div></div>
+<div class="row"><b>למה</b><div>רק עם חיסור השוויון מתקיים (r/3 − r = −2r/3) ותואם את ההקשר &#x27;תוצאה שלילית, לא מתאים&#x27;; כנראה ארטיפקט חילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5168</span>(1)</div><div class="ctx"><span>5169</span>★ ⟦(r)/(3)  r = -(2)/(3)r⟧</div><div class="ctx"><span>5171</span>תוצאה שלילית, לא מתאים.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-007" value="fix"> לתקן</label><label><input type="radio" name="d_F10-007" value="ok"> תקין</label><label><input type="radio" name="d_F10-007" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-007" value="later"> לדחות</label>
+<textarea name="n_F10-007" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-008">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">52</span>
+<span class="title">F10-008 · פסקה 5189</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">AD =⟦ √(3)r  r⟧ — חסר סימן חיסור בין √3r ל-r</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">AD = ⟦√(3)r − r⟧</div></div>
+<div class="row"><b>למה</b><div>לפי 5188 AD מחושב בחיסור הרדיוס מ-AO (√3r − r), וב-5192 אותו ביטוי מופיע עם מינוס (&#x27;√(3)r - r&#x27;); כנראה ארטיפקט חילוץ או תו מינוס חריג — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5188</span>נחשב את אורכו של AD באמצעות חיסור הרדיוס מ-AO:</div><div class="ctx"><span>5189</span>★ AD =⟦ √(3)r  r⟧</div><div class="ctx"><span>5191</span>★ נבחן את משולש ADE ביחס למשולש AOB. ניתן להסיק כי המשולשים דומים (זוויות ישרות וזווית A משותפת) ולכן גם משולש ADE הוא משולש זהב.  כלומר, על מנת למצוא את ED (הניצב הקטן), נחלק את AD (הניצב הגדול) ב-⟦√(3)⟧:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-008" value="fix"> לתקן</label><label><input type="radio" name="d_F10-008" value="ok"> תקין</label><label><input type="radio" name="d_F10-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-008" value="later"> לדחות</label>
+<textarea name="n_F10-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-009">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">53</span>
+<span class="title">F10-009 · פסקה 5302</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(π)/(4)⟧ ⟦a^(3)    (3)/(4)a^(3)⟧ — חסר סימן ≈ בין הערך המדויק להערכה</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(π)/(4) ∙ a^(3) ≈ (3)/(4)a^(3)⟧</div></div>
+<div class="row"><b>למה</b><div>לפי 5299 &#x27;נציב בתשובות 3 וקצת במקום π&#x27; — זו הערכה ולא שוויון, ונדרש סימן קירוב; כנראה נשמט בחילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5301</span>(1)</div><div class="ctx"><span>5302</span>★ ⟦(π)/(4)⟧ ⟦a^(3)    (3)/(4)a^(3)⟧</div><div class="ctx"><span>5304</span>★ ⟦(3)/(4)⟧ מנפח הקובייה, מתאים - תשובה נכונה.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-009" value="fix"> לתקן</label><label><input type="radio" name="d_F10-009" value="ok"> תקין</label><label><input type="radio" name="d_F10-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-009" value="later"> לדחות</label>
+<textarea name="n_F10-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-010">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">54</span>
+<span class="title">F10-010 · פסקה 5306</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(2π)/(3)⟧ ⟦a^(3)    ⟧2⟦a^(3)⟧ — חסר סימן ≈</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(2π)/(3) ∙ a^(3) ≈ 2a^(3)⟧</div></div>
+<div class="row"><b>למה</b><div>הערכת סדר גודל עם π≈3 (2π/3 ≈ 2), נדרש סימן קירוב; המסקנה &#x27;פעמיים נפח הקובייה&#x27; נכונה; כנראה נשמט בחילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5304</span>★ ⟦(3)/(4)⟧ מנפח הקובייה, מתאים - תשובה נכונה.</div><div class="ctx"><span>5305</span>(2)</div><div class="ctx"><span>5306</span>★ ⟦(2π)/(3)⟧ ⟦a^(3)    ⟧2⟦a^(3)⟧</div><div class="ctx"><span>5308</span>פעמיים נפח הקובייה, גדול מדי, לא מתאים.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-010" value="fix"> לתקן</label><label><input type="radio" name="d_F10-010" value="ok"> תקין</label><label><input type="radio" name="d_F10-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-010" value="later"> לדחות</label>
+<textarea name="n_F10-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-011">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">55</span>
+<span class="title">F10-011 · פסקה 5310</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦(π)/(2)⟧ ⟦a^(3)   (3)/(2)⟧ ⟦a^(3)⟧ — חסר סימן ≈</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦(π)/(2) ∙ a^(3) ≈ (3)/(2) ∙ a^(3)⟧</div></div>
+<div class="row"><b>למה</b><div>הערכת סדר גודל עם π≈3 (π/2 ≈ 1.5), נדרש סימן קירוב; המסקנה &#x27;פעם וחצי&#x27; נכונה; כנראה נשמט בחילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5308</span>פעמיים נפח הקובייה, גדול מדי, לא מתאים.</div><div class="ctx"><span>5309</span>(3)</div><div class="ctx"><span>5310</span>★ ⟦(π)/(2)⟧ ⟦a^(3)   (3)/(2)⟧ ⟦a^(3)⟧</div><div class="ctx"><span>5312</span>פעם וחצי נפח הקובייה, גדול מדי, לא מתאים.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-011" value="fix"> לתקן</label><label><input type="radio" name="d_F10-011" value="ok"> תקין</label><label><input type="radio" name="d_F10-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-011" value="later"> לדחות</label>
+<textarea name="n_F10-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F10-012">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">56</span>
+<span class="title">F10-012 · פסקה 5314</span><span class="cnt">F10</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦πa^(3)   3a^(3)⟧ — חסר סימן ≈</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">⟦πa^(3) ≈ 3a^(3)⟧</div></div>
+<div class="row"><b>למה</b><div>הערכת סדר גודל עם π≈3, נדרש סימן קירוב; המסקנה &#x27;שלוש פעמים&#x27; נכונה; כנראה נשמט בחילוץ — לוודא בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5312</span>פעם וחצי נפח הקובייה, גדול מדי, לא מתאים.</div><div class="ctx"><span>5313</span>(4)</div><div class="ctx"><span>5314</span>★ ⟦πa^(3)   3a^(3)⟧</div><div class="ctx"><span>5316</span>שלוש פעמים נפח הקובייה, גדול מדי, לא מתאים.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F10-012" value="fix"> לתקן</label><label><input type="radio" name="d_F10-012" value="ok"> תקין</label><label><input type="radio" name="d_F10-012" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F10-012" value="later"> לדחות</label>
+<textarea name="n_F10-012" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F11-020">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">57</span>
+<span class="title">F11-020 · פסקה 5602</span><span class="cnt">F11</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">[IMG]xaxa[IMG]xaxaדרך ב׳ - הערכת סדר גודל נוספת</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">[IMG] דרך ב׳ - הערכת סדר גודל נוספת</div></div>
+<div class="row"><b>למה</b><div>המחרוזות xaxa (וכן xax2x2 בפסקה 5615) הן אותיות תיוג של הסרטוט שנשפכו לטקסט ונכפלו — יש לוודא בוורד שאין טקסט תועה צמוד לתמונות; אימות הסרטוט עצמו דורש עין (רמת [IMG]).</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5600</span>★ כדי להכריע ביניהן נשאל את עצמנו: מאיפה המספר הזה? בכל פינה של הריבוע החיצון נוצר משולש ישר-זווית ושווה-שוקיים, כלומר משולש כסף, שבו מופיע המספר ⟦√(2)⟧ ביחס שבין היתר לניצב.  לעומת זאת אין סיבה ש-⟦√(3)⟧ יופיע בתשובה הנכונה.  תשובה (1) נפסלת, תשובה (4) נכונה.</div><div class="ctx"><span>5602</span>[IMG]xaxa[IMG]xaxaדרך ב׳ - הערכת סדר גודל נוספת</div><div class="ctx"><span>5603</span>נעביר אלכסון בריבוע הפנימי.  האלכסון מחבר את אמצע הצלע העליונה ואת אמצע הצלע התחתונה של הריבוע החיצון, ולכן אורכו שווה לצלע הריבוע החיצון ‎x‎.</div><div class="ctx"><span>5604</span>האלכסון מחלק את הריבוע הפנימי לשני משולשים.  נתבונן באחד מהם: הניצבים הם שתי צלעות של הריבוע הפנימי, נגדיר שאורך כל אחת מהן ‎a‎. היתר הוא האלכסון, שאורכו ‎x‎.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F11-020" value="fix"> לתקן</label><label><input type="radio" name="d_F11-020" value="ok"> תקין</label><label><input type="radio" name="d_F11-020" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F11-020" value="later"> לדחות</label>
+<textarea name="n_F11-020" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F11-011">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">58</span>
+<span class="title">F11-011 · פסקה 5727</span><span class="cnt">F11</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">היחס בין מספר הפעמונים של הבכור, האמצעי והצעיר הוא: ⟦1 : 1(1)/(4) : 4⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">היחס בין מספר הפעמונים של הצעיר, האמצעי והבכור הוא: ⟦1 : 1(1)/(4) : 4⟧</div></div>
+<div class="row"><b>למה</b><div>אזור מתמטי נקרא משמאל לימין, ולכן 1 מוצמד לבכור ו-4 לצעיר — היפוך של הנתון (הבכור פי 4 מהצעיר); התיקון המינימלי הוא היפוך הסדר המילולי, שכן שרשרת המספרים 1:1¼:4 → 4:5:16 (5728) → 16:20:64 (5730) עקבית פנימית בסדר צעיר→בכור והחישוב (צעיר=16) נכון.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5726</span>	דרך ג׳ - יחסים</div><div class="ctx"><span>5727</span>★ נתון כי היחס בין מספר הפעמונים של הבכור, האמצעי והצעיר הוא:  ⟦1 : 1(1)/(4) : 4⟧. </div><div class="ctx"><span>5728</span>נגדיל את היחסים פי 4 כדי לחשב במספרים שלמים: 4 : 5 : 16. </div><div class="ctx"><span>5729</span>סך יחידות היחס הינו:  4 + 5 + 16 = 25 </div></div></div>
+<div class="decide"><label><input type="radio" name="d_F11-011" value="fix"> לתקן</label><label><input type="radio" name="d_F11-011" value="ok"> תקין</label><label><input type="radio" name="d_F11-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F11-011" value="later"> לדחות</label>
+<textarea name="n_F11-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F12-010">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">59</span>
+<span class="title">F12-010 · פסקה 5982</span><span class="cnt">F12</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">⟦19^(3)= 19 ∙ 19 ∙ 19 = ..9  ∙  ..9 ∙  ..9 = . .1 ·  . .9 = ..9⟧</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">אחידות בסימון: ⟦19^(3) = 19 ∙ 19 ∙ 19 = ..9 ∙ ..9 ∙ ..9 = ..1 ∙ ..9 = ..9⟧</div></div>
+<div class="row"><b>למה</b><div>התוכן המתמטי נכון (9∙9 נותן אחדות 1, 1∙9 נותן אחדות 9, ו-19³ = 6,859 אכן מסתיים ב-9), אבל סימון הספרות החסרות אינו אחיד (&#x27;. .1&#x27; ו-&#x27;. .9&#x27; עם רווח באמצע לעומת &#x27;..9&#x27;) וסימן הכפל מתחלף בין ∙ ל-·.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5982</span>★ ⟦19^(3)= 19 ∙ 19 ∙ 19 = ..9  ∙  ..9 ∙  ..9 = . .1 ·  . .9 = ..9⟧</div><div class="ctx"><span>5984</span>לפיכך, ספרת האחדות בתוצאת המכפלה תהיה 9. ניתן לראות כי תשובות (2) ו-(4) מתאימות.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F12-010" value="fix"> לתקן</label><label><input type="radio" name="d_F12-010" value="ok"> תקין</label><label><input type="radio" name="d_F12-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F12-010" value="later"> לדחות</label>
+<textarea name="n_F12-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="f4" data-id="F12-011">
+<div class="ihead"><span class="tag f4">נוסחה · רמה 3</span><span class="num">60</span>
+<span class="title">F12-011 · פסקה 6098</span><span class="cnt">F12</span></div><div class="body">
+<div class="row"><b>יש בקובץ</b><div class="code">★ ⟦(3)/(4)⟧        18 / : 3</div></div>
+<div class="row"><b>הצעה</b><div class="code rec">★ ⟦(3)/(4)⟧        18   : 3 (או ÷ 3, בהתאם לסגנון הטבלה)</div></div>
+<div class="row"><b>למה</b><div>הלוכסן לפני &#x27;: 3&#x27; נראה כשריד עריכה — הטקסט בפס׳ 6097 אומר &#x27;באמצעות חלוקה ב-3&#x27;, והשורה המקבילה בכיתה השנייה (פס׳ 6105) מופיעה בלי סימון החלוקה כלל, כך שגם האחידות בין שתי הטבלאות דורשת בדיקה בוורד.</div></div>
+<div class="row"><b>מה חסר</b><div>—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>6096</span>דרך ג׳ - חישוב מתמטי מקוצר</div><div class="ctx"><span>6097</span>★ ביום מסוים נשארו בבית  ⟦(1)/(4)⟧ מהתלמידים בכיתה אחת, כלומר הגיעו לבית הספר  ⟦(3)/(4)⟧ מהתלמידים.  כדי שמספר התלמידים בכיתה יהיה שלם, מספר התלמידים שהגיעו צריך להתחלק ב-3 ללא שארית, לכן זו הכיתה בה הגיעו 18 תלמידים.  אם  ⟦(3)/(4)⟧  מגודל מסוים הם 18, ניתן לחשב  ⟦(1)/(4)⟧  מהגודל באמצעות חלוקה ב-3:</div><div class="ctx"><span>6098</span>★ ⟦(3)/(4)⟧        18 / : 3</div><div class="ctx"><span>6099</span>★ ⟦(1)/(4)⟧         6</div><div class="ctx"><span>6100</span>מספר התלמידים בכיתה הוא השלם, כלומר פי 4:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_F12-011" value="fix"> לתקן</label><label><input type="radio" name="d_F12-011" value="ok"> תקין</label><label><input type="radio" name="d_F12-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_F12-011" value="later"> לדחות</label>
+<textarea name="n_F12-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U01-004">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">61</span>
+<span class="title">U01-004 · פסקה 35 · פתיחה + הצבת תשובות</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">מהדורת 3008101</div></div>
+<div class="row"><b>הבעיה</b><div>קוד המהדורה נראה כקוד תאריך שבור או חסר ספרה - לא ניתן לאמת מתוך הקובץ</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">קוד המהדורה הנכון - מסופק על ידי ההוצאה/ליאור</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>35</span>מהדורת 989173</div><div class="ctx"><span>37</span>ניהול פדגוגי: ליאור כהן, אלעד שווייצר</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U01-004" value="fix"> לתקן</label><label><input type="radio" name="d_U01-004" value="ok"> תקין</label><label><input type="radio" name="d_U01-004" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U01-004" value="later"> לדחות</label>
+<textarea name="n_U01-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U01-008">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">62</span>
+<span class="title">U01-008 · פסקה 207 · פתיחה + הצבת תשובות</span><span class="cnt">grammar</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">יהיה לה פי 3 יותר כסף ממנו</div></div>
+<div class="row"><b>הבעיה</b><div>&#x27;פי 3 יותר&#x27; דו-משמעי מתמטית (פי 3 או פי 4); הפתרון x=10 מניח פי 3 בדיוק, ובשאר היחידה מנוסח &#x27;גדול פי 3 מ-&#x27;</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>205</span> ⏎ </div><div class="ctx"><span>207</span>אם דן ייתן לשירה 5 שקלים, יהיה לה פי 3 יותר כסף ממנו.</div><div class="ctx"><span>209</span>אם ידוע שכעת לשניהם סכום כסף זהה, כמה שקלים יש לשירה כעת?</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U01-008" value="fix"> לתקן</label><label><input type="radio" name="d_U01-008" value="ok"> תקין</label><label><input type="radio" name="d_U01-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U01-008" value="later"> לדחות</label>
+<textarea name="n_U01-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U01-009">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">63</span>
+<span class="title">U01-009 · פסקה 251 · פתיחה + הצבת תשובות</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">(2)    202</div></div>
+<div class="row"><b>הבעיה</b><div>המסיח 202 חריג - שאר המסיחים (100, 225, 250) כפולות של 25 ונגזרים מהיגיון השאלה, ו-202 אינו נגזר משום חישוב טבעי; ייתכן שצריך להיות 200</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">נוסח המסיחים במקור 1107/19 לאימות אם 202 או 200</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>251</span>			(1) 100		(2)    200	(3)    225	(4) 250</div><div class="ctx"><span>252</span>1107/19 הצבת תשובות, נתחיל מ-100 נבין שחסר יום ונחפש מספר ש 2/5 ממנו=100, סוף</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U01-009" value="fix"> לתקן</label><label><input type="radio" name="d_U01-009" value="ok"> תקין</label><label><input type="radio" name="d_U01-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U01-009" value="later"> לדחות</label>
+<textarea name="n_U01-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-002">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">64</span>
+<span class="title">U02-002 · פסקה 363 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">ההפרש ביניהם הוא 5 שנים</div></div>
+<div class="row"><b>הבעיה</b><div>32.5 פחות 17.5 שווה 15, לא 5 (שארית העתקה מתשובה (2))</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>361</span>התשובה נפסלת.</div><div class="ctx"><span>362</span>★ (2) אם הלל בן 27.5, ינון בן 22.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>363</span>★ (4) אם הלל בן 32.5, ינון בן 17.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>365</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-002" value="fix"> לתקן</label><label><input type="radio" name="d_U02-002" value="ok"> תקין</label><label><input type="radio" name="d_U02-002" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-002" value="later"> לדחות</label>
+<textarea name="n_U02-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-003">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">65</span>
+<span class="title">U02-003 · פסקה 363 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">ולא 5. התשובה נפסלת</div></div>
+<div class="row"><b>הבעיה</b><div>בהמשך לתיקון ההפרש - ההפרש בפועל הוא 15, ולכן ההשוואה היא 10 מול 15</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>361</span>התשובה נפסלת.</div><div class="ctx"><span>362</span>★ (2) אם הלל בן 27.5, ינון בן 22.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>363</span>★ (4) אם הלל בן 32.5, ינון בן 17.5. ההפרש ביניהם הוא 5 שנים. ⟦(1)/(5)⟧ מסכום הגילאים היא 10, ולא 5. התשובה נפסלת.</div><div class="ctx"><span>365</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-003" value="fix"> לתקן</label><label><input type="radio" name="d_U02-003" value="ok"> תקין</label><label><input type="radio" name="d_U02-003" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-003" value="later"> לדחות</label>
+<textarea name="n_U02-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-004">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">66</span>
+<span class="title">U02-004 · פסקה 387 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">ו-38 סוכריות בצהובה</div></div>
+<div class="row"><b>הבעיה</b><div>40 ועוד 2 שהועברו = 42, לא 38; המסקנה (פסילה) נותרת נכונה שכן 42 אינו פי 3 מ-10</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>385</span>טיפ: לאחר שמצאנו תשובה נכונה, אין צורך לבדוק את יתר התשובות.  אך למען שלמות ההסבר נפסול אותן:</div><div class="ctx"><span>387</span>(2)  אם בצנצנת הלבנה היו 12 סוכריות לפני ההעברה, בצנצנת הצהובה היו 40 סוכריות. כעת, לאחר שעודד העביר 2 סוכריות מהצנצנת הלבנה לצהובה, נותרו 10 סוכריות בלבנה ו-38 סוכריות בצהובה. ניתן לראות כי מספר הסוכריות בצנצנת הצהובה אינו גדול פי 3 ממספר הסוכריות בצנצנת הלבנה. התשובה נפסלת.</div><div class="ctx"><span>389</span>(3)  אם בצנצנת הלבנה היו 13 סוכריות לפני ההעברה, בצנצנת הצהובה היו 39 סוכריות. כעת, לאחר שעודד העביר 2 סוכריות מהצנצנת הלבנה לצהובה, נותרו 11 סוכריות בלבנה ו-41 סוכריות בצהובה.  ניתן לראות כי מספר הסוכריות בצנצנת הצהובה אינו גדול פי 3 ממספר הסוכריות בצנצנת הלבנה. התשובה נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-004" value="fix"> לתקן</label><label><input type="radio" name="d_U02-004" value="ok"> תקין</label><label><input type="radio" name="d_U02-004" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-004" value="later"> לדחות</label>
+<textarea name="n_U02-004" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">67</span>
+<span class="title">U02-010 · פסקה 460 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">1 = -1</div></div>
+<div class="row"><b>הבעיה</b><div>סתירה פנימית: שורות ההצבה מסתיימות ב&#x27;= 1&#x27; אך ההשוואה נעשית מול 1-; בנוסף עבור x=2 החישוב 4-4-7 נותן 7- ולא 1. בלי נוסח המשוואה המקורית אי אפשר להכריע איזה אגף שגוי</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">נוסח המשוואה המקורית של שאלה 5 (מהו אגף ימין: 1 או 1-)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>459</span>★  (1) ⟦(-2)^(2) – 2 ⋅ (-2) – 7 = 1⟧</div><div class="ctx"><span>460</span> 1 = -1                        התשובה נפסלת</div><div class="ctx"><span>461</span>★  (2) ⟦2^(2) – 2 ⋅ 2 – 7 = 1⟧</div><div class="ctx"><span>462</span> -7 = -1                        התשובה נפסלת</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-010" value="fix"> לתקן</label><label><input type="radio" name="d_U02-010" value="ok"> תקין</label><label><input type="radio" name="d_U02-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-010" value="later"> לדחות</label>
+<textarea name="n_U02-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-020">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">68</span>
+<span class="title">U02-020 · פסקה 595 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">שכן 5 הוא</div></div>
+<div class="row"><b>הבעיה</b><div>בתשובה זו נותרו 7 בלונים, לא 5 - שארית העתקה מפסילת תשובה (2)</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>594</span>(1)  אם לנטע היו 11 בלונים ו-7 התפוצצו, נותרו לה 4 בלונים.  מתוכם היא נתנה לשני 2 בלונים ולבסוף נשארו לה 2 בלונים בלבד, כך שלא יכלה לתת לעומר 3. התשובה נפסלת. </div><div class="ctx"><span>595</span>(4)  אם לנטע היו 14 בלונים ו-7 התפוצצו, נותרו לה 7 בלונים.  ניתן להסיק כי לא תוכל לתת לשני מחצית מהם שכן 5 הוא מספר אי-זוגי.  התשובה נפסלת.</div><div class="ctx"><span>597</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-020" value="fix"> לתקן</label><label><input type="radio" name="d_U02-020" value="ok"> תקין</label><label><input type="radio" name="d_U02-020" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-020" value="later"> לדחות</label>
+<textarea name="n_U02-020" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-034">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">69</span>
+<span class="title">U02-034 · פסקה 696 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">ב-9 הוא 9, המספר החדש</div></div>
+<div class="row"><b>הבעיה</b><div>הטענה הכללית אינה מדויקת - 99 מתחלק ב-9 וסכום ספרותיו 18; בהקשר (שמונים ומשהו) המסקנה נכונה, אך הניסוח הגורף שגוי</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>694</span>★ אם a הוא מספר דו-ספרתי שספרת האחדות שלו היא 8, בהופכנו את סדר הספרות נקבל מספר שספרת העשרות שלו היא 8, כלומר שמונים ומשהו.  המספר החדש גדול פי 9 מ-⟦(a)/(2)⟧, כלומר הוא מספר שמתחלק ב-9. </div><div class="ctx"><span>696</span>מכיוון שסכום הספרות של מספרים דו-ספרתיים שמתחלקים ב-9 הוא 9, המספר החדש יהיה 81, והמקורי יהיה 18. כלומר, סכום הספרות של a  הוא 9.</div><div class="ctx"><span>698</span>דרך נוספת:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-034" value="fix"> לתקן</label><label><input type="radio" name="d_U02-034" value="ok"> תקין</label><label><input type="radio" name="d_U02-034" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-034" value="later"> לדחות</label>
+<textarea name="n_U02-034" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-035">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">70</span>
+<span class="title">U02-035 · פסקה 699 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">(10·8 = 80</div></div>
+<div class="row"><b>הבעיה</b><div>החסם התחתון נבחן בכפל ב-9 (כמו החסם העליון 10·9=90): אם המספר היה 8 היינו מקבלים 9·8=72 שאינו &#x27;שמונים ומשהו&#x27;; הכתוב 10·8=80 אינו מדגים את הטענה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>698</span>דרך נוספת:</div><div class="ctx"><span>699</span>ננסה באמצעות הערכת סדר גודל למצוא מספר שיהיה קטן פי 9 משמונים ומשהו.  ניתן להסיק כי המספר יהיה קטן מ-10 (10∙9 = 90) וגדול מ-8 (10∙8 = 80, וספרת העשרות לא יכולה להיות 0). כלומר המספר יהיה 9. 81 גדול פי 9 מ-9. כלומר, המספר המקורי הוא 18, וסכום הספרות הוא 9.</div><div class="ctx"><span>701</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-035" value="fix"> לתקן</label><label><input type="radio" name="d_U02-035" value="ok"> תקין</label><label><input type="radio" name="d_U02-035" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-035" value="later"> לדחות</label>
+<textarea name="n_U02-035" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-041">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">71</span>
+<span class="title">U02-041 · פסקה 740 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">3560 = 512</div></div>
+<div class="row"><b>הבעיה</b><div>השבר 35/60 מצטמצם ל-7/12 ולא ל-5/12 (350/600 = 7/12); הפסילה מול 6/13 נותרת בעינה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>738</span>נציב את תשובה (1): </div><div class="ctx"><span>739</span>(1)  אם 100 גולות הועברו ממגירה א&#x27; למגירה ב&#x27;, כעת במגירה א&#x27; יש 350 גולות ובמגירה ב&#x27; 600 גולות.  היחס ביניהן הוא 350 : 600. נצמצם את היחס:</div><div class="ctx"><span>740</span>★ ⟦(350)/(600) = (35)/(60) = (5)/(12)⟧                         התשובה נפסלת.  נעבור לתשובה הנוחה הבאה.</div><div class="ctx"><span>742</span>נציב את תשובה (2): </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-041" value="fix"> לתקן</label><label><input type="radio" name="d_U02-041" value="ok"> תקין</label><label><input type="radio" name="d_U02-041" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-041" value="later"> לדחות</label>
+<textarea name="n_U02-041" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-045">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">72</span>
+<span class="title">U02-045 · פסקה 880 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">12 + 31</div></div>
+<div class="row"><b>הבעיה</b><div>כאשר a=1 האיבר a/y הוא 1/1 ולא 3/1 - שארית העתקה מסעיף (2) שבו a=3; הסכום הנכון הוא 1.5</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>879</span> (3)  נציב x = 2, y = 1 ⟸ a = 1</div><div class="ctx"><span>880</span>★ ⟦(1)/(3) = (1)/(2) + (3)/(1)          (1)/(3) ≠ 3.5⟧</div><div class="ctx"><span>881</span>ניתן לראות כי שני האגפים לא שווים זה לזה. התשובה נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-045" value="fix"> לתקן</label><label><input type="radio" name="d_U02-045" value="ok"> תקין</label><label><input type="radio" name="d_U02-045" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-045" value="later"> לדחות</label>
+<textarea name="n_U02-045" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-046">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">73</span>
+<span class="title">U02-046 · פסקה 880 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">≠ 3.5</div></div>
+<div class="row"><b>הבעיה</b><div>בהמשך לתיקון הקודם: 1/2 + 1/1 = 1.5 ולא 3.5; הפסילה נותרת בעינה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>879</span> (3)  נציב x = 2, y = 1 ⟸ a = 1</div><div class="ctx"><span>880</span>★ ⟦(1)/(3) = (1)/(2) + (3)/(1)          (1)/(3) ≠ 3.5⟧</div><div class="ctx"><span>881</span>ניתן לראות כי שני האגפים לא שווים זה לזה. התשובה נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-046" value="fix"> לתקן</label><label><input type="radio" name="d_U02-046" value="ok"> תקין</label><label><input type="radio" name="d_U02-046" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-046" value="later"> לדחות</label>
+<textarea name="n_U02-046" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U02-048">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">74</span>
+<span class="title">U02-048 · פסקה 895 · הצבת תשובות (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">a(xy- (x+y)2=0</div></div>
+<div class="row"><b>הבעיה</b><div>סוגריים לא מאוזנים - נפתחו שניים ונסגר אחד; חסרה סגירת הסוגריים של הגורם המשותף</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>893</span>מפני שאסור לחלק ב-a (ייתכן שהוא אפס), נחסר בין האגפים:</div><div class="ctx"><span>894</span>★ ⟦axy-a (x+y)^(2)=0⟧</div><div class="ctx"><span>895</span>★ ⟦a[(xy- (x+y)^(2)]=0⟧</div><div class="ctx"><span>897</span>★ מכיוון שכל המכפלה שווה ל-0, לפחות אחד מאיבריה הוא אפס.  לפיכך, אפשרות אחת היא כי a = 0. אפשרות נוספת היא: ⟦xy – (x + y)^(2) = 0⟧  , כלומר, ⟦xy=(x+y)^(2)⟧  נפתח את המשוואה:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U02-048" value="fix"> לתקן</label><label><input type="radio" name="d_U02-048" value="ok"> תקין</label><label><input type="radio" name="d_U02-048" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U02-048" value="later"> לדחות</label>
+<textarea name="n_U02-048" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U03-003">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">75</span>
+<span class="title">U03-003 · פסקה 912 · הצבת מספר נוח</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">תוכניות החסכון</div></div>
+<div class="row"><b>הבעיה</b><div>אותה אי-אחידות כתיב חסכון/חיסכון; מופיע פעמיים בפסקה (replace all).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>910</span>★ לביל מספר תוכניות חיסכון שבכל אחת מהן 2.5 מיליון שקלים.   לגייטס מספר זהה של תוכניות חיסכון שבכל אחת מהן  ⟦(1)/(4)⟧  מיליון שקלים.</div><div class="ctx"><span>912</span>★ ⟦(סך הכסף בתוכניות החסכון של ביל)/(סך הכסף בתוכניות החסכון של גייטס) = ?⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U03-003" value="fix"> לתקן</label><label><input type="radio" name="d_U03-003" value="ok"> תקין</label><label><input type="radio" name="d_U03-003" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U03-003" value="later"> לדחות</label>
+<textarea name="n_U03-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U03-024">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">76</span>
+<span class="title">U03-024 · פסקה 982 · הצבת מספר נוח</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">	ראם קיבל</div></div>
+<div class="row"><b>הבעיה</b><div>תו טאב/הזחה מיותר בתחילת פסקת השאלה, בשונה מכל שאר פסקאות השאלות ביחידה.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>980</span> ⏎ </div><div class="ctx"><span>982</span>★ ראם קיבל דמי כיס במוצאי שבת.  ביום א׳ הוא בזבז  ⟦(1)/(3)⟧  מדמי הכיס.  ביום ב׳ הוא שוב בזבז  ⟦(1)/(3)⟧  מדמי הכיס שנותרו לו.  וכך הלאה.</div><div class="ctx"><span>984</span>איזה חלק מדמי הכיס שקיבל ראם במוצאי שבת נותר ברשותו בסיום יום ג׳?</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U03-024" value="fix"> לתקן</label><label><input type="radio" name="d_U03-024" value="ok"> תקין</label><label><input type="radio" name="d_U03-024" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U03-024" value="later"> לדחות</label>
+<textarea name="n_U03-024" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U03-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">77</span>
+<span class="title">U03-010 · פסקה 1064 · הצבת מספר נוח</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">היחס הוא 5: 3 .</div></div>
+<div class="row"><b>הבעיה</b><div>היחס יואב:מאיר שחושב זה עתה הוא 3/5 ובדרך א&#x27; נכתב &#x27;3:5&#x27;; הסדר &#x27;5: 3&#x27; (כנראה שיבוש כיווניות) והרווחים סותרים זאת.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1063</span>★ ⟦(  (3x)/(4)  )/((5x)/(4))=(3x·4)/(5x·4)=(3)/(5)⟧</div><div class="ctx"><span>1064</span>היחס הוא 5: 3. </div><div class="ctx"><span>1066</span> ⏎ </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U03-010" value="fix"> לתקן</label><label><input type="radio" name="d_U03-010" value="ok"> תקין</label><label><input type="radio" name="d_U03-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U03-010" value="later"> לדחות</label>
+<textarea name="n_U03-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U03-014">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">78</span>
+<span class="title">U03-014 · פסקה 1106 · הצבת מספר נוח</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">הוא 3: 4 </div></div>
+<div class="row"><b>הבעיה</b><div>רווח שגוי בתוך היחס; בפסקה 1103 נכתב &#x27;3:4&#x27; ללא רווחים.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1105</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>1106</span>★ נציב את הסכום שקיבל כל אחד מהאחים כ-x. אם האח הצעיר העביר לבכור ⟦(x)/(3)⟧ מהסכום שקיבל, כעת לבכור יש ⟦(4)/(3)x⟧. היחס בין  x ל-x ⟦(4)/(3)⟧  הוא 3: 4  (מכיוון שמדובר ביחס הכולל שבר, מרחיבים הכל פי 3).  </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U03-014" value="fix"> לתקן</label><label><input type="radio" name="d_U03-014" value="ok"> תקין</label><label><input type="radio" name="d_U03-014" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U03-014" value="later"> לדחות</label>
+<textarea name="n_U03-014" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U04-009">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">79</span>
+<span class="title">U04-009 · פסקה 1385 · הצבת מספר במקום נעלם</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">1x + y – z</div></div>
+<div class="row"><b>הבעיה</b><div>תשובות (3) ו-(4) זהות מילה במילה בטקסט המחולץ; במקור מדובר כנראה בשני שברים שונים שהעימוד שלהם הושטח.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">עיצוב המשוואות המקורי בוורד המבחין בין תשובה (3) לתשובה (4)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1383</span>★ (2)   ⟦(1)/((x + y)^(2) – z^(2))⟧ -</div><div class="ctx"><span>1384</span>★ (3)    ⟦(1)/(x + y – z)⟧	</div><div class="ctx"><span>1385</span>★ (4)    ⟦(1)/(√(x + y – z))⟧</div><div class="ctx"><span>1386</span>1404/16 הצבת מספר במקום נעלם, (x = 3 , y = 2 , z = 1), סוף++</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U04-009" value="fix"> לתקן</label><label><input type="radio" name="d_U04-009" value="ok"> תקין</label><label><input type="radio" name="d_U04-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U04-009" value="later"> לדחות</label>
+<textarea name="n_U04-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U05-001">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">80</span>
+<span class="title">U05-001 · פסקה 1463 · הצבת מספר במקום נעלם (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">20200 = 15</div></div>
+<div class="row"><b>הבעיה</b><div>לפי ההצבה (שכר חודשי 100, שכר שעתי 20) התשובה היא 20/100=1/5 כפי שמראה התוצאה 1/5; המכנה 200 אינו קיים בנתוני השאלה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1461</span>★ ⟦100 ∙ 20 = 2000⟧</div><div class="ctx"><span>1463</span>★ ⟦(20)/(200) = (1)/(5)⟧</div><div class="ctx"><span>1465</span>★ ⟦(100)/(20)⟧ = 5</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U05-001" value="fix"> לתקן</label><label><input type="radio" name="d_U05-001" value="ok"> תקין</label><label><input type="radio" name="d_U05-001" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U05-001" value="later"> לדחות</label>
+<textarea name="n_U05-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U05-005">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">81</span>
+<span class="title">U05-005 · פסקה 1518 · הצבת מספר במקום נעלם (פתרונות)</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">0 +0 + 1-0 + 15= 16=4</div></div>
+<div class="row"><b>הבעיה</b><div>בכל שאר הפתרונות דרך א&#x27; נחתמת במשפט סיכום/פסילה; כאן חסר, והכותרת (פסקה 1513) קובעת שתשובה (4) נכונה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1516</span>עלינו לפשט את הביטוי שבשאלה לכדי אחד מהביטויים המוצגים בתשובות.  מכיוון שיש לנו ארבע תשובות מספריות, כלומר הן כבר מובחנות זו מזו, נוכל להציב כל מספר שנרצה.  נציב x = 0:</div><div class="ctx"><span>1518</span>★ ⟦√(√(0 +0 + 1)-0 + 15)= √(16)=4⟧</div><div class="ctx"><span>1520</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U05-005" value="fix"> לתקן</label><label><input type="radio" name="d_U05-005" value="ok"> תקין</label><label><input type="radio" name="d_U05-005" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U05-005" value="later"> לדחות</label>
+<textarea name="n_U05-005" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U05-015">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">82</span>
+<span class="title">U05-015 · פסקה 1756 · הצבת מספר במקום נעלם (פתרונות)</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">= 140,  = 40</div></div>
+<div class="row"><b>הבעיה</b><div>בהצבה α=140, β=40 תשובות (1) ו-(2) שוות שתיהן 90° (180−70−20 = 70+20), ולכן הטענה &#x27;התקבלו ארבע תשובות מובחנות&#x27; בפסקה 1765 שגויה; β=60 נותן 80, 100, 140, 40 - מובחנות</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>1754</span>דרך א&#x27; - הצבת מספרים</div><div class="ctx"><span>1755</span>עלינו להביע את הזווית המסומנת בסימן שאלה באמצעות הזוויות  ו-. משום שהנעלמים  ו- מופיעים בנתוני השאלה וגם בתשובות, ניתן להציב במקומם מספרים.  נציב מספרים התואמים לגודל המשוער של הזוויות בהתאם לסרטוט:</div><div class="ctx"><span>1756</span> = 140, = 40</div><div class="ctx"><span>1758</span>ראשית, נציב את המספרים שבחרנו בתשובות על מנת לוודא שהתשובות מובחנות זו מזו:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U05-015" value="fix"> לתקן</label><label><input type="radio" name="d_U05-015" value="ok"> תקין</label><label><input type="radio" name="d_U05-015" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U05-015" value="later"> לדחות</label>
+<textarea name="n_U05-015" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U07-001">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">83</span>
+<span class="title">U07-001 · פסקה 2444 · סימטריה / של&quot;ח</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">סימטריה (של&quot;ח)</div></div>
+<div class="row"><b>הבעיה</b><div>כותרת הפרק בגוף הספר היא &#x27;סימטריה (של&quot;ח)&#x27; ואילו בתוכן העניינים הפרק נקרא &#x27;שטחים ללא חישוב (של&quot;ח)&#x27; - אי-עקביות בין תוכן עניינים לגוף.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">החלטת עורך איזו כותרת קנונית - נוסח תוכן העניינים או נוסח גוף הספר</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2444</span>סימטריה (של״ח)</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U07-001" value="fix"> לתקן</label><label><input type="radio" name="d_U07-001" value="ok"> תקין</label><label><input type="radio" name="d_U07-001" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U07-001" value="later"> לדחות</label>
+<textarea name="n_U07-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U07-002">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">84</span>
+<span class="title">U07-002 · פסקה 2465 · סימטריה / של&quot;ח</span><span class="cnt">grammar</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">השטח המלבן</div></div>
+<div class="row"><b>הבעיה</b><div>במכנה השבר צריך צורת סמיכות &#x27;שטח המלבן&#x27; - &#x27;השטח המלבן&#x27; שגוי דקדוקית (השוו לפסקה 2476: &#x27;שטח המקבילית&#x27;).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2463</span>לפי נתונים אלה והנתונים שבסרטוט, </div><div class="ctx"><span>2465</span>★ ⟦(השטח הכהה)/(השטח המלבן)= ?⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U07-002" value="fix"> לתקן</label><label><input type="radio" name="d_U07-002" value="ok"> תקין</label><label><input type="radio" name="d_U07-002" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U07-002" value="later"> לדחות</label>
+<textarea name="n_U07-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U08-003">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">85</span>
+<span class="title">U08-003 · פסקה 2956 · שיטות חישוב</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">..2 ∙  ..2  = ..4</div></div>
+<div class="row"><b>הבעיה</b><div>בין שתי המכפלות יש חיבור (342+462), ולכן ספרות האחדות 2 ו-2 מתחברות ולא נכפלות; התוצאה 4 זהה במקרה, אך הסימן שגוי.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>2954</span>ספרת האחדות בתוצאת מכפלה, מושפעת אך ורק ממכפלת ספרות האחדות:</div><div class="ctx"><span>2956</span>★ ⟦19∙18+21∙22= ..2 ∙  ..2  = ..4⟧</div><div class="ctx"><span>2958</span>לפיכך, ספרת האחדות בתוצאת התרגיל תהיה 4. ניתן לראות כי רק תשובה (3) מתאימה.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U08-003" value="fix"> לתקן</label><label><input type="radio" name="d_U08-003" value="ok"> תקין</label><label><input type="radio" name="d_U08-003" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U08-003" value="later"> לדחות</label>
+<textarea name="n_U08-003" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U10-001">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">86</span>
+<span class="title">U10-001 · פסקה 3197 · לימוד מתקדם 1-6</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">(2)    2n</div></div>
+<div class="row"><b>הבעיה</b><div>מסיחים (1) ו-(2) זהים בטקסט המחולץ (&#x27;2n&#x27;); מאחר שחזקות אבדו בחילוץ, סביר שאחד מהם הוא 2^n או n^2 בכתיב אחר</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור: מהו הערך המקורי של מסיח (2) - כנראה חזקה שאבדה בחילוץ OMML</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3196</span>★ (1)    ⟦2^(n)⟧</div><div class="ctx"><span>3197</span>(2) 2n</div><div class="ctx"><span>3198</span>★ (3)    ⟦n^(3)⟧</div><div class="ctx"><span>3199</span>★ (4)    ⟦n^(2)⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U10-001" value="fix"> לתקן</label><label><input type="radio" name="d_U10-001" value="ok"> תקין</label><label><input type="radio" name="d_U10-001" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U10-001" value="later"> לדחות</label>
+<textarea name="n_U10-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U10-009">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">87</span>
+<span class="title">U10-009 · פסקה 3480 · לימוד מתקדם 1-6</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">לא ניתן לדעת מהנתונים</div></div>
+<div class="row"><b>הבעיה</b><div>בפס&#x27; 3320 מסיח מקביל מנוסח &#x27;אי-אפשר לדעת לפי הנתונים&#x27; - האחדת נוסח המסיח הקבוע של הסדרה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3478</span>		מהו גודל השטח המקווקו (בסמ״ר)?</div><div class="ctx"><span>3480</span>★ 	(1)	⟦4π – 6√(3)⟧(2)	⟦16π – 20√(3)⟧(3)	⟦4π – 24√(2)⟧(4)	לא ניתן לדעת מהנתונים		</div><div class="ctx"><span>3481</span>הערכת סדר גודל, אמצע</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U10-009" value="fix"> לתקן</label><label><input type="radio" name="d_U10-009" value="ok"> תקין</label><label><input type="radio" name="d_U10-009" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U10-009" value="later"> לדחות</label>
+<textarea name="n_U10-009" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U10-006">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">88</span>
+<span class="title">U10-006 · פסקה 3549 · לימוד מתקדם 1-6</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">3(a + b)</div></div>
+<div class="row"><b>הבעיה</b><div>זו השאלה היחידה ביחידה שמסיחיה מופיעים ללא מספור (1)(2)(3)(4); ייתכן שבמקור זו רשימה ממוספרת אוטומטית שהמספור שלה לא חולץ</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור: האם המספור (1)-(4) קיים כרשימה אוטומטית ב-Word או חסר בפועל וטעון הוספה</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3547</span>															איזה מהביטויים הבאים הוא בהכרח זוגי?						</div><div class="ctx"><span>3549</span>								3(a + b)</div><div class="ctx"><span>3550</span>								2b + d</div><div class="ctx"><span>3551</span>								c² – a²</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U10-006" value="fix"> לתקן</label><label><input type="radio" name="d_U10-006" value="ok"> תקין</label><label><input type="radio" name="d_U10-006" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U10-006" value="later"> לדחות</label>
+<textarea name="n_U10-006" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U10-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">89</span>
+<span class="title">U10-010 · פסקה 3559 · לימוד מתקדם 1-6</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">מה גודל השטח הכהה?</div></div>
+<div class="row"><b>הבעיה</b><div>המסיחים מנוסחים באמצעות המשתנה a, אך a אינו מוגדר בגוף השאלה - כנראה מסומן בסרטוט בלבד</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול הסרטוט במקור שהמשתנה a אכן מוגדר בו (למשל כרוחב המלבן); אם לא - חסר נתון בשאלה</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3558</span>לפי נתונים אלה והנתונים שבסרטוט, </div><div class="ctx"><span>3559</span>מה גודל השטח הכהה?</div><div class="ctx"><span>3561</span>★ (1)    ⟦a^(2)⟧	</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U10-010" value="fix"> לתקן</label><label><input type="radio" name="d_U10-010" value="ok"> תקין</label><label><input type="radio" name="d_U10-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U10-010" value="later"> לדחות</label>
+<textarea name="n_U10-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U10-011">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">90</span>
+<span class="title">U10-011 · פסקה 3568 · לימוד מתקדם 1-6</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">אוכלסו 3 מהדירות</div></div>
+<div class="row"><b>הבעיה</b><div>הניסוח &#x27;3 מהדירות&#x27; (ולא &#x27;3 דירות&#x27;) מרמז ששבר 1/3 אבד בחילוץ; אם 3 דירות - התשובה היחידה האפשרית היא 11 (מסיח 3), ואם 1/3 - התשובה היא 12 (מסיח 4), כך שהתשובה הנכונה תלויה בגרסת המקור</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור: האם בשבוע הראשון אוכלסו 3 דירות או 1/3 מהדירות</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3567</span>בבניין חדש יש n דירות ריקות.  </div><div class="ctx"><span>3568</span>בשבוע הראשון אוכלסו 3 מהדירות. </div><div class="ctx"><span>3569</span>בשבוע השני אוכלסו מחצית מהדירות הריקות שנותרו.</div><div class="ctx"><span>3570</span>בשבוע השלישי אוכלסו 4 דירות נוספות.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U10-011" value="fix"> לתקן</label><label><input type="radio" name="d_U10-011" value="ok"> תקין</label><label><input type="radio" name="d_U10-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U10-011" value="later"> לדחות</label>
+<textarea name="n_U10-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-001">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">91</span>
+<span class="title">U12-001 · פסקה 3941 · תשובות 1-3</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">פאי (p)</div></div>
+<div class="row"><b>הבעיה</b><div>ככל הנראה הסמל π בפונט Symbol חולץ כאות p; בפסקה 3942 באותו פתרון מופיע π תקין</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור/הדפוס אם מופיע שם סמל π או האות p</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>3940</span>דרך א׳ - הערכת סדר גודל (תבנית הביטוי)</div><div class="ctx"><span>3941</span>עלינו למצוא את היקף הצורה המודגשת בסרטוט, אשר מורכבת מקשת ושני רדיוסים של מעגל O. לפיכך, נצפה שהתשובה הנכונה תהיה ביטוי המורכב מחיבור של שני רכיבים: גודל הרדיוסים בס״מ, וגודל הכולל פאי (p), שכן אורך הקשת נגזר מהיקף המעגל.  </div><div class="ctx"><span>3942</span>תשובות (3) ו-(4) נפסלות, שכן אינן כוללות את הגורם π.</div><div class="ctx"><span>3943</span>כמו כן, נתון כי אורך רדיוס המעגל הוא 1 ס״מ, כלומר סכום אורכם של שני רדיוסים הוא 2 ס״מ.  לפיכך תשובה (1) נפסלת ותשובה (2) היא התשובה היחידה שמתאימה.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-001" value="fix"> לתקן</label><label><input type="radio" name="d_U12-001" value="ok"> תקין</label><label><input type="radio" name="d_U12-001" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-001" value="later"> לדחות</label>
+<textarea name="n_U12-001" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-007">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">92</span>
+<span class="title">U12-007 · פסקה 4142 · תשובות 1-3</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">באמצעות הזוויות  ו-γ</div></div>
+<div class="row"><b>הבעיה</b><div>חסרות אותיות יווניות: אחרי &quot;את הזווית&quot; חסרה α ולפני &quot;ו-γ&quot; חסרה β (רווח כפול במקומן, פעמיים בפסקה); ייתכן שאבדו בחילוץ</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור אם האותיות α ו-β מופיעות שם</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4141</span>דרך א&#x27; - הצבת מספרים</div><div class="ctx"><span>4142</span>עלינו להביע את הזווית באמצעות הזוויות ו-γ. משום שהנעלמים  ו-γ מופיעים בנתוני השאלה וגם בתשובות, ניתן להציב במקומם מספרים.  נציב מספרים התואמים לגודל המשוער של הזוויות בהתאם לסרטוט: β = 80° , γ = 150°.</div><div class="ctx"><span>4143</span>ראשית, נציב את המספרים שבחרנו בתשובות על מנת לוודא שהתשובות מובחנות זו מזו:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-007" value="fix"> לתקן</label><label><input type="radio" name="d_U12-007" value="ok"> תקין</label><label><input type="radio" name="d_U12-007" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-007" value="later"> לדחות</label>
+<textarea name="n_U12-007" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-008">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">93</span>
+<span class="title">U12-008 · פסקה 4150 · תשובות 1-3</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">של הזווית .</div></div>
+<div class="row"><b>הבעיה</b><div>חסרה האות α לפני הנקודה (רווח לפני פיסוק מעיד על תו שנשמט); ייתכן שאבדה בחילוץ</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול קובץ המקור אם האות α מופיעה שם</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4148</span>(4)	180° – 80° – 150° = -50°</div><div class="ctx"><span>4149</span>[IMG]8015080100[IMG]8015080100</div><div class="ctx"><span>4150</span>[IMG][IMG]התקבלו ארבע תשובות מובחנות, לכן נמשיך ונציב את ערכי הזוויות בסרטוט ונמצא את ערכה המספרי של הזווית.</div><div class="ctx"><span>4151</span>מכיוון שהזוויות נמצאות בין ישרים מקבילים, נוכל להעביר את הזווית β אל הישר b, וכך היא מהווה זווית חיצונית למשולש שזוויתו α. לכן הזווית הצמודה אליה, הזווית הפנימית במשולש שווה 100° (משלימה ל-180°).</div><div class="ctx"><span>4152</span>	סכום הזוויות 100° ו-α צריך להיות שווה ל-150°, משום שזה גודל הזווית γ החיצונית למשולש.  לכן הזווית α שווה ל-50°.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-008" value="fix"> לתקן</label><label><input type="radio" name="d_U12-008" value="ok"> תקין</label><label><input type="radio" name="d_U12-008" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-008" value="later"> לדחות</label>
+<textarea name="n_U12-008" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-011">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">94</span>
+<span class="title">U12-011 · פסקה 4153 · תשובות 1-3</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">מצאנו כי α = 50.</div></div>
+<div class="row"><b>הבעיה</b><div>חסר סימן מעלות (בשאר הפתרון: 50°, 100°); אך ייתכן שזו נוסחת OMML שסימן המעלות אבד בחילוצה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול המקור אם בנוסחה מופיע סימן °</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4151</span>מכיוון שהזוויות נמצאות בין ישרים מקבילים, נוכל להעביר את הזווית β אל הישר b, וכך היא מהווה זווית חיצונית למשולש שזוויתו α. לכן הזווית הצמודה אליה, הזווית הפנימית במשולש שווה 100° (משלימה ל-180°).</div><div class="ctx"><span>4152</span>	סכום הזוויות 100° ו-α צריך להיות שווה ל-150°, משום שזה גודל הזווית γ החיצונית למשולש.  לכן הזווית α שווה ל-50°.</div><div class="ctx"><span>4153</span>מצאנו כי α = 50. מכיוון שהערך שהתקבל לאחר ההצבה בביטוי שונה מהערך שבתשובות (2), (3) ו-(4) הן נפסלות, והתשובה היחידה שמתאימה היא תשובה (1).</div><div class="ctx"><span>4155</span>דרך ב&#x27; - חישוב מתמטי</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-011" value="fix"> לתקן</label><label><input type="radio" name="d_U12-011" value="ok"> תקין</label><label><input type="radio" name="d_U12-011" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-011" value="later"> לדחות</label>
+<textarea name="n_U12-011" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-018">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">95</span>
+<span class="title">U12-018 · פסקה 4369 · תשובות 1-3</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">כלומרx</div></div>
+<div class="row"><b>הבעיה</b><div>נראה שחסר רווח בין &quot;כלומר&quot; לביטוי, אך ייתכן שהרווח אבד בחילוץ נוסחת ה-OMML הצמודה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול המקור אם קיים רווח בין המילה לנוסחה</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4368</span>דרך ב׳ - חישוב מתמטי </div><div class="ctx"><span>4369</span>★ נציב כי בשדה היו x תותים.  עד הפסקת הצהריים החקלאי קטף שישית מהתותים, כלומרx  ⟦(1)/(6)⟧ .</div><div class="ctx"><span>4370</span>★ נותרו בשדה x  ⟦(5)/(6)⟧  תותים.  לאחר שחזר מהפסקת הצהריים קטף החקלאי  ⟦(1)/(5)⟧ מכמות התותים שנותרו בשדה:</div><div class="ctx"><span>4371</span>★ ⟦(1)/(5)  (5)/(6)x = (1)/(6)x⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-018" value="fix"> לתקן</label><label><input type="radio" name="d_U12-018" value="ok"> תקין</label><label><input type="radio" name="d_U12-018" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-018" value="later"> לדחות</label>
+<textarea name="n_U12-018" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U12-019">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">96</span>
+<span class="title">U12-019 · פסקה 4372 · תשובות 1-3</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">עודx</div></div>
+<div class="row"><b>הבעיה</b><div>נראה שחסר רווח בין &quot;עוד&quot; לביטוי, אך ייתכן שהרווח אבד בחילוץ נוסחת ה-OMML הצמודה</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">אימות מול המקור אם קיים רווח בין המילה לנוסחה</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4370</span>★ נותרו בשדה x  ⟦(5)/(6)⟧  תותים.  לאחר שחזר מהפסקת הצהריים קטף החקלאי  ⟦(1)/(5)⟧ מכמות התותים שנותרו בשדה:</div><div class="ctx"><span>4371</span>★ ⟦(1)/(5)  (5)/(6)x = (1)/(6)x⟧</div><div class="ctx"><span>4372</span>★ כלומר לאחר ההפסקה הוא קטף עודx  ⟦(1)/(6)⟧ תותים.</div><div class="ctx"><span>4373</span>נתון כי בסך הכל החקלאי קטף באותו יום 160 תותים, נבנה משוואה בהתאם:</div><div class="ctx"><span>4374</span>★ ⟦(1)/(6)x + (1)/(6)x = 160⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U12-019" value="fix"> לתקן</label><label><input type="radio" name="d_U12-019" value="ok"> תקין</label><label><input type="radio" name="d_U12-019" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U12-019" value="later"> לדחות</label>
+<textarea name="n_U12-019" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U13-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">97</span>
+<span class="title">U13-010 · פסקה 4649 · תשובות 4-5</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">פי  6על מנת</div></div>
+<div class="row"><b>הבעיה</b><div>רווח כפול לפני 6 ורווח חסר אחריו.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4647</span>★ מצאנו ש-x גדול מצלע המשושה פי ⟦√(3)⟧, כלומר צלע המשושה שווה:</div><div class="ctx"><span>4648</span>★ ⟦a = (x)/(√(3))⟧</div><div class="ctx"><span>4649</span>נכפיל פי 6 על מנת לחשב את היקף המשושה:</div><div class="ctx"><span>4650</span>★ ⟦6a = (6x)/(√(3))⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U13-010" value="fix"> לתקן</label><label><input type="radio" name="d_U13-010" value="ok"> תקין</label><label><input type="radio" name="d_U13-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U13-010" value="later"> לדחות</label>
+<textarea name="n_U13-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U13-013">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">98</span>
+<span class="title">U13-013 · פסקה 4818 · תשובות 4-5</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">משכורת עורך דין =</div></div>
+<div class="row"><b>הבעיה</b><div>במשוואה המילולית חסרה המילה &#x27;בכיר&#x27; — בכל הפתרון מדובר על עורך דין בכיר מול מתמחה.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4816</span>נתון שעורך דין בכיר מרוויח 50,000 שקלים יותר מאשר עורך דין מתמחה, ומכאן כי שכר מתמחה הוא (x – 50,000).</div><div class="ctx"><span>4817</span>לפי נתוני השאלה סך משכורותיהם של 2 עורכי דין בכירים שווה לסך משכורותיהם של 7 מתמחים. ניצור משוואה:</div><div class="ctx"><span>4818</span>★ ⟦2  משכורת עורך דין = 7  משכורת מתמחה⟧</div><div class="ctx"><span>4819</span>★ ⟦2x = 7(x – 50,000)⟧</div><div class="ctx"><span>4820</span>★ ⟦2x = 7x –  350,000⟧</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U13-013" value="fix"> לתקן</label><label><input type="radio" name="d_U13-013" value="ok"> תקין</label><label><input type="radio" name="d_U13-013" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U13-013" value="later"> לדחות</label>
+<textarea name="n_U13-013" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U13-015">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">99</span>
+<span class="title">U13-015 · פסקה 4837 · תשובות 4-5</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">pr2 = p  22 = 4p</div></div>
+<div class="row"><b>הבעיה</b><div>האות הלטינית p משמשת במקום הסימן π, בעוד ביתר היחידה (4736, 4855, 4925) נכתב π; יש להחליף את שלושת מופעי ה-p בפסקה.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4835</span>נתון כי קוטר המעגל הוא 4 ס״מ, לפיכך רדיוס המעגל הוא 2 ס״מ.  נציב בנוסחת שטח מעגל:</div><div class="ctx"><span>4837</span>pr2 = p 22 = 4p</div><div class="ctx"><span>4839</span>אם כן, נצפה שהתשובה הנכונה תכיל ביטוי שבו הגורם הראשון הוא 4p, תשובה (2) נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U13-015" value="fix"> לתקן</label><label><input type="radio" name="d_U13-015" value="ok"> תקין</label><label><input type="radio" name="d_U13-015" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U13-015" value="later"> לדחות</label>
+<textarea name="n_U13-015" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U13-016">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">100</span>
+<span class="title">U13-016 · פסקה 4839 · תשובות 4-5</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">הוא 4p</div></div>
+<div class="row"><b>הבעיה</b><div>בטקסט הרץ נכתב 4p אך באותו פתרון עצמו (4855) נכתב 4π — האות p היא שיבוש של π.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4837</span>pr2 = p 22 = 4p</div><div class="ctx"><span>4839</span>אם כן, נצפה שהתשובה הנכונה תכיל ביטוי שבו הגורם הראשון הוא 4p, תשובה (2) נפסלת.</div><div class="ctx"><span>4840</span>★ על מנת לחשב את שטח המשושה ניתן לחלקו באמצעות אלכסונים לשישה משולשים שווי צלעות חופפים, ולחשב את שטחם.  אין צורך להשלים את החישוב, שכן ידוע לנו שנוסחת השטח כוללת ⟦√(3)⟧, לעומת זאת, אין מקור סביר לביטוי ⟦√(2)⟧. לפיכך, תשובה (3) נפסלת.</div><div class="ctx"><span>4841</span>בשלב זה ברור שהנתונים מאפשרים לנו לחשב את גודל השטח המקווקו, תשובה (4) נפסלת.</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U13-016" value="fix"> לתקן</label><label><input type="radio" name="d_U13-016" value="ok"> תקין</label><label><input type="radio" name="d_U13-016" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U13-016" value="later"> לדחות</label>
+<textarea name="n_U13-016" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U13-019">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">101</span>
+<span class="title">U13-019 · פסקה 4848 · תשובות 4-5</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">pr2 = p  22 = 4p</div></div>
+<div class="row"><b>הבעיה</b><div>כמו בפסקה 4837 — p במקום π בשלושה מופעים, בעוד התוצאה הסופית (4855) כתובה עם π.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>4846</span>כדי למצוא את גודל השטח המקווקו נחשב את שטח המעגל ואת שטח המשושה המשוכלל ונחסר ביניהם.  </div><div class="ctx"><span>4847</span>שטח המעגל: נתון כי קוטר המעגל הוא 4 ס״מ, לפיכך רדיוס המעגל הוא 2 ס״מ.  נציב בנוסחת שטח מעגל:</div><div class="ctx"><span>4848</span>pr2 = p 22 = 4p</div><div class="ctx"><span>4850</span>שטח המשושה: באמצעות אלכסונים נחלק את המשושה לשישה משולשים שווי צלעות חופפים, ונחשב את שטחם.  </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U13-019" value="fix"> לתקן</label><label><input type="radio" name="d_U13-019" value="ok"> תקין</label><label><input type="radio" name="d_U13-019" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U13-019" value="later"> לדחות</label>
+<textarea name="n_U13-019" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U14-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">102</span>
+<span class="title">U14-010 · פסקה 5186 · תשובות 6-7</span><span class="cnt">punct</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">1 : 3 :2</div></div>
+<div class="row"><b>הבעיה</b><div>ריווח לא אחיד סביב הנקודתיים; במופעים המקבילים (4993, 4997) נכתב &quot;1 : 3 : 2&quot; (ה-3 הוא √3 שנשמט בחילוץ - אין לגעת בו).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5185</span>דרך ב&#x27; - חישוב מתמטי</div><div class="ctx"><span>5186</span>★ AO הוא גובה במשולש שווה-צלעות, ולפיכך מחלק אותו ל-2 משולשי זהב, כך שיחס הצלעות בתוך כל משולש הוא 1 : ⟦√(3) :2⟧ . נבחן את משולש AOB : BO (הניצב הקטן) שווה ל-r. כדי לעבור מהניצב הקטן לגדול נכפול ב-⟦√(3)⟧ , כך ש-AO שווה ל-⟦√(3)r⟧.</div><div class="ctx"><span>5188</span>נחשב את אורכו של AD באמצעות חיסור הרדיוס מ-AO:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U14-010" value="fix"> לתקן</label><label><input type="radio" name="d_U14-010" value="ok"> תקין</label><label><input type="radio" name="d_U14-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U14-010" value="later"> לדחות</label>
+<textarea name="n_U14-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U14-016">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">103</span>
+<span class="title">U14-016 · פסקה 5258 · תשובות 6-7</span><span class="cnt">math</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">הוא 1 : 2 בהתאמה</div></div>
+<div class="row"><b>הבעיה</b><div>העירוניות כפולות מהבינעירוניות (2/3 עירוניות, 1/3 בינעירוניות בהמשך הפסקה), ועם &quot;בהתאמה&quot; האיבר הראשון בסדר הקריאה חייב להתאים לעירוניות - כלומר 2 : 1; מומלץ לוודא את סדר התצוגה בקובץ הוורד (bidi).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5257</span>דרך א׳ - יחסים</div><div class="ctx"><span>5258</span>★ נתון כי היחס בין כמות הנסיעות העירוניות לכמות הנסיעות הבינעירוניות הוא 1 : 2 בהתאמה, כלומר סך הכל 3 יחידות יחס.  לפיכך,  ⟦(1)/(3)⟧ מהנסיעות שביצע באותו היום היו בינעירוניות, ו-⟦(2)/(3) ⟧  מהנסיעות היו עירוניות.  מכיוון שנתון שנהג המונית ביצע 30 נסיעות, ניתן להסיק כי 10 מהן היו בינעירוניות (⟦ 30 = 10⟧ ⟦(1)/(3)⟧ ) ו-20 מהן היו עירוניות (⟦ 30 = 20⟧  ⟦(2)/(3)⟧).</div><div class="ctx"><span>5259</span>כעת ניתן לחשב את הסכום שהרוויח נהג המונית.  נכפיל את כמות הנסיעות מכל סוג במחירה של כל נסיעה, ונפחית 30 שקלים שהם עלות הדלק:</div><div class="ctx"><span>5260</span>(10  30) + (20  20) – 30 = 300 + 400 – 30 = 700 – 30 = 670</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U14-016" value="fix"> לתקן</label><label><input type="radio" name="d_U14-016" value="ok"> תקין</label><label><input type="radio" name="d_U14-016" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U14-016" value="later"> לדחות</label>
+<textarea name="n_U14-016" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U15-002">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">104</span>
+<span class="title">U15-002 · פסקה 5413 · תשובות 8-9</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">את סכום השטחים הכהים</div></div>
+<div class="row"><b>הבעיה</b><div>בשאר הפתרון (5406, 5422) נוקטים לשון יחיד &quot;השטח הכהה&quot;; יש להאחיד.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">—</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5412</span>דרך ב׳ - חישוב מתמטי</div><div class="ctx"><span>5413</span>על מנת למצוא את סכום השטחים הכהים נחשב את שטח חצי המעגל ואת שטח משולש ABC ונחסר ביניהם.  כדי לחשב את שטח המעגל נמצא את רדיוס המעגל:</div><div class="ctx"><span>5414</span>אורך הקוטר AB הוא 2 ס״מ, ולכן רדיוס חצי המעגל הוא 1 ס״מ.  לפיכך שטח חצי המעגל:</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U15-002" value="fix"> לתקן</label><label><input type="radio" name="d_U15-002" value="ok"> תקין</label><label><input type="radio" name="d_U15-002" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U15-002" value="later"> לדחות</label>
+<textarea name="n_U15-002" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U15-010">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">105</span>
+<span class="title">U15-010 · פסקה 5628 · תשובות 8-9</span><span class="cnt">other</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">באמצעות הזוויות  ו-.</div></div>
+<div class="row"><b>הבעיה</b><div>סימני הזוויות היווניות חסרים בטקסט (וכן בהמשך הפסקה וב-5629).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">תווי α ו-β שלא חולצו מהמסמך (מופיעים תקין ב-5640, 5645)</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5627</span>דרך א&#x27; - הצבת מספרים</div><div class="ctx"><span>5628</span>עלינו להביע את הזווית המסומנת בסימן שאלה באמצעות הזוויות ו-. משום שהנעלמים  ו- מופיעים בנתוני השאלה וגם בתשובות, ניתן להציב במקומם מספרים.  נציב מספרים התואמים לגודל המשוער של הזוויות בהתאם לסרטוט:</div><div class="ctx"><span>5629</span> = 70,  = 80</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U15-010" value="fix"> לתקן</label><label><input type="radio" name="d_U15-010" value="ok"> תקין</label><label><input type="radio" name="d_U15-010" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U15-010" value="later"> לדחות</label>
+<textarea name="n_U15-010" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U15-016">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">106</span>
+<span class="title">U15-016 · פסקה 5727 · תשובות 8-9</span><span class="cnt">consistency</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">הבכור, האמצעי והצעיר הוא:  1 : 114 : 4</div></div>
+<div class="row"><b>הבעיה</b><div>הבכור קיבל פי 4 מהצעיר, ולכן בסדר המילולי בכור:אמצעי:צעיר היחס צריך להיקרא 4 : 1¼ : 1; ייתכן היפוך תצוגה (bidi). כך גם ב-5730 (16 : 20 : 64).</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">סדר התצוגה בפועל של שרשרת היחס במסמך ה-Word</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5726</span>	דרך ג׳ - יחסים</div><div class="ctx"><span>5727</span>★ נתון כי היחס בין מספר הפעמונים של הבכור, האמצעי והצעיר הוא:  ⟦1 : 1(1)/(4) : 4⟧. </div><div class="ctx"><span>5728</span>נגדיל את היחסים פי 4 כדי לחשב במספרים שלמים: 4 : 5 : 16. </div><div class="ctx"><span>5729</span>סך יחידות היחס הינו:  4 + 5 + 16 = 25 </div></div></div>
+<div class="decide"><label><input type="radio" name="d_U15-016" value="fix"> לתקן</label><label><input type="radio" name="d_U15-016" value="ok"> תקין</label><label><input type="radio" name="d_U15-016" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U15-016" value="later"> לדחות</label>
+<textarea name="n_U15-016" placeholder="הערה"></textarea></div></div></div>
+<div class="issue" data-kind="t4" data-id="U15-021">
+<div class="ihead"><span class="tag t4">רמה 4</span><span class="num">107</span>
+<span class="title">U15-021 · פסקה 5793 · תשובות 8-9</span><span class="cnt">reference</span></div><div class="body">
+<div class="row"><b>הטקסט</b><div class="code">9</div></div>
+<div class="row"><b>הבעיה</b><div>בניגוד לשאר הפתרונות, ארבע התשובות מופיעות בלי תוויות (1)-(4); כנראה אבד מספור אוטומטי.</div></div>
+<div class="row"><b>מה חסר</b><div class="rec">תוויות המספור (1)-(4) של רשימת התשובות במסמך המקורי</div></div>
+<div class="row"><b>הקשר</b><div><div class="ctx"><span>5791</span>נציב: x = 4. ראשית, נציב את המספר בתשובות על מנת לוודא שהתשובות מובחנות זו מזו:</div><div class="ctx"><span>5793</span>9</div><div class="ctx"><span>5794</span>5</div><div class="ctx"><span>5795</span>x – 2 = 4 – 2 = 2</div></div></div>
+<div class="decide"><label><input type="radio" name="d_U15-021" value="fix"> לתקן</label><label><input type="radio" name="d_U15-021" value="ok"> תקין</label><label><input type="radio" name="d_U15-021" value="check"> לבדוק מול המקור</label><label><input type="radio" name="d_U15-021" value="later"> לדחות</label>
+<textarea name="n_U15-021" placeholder="הערה"></textarea></div></div></div>
+<div id="toast"></div>
+<script>
+const KEY='decisions_psychometrit_v2';
+document.querySelectorAll('.ihead').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
+function openAll(v){document.querySelectorAll('.issue').forEach(i=>i.classList.toggle('open',!!v))}
+function filt(k){document.querySelectorAll('.issue').forEach(i=>{
+  let s=(k=='all')||(k=='open'?!i.querySelector('input:checked'):i.dataset.kind==k);
+  i.style.display=s?'':'none'})}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');
+  clearTimeout(t._x);t._x=setTimeout(()=>t.classList.remove('on'),2800)}
+function bulk(kind,val){let n=0;
+  document.querySelectorAll('.issue[data-kind="'+kind+'"]').forEach(i=>{
+    if(i.querySelector('input:checked'))return;
+    const r=i.querySelector('input[value="'+val+'"]');if(r){r.checked=true;n++}});
+  save();prog();toast(n?('סומנו '+n+' סוגיות. במה שכבר סימנת לא נגעתי.'):'הכל כבר הוכרע.')}
+const LBL={done:'תיקנתי בוורד',skip:'להשאיר כמו שהוא',later:'לדחות',
+ fix:'לתקן',ok:'תקין - לא לגעת',check:'לבדוק מול המקור/הדפוס'};
+const KND={omml:'עריכה ידנית בוורד',f4:'נוסחאות',t4:'רמה 4'};
+function collect(){const o=[];document.querySelectorAll('.issue').forEach(i=>{
+  const c=i.querySelector('input:checked'),n=i.querySelector('textarea');
+  o.push({id:i.dataset.id,kind:i.dataset.kind,title:i.querySelector('.title').textContent.trim(),
+    decision:c?c.value:null,note:(n&&n.value.trim())?n.value.trim():null})});return o}
+function save(){try{const d={};document.querySelectorAll('.issue').forEach(i=>{
+  const c=i.querySelector('input:checked'),n=i.querySelector('textarea');
+  d[i.dataset.id]={v:c?c.value:null,n:n?n.value:''}});localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}}
+function restore(){try{const d=JSON.parse(localStorage.getItem(KEY)||'{}');
+  document.querySelectorAll('.issue').forEach(i=>{const x=d[i.dataset.id];if(!x)return;
+    if(x.v){const r=i.querySelector('input[value="'+x.v+'"]');if(r)r.checked=true}
+    const n=i.querySelector('textarea');if(n&&x.n)n.value=x.n})}catch(e){}}
+function asText(){const a=collect(),NL=String.fromCharCode(10);
+  let t='הכרעות אלעד - חשיבה פסיכומטרית - '+new Date().toLocaleString('he-IL')+NL+
+    '======================================================================'+NL+NL;
+  ['omml','f4','t4'].forEach(k=>{t+='## '+KND[k]+NL+NL;
+    a.filter(x=>x.kind==k).forEach(x=>{
+      t+='['+(x.decision?(LBL[x.decision]||x.decision):'*** לא הוכרע ***')+']  '+x.id+' - '+x.title+NL;
+      if(x.note)t+='    הערה: '+x.note+NL});t+=NL});
+  const nd=a.filter(x=>!x.decision).length;
+  t+='======================================================================'+NL+
+    'סה"כ '+a.length+' סוגיות · '+(a.length-nd)+' הוכרעו · '+nd+' לא הוכרעו.'+NL;return t}
+function exportFile(){const NL=String.fromCharCode(10);
+  const b=new Blob([String.fromCharCode(65279)+asText()+NL+NL+'--- JSON ---'+NL+JSON.stringify(collect(),null,1)],
+   {type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);
+  a.download='הכרעות אלעד - חשיבה פסיכומטרית.txt';
+  document.body.appendChild(a);a.click();a.remove();
+  toast('הקובץ ירד לתיקיית ההורדות. גרור אותו לצ׳אט.')}
+function copyAll(){navigator.clipboard.writeText(asText())
+  .then(()=>toast('הועתק. הדבק לי בצ׳אט.')).catch(()=>toast('נכשל - השתמש בשמירה לקובץ.'))}
+function clearAll(){if(!confirm('לנקות את כל ההכרעות?'))return;
+  document.querySelectorAll('input:checked').forEach(r=>r.checked=false);
+  document.querySelectorAll('textarea').forEach(t=>t.value='');save();prog();toast('נוקה.')}
+function prog(){const all=document.querySelectorAll('.issue');let d=0;
+  all.forEach(i=>{if(i.querySelector('input:checked')){d++;i.classList.add('done')}else i.classList.remove('done')});
+  document.getElementById('prog').textContent='הוכרעו '+d+' מתוך '+all.length+
+    (d<all.length?('  ·  נשארו '+(all.length-d)):'  ·  הכל מוכן ✔')}
+document.addEventListener('change',()=>{save();prog()});
+document.addEventListener('input',e=>{if(e.target.tagName=='TEXTAREA')save()});
+window.addEventListener('beforeunload',save);restore();prog();
+</script></body></html>
