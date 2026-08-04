@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785803238151,
+  "savedAt": 1785803537882,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.412996+00:00"
+          "resetsAt": "2026-08-05T06:00:00.430204+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.413267+00:00"
+          "resetsAt": "2026-08-05T06:00:00.430478+00:00"
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-claudepsycho",
@@ -201,15 +201,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T19:00:00.197129+00:00"
+          "resetsAt": "2026-08-04T18:59:59.588088+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.197394+00:00"
+          "resetsAt": "2026-08-04T18:59:59.588537+00:00"
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T02:59:59.767329+00:00"
+          "resetsAt": "2026-08-05T03:00:00.455817+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T02:59:59.767717+00:00"
+          "resetsAt": "2026-08-05T03:00:00.456060+00:00"
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-claude2",
@@ -308,8 +308,8 @@
           "t": "M_מנהל הגהה פסיכו",
           "u": "https://claude.ai/cowork/cse_01W44MHu3CjYrKntiRzYvMLj",
           "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-04T00:19:44.898223Z",
+          "sb": "working",
+          "ev": "2026-08-04T00:29:01.457567Z",
           "tag": "remote"
         },
         {
@@ -387,20 +387,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 15,
-          "resetsAt": "2026-08-04T01:19:59.866662+00:00"
+          "pct": 16,
+          "resetsAt": "2026-08-04T01:20:00.117369+00:00"
         },
         "weeklyAll": {
-          "pct": 72,
-          "resetsAt": "2026-08-09T03:59:59.866687+00:00"
+          "pct": 73,
+          "resetsAt": "2026-08-09T04:00:00.117388+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T03:59:59.866984+00:00"
+          "resetsAt": "2026-08-09T04:00:00.117639+00:00"
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T11:59:59.636065+00:00"
+          "resetsAt": "2026-08-04T12:00:00.134520+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T11:59:59.636425+00:00"
+          "resetsAt": "2026-08-04T12:00:00.134794+00:00"
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-claude4",
@@ -448,6 +448,14 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "סגירת שלושה ספרים",
+          "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
+          "st": "active",
+          "sb": "blocked",
+          "ev": "2026-08-04T00:26:18.530703Z",
+          "tag": "remote"
+        },
         {
           "t": "הכרעות ספרי פסיכון",
           "u": "https://claude.ai/cowork/cse_011jm8nMJXKyLk4Tm7fbx4Gb",
@@ -500,19 +508,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": null
+          "resetsAt": "2026-08-04T05:20:00.628081+00:00"
         },
         "weeklyAll": {
           "pct": 0,
-          "resetsAt": "2026-08-10T02:59:59.675130+00:00"
+          "resetsAt": "2026-08-10T02:59:59.628103+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785803238151,
-      "updatedAt": 1785803238151
+      "lastSyncAt": 1785803537882,
+      "updatedAt": 1785803537882
     },
     {
       "id": "acc-info",
