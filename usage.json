@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785863538962,
+  "savedAt": 1785863837878,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.323733+00:00"
+          "resetsAt": "2026-08-05T05:59:59.545205+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.324108+00:00"
+          "resetsAt": "2026-08-05T05:59:59.545528+00:00"
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-claudepsycho",
@@ -197,19 +197,19 @@
       "usage": {
         "session": {
           "pct": 1,
-          "resetsAt": "2026-08-04T19:10:00.505535+00:00"
+          "resetsAt": "2026-08-04T19:10:00.234444+00:00"
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-04T19:00:00.505558+00:00"
+          "resetsAt": "2026-08-04T19:00:00.234466+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.505860+00:00"
+          "resetsAt": "2026-08-04T19:00:00.234776+00:00"
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T02:59:59.794466+00:00"
+          "resetsAt": "2026-08-05T02:59:59.709332+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T02:59:59.794770+00:00"
+          "resetsAt": "2026-08-05T02:59:59.709872+00:00"
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-claude2",
@@ -388,19 +388,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-04T22:00:00.468070+00:00"
+          "resetsAt": "2026-08-04T21:59:59.729188+00:00"
         },
         "weeklyAll": {
           "pct": 78,
-          "resetsAt": "2026-08-09T04:00:00.468097+00:00"
+          "resetsAt": "2026-08-09T03:59:59.729212+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T04:00:00.468362+00:00"
+          "resetsAt": "2026-08-09T03:59:59.729592+00:00"
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-claude3",
@@ -441,8 +441,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-claude4",
@@ -455,7 +455,15 @@
           "u": "https://claude.ai/cowork/cse_01FFCPYRmA3n6wwDTohugUAo",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-04T17:09:05.060911Z",
+          "ev": "2026-08-04T17:13:58.239039Z",
+          "tag": "remote"
+        },
+        {
+          "t": "M_tirgul700 - הגהה - סגור",
+          "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-08-04T17:11:50.674655Z",
           "tag": "remote"
         },
         {
@@ -464,14 +472,6 @@
           "st": "active",
           "sb": "review_ready",
           "ev": "2026-08-04T15:46:17.455951Z",
-          "tag": "remote"
-        },
-        {
-          "t": "M_tirgul700 - הגהה - סגור",
-          "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
-          "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-04T12:44:23.739263Z",
           "tag": "remote"
         },
         {
@@ -493,20 +493,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 17,
-          "resetsAt": "2026-08-04T21:00:00.273581+00:00"
+          "pct": 19,
+          "resetsAt": "2026-08-04T20:59:59.274281+00:00"
         },
         "weeklyAll": {
           "pct": 36,
-          "resetsAt": "2026-08-10T03:00:00.273602+00:00"
+          "resetsAt": "2026-08-10T02:59:59.274299+00:00"
         },
         "weeklyFable": {
           "pct": 44,
-          "resetsAt": "2026-08-10T03:00:00.273878+00:00"
+          "resetsAt": "2026-08-10T03:00:00.274542+00:00"
         }
       },
-      "lastSyncAt": 1785863538962,
-      "updatedAt": 1785863538962
+      "lastSyncAt": 1785863837878,
+      "updatedAt": 1785863837878
     },
     {
       "id": "acc-info",
