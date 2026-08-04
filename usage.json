@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785838938214,
+  "savedAt": 1785839238231,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.077655+00:00"
+          "resetsAt": "2026-08-05T06:00:00.376353+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.078207+00:00"
+          "resetsAt": "2026-08-05T06:00:00.376595+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-claudepsycho",
@@ -197,19 +197,19 @@
       "usage": {
         "session": {
           "pct": 7,
-          "resetsAt": "2026-08-04T13:29:59.464053+00:00"
+          "resetsAt": "2026-08-04T13:30:00.888511+00:00"
         },
         "weeklyAll": {
           "pct": 68,
-          "resetsAt": "2026-08-04T19:00:00.464076+00:00"
+          "resetsAt": "2026-08-04T19:00:00.888533+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.464368+00:00"
+          "resetsAt": "2026-08-04T18:59:59.888769+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T03:00:00.472161+00:00"
+          "resetsAt": "2026-08-05T03:00:00.352471+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T03:00:00.472493+00:00"
+          "resetsAt": "2026-08-05T03:00:00.352776+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-claude2",
@@ -388,19 +388,19 @@
       "usage": {
         "session": {
           "pct": 9,
-          "resetsAt": "2026-08-04T11:20:00.175290+00:00"
+          "resetsAt": "2026-08-04T11:19:59.726545+00:00"
         },
         "weeklyAll": {
           "pct": 78,
-          "resetsAt": "2026-08-09T04:00:00.175313+00:00"
+          "resetsAt": "2026-08-09T03:59:59.726567+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T04:00:00.175579+00:00"
+          "resetsAt": "2026-08-09T03:59:59.726792+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T12:00:00.388578+00:00"
+          "resetsAt": "2026-08-04T11:59:59.508909+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T12:00:00.388878+00:00"
+          "resetsAt": "2026-08-04T11:59:59.509324+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-claude4",
@@ -449,19 +449,11 @@
       "notes": "",
       "sessions": [
         {
-          "t": "__warming__",
+          "t": "M_מנהל הגהות פסיכו - פעיל",
           "u": "https://claude.ai/cowork/cse_01FFCPYRmA3n6wwDTohugUAo",
           "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-04T10:17:55.689145Z",
-          "tag": "remote"
-        },
-        {
-          "t": "M_algebra - הגהה",
-          "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
-          "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-04T10:13:03.270879Z",
+          "sb": "working",
+          "ev": "2026-08-04T10:23:17.956751Z",
           "tag": "remote"
         },
         {
@@ -469,7 +461,15 @@
           "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
           "st": "active",
           "sb": "blocked",
-          "ev": "2026-08-04T10:11:16.593103Z",
+          "ev": "2026-08-04T10:22:18.138271Z",
+          "tag": "remote"
+        },
+        {
+          "t": "M_algebra - הגהה",
+          "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-08-04T10:21:41.542335Z",
           "tag": "remote"
         },
         {
@@ -499,20 +499,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 24,
-          "resetsAt": "2026-08-04T10:59:59.118475+00:00"
+          "pct": 27,
+          "resetsAt": "2026-08-04T11:00:00.338383+00:00"
         },
         "weeklyAll": {
-          "pct": 13,
-          "resetsAt": "2026-08-10T02:59:59.118515+00:00"
+          "pct": 14,
+          "resetsAt": "2026-08-10T03:00:00.338406+00:00"
         },
         "weeklyFable": {
-          "pct": 0,
-          "resetsAt": null
+          "pct": 1,
+          "resetsAt": "2026-08-10T03:00:00.338632+00:00"
         }
       },
-      "lastSyncAt": 1785838938214,
-      "updatedAt": 1785838938214
+      "lastSyncAt": 1785839238231,
+      "updatedAt": 1785839238231
     },
     {
       "id": "acc-info",
