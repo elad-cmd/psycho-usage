@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785844815333,
+  "savedAt": 1785844816668,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
@@ -81,14 +81,6 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
-    },
-    {
-      "id": "tirgul700",
-      "owner": "acc-claude4",
-      "claimedAt": 1785832628693,
-      "claimedAcc": "acc-claude4",
-      "stages": {},
-      "updatedAt": 1785832443030
     },
     {
       "id": "algebra",
@@ -328,6 +320,20 @@
       "blockers": [
         "2 תיקוני גרפיקה — טעות תוכן שתודפס"
       ]
+    },
+    {
+      "id": "tirgul700",
+      "owner": "acc-claude4",
+      "claimedAt": 1785832628693,
+      "claimedAcc": "acc-claude4",
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": ""
+        }
+      },
+      "updatedAt": 1785844816668,
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
