@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785832443030,
+  "savedAt": 1785832975825,
   "savedBy": "dashboard",
   "books": [
     {
@@ -26,17 +26,6 @@
       "owner": "acc-claude2",
       "stages": {},
       "updatedAt": 1785661103356
-    },
-    {
-      "id": "algebra",
-      "stages": {
-        "decide": {
-          "s": "w",
-          "t": "5"
-        }
-      },
-      "updatedAt": 1785755691161,
-      "updatedBy": "אלעד 362"
     },
     {
       "id": "beayot",
@@ -134,6 +123,20 @@
       "claimedAcc": "acc-claude4",
       "stages": {},
       "updatedAt": 1785832443030
+    },
+    {
+      "id": "algebra",
+      "stages": {
+        "decide": {
+          "s": "w",
+          "t": "5"
+        }
+      },
+      "updatedAt": 1785832975825,
+      "updatedBy": "אלעד 362",
+      "owner": "acc-claude4",
+      "claimedAt": 1785833161521,
+      "claimedAcc": "acc-claude4"
     }
   ]
 }
