@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785825137937,
+  "savedAt": 1785825437541,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.254592+00:00"
+          "resetsAt": "2026-08-05T06:00:00.315142+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.254871+00:00"
+          "resetsAt": "2026-08-05T06:00:00.315387+00:00"
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-claudepsycho",
@@ -201,15 +201,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T19:00:00.073175+00:00"
+          "resetsAt": "2026-08-04T18:59:59.844895+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.073497+00:00"
+          "resetsAt": "2026-08-04T18:59:59.845207+00:00"
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T02:59:59.996550+00:00"
+          "resetsAt": "2026-08-05T02:59:59.631408+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T02:59:59.996901+00:00"
+          "resetsAt": "2026-08-05T02:59:59.631634+00:00"
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-claude2",
@@ -309,7 +309,7 @@
           "u": "https://claude.ai/cowork/cse_01W44MHu3CjYrKntiRzYvMLj",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-04T06:28:21.867935Z",
+          "ev": "2026-08-04T06:33:53.374767Z",
           "tag": "remote"
         },
         {
@@ -388,19 +388,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-04T11:20:00.580152+00:00"
+          "resetsAt": "2026-08-04T11:19:59.702289+00:00"
         },
         "weeklyAll": {
           "pct": 75,
-          "resetsAt": "2026-08-09T04:00:00.580177+00:00"
+          "resetsAt": "2026-08-09T03:59:59.702318+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T03:59:59.580436+00:00"
+          "resetsAt": "2026-08-09T03:59:59.702655+00:00"
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T11:59:59.987764+00:00"
+          "resetsAt": "2026-08-04T12:00:00.419332+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T11:59:59.988104+00:00"
+          "resetsAt": "2026-08-04T12:00:00.419623+00:00"
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-claude4",
@@ -449,19 +449,19 @@
       "notes": "",
       "sessions": [
         {
+          "t": "M_algebra, beayot, psychometrit",
+          "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
+          "st": "active",
+          "sb": "working",
+          "ev": "2026-08-04T06:34:08.338591Z",
+          "tag": "remote"
+        },
+        {
           "t": "M_tirgul700",
           "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
           "st": "active",
           "sb": "blocked",
-          "ev": "2026-08-04T06:23:01.240335Z",
-          "tag": "remote"
-        },
-        {
-          "t": "M_algebra, beayot, psychometrit",
-          "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
-          "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-04T06:19:26.789231Z",
+          "ev": "2026-08-04T06:33:39.745311Z",
           "tag": "remote"
         },
         {
@@ -515,20 +515,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 3,
-          "resetsAt": "2026-08-04T11:00:00.655803+00:00"
+          "pct": 4,
+          "resetsAt": "2026-08-04T11:00:00.356532+00:00"
         },
         "weeklyAll": {
           "pct": 7,
-          "resetsAt": "2026-08-10T03:00:00.655831+00:00"
+          "resetsAt": "2026-08-10T03:00:00.356555+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785825137937,
-      "updatedAt": 1785825137937
+      "lastSyncAt": 1785825437541,
+      "updatedAt": 1785825437541
     },
     {
       "id": "acc-info",
