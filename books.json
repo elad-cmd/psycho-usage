@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785844765522,
+  "savedAt": 1785844766460,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
@@ -26,17 +26,6 @@
       "owner": "acc-claude2",
       "stages": {},
       "updatedAt": 1785661103356
-    },
-    {
-      "id": "beayot",
-      "stages": {
-        "decide": {
-          "s": "w",
-          "t": "4"
-        }
-      },
-      "updatedAt": 1785755692270,
-      "updatedBy": "אלעד 362"
     },
     {
       "id": "miluli",
@@ -171,6 +160,21 @@
       "claimedAcc": "acc-claude4",
       "next": "אימות 491 עמ' בוורד (עין: 121/316/350/360) → הגשה ל-04_inbox באישור אלעד",
       "blockers": []
+    },
+    {
+      "id": "beayot",
+      "stages": {
+        "decide": {
+          "s": "w",
+          "t": "4"
+        },
+        "content": {
+          "s": "d",
+          "t": ""
+        }
+      },
+      "updatedAt": 1785844766460,
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
