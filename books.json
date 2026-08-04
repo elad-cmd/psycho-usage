@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1785755696596,
-  "savedBy": "אלעד 362",
+  "savedAt": 1785832431825,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "hibur",
@@ -72,8 +72,20 @@
       "updatedBy": "אלעד 362"
     },
     {
+      "id": "geometry",
+      "owner": "acc-info",
+      "stages": {
+        "proof": {
+          "s": "r",
+          "t": "0"
+        }
+      },
+      "updatedAt": 1785755696596,
+      "updatedBy": "אלעד 362"
+    },
+    {
       "id": "psychometrit",
-      "owner": "acc-elad362",
+      "owner": "acc-claude2",
       "stages": {
         "claim": {
           "s": "d",
@@ -104,26 +116,16 @@
           "t": "107"
         }
       },
-      "updatedAt": 1785755695619,
+      "updatedAt": 1785832431825,
       "updatedBy": "אלעד 362",
       "next": "הכרעות אלעד ב-/decisions/?b=psychometrit — 12 מועמדי מדיניות + 62 ממצאי רמה 4",
       "blockers": [
         "סבב נוסחאות OMML (1,158) טרם בוצע",
         "בדיקה חזותית של 285 סרטוטים טרם בוצעה",
         "25 תיקונים דורשים עריכה ידנית בוורד (עוגן בתוך נוסחה)"
-      ]
-    },
-    {
-      "id": "geometry",
-      "owner": "acc-info",
-      "stages": {
-        "proof": {
-          "s": "r",
-          "t": "0"
-        }
-      },
-      "updatedAt": 1785755696596,
-      "updatedBy": "אלעד 362"
+      ],
+      "claimedAt": 1785832617497,
+      "claimedAcc": "acc-claude2"
     }
   ]
 }
