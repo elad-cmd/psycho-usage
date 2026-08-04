@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785835938293,
+  "savedAt": 1785836238744,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T06:00:00.389359+00:00"
+          "resetsAt": "2026-08-05T05:59:59.758821+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T06:00:00.389714+00:00"
+          "resetsAt": "2026-08-05T05:59:59.759106+00:00"
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-claudepsycho",
@@ -197,19 +197,19 @@
       "usage": {
         "session": {
           "pct": 4,
-          "resetsAt": "2026-08-04T13:29:59.338413+00:00"
+          "resetsAt": "2026-08-04T13:29:59.786696+00:00"
         },
         "weeklyAll": {
-          "pct": 67,
-          "resetsAt": "2026-08-04T19:00:00.338440+00:00"
+          "pct": 68,
+          "resetsAt": "2026-08-04T19:00:00.786725+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.338813+00:00"
+          "resetsAt": "2026-08-04T18:59:59.787051+00:00"
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T02:59:59.555651+00:00"
+          "resetsAt": "2026-08-05T02:59:59.912994+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T02:59:59.555895+00:00"
+          "resetsAt": "2026-08-05T02:59:59.913311+00:00"
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-claude2",
@@ -388,19 +388,19 @@
       "usage": {
         "session": {
           "pct": 8,
-          "resetsAt": "2026-08-04T11:19:59.891928+00:00"
+          "resetsAt": "2026-08-04T11:20:00.376960+00:00"
         },
         "weeklyAll": {
           "pct": 77,
-          "resetsAt": "2026-08-09T03:59:59.891955+00:00"
+          "resetsAt": "2026-08-09T04:00:00.376993+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T03:59:59.892442+00:00"
+          "resetsAt": "2026-08-09T04:00:00.377439+00:00"
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T12:00:00.386356+00:00"
+          "resetsAt": "2026-08-04T12:00:00.015796+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T12:00:00.386750+00:00"
+          "resetsAt": "2026-08-04T12:00:00.016044+00:00"
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-claude4",
@@ -449,11 +449,19 @@
       "notes": "",
       "sessions": [
         {
+          "t": "M_tirgul700 - הגהה",
+          "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
+          "st": "active",
+          "sb": "working",
+          "ev": "2026-08-04T09:34:07.630527Z",
+          "tag": "remote"
+        },
+        {
           "t": "M_algebra - הגהה",
           "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
           "st": "active",
-          "sb": "blocked",
-          "ev": "2026-08-04T09:22:39.593503Z",
+          "sb": "review_ready",
+          "ev": "2026-08-04T09:33:44.813663Z",
           "tag": "remote"
         },
         {
@@ -462,14 +470,6 @@
           "st": "active",
           "sb": "review_ready",
           "ev": "2026-08-04T09:21:33.017599Z",
-          "tag": "remote"
-        },
-        {
-          "t": "M_tirgul700 - הגהה",
-          "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
-          "st": "active",
-          "sb": "blocked",
-          "ev": "2026-08-04T09:16:07.843999Z",
           "tag": "remote"
         },
         {
@@ -492,19 +492,19 @@
       "usage": {
         "session": {
           "pct": 20,
-          "resetsAt": "2026-08-04T11:00:00.155326+00:00"
+          "resetsAt": "2026-08-04T11:00:00.891150+00:00"
         },
         "weeklyAll": {
           "pct": 12,
-          "resetsAt": "2026-08-10T03:00:00.155346+00:00"
+          "resetsAt": "2026-08-10T03:00:00.891189+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785835938293,
-      "updatedAt": 1785835938293
+      "lastSyncAt": 1785836238744,
+      "updatedAt": 1785836238744
     },
     {
       "id": "acc-info",
