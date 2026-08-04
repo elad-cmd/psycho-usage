@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785832038115,
+  "savedAt": 1785832340346,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T05:59:59.855768+00:00"
+          "resetsAt": "2026-08-05T05:59:59.511294+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.856077+00:00"
+          "resetsAt": "2026-08-05T05:59:59.511551+00:00"
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-claudepsycho",
@@ -201,15 +201,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T18:59:59.748923+00:00"
+          "resetsAt": "2026-08-04T18:59:59.900731+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T18:59:59.749194+00:00"
+          "resetsAt": "2026-08-04T18:59:59.901129+00:00"
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T03:00:00.184891+00:00"
+          "resetsAt": "2026-08-05T02:59:59.519234+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T03:00:00.185218+00:00"
+          "resetsAt": "2026-08-05T02:59:59.519592+00:00"
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-claude2",
@@ -309,15 +309,15 @@
           "u": "https://claude.ai/cowork/cse_012py4EVj5uMBnVo1PmB6cD8",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-04T08:24:02.123695Z",
+          "ev": "2026-08-04T08:29:04.014351Z",
           "tag": "remote"
         },
         {
           "t": "M_geometry",
           "u": "https://claude.ai/cowork/cse_01W44MHu3CjYrKntiRzYvMLj",
           "st": "active",
-          "sb": "working",
-          "ev": "2026-08-04T08:23:55.780319Z",
+          "sb": "review_ready",
+          "ev": "2026-08-04T08:25:39.608495Z",
           "tag": "remote"
         },
         {
@@ -388,19 +388,19 @@
       "usage": {
         "session": {
           "pct": 7,
-          "resetsAt": "2026-08-04T11:20:00.651656+00:00"
+          "resetsAt": "2026-08-04T11:20:00.848928+00:00"
         },
         "weeklyAll": {
           "pct": 77,
-          "resetsAt": "2026-08-09T04:00:00.651745+00:00"
+          "resetsAt": "2026-08-09T04:00:00.848949+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T03:59:59.652015+00:00"
+          "resetsAt": "2026-08-09T03:59:59.849192+00:00"
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T12:00:00.404103+00:00"
+          "resetsAt": "2026-08-04T11:59:59.593043+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T12:00:00.404370+00:00"
+          "resetsAt": "2026-08-04T11:59:59.593315+00:00"
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-claude4",
@@ -453,15 +453,15 @@
           "u": "https://claude.ai/cowork/cse_019hMKTPfbnJ9XDMsitQLGoy",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-04T08:24:08.518607Z",
+          "ev": "2026-08-04T08:29:10.120447Z",
           "tag": "remote"
         },
         {
           "t": "M_tirgul700",
           "u": "https://claude.ai/cowork/cse_019eV9SGWr3tJMSDuSTxeTB8",
           "st": "active",
-          "sb": "blocked",
-          "ev": "2026-08-04T08:15:48.038191Z",
+          "sb": "working",
+          "ev": "2026-08-04T08:28:33.051887Z",
           "tag": "remote"
         },
         {
@@ -483,20 +483,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 13,
-          "resetsAt": "2026-08-04T11:00:00.058825+00:00"
+          "pct": 15,
+          "resetsAt": "2026-08-04T11:00:00.342868+00:00"
         },
         "weeklyAll": {
           "pct": 10,
-          "resetsAt": "2026-08-10T03:00:00.058845+00:00"
+          "resetsAt": "2026-08-10T03:00:00.342895+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785832038115,
-      "updatedAt": 1785832038115
+      "lastSyncAt": 1785832340346,
+      "updatedAt": 1785832340346
     },
     {
       "id": "acc-info",
