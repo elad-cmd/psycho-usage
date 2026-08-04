@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1785828738146,
+  "savedAt": 1785829038307,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -97,15 +97,15 @@
         },
         "weeklyAll": {
           "pct": 59,
-          "resetsAt": "2026-08-05T05:59:59.541978+00:00"
+          "resetsAt": "2026-08-05T06:00:00.464850+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T05:59:59.542336+00:00"
+          "resetsAt": "2026-08-05T06:00:00.465533+00:00"
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-claudepsycho",
@@ -201,15 +201,15 @@
         },
         "weeklyAll": {
           "pct": 66,
-          "resetsAt": "2026-08-04T19:00:00.207253+00:00"
+          "resetsAt": "2026-08-04T19:00:00.164572+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T19:00:00.207544+00:00"
+          "resetsAt": "2026-08-04T19:00:00.164836+00:00"
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-elad",
@@ -288,15 +288,15 @@
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-05T03:00:00.210921+00:00"
+          "resetsAt": "2026-08-05T03:00:00.373503+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-05T03:00:00.211342+00:00"
+          "resetsAt": "2026-08-05T03:00:00.373829+00:00"
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-claude2",
@@ -308,8 +308,8 @@
           "t": "M_geometry",
           "u": "https://claude.ai/cowork/cse_01W44MHu3CjYrKntiRzYvMLj",
           "st": "active",
-          "sb": "blocked",
-          "ev": "2026-08-04T07:10:17.905759Z",
+          "sb": "working",
+          "ev": "2026-08-04T07:34:04.137583Z",
           "tag": "remote"
         },
         {
@@ -387,20 +387,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 2,
-          "resetsAt": "2026-08-04T11:19:59.885502+00:00"
+          "pct": 3,
+          "resetsAt": "2026-08-04T11:20:00.924439+00:00"
         },
         "weeklyAll": {
           "pct": 76,
-          "resetsAt": "2026-08-09T03:59:59.885526+00:00"
+          "resetsAt": "2026-08-09T04:00:00.924465+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-09T03:59:59.885890+00:00"
+          "resetsAt": "2026-08-09T03:59:59.924758+00:00"
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-claude3",
@@ -432,15 +432,15 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-04T11:59:59.585856+00:00"
+          "resetsAt": "2026-08-04T11:59:59.869354+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-04T11:59:59.586169+00:00"
+          "resetsAt": "2026-08-04T11:59:59.869729+00:00"
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-claude4",
@@ -516,19 +516,19 @@
       "usage": {
         "session": {
           "pct": 9,
-          "resetsAt": "2026-08-04T11:00:00.125645+00:00"
+          "resetsAt": "2026-08-04T11:00:00.533617+00:00"
         },
         "weeklyAll": {
           "pct": 8,
-          "resetsAt": "2026-08-10T03:00:00.125666+00:00"
+          "resetsAt": "2026-08-10T03:00:00.533645+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": null
         }
       },
-      "lastSyncAt": 1785828738146,
-      "updatedAt": 1785828738146
+      "lastSyncAt": 1785829038307,
+      "updatedAt": 1785829038307
     },
     {
       "id": "acc-info",
