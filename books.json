@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1785943631259,
-  "savedBy": "dashboard",
+  "savedAt": 1785943632338,
+  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
       "id": "_assign",
@@ -613,6 +613,24 @@
       "blockers": []
     },
     {
+      "id": "_order",
+      "ids": [
+        "acc-claude3",
+        "acc-claude4",
+        "acc-office",
+        "acc-elad362",
+        "acc-claudepsycho",
+        "acc-claude2",
+        "acc-elad",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1785943631259
+    },
+    {
       "id": "kis",
       "stages": {
         "content": {
@@ -652,29 +670,11 @@
           "t": ""
         }
       },
-      "updatedAt": 1785943630554,
+      "updatedAt": 1785943632338,
       "updatedBy": "X_ניהול — פסיכו · יוזר ראשי",
       "owner": null,
       "next": "סבב הגהה מלא מאפס — נכנס לתור ככל ספר שטרם התחיל",
       "blockers": []
-    },
-    {
-      "id": "_order",
-      "ids": [
-        "acc-claude3",
-        "acc-claude4",
-        "acc-office",
-        "acc-elad362",
-        "acc-claudepsycho",
-        "acc-claude2",
-        "acc-elad",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1785943631259
     }
   ]
 }
