@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785924503082,
+  "savedAt": 1785924504290,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
@@ -8,12 +8,6 @@
       "owner": "acc-info",
       "stages": {},
       "updatedAt": 1785585553926
-    },
-    {
-      "id": "zmanim",
-      "owner": "acc-claude3",
-      "stages": {},
-      "updatedAt": 1785921301540
     },
     {
       "id": "algebra",
@@ -505,6 +499,18 @@
         "אימות ציר Y תרשים 1 (H381)",
         "בדיקת סרטוטים מול PDF מוורד"
       ]
+    },
+    {
+      "id": "zmanim",
+      "owner": "acc-claude3",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטרים: שאלות (עצרת מתו"
+        }
+      },
+      "updatedAt": 1785924504290,
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
