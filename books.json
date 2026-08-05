@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785919774787,
+  "savedAt": 1785919776508,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
@@ -14,12 +14,6 @@
       "owner": "acc-info",
       "stages": {},
       "updatedAt": 1785585553926
-    },
-    {
-      "id": "mikud700",
-      "owner": "acc-essay",
-      "stages": {},
-      "updatedAt": 1785585560651
     },
     {
       "id": "zmanim",
@@ -421,6 +415,18 @@
       "owner": null,
       "next": "סבב הגהה מלא מאפס — נכנס לתור ככל ספר שטרם התחיל",
       "blockers": []
+    },
+    {
+      "id": "mikud700",
+      "owner": "acc-essay",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: books-psycho/mast"
+        }
+      },
+      "updatedAt": 1785919776507,
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
