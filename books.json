@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785935865886,
+  "savedAt": 1785935873335,
   "savedBy": "dashboard",
   "books": [
     {
@@ -640,24 +640,6 @@
       "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
     },
     {
-      "id": "_order",
-      "ids": [
-        "acc-claude4",
-        "acc-elad362",
-        "acc-claude3",
-        "acc-claude2",
-        "acc-elad",
-        "acc-claudepsycho",
-        "acc-office",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1785935838725
-    },
-    {
       "id": "_assign",
       "stages": {},
       "updatedAt": 1785935865886,
@@ -665,6 +647,24 @@
         "acc-claude4": "M1",
         "acc-elad362": "M4"
       }
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-claude4",
+        "acc-office",
+        "acc-elad362",
+        "acc-claude3",
+        "acc-claude2",
+        "acc-elad",
+        "acc-claudepsycho",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1785935873335
     }
   ]
 }
