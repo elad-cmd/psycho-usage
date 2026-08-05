@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1785927740187,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1785927741130,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "tarshimim",
@@ -533,11 +533,6 @@
       ]
     },
     {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1785927727566
-    },
-    {
       "id": "miluli",
       "stages": {
         "decide": {
@@ -636,6 +631,11 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1785927741130
     }
   ]
 }
