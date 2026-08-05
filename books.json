@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1785924417771,
+  "savedAt": 1785924419023,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
@@ -306,14 +306,6 @@
       ]
     },
     {
-      "id": "hibur",
-      "owner": "acc-office",
-      "stages": {},
-      "updatedAt": 1785920579613,
-      "claimedAt": 1785920763470,
-      "claimedAcc": "acc-office"
-    },
-    {
       "id": "zmanim",
       "owner": "acc-claude3",
       "stages": {},
@@ -465,6 +457,20 @@
       ],
       "claimedAt": 1785845068130,
       "claimedAcc": "acc-claude4"
+    },
+    {
+      "id": "hibur",
+      "owner": "acc-office",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: 3 חלקים (חלק 0 · "
+        }
+      },
+      "updatedAt": 1785924419023,
+      "claimedAt": 1785920763470,
+      "claimedAcc": "acc-office",
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
