@@ -1,14 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1785927697713,
+  "savedAt": 1785927698773,
   "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
-    {
-      "id": "maraton",
-      "owner": "acc-info",
-      "stages": {},
-      "updatedAt": 1785585553926
-    },
     {
       "id": "mikud700",
       "owner": null,
@@ -596,6 +590,18 @@
       "owner": null,
       "next": "סבב הגהה מלא מאפס — נכנס לתור ככל ספר שטרם התחיל",
       "blockers": []
+    },
+    {
+      "id": "maraton",
+      "owner": "acc-info",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטרים: שאלות (עצרת מתו"
+        }
+      },
+      "updatedAt": 1785927698773,
+      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי"
     }
   ]
 }
