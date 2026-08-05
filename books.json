@@ -1,13 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1785935813870,
+  "savedAt": 1785935824512,
   "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1785930406536
-    },
     {
       "id": "algebra",
       "stages": {
@@ -661,6 +656,14 @@
       ],
       "stages": {},
       "updatedAt": 1785935813869
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1785935824512,
+      "map": {
+        "acc-claude4": "M1"
+      }
     }
   ]
 }
