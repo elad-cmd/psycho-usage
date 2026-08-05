@@ -1,26 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1785943630554,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1785943631259,
+  "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_order",
-      "ids": [
-        "acc-claude4",
-        "acc-office",
-        "acc-claude3",
-        "acc-elad362",
-        "acc-claudepsycho",
-        "acc-claude2",
-        "acc-elad",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1785935896303
-    },
     {
       "id": "_assign",
       "stages": {},
@@ -675,6 +657,24 @@
       "owner": null,
       "next": "סבב הגהה מלא מאפס — נכנס לתור ככל ספר שטרם התחיל",
       "blockers": []
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-claude3",
+        "acc-claude4",
+        "acc-office",
+        "acc-elad362",
+        "acc-claudepsycho",
+        "acc-claude2",
+        "acc-elad",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1785943631259
     }
   ]
 }
