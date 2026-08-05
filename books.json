@@ -1,61 +1,13 @@
 {
   "v": 1,
-  "savedAt": 1785927672537,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1785927673633,
+  "savedBy": "mini · אלעד 2",
   "books": [
     {
       "id": "maraton",
       "owner": "acc-info",
       "stages": {},
       "updatedAt": 1785585553926
-    },
-    {
-      "id": "hibur",
-      "owner": "אלעד 2 · Office Cloud",
-      "stages": {
-        "content": {
-          "s": "d",
-          "t": "מאסטר: 3 חלקים (חלק 0 · "
-        },
-        "claim": {
-          "s": "r",
-          "t": "אלעד 2 · Office Cloud"
-        },
-        "survey": {
-          "s": "r",
-          "t": "הסבב נפתח 05.08"
-        },
-        "proof": {
-          "s": "n",
-          "t": ""
-        },
-        "verify": {
-          "s": "n",
-          "t": ""
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1785924430254,
-      "claimedAt": 1785920763470,
-      "claimedAcc": "acc-office",
-      "updatedBy": "X_ניהול — פסיכו · יוזר ראשי",
-      "next": "סקר בסיס → הגהה. היסטוריה: 6 דיווחים (5 תצלומים) ב-01_readonly\\projects\\proofing-2026\\hibur",
-      "blockers": []
     },
     {
       "id": "kis",
@@ -596,6 +548,54 @@
       ],
       "claimedAt": 1785845068130,
       "claimedAcc": "acc-claude4"
+    },
+    {
+      "id": "hibur",
+      "owner": "אלעד 2 · Office Cloud",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: 3 חלקים + PDF דפו"
+        },
+        "claim": {
+          "s": "r",
+          "t": "אלעד 2 · Office Cloud"
+        },
+        "survey": {
+          "s": "r",
+          "t": "הסבב נפתח 05.08"
+        },
+        "proof": {
+          "s": "n",
+          "t": ""
+        },
+        "verify": {
+          "s": "n",
+          "t": ""
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1785927673633,
+      "claimedAt": 1785920763470,
+      "claimedAcc": "acc-office",
+      "updatedBy": "mini · אלעד 2",
+      "next": "סקר בסיס → הגהה. היסטוריה: 6 דיווחים (5 תצלומים) ב-01_readonly\\projects\\proofing-2026\\hibur",
+      "blockers": []
     }
   ]
 }
