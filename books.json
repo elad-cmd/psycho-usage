@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786014452815,
-  "savedBy": "X1",
+  "savedAt": 1786014453930,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_order",
@@ -515,16 +515,6 @@
       "blockers": []
     },
     {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786014438861,
-      "map": {
-        "acc-claude4": "M1",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": ""
-      }
-    },
-    {
       "id": "maraton",
       "owner": "אלעד 4 · elad362",
       "stages": {
@@ -677,6 +667,16 @@
         "3 פריטים ידניים בוורד: הדגשות 'מיליפ' · ניסוחי תיבות טקסט · המרת מספור לליטרלי"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786014453930,
+      "map": {
+        "acc-claude4": "M1",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": "X1"
+      }
     }
   ]
 }
