@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786014438861,
-  "savedBy": "dashboard",
+  "savedAt": 1786014439636,
+  "savedBy": "M_maraton — הגהה · יוזר אלעד 4",
   "books": [
     {
       "id": "_order",
@@ -616,6 +616,16 @@
       "blockers": []
     },
     {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786014438861,
+      "map": {
+        "acc-claude4": "M1",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": ""
+      }
+    },
+    {
       "id": "maraton",
       "owner": "אלעד 4 · elad362",
       "stages": {
@@ -656,7 +666,7 @@
           "t": ""
         }
       },
-      "updatedAt": 1786014437912,
+      "updatedAt": 1786014439636,
       "updatedBy": "M_maraton — הגהה · יוזר אלעד 4",
       "next": "הכרעות אלעד · אימות יריב · החלה",
       "blockers": [
@@ -667,16 +677,6 @@
         "מפתחות סותרים ב-8 מוקדים בין שני הספרים"
       ],
       "decisionsPath": "03_work/elad4/maraton/ממתין לאלעד - מרתון 20260805.md"
-    },
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786014438861,
-      "map": {
-        "acc-claude4": "M1",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": ""
-      }
     }
   ]
 }
