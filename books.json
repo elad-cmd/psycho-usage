@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786014453930,
-  "savedBy": "dashboard",
+  "savedAt": 1786014456227,
+  "savedBy": "X1",
   "books": [
     {
       "id": "_order",
@@ -616,6 +616,16 @@
       ]
     },
     {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786014453930,
+      "map": {
+        "acc-claude4": "M1",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": "X1"
+      }
+    },
+    {
       "id": "miluli",
       "stages": {
         "decide": {
@@ -655,7 +665,7 @@
           "t": ""
         }
       },
-      "updatedAt": 1786014452815,
+      "updatedAt": 1786014456227,
       "updatedBy": "X1",
       "owner": "X1 · שיחת מילולית",
       "next": "אלעד בהכרעות ב-X1 → הוספת ההסברים החדשים לשאלות השלמת משפטים → החלת הגהות המדריכים → קליטת הגהות השלמת משפטים → סגירת הבנה והסקה → 3 הידניים בוורד",
@@ -667,16 +677,6 @@
         "3 פריטים ידניים בוורד: הדגשות 'מיליפ' · ניסוחי תיבות טקסט · המרת מספור לליטרלי"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
-    },
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786014453930,
-      "map": {
-        "acc-claude4": "M1",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": "X1"
-      }
     }
   ]
 }
