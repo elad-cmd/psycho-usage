@@ -1,26 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1786117719611,
-  "savedBy": "M_zmanim - הגהה · מיני",
+  "savedAt": 1786118103431,
+  "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_order",
-      "ids": [
-        "acc-claude3",
-        "acc-claude4",
-        "acc-office",
-        "acc-elad362",
-        "acc-claudepsycho",
-        "acc-claude2",
-        "acc-elad",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1785943631259
-    },
     {
       "id": "_assign",
       "stages": {},
@@ -738,6 +720,24 @@
         "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
       ],
       "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-claude4",
+        "acc-claude3",
+        "acc-office",
+        "acc-elad362",
+        "acc-claudepsycho",
+        "acc-claude2",
+        "acc-elad",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786118103431
     }
   ]
 }
