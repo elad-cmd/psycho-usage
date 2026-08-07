@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786147089089,
+  "savedAt": 1786147089981,
   "savedBy": "dashboard",
   "books": [
     {
@@ -31,14 +31,6 @@
         "acc-claudepsycho": "M3",
         "acc-claude3": ""
       }
-    },
-    {
-      "id": "yesodot_a",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786146488795
     },
     {
       "id": "yesodot_b",
@@ -745,6 +737,14 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786147089089
+    },
+    {
+      "id": "yesodot_a",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786147089981
     }
   ]
 }
