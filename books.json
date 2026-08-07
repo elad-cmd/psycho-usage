@@ -1,19 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1786118117835,
+  "savedAt": 1786118134046,
   "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786015379568,
-      "map": {
-        "acc-claude4": "M1",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": "M3",
-        "acc-claude3": "X1"
-      }
-    },
     {
       "id": "algebra",
       "stages": {
@@ -738,6 +727,17 @@
       ],
       "stages": {},
       "updatedAt": 1786118117835
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786118134046,
+      "map": {
+        "acc-claude4": "M1",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": "M3",
+        "acc-claude3": ""
+      }
     }
   ]
 }
