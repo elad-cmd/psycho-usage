@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786104502245,
-  "savedBy": "M3",
+  "savedAt": 1786104503374,
+  "savedBy": "M_zmanim - הגהה · מיני",
   "books": [
     {
       "id": "_order",
@@ -31,55 +31,6 @@
         "acc-claudepsycho": "M3",
         "acc-claude3": "X1"
       }
-    },
-    {
-      "id": "zmanim",
-      "owner": "מנהל יוזר M3 (claude.psycho) · תפיסה zmanim-20260807T1630-m3mgr",
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": ""
-        },
-        "claim": {
-          "s": "d",
-          "t": "נעילה נלקחה מחדש 07.08 1"
-        },
-        "survey": {
-          "s": "d",
-          "t": "785 שאלות · 29 יחידות+מס"
-        },
-        "proof": {
-          "s": "r",
-          "t": "13/29 יחידות: 12 מהסבב ה"
-        },
-        "verify": {
-          "s": "n",
-          "t": ""
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786103909223,
-      "updatedBy": "M_zmanim - הגהה · מיני",
-      "next": "הגהה יחידה-יחידה; אחר כך אימות יריב והחלה",
-      "blockers": [
-        "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
-      ],
-      "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
     },
     {
       "id": "algebra",
@@ -679,6 +630,55 @@
         "PDF מוורד ל-293 סרטוטים (ירושה מ-M4)",
         "H381 גרפי (ירושה)"
       ]
+    },
+    {
+      "id": "zmanim",
+      "owner": "מנהל יוזר M3 (claude.psycho) · תפיסה zmanim-20260807T1630-m3mgr",
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": ""
+        },
+        "claim": {
+          "s": "d",
+          "t": "נעילה נלקחה מחדש 07.08 1"
+        },
+        "survey": {
+          "s": "d",
+          "t": "785 שאלות · 29 יחידות+מס"
+        },
+        "proof": {
+          "s": "r",
+          "t": "13/29 יחידות: 12 מהסבב ה"
+        },
+        "verify": {
+          "s": "n",
+          "t": ""
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786104503374,
+      "updatedBy": "M_zmanim - הגהה · מיני",
+      "next": "הגהה יחידה-יחידה; אחר כך אימות יריב והחלה",
+      "blockers": [
+        "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
+      ],
+      "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
     }
   ]
 }
