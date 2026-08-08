@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786223823985,
+  "savedAt": 1786223824720,
   "savedBy": "dashboard",
   "books": [
     {
@@ -367,18 +367,6 @@
         "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
       ],
       "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
-    },
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786223731244,
-      "map": {
-        "acc-claude4": "M4",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": "M3",
-        "acc-claude3": "",
-        "acc-elad": "M1"
-      }
     },
     {
       "id": "algebra",
@@ -750,6 +738,18 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786223823985
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786223824720,
+      "map": {
+        "acc-claude4": "M4",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": "M3",
+        "acc-claude3": "M3",
+        "acc-elad": "M1"
+      }
     }
   ]
 }
