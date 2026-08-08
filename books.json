@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786223843711,
-  "savedBy": "dashboard",
+  "savedAt": 1786223844547,
+  "savedBy": "X1",
   "books": [
     {
       "id": "psychometrit",
@@ -684,6 +684,24 @@
       "decisionsPath": "04_inbox/mikud700/M4--20260807-2145/סיכום הסקר - שאלות 700 20260807.md"
     },
     {
+      "id": "_order",
+      "ids": [
+        "acc-elad",
+        "acc-claude4",
+        "acc-office",
+        "acc-claude3",
+        "acc-claudepsycho",
+        "acc-elad362",
+        "acc-claude2",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786223843711
+    },
+    {
       "id": "miluli",
       "stages": {
         "decide": {
@@ -723,7 +741,7 @@
           "t": ""
         }
       },
-      "updatedAt": 1786223842919,
+      "updatedAt": 1786223844547,
       "updatedBy": "X1",
       "owner": "X1 · שיחת מילולית",
       "next": "הכרעת המבנה (DB מול ספר) → קטע 29 → שתי האנלוגיות הבעייתיות → הגהת פרק 8 ופרק 2 → 3 הידניים",
@@ -732,24 +750,6 @@
         "העבודה ב-X1 ואינה נראית מהדיסק — הסטטוס כאן עלול לפגר"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
-    },
-    {
-      "id": "_order",
-      "ids": [
-        "acc-elad",
-        "acc-claude4",
-        "acc-office",
-        "acc-claude3",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-claude2",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786223843711
     }
   ]
 }
