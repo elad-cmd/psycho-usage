@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786223851437,
-  "savedBy": "dashboard",
+  "savedAt": 1786223852445,
+  "savedBy": "X_הפקה - לדפוס · יוזר ראשי",
   "books": [
     {
       "id": "simulaziot",
@@ -682,6 +682,24 @@
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
     },
     {
+      "id": "_order",
+      "ids": [
+        "acc-elad",
+        "acc-office",
+        "acc-claude3",
+        "acc-claude4",
+        "acc-claudepsycho",
+        "acc-elad362",
+        "acc-claude2",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786223851437
+    },
+    {
       "id": "psychometrit",
       "owner": null,
       "stages": {
@@ -722,7 +740,7 @@
           "t": "הספר נפתח מחדש 05.08 — 7"
         }
       },
-      "updatedAt": 1786223850761,
+      "updatedAt": 1786223852445,
       "updatedBy": "X_הפקה - לדפוס · יוזר ראשי",
       "next": "אלעד בודק 7 פריטים חזותיים בקובץ החי; אחריהם — הפקה מחדש וסגירה",
       "blockers": [
@@ -732,24 +750,6 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
-    },
-    {
-      "id": "_order",
-      "ids": [
-        "acc-elad",
-        "acc-office",
-        "acc-claude3",
-        "acc-claude4",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-claude2",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786223851437
     }
   ]
 }
