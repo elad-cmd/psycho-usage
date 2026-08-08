@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786222777922,
-  "savedBy": "X_הפקה - לדפוס · יוזר ראשי",
+  "savedAt": 1786222778817,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_order",
@@ -291,14 +291,6 @@
       "updatedBy": "mini · אלעד 2",
       "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
       "blockers": []
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786222703576
     },
     {
       "id": "kis",
@@ -749,6 +741,14 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786222778817
     }
   ]
 }
