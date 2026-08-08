@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786223290521,
-  "savedBy": "M_zmanim - הגהה · מיני",
+  "savedAt": 1786223724074,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_order",
@@ -20,17 +20,6 @@
       ],
       "stages": {},
       "updatedAt": 1786118117835
-    },
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786118134046,
-      "map": {
-        "acc-claude4": "M1",
-        "acc-elad362": "M4",
-        "acc-claudepsycho": "M3",
-        "acc-claude3": ""
-      }
     },
     {
       "id": "algebra",
@@ -749,6 +738,18 @@
         "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
       ],
       "decisionsPath": "03_work/elad3/zmanim/ממשק הכרעות - ניהול זמנים.html (ייווצר)"
+    },
+    {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786223724074,
+      "map": {
+        "acc-claude4": "M1",
+        "acc-elad362": "M4",
+        "acc-claudepsycho": "M3",
+        "acc-claude3": "",
+        "acc-elad": "M1"
+      }
     }
   ]
 }
