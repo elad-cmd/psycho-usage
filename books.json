@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786223872130,
-  "savedBy": "dashboard",
+  "savedAt": 1786223873262,
+  "savedBy": "M3",
   "books": [
     {
       "id": "tirgul_kamuti",
@@ -687,6 +687,18 @@
       "claimedAcc": "acc-claude4"
     },
     {
+      "id": "_assign",
+      "stages": {},
+      "updatedAt": 1786223872130,
+      "map": {
+        "acc-claude4": "M4",
+        "acc-elad362": "",
+        "acc-claudepsycho": "",
+        "acc-claude3": "M3",
+        "acc-elad": "M1"
+      }
+    },
+    {
       "id": "tirgul700",
       "owner": "מנהל יוזר M3 (claude.psycho) · תפיסה tirgul700-20260807T0050-m3m",
       "claimedAt": 1785832628693,
@@ -729,7 +741,7 @@
           "t": "ממתין: אישור מבנה + החלת"
         }
       },
-      "updatedAt": 1786223871142,
+      "updatedAt": 1786223873262,
       "updatedBy": "M3",
       "next": "אישור אלעד למבנה (דרך המנהל) → החלת 45 תיקוני היום של M4 על מבנה-הסדרה (מקור: M4--20260806-1535) → F9 → בדיקת סרטוטים (PDF מוורד) → close. M3 עובר בינתיים למשימה 3 בתור (kis)",
       "decisionsPath": "04_inbox/tirgul700/M3--20260807-0055/מסירה.md",
@@ -738,18 +750,6 @@
         "PDF מוורד ל-293 סרטוטים",
         "H381 גרפי"
       ]
-    },
-    {
-      "id": "_assign",
-      "stages": {},
-      "updatedAt": 1786223872130,
-      "map": {
-        "acc-claude4": "M4",
-        "acc-elad362": "",
-        "acc-claudepsycho": "",
-        "acc-claude3": "M3",
-        "acc-elad": "M1"
-      }
     }
   ]
 }
