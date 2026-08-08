@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786223850761,
-  "savedBy": "X_הפקה - לדפוס · יוזר ראשי",
+  "savedAt": 1786223851437,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "simulaziot",
@@ -682,24 +682,6 @@
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
     },
     {
-      "id": "_order",
-      "ids": [
-        "acc-elad",
-        "acc-office",
-        "acc-claude4",
-        "acc-claude3",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-claude2",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786223849847
-    },
-    {
       "id": "psychometrit",
       "owner": null,
       "stages": {
@@ -750,6 +732,24 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-elad",
+        "acc-office",
+        "acc-claude3",
+        "acc-claude4",
+        "acc-claudepsycho",
+        "acc-elad362",
+        "acc-claude2",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786223851437
     }
   ]
 }
