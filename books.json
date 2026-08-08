@@ -1,16 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1786223856516,
-  "savedBy": "X_הפקה - לדפוס · יוזר ראשי",
+  "savedAt": 1786223857800,
+  "savedBy": "dashboard",
   "books": [
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786223258294
-    },
     {
       "id": "tarshimim",
       "stages": {
@@ -750,6 +742,14 @@
       ],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786223857800
     }
   ]
 }
