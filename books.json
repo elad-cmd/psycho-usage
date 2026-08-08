@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786223972533,
+  "savedAt": 1786223974843,
   "savedBy": "dashboard",
   "books": [
     {
@@ -478,24 +478,6 @@
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
     },
     {
-      "id": "_order",
-      "ids": [
-        "acc-elad",
-        "acc-office",
-        "acc-claude3",
-        "acc-claude4",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-claude2",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786223851437
-    },
-    {
       "id": "psychometrit",
       "owner": null,
       "stages": {
@@ -750,6 +732,24 @@
         "acc-claude3": "M3",
         "acc-elad": "M1"
       }
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-elad",
+        "acc-office",
+        "acc-claude3",
+        "acc-elad362",
+        "acc-claude4",
+        "acc-claudepsycho",
+        "acc-claude2",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786223974843
     }
   ]
 }
