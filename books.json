@@ -1,26 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1786223840413,
-  "savedBy": "X1",
+  "savedAt": 1786223841248,
+  "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_order",
-      "ids": [
-        "acc-claude4",
-        "acc-office",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-claude3",
-        "acc-claude2",
-        "acc-elad",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786118117835
-    },
     {
       "id": "psychometrit",
       "owner": null,
@@ -750,6 +732,24 @@
         "העבודה ב-X1 ואינה נראית מהדיסק — הסטטוס כאן עלול לפגר"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-claude4",
+        "acc-office",
+        "acc-claude3",
+        "acc-elad",
+        "acc-claudepsycho",
+        "acc-elad362",
+        "acc-claude2",
+        "acc-info",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786223841248
     }
   ]
 }
