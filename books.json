@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261172052,
-  "savedBy": "dashboard",
+  "savedAt": 1786261172835,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -673,32 +673,6 @@
       "updatedBy": "elad1"
     },
     {
-      "id": "yesodot_b",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": "הספר אינו דורש הרכבת תוכ"
-        },
-        "claim": {
-          "s": "d",
-          "t": "M5 09.08 10:25 — תפיסה ל"
-        },
-        "survey": {
-          "s": "d",
-          "t": "M5 09.08: 18 שערים · 23,"
-        },
-        "proof": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786261156668,
-      "updatedBy": "claude2"
-    },
-    {
       "id": "tarshimim",
       "stages": {
         "decide": {
@@ -808,6 +782,36 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786261172052
+    },
+    {
+      "id": "yesodot_b",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        },
+        "claim": {
+          "s": "d",
+          "t": "M5 09.08 10:25 — תפיסה ל"
+        },
+        "survey": {
+          "s": "d",
+          "t": "M5 09.08: 18 שערים · 23,"
+        },
+        "proof": {
+          "s": "n",
+          "t": ""
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786261172835,
+      "updatedBy": "claude2"
     }
   ]
 }
