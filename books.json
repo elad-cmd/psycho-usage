@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261151667,
-  "savedBy": "claude2",
+  "savedAt": 1786261152561,
+  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
   "books": [
     {
       "id": "_assign",
@@ -734,6 +734,20 @@
       "updatedBy": "elad1"
     },
     {
+      "id": "yesodot_b",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        }
+      },
+      "updatedAt": 1786261151667,
+      "updatedBy": "claude2"
+    },
+    {
       "id": "tarshimim",
       "stages": {
         "decide": {
@@ -773,7 +787,7 @@
           "t": "מוכן להגהה סופית — קובץ "
         }
       },
-      "updatedAt": 1786261150855,
+      "updatedAt": 1786261152561,
       "updatedBy": "X_ניהול — פסיכו · יוזר ראשי",
       "owner": null,
       "next": "המתנה לתיקוני המדריכים מההגהה הסופית. כשיחזרו — החלה, ואז מוכן לדפוס. במקביל: שני תיקוני הגרפיקה.",
@@ -782,20 +796,6 @@
       ],
       "claimedAt": 1785942680879,
       "claimedAcc": "acc-claude4"
-    },
-    {
-      "id": "yesodot_b",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": "הספר אינו דורש הרכבת תוכ"
-        }
-      },
-      "updatedAt": 1786261151667,
-      "updatedBy": "claude2"
     }
   ]
 }
