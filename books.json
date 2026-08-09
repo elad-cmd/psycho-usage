@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786279160766,
-  "savedBy": "elad1",
+  "savedAt": 1786279161629,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -34,52 +34,6 @@
       ],
       "stages": {},
       "updatedAt": 1786259105631
-    },
-    {
-      "id": "yesodot_b",
-      "owner": "מנהל יוזר M5 — Cowork (claude2) · תפיסה yesodot_b-20260809T1025-",
-      "next": "שיבוץ סבב הגהה + אישור הבסיס מול אלעד",
-      "blockers": [],
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": "הספר אינו דורש הרכבת תוכ"
-        },
-        "claim": {
-          "s": "d",
-          "t": "M5 09.08 10:25 — תפיסה ל"
-        },
-        "survey": {
-          "s": "d",
-          "t": "M5 09.08: 18 שערים · 23,"
-        },
-        "proof": {
-          "s": "n",
-          "t": ""
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        },
-        "verify": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786278503797,
-      "updatedBy": "claude2"
     },
     {
       "id": "zmanim",
@@ -823,6 +777,52 @@
       },
       "updatedAt": 1786279160766,
       "updatedBy": "elad1"
+    },
+    {
+      "id": "yesodot_b",
+      "owner": "מנהל יוזר M5 — Cowork (claude2) · תפיסה yesodot_b-20260809T1025-",
+      "next": "שיבוץ סבב הגהה + אישור הבסיס מול אלעד",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        },
+        "claim": {
+          "s": "d",
+          "t": "M5 09.08 10:25 — תפיסה ל"
+        },
+        "survey": {
+          "s": "d",
+          "t": "M5 09.08: 18 שערים · 23,"
+        },
+        "proof": {
+          "s": "n",
+          "t": ""
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        },
+        "verify": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786279161629,
+      "updatedBy": "claude2"
     }
   ]
 }
