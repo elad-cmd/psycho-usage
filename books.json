@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786279165521,
-  "savedBy": "X1",
+  "savedAt": 1786279166366,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -676,52 +676,6 @@
       "updatedBy": "elad1"
     },
     {
-      "id": "yesodot_b",
-      "owner": "מנהל יוזר M5 — Cowork (claude2) · תפיסה yesodot_b-20260809T1025-",
-      "next": "שיבוץ סבב הגהה + אישור הבסיס מול אלעד",
-      "blockers": [],
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": "הספר אינו דורש הרכבת תוכ"
-        },
-        "claim": {
-          "s": "d",
-          "t": "M5 09.08 10:25 — תפיסה ל"
-        },
-        "survey": {
-          "s": "d",
-          "t": "M5 09.08: 18 שערים · 23,"
-        },
-        "proof": {
-          "s": "n",
-          "t": ""
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        },
-        "verify": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786279162504,
-      "updatedBy": "claude2"
-    },
-    {
       "id": "mikud700",
       "owner": "מנהל יוזר M4 (Cowork elad362) · תפיסה mikud700-20260807T2105-m4m",
       "stages": {
@@ -823,6 +777,52 @@
         "העבודה ב-X1 ואינה נראית מהדיסק — הסטטוס כאן עלול לפגר"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "yesodot_b",
+      "owner": "מנהל יוזר M5 — Cowork (claude2) · תפיסה yesodot_b-20260809T1025-",
+      "next": "שיבוץ סבב הגהה + אישור הבסיס מול אלעד",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        },
+        "claim": {
+          "s": "d",
+          "t": "M5 09.08 10:25 — תפיסה ל"
+        },
+        "survey": {
+          "s": "d",
+          "t": "M5 09.08: 18 שערים · 23,"
+        },
+        "proof": {
+          "s": "n",
+          "t": ""
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        },
+        "verify": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786279166366,
+      "updatedBy": "claude2"
     }
   ]
 }
