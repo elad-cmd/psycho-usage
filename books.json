@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261173688,
-  "savedBy": "dashboard",
+  "savedAt": 1786261174472,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -776,6 +776,14 @@
       "updatedAt": 1786261172052
     },
     {
+      "id": "tirgul_miluli",
+      "owner": null,
+      "next": "להסיר מהדשבורד",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786261173688
+    },
+    {
       "id": "yesodot_b",
       "owner": null,
       "next": "סקר בסיס",
@@ -800,18 +808,14 @@
         "apply": {
           "s": "n",
           "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
         }
       },
-      "updatedAt": 1786261172835,
+      "updatedAt": 1786261174472,
       "updatedBy": "claude2"
-    },
-    {
-      "id": "tirgul_miluli",
-      "owner": null,
-      "next": "להסיר מהדשבורד",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786261173688
     }
   ]
 }
