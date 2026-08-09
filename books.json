@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261148362,
-  "savedBy": "elad1",
+  "savedAt": 1786261149179,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_assign",
@@ -567,14 +567,6 @@
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
     },
     {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786261112048
-    },
-    {
       "id": "tarshimim",
       "stages": {
         "decide": {
@@ -790,6 +782,14 @@
       },
       "updatedAt": 1786261148361,
       "updatedBy": "elad1"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786261149179
     }
   ]
 }
