@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261152561,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1786261153354,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -734,20 +734,6 @@
       "updatedBy": "elad1"
     },
     {
-      "id": "yesodot_b",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {
-        "content": {
-          "s": "x",
-          "t": "הספר אינו דורש הרכבת תוכ"
-        }
-      },
-      "updatedAt": 1786261151667,
-      "updatedBy": "claude2"
-    },
-    {
       "id": "tarshimim",
       "stages": {
         "decide": {
@@ -796,6 +782,24 @@
       ],
       "claimedAt": 1785942680879,
       "claimedAcc": "acc-claude4"
+    },
+    {
+      "id": "yesodot_b",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        },
+        "claim": {
+          "s": "d",
+          "t": "M5 09.08 10:25 — תפיסה ל"
+        }
+      },
+      "updatedAt": 1786261153354,
+      "updatedBy": "claude2"
     }
   ]
 }
