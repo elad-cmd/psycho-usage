@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786261150855,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1786261151667,
+  "savedBy": "claude2",
   "books": [
     {
       "id": "_assign",
@@ -34,14 +34,6 @@
       ],
       "stages": {},
       "updatedAt": 1786259105631
-    },
-    {
-      "id": "yesodot_b",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786260489235
     },
     {
       "id": "zmanim",
@@ -790,6 +782,20 @@
       ],
       "claimedAt": 1785942680879,
       "claimedAcc": "acc-claude4"
+    },
+    {
+      "id": "yesodot_b",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {
+        "content": {
+          "s": "x",
+          "t": "הספר אינו דורש הרכבת תוכ"
+        }
+      },
+      "updatedAt": 1786261151667,
+      "updatedBy": "claude2"
     }
   ]
 }
