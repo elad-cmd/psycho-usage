@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786274259999,
-  "savedBy": "M_שיחת מנהל פרויקט 20260808 · אלעד פסיכו",
+  "savedAt": 1786274260951,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_assign",
@@ -34,14 +34,6 @@
       ],
       "stages": {},
       "updatedAt": 1786259105631
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786273661754
     },
     {
       "id": "tarshimim",
@@ -823,6 +815,14 @@
       "blockers": [],
       "claimedAt": 1785832617497,
       "claimedAcc": "acc-claude2"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786274260951
     }
   ]
 }
