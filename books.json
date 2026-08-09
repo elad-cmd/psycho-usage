@@ -1,26 +1,8 @@
 {
   "v": 1,
-  "savedAt": 1786281093999,
+  "savedAt": 1786281096640,
   "savedBy": "dashboard",
   "books": [
-    {
-      "id": "_order",
-      "ids": [
-        "acc-elad",
-        "acc-claude2",
-        "acc-claudepsycho",
-        "acc-elad362",
-        "acc-office",
-        "acc-claude3",
-        "acc-claude4",
-        "acc-info",
-        "acc-essay",
-        "acc-shop",
-        "acc-essaymgr"
-      ],
-      "stages": {},
-      "updatedAt": 1786259105631
-    },
     {
       "id": "algebra",
       "stages": {
@@ -824,6 +806,24 @@
         "acc-office": "",
         "acc-info": "M5"
       }
+    },
+    {
+      "id": "_order",
+      "ids": [
+        "acc-elad",
+        "acc-claude2",
+        "acc-claudepsycho",
+        "acc-elad362",
+        "acc-info",
+        "acc-office",
+        "acc-claude3",
+        "acc-claude4",
+        "acc-essay",
+        "acc-shop",
+        "acc-essaymgr"
+      ],
+      "stages": {},
+      "updatedAt": 1786281096640
     }
   ]
 }
