@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1786298240312,
+  "savedAt": 1786298539730,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -93,19 +93,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-09T22:20:00.324388+00:00"
+          "resetsAt": "2026-08-09T22:20:00.095660+00:00"
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T06:00:00.324412+00:00"
+          "resetsAt": "2026-08-12T06:00:00.095683+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T06:00:00.324576+00:00"
+          "resetsAt": "2026-08-12T06:00:00.095883+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-claudepsycho",
@@ -201,15 +201,15 @@
         },
         "weeklyAll": {
           "pct": 56,
-          "resetsAt": "2026-08-11T18:59:59.812760+00:00"
+          "resetsAt": "2026-08-11T18:59:59.697605+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-11T18:59:59.812965+00:00"
+          "resetsAt": "2026-08-11T18:59:59.697769+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-elad",
@@ -222,15 +222,23 @@
           "u": "https://claude.ai/cowork/cse_01Y74n2xQZcoKALphe1VSyYo",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-09T17:51:29.019167Z",
+          "ev": "2026-08-09T17:59:08.131615Z",
           "tag": "remote"
         },
         {
           "t": "M_שיחת מנהל פרויקט",
           "u": "https://claude.ai/cowork/cse_01K4Uv1WdfRhHKrusn6oGAYH",
           "st": "active",
+          "sb": "working",
+          "ev": "2026-08-09T17:59:03.306047Z",
+          "tag": "remote"
+        },
+        {
+          "t": "M_בר התקדמות במשימה",
+          "u": "https://claude.ai/cowork/cse_01GbtnJiarwNhPWPvx8N55pP",
+          "st": "active",
           "sb": "blocked",
-          "ev": "2026-08-09T17:50:58.110223Z",
+          "ev": "2026-08-09T17:58:11.336671Z",
           "tag": "remote"
         },
         {
@@ -288,32 +296,24 @@
           "sb": "blocked",
           "ev": "2026-08-02T10:15:51.249215Z",
           "tag": "remote"
-        },
-        {
-          "t": "X_חשיבה מילולית - הבנה והסקה + השמש",
-          "u": "https://claude.ai/cowork/cse_019PtezyvjLCYYGLAAboKv5S",
-          "st": "active",
-          "sb": "blocked",
-          "ev": "2026-08-02T10:11:20.205663Z",
-          "tag": "remote"
         }
       ],
       "usage": {
         "session": {
-          "pct": 13,
-          "resetsAt": "2026-08-09T21:29:59.586377+00:00"
+          "pct": 14,
+          "resetsAt": "2026-08-09T21:29:59.441251+00:00"
         },
         "weeklyAll": {
           "pct": 37,
-          "resetsAt": "2026-08-13T23:59:59.586402+00:00"
+          "resetsAt": "2026-08-14T00:00:00.441275+00:00"
         },
         "weeklyFable": {
-          "pct": 70,
-          "resetsAt": "2026-08-13T23:59:59.586683+00:00"
+          "pct": 71,
+          "resetsAt": "2026-08-14T00:00:00.441442+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-elad362",
@@ -328,15 +328,15 @@
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T03:00:00.152117+00:00"
+          "resetsAt": "2026-08-12T02:59:59.565134+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T03:00:00.152364+00:00"
+          "resetsAt": "2026-08-12T02:59:59.565296+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-claude2",
@@ -428,19 +428,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-09T22:00:00.371866+00:00"
+          "resetsAt": "2026-08-09T22:00:00.612435+00:00"
         },
         "weeklyAll": {
           "pct": 6,
-          "resetsAt": "2026-08-16T04:00:00.371890+00:00"
+          "resetsAt": "2026-08-16T04:00:00.612460+00:00"
         },
         "weeklyFable": {
           "pct": 11,
-          "resetsAt": "2026-08-16T04:00:00.372129+00:00"
+          "resetsAt": "2026-08-16T04:00:00.612673+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-claude3",
@@ -480,15 +480,15 @@
         },
         "weeklyAll": {
           "pct": 55,
-          "resetsAt": "2026-08-11T12:00:00.394097+00:00"
+          "resetsAt": "2026-08-11T12:00:00.504262+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-11T12:00:00.394326+00:00"
+          "resetsAt": "2026-08-11T12:00:00.504475+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-claude4",
@@ -580,19 +580,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-09T18:30:00.247575+00:00"
+          "resetsAt": "2026-08-09T18:30:00.486907+00:00"
         },
         "weeklyAll": {
           "pct": 90,
-          "resetsAt": "2026-08-10T03:00:00.247598+00:00"
+          "resetsAt": "2026-08-10T03:00:00.486935+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-10T03:00:00.247778+00:00"
+          "resetsAt": "2026-08-10T03:00:00.487156+00:00"
         }
       },
-      "lastSyncAt": 1786298240312,
-      "updatedAt": 1786298240312
+      "lastSyncAt": 1786298539730,
+      "updatedAt": 1786298539730
     },
     {
       "id": "acc-info",
