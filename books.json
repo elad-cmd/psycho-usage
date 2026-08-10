@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786390722928,
+  "savedAt": 1786390724251,
   "savedBy": "dashboard",
   "books": [
     {
@@ -59,14 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786390126619
     },
     {
       "id": "tarshimim",
@@ -967,6 +959,14 @@
       "owner": null,
       "next": "סבב הערות מנהל ← שלב 3 (המלצות) ← הכרעות אלעד; בינתיים: קריאת 5 קטעי הבנק (אושר)",
       "blockers": []
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786390724251
     }
   ]
 }
