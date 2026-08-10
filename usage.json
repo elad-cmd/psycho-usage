@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1786396345582,
+  "savedAt": 1786396645292,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -333,19 +333,19 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-08-10T22:00:00.270857+00:00"
+          "resetsAt": "2026-08-10T22:00:00.102769+00:00"
         },
         "weeklyAll": {
           "pct": 73,
-          "resetsAt": "2026-08-12T06:00:00.270880+00:00"
+          "resetsAt": "2026-08-12T06:00:00.102795+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T06:00:00.271078+00:00"
+          "resetsAt": "2026-08-12T06:00:00.103064+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-claudepsycho",
@@ -777,19 +777,19 @@
       "usage": {
         "session": {
           "pct": 1,
-          "resetsAt": "2026-08-10T22:30:00.120827+00:00"
+          "resetsAt": "2026-08-10T22:30:00.037817+00:00"
         },
         "weeklyAll": {
           "pct": 57,
-          "resetsAt": "2026-08-11T19:00:00.120856+00:00"
+          "resetsAt": "2026-08-11T19:00:00.037853+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-11T19:00:00.121144+00:00"
+          "resetsAt": "2026-08-11T19:00:00.038046+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-elad",
@@ -1305,22 +1305,33 @@
         },
         "weeklyAll": {
           "pct": 52,
-          "resetsAt": "2026-08-13T23:59:59.610906+00:00"
+          "resetsAt": "2026-08-13T23:59:59.857901+00:00"
         },
         "weeklyFable": {
           "pct": 90,
-          "resetsAt": "2026-08-13T23:59:59.611223+00:00"
+          "resetsAt": "2026-08-13T23:59:59.858112+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-elad362",
       "label": "elad362@gmail.com",
       "plan": "Max (20x)",
       "notes": "",
-      "sessions": [],
+      "sessions": [
+        {
+          "t": "Dispatch background conversation",
+          "u": "https://claude.ai/cowork/cse_01T7PbhgaZJnUXm97yabEAMz",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-05-27T22:27:03.590239Z",
+          "c": "2026-05-27T18:55:30.012974Z",
+          "ws": "idle",
+          "tag": "remote"
+        }
+      ],
       "usage": {
         "session": {
           "pct": 0,
@@ -1328,15 +1339,15 @@
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T03:00:00.138808+00:00"
+          "resetsAt": "2026-08-12T03:00:00.414246+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T03:00:00.138977+00:00"
+          "resetsAt": "2026-08-12T03:00:00.414460+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-claude2",
@@ -1518,19 +1529,19 @@
       "usage": {
         "session": {
           "pct": 40,
-          "resetsAt": "2026-08-10T22:00:00.252829+00:00"
+          "resetsAt": "2026-08-10T22:00:00.006318+00:00"
         },
         "weeklyAll": {
           "pct": 31,
-          "resetsAt": "2026-08-16T04:00:00.252850+00:00"
+          "resetsAt": "2026-08-16T04:00:00.006381+00:00"
         },
         "weeklyFable": {
           "pct": 59,
-          "resetsAt": "2026-08-16T04:00:00.253039+00:00"
+          "resetsAt": "2026-08-16T04:00:00.006674+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-claude3",
@@ -1602,19 +1613,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-08-11T00:00:00.187134+00:00"
+          "resetsAt": "2026-08-11T00:00:00.773156+00:00"
         },
         "weeklyAll": {
           "pct": 56,
-          "resetsAt": "2026-08-11T12:00:00.187154+00:00"
+          "resetsAt": "2026-08-11T12:00:00.773185+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-11T12:00:00.187323+00:00"
+          "resetsAt": "2026-08-11T11:59:59.773505+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-claude4",
@@ -1623,22 +1634,32 @@
       "notes": "",
       "sessions": [
         {
-          "t": "M_שיחת מנהל פרויקט 20260810.2",
-          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
+          "t": "__warming__",
+          "u": "https://claude.ai/cowork/cse_01EtzSokquvmv62nxuxTd3jx",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-10T21:08:31.530660Z",
-          "c": "2026-08-10T09:45:26.162862Z",
-          "ws": "running",
+          "ev": "2026-08-10T21:14:06.189461Z",
+          "c": "2026-08-10T21:14:06.189461Z",
+          "ws": "WORKER_STATUS_UNSPECIFIE",
           "tag": "remote"
         },
         {
           "t": "M_הכרעות — מרתון 20260810.3",
           "u": "https://claude.ai/cowork/cse_013Huvdt5WfxJnLEBn4KEL1z",
           "st": "active",
-          "sb": "review_ready",
-          "ev": "2026-08-10T20:58:21.725536Z",
+          "sb": "blocked",
+          "ev": "2026-08-10T21:13:51.455451Z",
           "c": "2026-08-10T17:19:24.634648Z",
+          "ws": "idle",
+          "tag": "remote"
+        },
+        {
+          "t": "M_שיחת מנהל פרויקט 20260810.2",
+          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
+          "st": "active",
+          "sb": "blocked",
+          "ev": "2026-08-10T21:13:30.085889Z",
+          "c": "2026-08-10T09:45:26.162862Z",
           "ws": "idle",
           "tag": "remote"
         },
@@ -1785,20 +1806,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 10,
-          "resetsAt": "2026-08-11T00:40:00.724193+00:00"
+          "pct": 11,
+          "resetsAt": "2026-08-11T00:40:00.289115+00:00"
         },
         "weeklyAll": {
-          "pct": 30,
-          "resetsAt": "2026-08-17T03:00:00.724213+00:00"
+          "pct": 31,
+          "resetsAt": "2026-08-17T03:00:00.289143+00:00"
         },
         "weeklyFable": {
-          "pct": 59,
-          "resetsAt": "2026-08-17T03:00:00.724387+00:00"
+          "pct": 60,
+          "resetsAt": "2026-08-17T03:00:00.289397+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-info",
@@ -1808,20 +1829,20 @@
       "sessions": [],
       "usage": {
         "session": {
-          "pct": 8,
-          "resetsAt": "2026-08-11T01:19:59.225146+00:00"
+          "pct": 10,
+          "resetsAt": "2026-08-11T01:19:59.145988+00:00"
         },
         "weeklyAll": {
-          "pct": 6,
-          "resetsAt": "2026-08-16T00:59:59.225201+00:00"
+          "pct": 7,
+          "resetsAt": "2026-08-16T00:59:59.146011+00:00"
         },
         "weeklyFable": {
-          "pct": 11,
-          "resetsAt": "2026-08-16T00:59:59.225395+00:00"
+          "pct": 12,
+          "resetsAt": "2026-08-16T00:59:59.146227+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-essay",
@@ -1833,10 +1854,10 @@
           "t": "M_טיוב — ניהול זמנים 20260810.1",
           "u": "https://claude.ai/cowork/cse_01U4Kvpz817SLDYkQJyWuqdt",
           "st": "active",
-          "sb": "working",
-          "ev": "2026-08-10T21:09:12.196042Z",
+          "sb": "review_ready",
+          "ev": "2026-08-10T21:11:13.160957Z",
           "c": "2026-08-10T20:25:07.359101Z",
-          "ws": "running",
+          "ws": "idle",
           "tag": "remote"
         },
         {
@@ -1893,19 +1914,19 @@
       "usage": {
         "session": {
           "pct": 29,
-          "resetsAt": "2026-08-10T22:40:00.617523+00:00"
+          "resetsAt": "2026-08-10T22:40:00.301063+00:00"
         },
         "weeklyAll": {
           "pct": 17,
-          "resetsAt": "2026-08-11T09:00:00.617543+00:00"
+          "resetsAt": "2026-08-11T09:00:00.301085+00:00"
         },
         "weeklyFable": {
           "pct": 33,
-          "resetsAt": "2026-08-11T09:00:00.617744+00:00"
+          "resetsAt": "2026-08-11T09:00:00.301304+00:00"
         }
       },
-      "lastSyncAt": 1786396345582,
-      "updatedAt": 1786396345582
+      "lastSyncAt": 1786396645292,
+      "updatedAt": 1786396645292
     },
     {
       "id": "acc-shop",
@@ -1984,7 +2005,7 @@
       "model": "claude-fable-5 (Fable)",
       "role": "טיוב קטעי הבנת הנקרא בסימולציות מול הקודבוק (ניסוח + מינון)",
       "since": "2026-08-11T02:27+03:00",
-      "lastSeen": "2026-08-11T02:27+03:00",
+      "lastSeen": "2026-08-11T04:50+03:00",
       "note": "שיחת הטיוב שהוזנקה בקיקאוף 10.08 23:25 (tiuv-sim-kickoff). על היוזר חיה גם M_שיחת מנהל יוזר M5 — מעדכנת בעצמה.",
       "updatedBy": "M_טיוב — סימולציות 20260810.1 · Fable"
     },
