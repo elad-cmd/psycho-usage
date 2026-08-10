@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786396136208,
+  "savedAt": 1786396137411,
   "savedBy": "dashboard",
   "books": [
     {
@@ -59,14 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786395783717
     },
     {
       "id": "tarshimim",
@@ -967,6 +959,14 @@
       "owner": null,
       "next": "טיוב קטע 25 ← מסמך 00 מסכם + מכתב סיום ← הכרעות אלעד",
       "blockers": []
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786396137411
     }
   ]
 }
