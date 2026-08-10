@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786400411994,
-  "savedBy": "מנהל",
+  "savedAt": 1786400412983,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_tasks",
@@ -59,14 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786399713496
     },
     {
       "id": "tarshimim",
@@ -967,6 +959,14 @@
         "ההכרעה המבנית חוסמת בנייה מחדש (DB מול ספר)"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786400412983
     }
   ]
 }
