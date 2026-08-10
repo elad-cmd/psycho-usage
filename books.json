@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786400412983,
-  "savedBy": "dashboard",
+  "savedAt": 1786400413955,
+  "savedBy": "מנהל",
   "books": [
     {
       "id": "_tasks",
@@ -912,6 +912,14 @@
       "blockers": []
     },
     {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786400412983
+    },
+    {
       "id": "miluli",
       "stages": {
         "decide": {
@@ -951,7 +959,7 @@
           "t": ""
         }
       },
-      "updatedAt": 1786400411994,
+      "updatedAt": 1786400413955,
       "updatedBy": "מנהל",
       "owner": "מנהל פרויקט — ניהול מרכזי",
       "next": "הכרעת המבנה (DB מול ספר) → קטע 29 → שתי האנלוגיות הבעייתיות → הגהת פרק 8 ופרק 2 → 3 הידניים",
@@ -959,14 +967,6 @@
         "ההכרעה המבנית חוסמת בנייה מחדש (DB מול ספר)"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786400412983
     }
   ]
 }
