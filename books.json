@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786389407166,
-  "savedBy": "X_ניהול — פסיכו · יוזר ראשי",
+  "savedAt": 1786389408219,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_tasks",
@@ -59,14 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786388915714
     },
     {
       "id": "tarshimim",
@@ -967,6 +959,14 @@
       "blockers": [],
       "claimedAt": 1785942678340,
       "claimedAcc": "acc-claude4"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786389408219
     }
   ]
 }
