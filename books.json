@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786359502872,
+  "savedAt": 1786359503854,
   "savedBy": "dashboard",
   "books": [
     {
@@ -10,14 +10,6 @@
       },
       "stages": {},
       "updatedAt": 1786350616929
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786358918016
     },
     {
       "id": "tarshimim",
@@ -967,6 +959,14 @@
       "owner": null,
       "next": "פתיחת שיחת M_הבנת הנקרא (essay, Fable) ← קליטה וקודבוק ← ציונים לכל קטע ← המלצות לאלעד",
       "blockers": []
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786359503854
     }
   ]
 }
