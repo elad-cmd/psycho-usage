@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1786488442435,
+  "savedAt": 1786488741673,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -333,19 +333,19 @@
       "usage": {
         "session": {
           "pct": 3,
-          "resetsAt": "2026-08-11T22:49:59.681608+00:00"
+          "resetsAt": "2026-08-11T22:49:59.935913+00:00"
         },
         "weeklyAll": {
           "pct": 76,
-          "resetsAt": "2026-08-12T05:59:59.681625+00:00"
+          "resetsAt": "2026-08-12T05:59:59.935935+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T05:59:59.681782+00:00"
+          "resetsAt": "2026-08-12T05:59:59.936167+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-claudepsycho",
@@ -781,7 +781,7 @@
         },
         "weeklyAll": {
           "pct": 1,
-          "resetsAt": "2026-08-18T19:00:00.250429+00:00"
+          "resetsAt": "2026-08-18T18:59:59.761851+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -789,8 +789,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-elad",
@@ -1340,15 +1340,15 @@
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T03:00:00.299176+00:00"
+          "resetsAt": "2026-08-12T02:59:59.958568+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T03:00:00.299462+00:00"
+          "resetsAt": "2026-08-12T02:59:59.958767+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-claude2",
@@ -1544,15 +1544,15 @@
         },
         "weeklyAll": {
           "pct": 43,
-          "resetsAt": "2026-08-16T04:00:00.058301+00:00"
+          "resetsAt": "2026-08-16T03:59:59.723356+00:00"
         },
         "weeklyFable": {
           "pct": 82,
-          "resetsAt": "2026-08-16T04:00:00.058516+00:00"
+          "resetsAt": "2026-08-16T03:59:59.723602+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-claude3",
@@ -1648,7 +1648,7 @@
         },
         "weeklyAll": {
           "pct": 2,
-          "resetsAt": "2026-08-18T12:00:00.212573+00:00"
+          "resetsAt": "2026-08-18T12:00:00.198682+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -1656,8 +1656,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-claude4",
@@ -1666,22 +1666,22 @@
       "notes": "",
       "sessions": [
         {
-          "t": "M_שיחת מנהל פרויקט 20260810.2",
-          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
-          "st": "active",
-          "sb": "working",
-          "ev": "2026-08-11T22:44:05.667342Z",
-          "c": "2026-08-10T09:45:26.162862Z",
-          "ws": "running",
-          "tag": "remote"
-        },
-        {
           "t": "M_הכרעות — טיוב הבנת הנקרא 20260811.1",
           "u": "https://claude.ai/cowork/cse_01Pn8DEbFuvttCdLmqWwBbAf",
           "st": "active",
           "sb": "blocked",
-          "ev": "2026-08-11T22:29:34.188328Z",
+          "ev": "2026-08-11T22:48:57.801300Z",
           "c": "2026-08-11T09:54:12.334961Z",
+          "ws": "idle",
+          "tag": "remote"
+        },
+        {
+          "t": "M_שיחת מנהל פרויקט 20260810.2",
+          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-08-11T22:48:55.904853Z",
+          "c": "2026-08-10T09:45:26.162862Z",
           "ws": "idle",
           "tag": "remote"
         },
@@ -1868,20 +1868,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 10,
-          "resetsAt": "2026-08-12T02:09:59.085521+00:00"
+          "pct": 11,
+          "resetsAt": "2026-08-12T02:10:00.075506+00:00"
         },
         "weeklyAll": {
           "pct": 58,
-          "resetsAt": "2026-08-17T03:00:00.085539+00:00"
+          "resetsAt": "2026-08-17T03:00:00.075530+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-17T03:00:00.085710+00:00"
+          "resetsAt": "2026-08-17T03:00:00.075796+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-info",
@@ -1896,15 +1896,15 @@
         },
         "weeklyAll": {
           "pct": 10,
-          "resetsAt": "2026-08-16T01:00:00.218848+00:00"
+          "resetsAt": "2026-08-16T01:00:00.493626+00:00"
         },
         "weeklyFable": {
           "pct": 19,
-          "resetsAt": "2026-08-16T01:00:00.219091+00:00"
+          "resetsAt": "2026-08-16T01:00:00.493811+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-essay",
@@ -1990,15 +1990,15 @@
         },
         "weeklyAll": {
           "pct": 11,
-          "resetsAt": "2026-08-18T09:00:00.439106+00:00"
+          "resetsAt": "2026-08-18T08:59:59.860604+00:00"
         },
         "weeklyFable": {
           "pct": 22,
-          "resetsAt": "2026-08-18T09:00:00.439311+00:00"
+          "resetsAt": "2026-08-18T08:59:59.860787+00:00"
         }
       },
-      "lastSyncAt": 1786488442435,
-      "updatedAt": 1786488442435
+      "lastSyncAt": 1786488741673,
+      "updatedAt": 1786488741673
     },
     {
       "id": "acc-shop",
