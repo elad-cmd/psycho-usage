@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1786490242029,
+  "savedAt": 1786490545002,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -337,15 +337,15 @@
         },
         "weeklyAll": {
           "pct": 76,
-          "resetsAt": "2026-08-12T05:59:59.991014+00:00"
+          "resetsAt": "2026-08-12T05:59:59.946967+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T05:59:59.991254+00:00"
+          "resetsAt": "2026-08-12T05:59:59.947185+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-claudepsycho",
@@ -358,7 +358,7 @@
           "u": "https://claude.ai/cowork/cse_017XocR2xy7g1yKNgMgf7bMm",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-11T23:14:04.191878Z",
+          "ev": "2026-08-11T23:18:51.938511Z",
           "c": "2026-08-10T06:42:57.824190Z",
           "ws": "running",
           "tag": "remote"
@@ -777,11 +777,11 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-08-12T04:09:59.861325+00:00"
+          "resetsAt": "2026-08-12T04:09:59.440682+00:00"
         },
         "weeklyAll": {
-          "pct": 1,
-          "resetsAt": "2026-08-18T18:59:59.861347+00:00"
+          "pct": 2,
+          "resetsAt": "2026-08-18T18:59:59.440703+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -789,8 +789,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-elad",
@@ -1340,15 +1340,15 @@
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T02:59:59.526448+00:00"
+          "resetsAt": "2026-08-12T03:00:00.448963+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T02:59:59.526730+00:00"
+          "resetsAt": "2026-08-12T03:00:00.449266+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-claude2",
@@ -1544,15 +1544,15 @@
         },
         "weeklyAll": {
           "pct": 43,
-          "resetsAt": "2026-08-16T03:59:59.578803+00:00"
+          "resetsAt": "2026-08-16T03:59:59.737242+00:00"
         },
         "weeklyFable": {
           "pct": 82,
-          "resetsAt": "2026-08-16T03:59:59.579007+00:00"
+          "resetsAt": "2026-08-16T03:59:59.737478+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-claude3",
@@ -1648,7 +1648,7 @@
         },
         "weeklyAll": {
           "pct": 2,
-          "resetsAt": "2026-08-18T12:00:00.450037+00:00"
+          "resetsAt": "2026-08-18T11:59:59.569604+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -1656,8 +1656,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-claude4",
@@ -1670,7 +1670,7 @@
           "u": "https://claude.ai/cowork/cse_01Pn8DEbFuvttCdLmqWwBbAf",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-11T23:14:09.853356Z",
+          "ev": "2026-08-11T23:18:00.904150Z",
           "c": "2026-08-11T09:54:12.334961Z",
           "ws": "running",
           "tag": "remote"
@@ -1679,10 +1679,10 @@
           "t": "M_שיחת מנהל פרויקט 20260810.2",
           "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
           "st": "active",
-          "sb": "working",
-          "ev": "2026-08-11T23:13:29.747142Z",
+          "sb": "blocked",
+          "ev": "2026-08-11T23:17:12.602411Z",
           "c": "2026-08-10T09:45:26.162862Z",
-          "ws": "running",
+          "ws": "idle",
           "tag": "remote"
         },
         {
@@ -1868,20 +1868,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 16,
-          "resetsAt": "2026-08-12T02:09:59.098598+00:00"
+          "pct": 17,
+          "resetsAt": "2026-08-12T02:09:59.143704+00:00"
         },
         "weeklyAll": {
           "pct": 60,
-          "resetsAt": "2026-08-17T03:00:00.098626+00:00"
+          "resetsAt": "2026-08-17T03:00:00.143726+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-17T03:00:00.098957+00:00"
+          "resetsAt": "2026-08-17T03:00:00.143984+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-info",
@@ -1896,15 +1896,15 @@
         },
         "weeklyAll": {
           "pct": 10,
-          "resetsAt": "2026-08-16T00:59:59.826706+00:00"
+          "resetsAt": "2026-08-16T00:59:59.841011+00:00"
         },
         "weeklyFable": {
           "pct": 19,
-          "resetsAt": "2026-08-16T00:59:59.826907+00:00"
+          "resetsAt": "2026-08-16T00:59:59.841240+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-essay",
@@ -1990,15 +1990,15 @@
         },
         "weeklyAll": {
           "pct": 11,
-          "resetsAt": "2026-08-18T09:00:00.248735+00:00"
+          "resetsAt": "2026-08-18T09:00:00.352951+00:00"
         },
         "weeklyFable": {
           "pct": 22,
-          "resetsAt": "2026-08-18T09:00:00.248945+00:00"
+          "resetsAt": "2026-08-18T09:00:00.353119+00:00"
         }
       },
-      "lastSyncAt": 1786490242029,
-      "updatedAt": 1786490242029
+      "lastSyncAt": 1786490545002,
+      "updatedAt": 1786490545002
     },
     {
       "id": "acc-shop",
