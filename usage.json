@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1786487241478,
+  "savedAt": 1786487540339,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -333,19 +333,19 @@
       "usage": {
         "session": {
           "pct": 3,
-          "resetsAt": "2026-08-11T22:49:59.605107+00:00"
+          "resetsAt": "2026-08-11T22:50:00.084792+00:00"
         },
         "weeklyAll": {
           "pct": 76,
-          "resetsAt": "2026-08-12T05:59:59.605131+00:00"
+          "resetsAt": "2026-08-12T06:00:00.084813+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T05:59:59.605411+00:00"
+          "resetsAt": "2026-08-12T06:00:00.085035+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-claudepsycho",
@@ -781,7 +781,7 @@
         },
         "weeklyAll": {
           "pct": 1,
-          "resetsAt": "2026-08-18T18:59:59.855070+00:00"
+          "resetsAt": "2026-08-18T18:59:59.598342+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -789,8 +789,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-elad",
@@ -1340,15 +1340,15 @@
         },
         "weeklyAll": {
           "pct": 70,
-          "resetsAt": "2026-08-12T02:59:59.635367+00:00"
+          "resetsAt": "2026-08-12T03:00:00.137965+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-12T02:59:59.635640+00:00"
+          "resetsAt": "2026-08-12T03:00:00.138246+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-claude2",
@@ -1544,15 +1544,15 @@
         },
         "weeklyAll": {
           "pct": 43,
-          "resetsAt": "2026-08-16T03:59:59.826014+00:00"
+          "resetsAt": "2026-08-16T04:00:00.188819+00:00"
         },
         "weeklyFable": {
           "pct": 82,
-          "resetsAt": "2026-08-16T03:59:59.826200+00:00"
+          "resetsAt": "2026-08-16T04:00:00.189030+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-claude3",
@@ -1648,7 +1648,7 @@
         },
         "weeklyAll": {
           "pct": 2,
-          "resetsAt": "2026-08-18T12:00:00.286599+00:00"
+          "resetsAt": "2026-08-18T12:00:00.274137+00:00"
         },
         "weeklyFable": {
           "pct": 0,
@@ -1656,8 +1656,8 @@
           "estimated": true
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-claude4",
@@ -1666,23 +1666,23 @@
       "notes": "",
       "sessions": [
         {
-          "t": "M_שיחת מנהל פרויקט 20260810.2",
-          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
-          "st": "active",
-          "sb": "working",
-          "ev": "2026-08-11T22:24:00.886762Z",
-          "c": "2026-08-10T09:45:26.162862Z",
-          "ws": "running",
-          "tag": "remote"
-        },
-        {
           "t": "M_הכרעות — טיוב הבנת הנקרא 20260811.1",
           "u": "https://claude.ai/cowork/cse_01Pn8DEbFuvttCdLmqWwBbAf",
           "st": "active",
           "sb": "working",
-          "ev": "2026-08-11T22:23:35.173869Z",
+          "ev": "2026-08-11T22:28:10.006925Z",
           "c": "2026-08-11T09:54:12.334961Z",
           "ws": "running",
+          "tag": "remote"
+        },
+        {
+          "t": "M_שיחת מנהל פרויקט 20260810.2",
+          "u": "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773",
+          "st": "active",
+          "sb": "blocked",
+          "ev": "2026-08-11T22:25:40.113468Z",
+          "c": "2026-08-10T09:45:26.162862Z",
+          "ws": "idle",
           "tag": "remote"
         },
         {
@@ -1869,19 +1869,19 @@
       "usage": {
         "session": {
           "pct": 8,
-          "resetsAt": "2026-08-12T02:09:59.714416+00:00"
+          "resetsAt": "2026-08-12T02:10:00.019174+00:00"
         },
         "weeklyAll": {
           "pct": 58,
-          "resetsAt": "2026-08-17T02:59:59.714441+00:00"
+          "resetsAt": "2026-08-17T03:00:00.019195+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-08-17T02:59:59.714682+00:00"
+          "resetsAt": "2026-08-17T03:00:00.019434+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-info",
@@ -1896,15 +1896,15 @@
         },
         "weeklyAll": {
           "pct": 10,
-          "resetsAt": "2026-08-16T01:00:00.227895+00:00"
+          "resetsAt": "2026-08-16T01:00:00.091949+00:00"
         },
         "weeklyFable": {
           "pct": 19,
-          "resetsAt": "2026-08-16T01:00:00.228245+00:00"
+          "resetsAt": "2026-08-16T01:00:00.092212+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-essay",
@@ -1990,15 +1990,15 @@
         },
         "weeklyAll": {
           "pct": 11,
-          "resetsAt": "2026-08-18T09:00:00.357099+00:00"
+          "resetsAt": "2026-08-18T08:59:59.731457+00:00"
         },
         "weeklyFable": {
           "pct": 22,
-          "resetsAt": "2026-08-18T09:00:00.357351+00:00"
+          "resetsAt": "2026-08-18T08:59:59.731669+00:00"
         }
       },
-      "lastSyncAt": 1786487241478,
-      "updatedAt": 1786487241478
+      "lastSyncAt": 1786487540339,
+      "updatedAt": 1786487540339
     },
     {
       "id": "acc-shop",
