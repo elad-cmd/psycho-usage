@@ -211,6 +211,11 @@ async function syncOne(sk) {
    קובץ פגום     → זורקים שגיאה ולא כותבים כלום. אסור להתחיל מרשימה ריקה,
                    כי אז כל חשבון שהמפתח שלו מת באותו רגע נמחק מהקובץ ו"נעלם"
                    מהדשבורד עד שהמפתח שלו יחזור לעבוד. */
+/* 8.42 — savedAt של הכתיבה הקודמת: חלון הדגימה למדידת עבודה-בפועל. */
+function readPrevSavedAt(raw) {
+  try { const b = JSON.parse(raw); return (b && typeof b.savedAt === "number") ? b.savedAt : 0; }
+  catch { return 0; }
+}
 function readStore(raw) {
   if (raw === null) { console.log("usage.json לא קיים — הקמה ראשונה מה-SEED."); return SEED.map((a) => ({ ...a })); }
   let blob;
@@ -255,9 +260,13 @@ function ensureRoster(accounts) {
   return accounts;
 }
 
-function merge(accounts, fresh) {
+function merge(accounts, fresh, prevSavedAt) {
   const now = Date.now();
   ensureRoster(accounts);
+  /* 8.42 — מדידת עבודה-בפועל, בשיטת «מדידת זמני עבודה אמיתיים» (דוח 11.08):
+     ev שהתקדם בין שתי כתיבות = השיחה עבדה בחלון הזה; wm (דקות) צובר.
+     ev קפוא = שינה/המתנה — לא נספר. חור ארוך בין כתיבות נספר עד 25 דק'. */
+  const winMin = prevSavedAt ? Math.round(Math.min(Math.max(now - prevSavedAt, 0), 25 * 60e3) / 60000) : 0;
   for (const r of fresh) {
     let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
     if (!acc) {
@@ -267,7 +276,17 @@ function merge(accounts, fresh) {
     acc.usage = carryUsage(acc.usage, r.usage, now);
     acc.lastSyncAt = now;
     acc.updatedAt = now;
-    if (Array.isArray(r.sessions)) acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
+    if (Array.isArray(r.sessions)) {
+      const prevByU = {};
+      for (const x of acc.sessions || []) if (x && x.u) prevByU[x.u] = x;
+      for (const s of r.sessions) {
+        const old = s && s.u ? prevByU[s.u] : null;
+        let wm = (old && typeof old.wm === "number") ? old.wm : 0;
+        if (winMin > 0 && old && old.ev && s.ev && old.ev !== s.ev) wm += winMin;
+        if (wm > 0) s.wm = wm;
+      }
+      acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
+    }
     // ניקוי: מציגים אך ורק שיחות Cowork אמיתיות. רשומות ישנות של שיחות צ׳אט
     // (‎/chat/…) נשארו במאגר מגרסה קודמת והוצגו בטעות ככותרת "שיחות Cowork".
     acc.sessions = (acc.sessions || []).filter((x) => x && typeof x.u === "string" && x.u.includes("/cowork/"));
@@ -394,7 +413,7 @@ async function main() {
 
   if (!PUSH) {
     const raw = existsSync(STORE) ? readFileSync(STORE, "utf8") : null;
-    const payload = merge(readStore(raw), fresh);
+    const payload = merge(readStore(raw), fresh, raw ? readPrevSavedAt(raw) : 0);
     payload.seats = seats; payload.mailFeed = mailFeed;
   payload.bookStates = collectBookStates();
     payload.metrics = collectMetrics();
@@ -406,7 +425,7 @@ async function main() {
   const token = loadToken();
   for (let attempt = 1; attempt <= 3; attempt++) {
     const { sha, raw } = await ghGet(token);
-    const payload = merge(readStore(raw), fresh);
+    const payload = merge(readStore(raw), fresh, raw ? readPrevSavedAt(raw) : 0);
     payload.seats = seats; payload.mailFeed = mailFeed;
     payload.bookStates = collectBookStates();
     payload.metrics = collectMetrics(); // 8.30 — גם במסלול הדחיפה (מוני eladQ והברים החיים)
