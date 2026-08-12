@@ -29,9 +29,11 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
            "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 /* כמה שיחות Cowork נשמרות לכל חשבון ב-usage.json.
    היה 5 — ויוזר עם יותר מחמש שיחות היה מפיל שיחה מגל 0 בדשבורד
-   (הרשימה נחתכת כאן, כך שהדשבורד פשוט לא רואה אותה). 10 מכסה
-   בנוחות את המצב בפועל. אותו מספר מוגדר גם בדשבורד: _src/quota-control.source.html. */
-const MAX_SESSIONS = 10;
+   (הרשימה נחתכת כאן, כך שהדשבורד פשוט לא רואה אותה).
+   8.12 (אלעד 09.08): הועלה מ-10 ל-50 — טאב «שיחות לפי יוזר» בדשבורד מציג
+   עכשיו את כל ההיסטוריה, כולל שיחות סגורות, וההיסטוריה נחתכת רק כאן.
+   בדשבורד עצמו MAX_SESSIONS=10 נשאר תקרת-תצוגה לכרטיסי היוזרים בלבד. */
+const MAX_SESSIONS = 50;
 const COWORK_TAGS = ["cowork-remote", "cowork-local"];
 
 /* רשימת החשבונות הקנונית — משמשת רק להקמה ראשונה של קובץ שלא קיים.
@@ -92,19 +94,38 @@ async function claudeGet(path, sk, extraHeaders, extraCookies) {
    העוגייה הפילה ל-401, החזרתה הקפיצה חזרה ל-200, וכל שאר העוגיות לא השפיעו.
 
    כישלון כאן לעולם לא מפיל את סנכרון ה-usage — מחזיר null, והקורא משאיר את הרשימה הקודמת. */
-async function fetchCoworkSessions(sk, orgUuid) {
-  if (!orgUuid) return null;
+async function fetchCoworkSessions(sk, orgUuids) {
+  // 8.23: מקבל את *כל* הארגונים של החשבון וסורק את כולם — היו חשבונות (elad362, info)
+  // שה-usage שלהם עבד אבל השיחות ישבו בארגון אחר מזה שנבחר, והרשימה חזרה ריקה.
+  if (!Array.isArray(orgUuids)) orgUuids = orgUuids ? [orgUuids] : [];
+  if (!orgUuids.length) return null;
   const V1 = { "anthropic-version": "2023-06-01" };
-  const COOKIES = "lastActiveOrg=" + orgUuid;      // חובה — בלעדיה השער מחזיר 401
   const byId = new Map();
   let anyOk = false;
-  for (const tag of COWORK_TAGS) {
-    try {
-      const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1, COOKIES);
-      anyOk = true;
-      for (const s of (res && res.data) || []) if (s && s.id) { dumpSessionShape(s); byId.set(s.id, s); }
-    } catch (e) {
-      console.log(`   · תגית ${tag}: ${(e && e.message) || e}`);
+  for (const orgUuid of orgUuids) {
+    const COOKIES = "lastActiveOrg=" + orgUuid;
+    for (const tag of COWORK_TAGS) {
+      try {
+        const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}&tags=${encodeURIComponent(tag)}`, sk, V1, COOKIES);
+        anyOk = true;
+        for (const s of (res && res.data) || []) if (s && s.id) { dumpSessionShape(s); byId.set(s.id, s); }
+      } catch (e) {
+        console.log(`   · ארגון ${String(orgUuid).slice(0, 8)} תגית ${tag}: ${(e && e.message) || e}`);
+      }
+    }
+  }
+  // 8.24: נפילה-לאחור — יש חשבונות (M4/M5) שהשיחות שלהם חוזרות ריקות בסינון תגיות
+  // (כנראה אפליקציה שלא מתייגת). אם לא נמצא כלום — שולפים בלי תגיות וממזגים.
+  if (!byId.size) {
+    for (const orgUuid of orgUuids) {
+      const COOKIES = "lastActiveOrg=" + orgUuid;
+      try {
+        const res = await claudeGet(`/v1/code/sessions?limit=${MAX_SESSIONS + 3}`, sk, V1, COOKIES);
+        anyOk = true;
+        for (const s of (res && res.data) || []) if (s && s.id) { dumpSessionShape(s); byId.set(s.id, s); }
+      } catch (e) {
+        console.log(`   · ללא-תגיות ארגון ${String(orgUuid).slice(0, 8)}: ${(e && e.message) || e}`);
+      }
     }
   }
   if (!anyOk) return null;
@@ -120,6 +141,8 @@ async function fetchCoworkSessions(sk, orgUuid) {
       if (s.status) rec.st = String(s.status).slice(0, 32);
       if (s.status_bucket) rec.sb = String(s.status_bucket).slice(0, 32);
       if (s.last_event_at) rec.ev = s.last_event_at;
+      if (s.created_at) rec.c = s.created_at;                        // 8.14 — בר משך הביצוע בדשבורד
+      if (s.worker_status) rec.ws = String(s.worker_status).slice(0, 24); // 8.14 — כחול=רצה עכשיו
       if (Array.isArray(s.tags)) rec.tag = s.tags.includes("cowork-local") ? "local" : "remote";
       // עומס השיחה: ה-API טרם תועד כמחזיר נתון כזה. במקום לנחש — סורקים
       // שדות מספריים ששמם מרמז על ניצול הקשר, ורק אם נמצא כזה כותבים `load`.
@@ -179,7 +202,7 @@ async function syncOne(sk) {
   // או להחזיר resets_at=null. במקרה כזה merge() משלים את שעת האיפוס מהמחזור
   // השבועי הידוע, במקום שהחשבון "ייעלם" מהלוח עד שיהיה בשימוש שוב.
   if (!Array.isArray(u.limits)) throw new Error("תשובת usage לא תקינה (אין limits)");
-  const sessions = await fetchCoworkSessions(sk, org.uuid);
+  const sessions = await fetchCoworkSessions(sk, orgs.map((o) => o.uuid));
   return { email, usage, sessions };
 }
 
@@ -262,7 +285,91 @@ async function ghGet(token) {
 async function ghPut(token, obj, sha) {
   const body = { message: "update usage (local)", content: Buffer.from(JSON.stringify(obj, null, 2)).toString("base64"), branch: "main" };
   if (sha) body.sha = sha;
-  return fetch(GH_API, { method: "PUT", headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json", "Content-Type": "application/json", "User-Agent": "psycho-poller" }, body: JSON.stringify(body) });
+  // 8.40: redirect:"manual" — אם ה-repo שונה-שם/הועבר, GitHub מחזיר 3xx, ו-fetch
+  // היה הופך PUT מופנה ל-GET ומחזיר 200 «הצלחה» ריקה שלא כותבת דבר (זה מקור ה-main
+  // הקפוא). עכשיו 3xx נשאר 3xx (put.ok=false) ונתפס ככישלון רועש למטה.
+  return fetch(GH_API, { method: "PUT", redirect: "manual", headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json", "Content-Type": "application/json", "User-Agent": "psycho-poller" }, body: JSON.stringify(body) });
+}
+
+/* 8.16 — מושבים ופיד דואר מהדיסק המשותף (טאב היוזרים בדשבורד).
+   קריאה בלבד; כשל כאן לעולם לא מפיל את סנכרון המכסות. */
+import { readdirSync, statSync } from "node:fs";
+const SHARED = "C:\\PsychoShared";
+function collectMetrics() {
+  try { return JSON.parse(readFileSync("C:\\PsychoShared\\05_state\\metrics.json", "utf8")); } catch (e) { return null; }
+}
+function collectBookStates() {
+  // 8.26: הערכת התקדמות גסה למטריצת הספרים — נקרא מקבצי ה-state של השיחות.
+  const out = {};
+  try {
+    const dir = "C:\\PsychoShared\\05_state\\sessions";
+    for (const f of readdirSync(dir)) {
+      if (!f.endsWith(".json")) continue;
+      try {
+        const d = JSON.parse(readFileSync(`${dir}\\${f}`, "utf8"));
+        const fin = (d && d.findings) || {};
+        const eq = (d && d.eladQueue) || null;
+        out[f.replace(/\.json$/, "")] = {
+          round: (d && d.round) ? String(d.round).slice(0, 120) : null,
+          total: typeof fin.total === "number" ? fin.total : null,
+          applied: typeof fin.applied === "number" ? fin.applied : null,
+          am: typeof fin.appliedMaster === "number" ? fin.appliedMaster : null, // 8.40 (פריט 8) — מונה «הוחל על המאסטר», נפרד מעותק העבודה
+          at: (d && d.updatedAt) || null,
+          eladQ: eq && typeof eq.remaining === "number" ? { r: eq.remaining, i: (typeof eq.initial === "number" ? eq.initial : null), n: eq.note ? String(eq.note).slice(0, 90) : null } : null,
+          vb: (d && d.verifyBatches && typeof d.verifyBatches.done === "number") ? { d: d.verifyBatches.done, t: d.verifyBatches.total } : null,
+        };
+      } catch (e) { /* קובץ פגום — מדלגים */ }
+    }
+  } catch (e) { /* אין תיקייה — משאירים ריק */ }
+  return out;
+}
+function collectSeats() {
+  const out = {};
+  try {
+    const dir = SHARED + "\\05_state\\seats";
+    for (const f of readdirSync(dir)) {
+      if (!/^(M[1-6]|X1|MICHAL)\.json$/.test(f)) continue;
+      try { out[f.slice(0, -5)] = JSON.parse(readFileSync(dir + "\\" + f, "utf8")); } catch {}
+    }
+  } catch {}
+  return out;
+}
+function parseMailName(name) {
+  const m = /^(.+?)--(\d{8})-(\d{4})--(.+)\.md$/.exec(name);
+  if (!m) return null;
+  const [, from, d, t, subj] = m;
+  return { from, at: `${d.slice(6, 8)}.${d.slice(4, 6)} ${t.slice(0, 2)}:${t.slice(2)}`,
+           stamp: d + t, subject: subj.slice(0, 90) };
+}
+function collectMailFeed() {
+  const out = {};
+  for (let n = 1; n <= 6; n++) {
+    const M = "M" + n, feed = [];
+    try {
+      for (const f of readdirSync(`${SHARED}\\07_mail\\to_${M}`)) {
+        const e = parseMailName(f); if (e) feed.push({ ...e, dir: "אל", _p: `${SHARED}\\07_mail\\to_${M}\\${f}` });
+      }
+    } catch {}
+    try {
+      for (const f of readdirSync(`${SHARED}\\07_mail\\_to_manager`)) {
+        if (!f.startsWith(M + "--")) continue;
+        const e = parseMailName(f); if (e) feed.push({ ...e, dir: "מאת" });
+      }
+    } catch {}
+    feed.sort((a, b) => (b.stamp < a.stamp ? -1 : 1));
+    out[M] = feed.slice(0, 5).map(({ stamp, _p, ...rest }) => {
+      // 8.31: לאיזו שיחה ממוען מכתב מנהל — כדי שדגל «לא זזה» יידלק רק על שיחה שמחכים לה
+      if (_p && rest.dir === "אל") {
+        try {
+          const head = readFileSync(_p, "utf8").slice(0, 400);
+          const mm = head.match(/^אל:\s*(.+)$/m);
+          if (mm) rest.to = mm[1].trim().slice(0, 80);
+        } catch {}
+      }
+      return rest;
+    });
+  }
+  return out;
 }
 
 async function main() {
@@ -283,9 +390,14 @@ async function main() {
   }
   if (!fresh.length) { console.log("אף חשבון לא סונכרן — לא נוגעים ב-usage.json."); process.exit(1); }
 
+  const seats = collectSeats(), mailFeed = collectMailFeed();
+
   if (!PUSH) {
     const raw = existsSync(STORE) ? readFileSync(STORE, "utf8") : null;
     const payload = merge(readStore(raw), fresh);
+    payload.seats = seats; payload.mailFeed = mailFeed;
+  payload.bookStates = collectBookStates();
+    payload.metrics = collectMetrics();
     writeFileSync(STORE, JSON.stringify(payload, null, 2));
     console.log(`✓ usage.json עודכן — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`);
     return;
@@ -295,9 +407,27 @@ async function main() {
   for (let attempt = 1; attempt <= 3; attempt++) {
     const { sha, raw } = await ghGet(token);
     const payload = merge(readStore(raw), fresh);
+    payload.seats = seats; payload.mailFeed = mailFeed;
+    payload.bookStates = collectBookStates();
+    payload.metrics = collectMetrics(); // 8.30 — גם במסלול הדחיפה (מוני eladQ והברים החיים)
+    try { writeFileSync(STORE, JSON.stringify(payload, null, 2)); } catch {} // 8.16 — עותק מקומי גם בדחיפה (למעקב המנהל)
     const put = await ghPut(token, payload, sha);
-    if (put.ok) { console.log(`✓ נדחף ל-GitHub — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`); return; }
+    if (put.ok) {
+      // 8.40: אימות-אחרי-כתיבה. «נדחף ✓» לבדו שיקר בעבר — הדחיפה חזרה 200 וה-main
+      // נשאר קפוא. מאמתים שה-savedAt שכתבנו באמת יושב עכשיו ב-main לפני שמכריזים הצלחה.
+      let landed = false, gotSavedAt = null;
+      try {
+        const chk = await ghGet(token);
+        const got = chk && chk.raw ? JSON.parse(chk.raw) : null;
+        gotSavedAt = got && got.savedAt;
+        landed = !!(got && got.savedAt === payload.savedAt);
+      } catch (e) { console.log("⚠ אימות-אחרי-כתיבה נכשל: " + ((e && e.message) || e)); }
+      if (landed) { console.log(`✓ נדחף ל-GitHub ואומת — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`); return; }
+      console.log(`✗ הדחיפה החזירה ${put.status} אך main לא מציג את הכתיבה (savedAt ב-main: ${gotSavedAt}, ציפינו: ${payload.savedAt}). בדוק שם/כתובת ה-repo וההרשאות. יוצא בכישלון כדי שזה לא יישאר שקט.`);
+      process.exit(1);
+    }
     if (put.status === 409) { console.log(`התנגשות (ניסיון ${attempt}) — מנסה שוב...`); continue; }
+    if (put.status >= 300 && put.status < 400) { console.log(`✗ GitHub הפנה את ה-PUT (status ${put.status}) — כמעט תמיד repo ששונה-שם/הועבר. כתובת ה-API: ${GH_API}. תקן OWNER/REPO והרשאות.`); process.exit(1); }
     console.log("כתיבה ל-GitHub נכשלה: " + put.status + " " + (await put.text()).slice(0, 160));
     process.exit(1);
   }
