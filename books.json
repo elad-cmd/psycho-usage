@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786625769845,
-  "savedBy": "dashboard",
+  "savedAt": 1786625771049,
+  "savedBy": "mini · אלעד 2",
   "books": [
     {
       "id": "_tasks",
@@ -365,54 +365,6 @@
         "costStart טרם נרשם - לרישום המנהלת (יוזר acc-claude3); לשיחה אין גישה לדשבורד"
       ],
       "decisionsPath": "04_inbox/zmanim/M3--20260811-2306-hachraot-misparim/ממתין לאלעד - ניהול זמנים 20260811.md · 04_inbox/zmanim/M3--20260812-1155-hachraot-sgirat-yehidot/ממתין לאלעד - עשר הכרעות שסוגרות שש יחידות 20260812.md"
-    },
-    {
-      "id": "hibur",
-      "owner": "אלעד 2 · Office Cloud",
-      "stages": {
-        "content": {
-          "s": "d",
-          "t": "מאסטר: 3 חלקים + PDF דפו"
-        },
-        "claim": {
-          "s": "d",
-          "t": "נתפס 12:49 · claims/hibu"
-        },
-        "survey": {
-          "s": "d",
-          "t": "כ-9,000 פסקאות · 138 טבל"
-        },
-        "proof": {
-          "s": "r",
-          "t": "פיילוט U02 הושלם (1/23 י"
-        },
-        "verify": {
-          "s": "r",
-          "t": "אימות יריב על U02: 16/17"
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786625638638,
-      "claimedAt": 1785920763470,
-      "claimedAcc": "acc-office",
-      "updatedBy": "mini · אלעד 2",
-      "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
-      "blockers": []
     },
     {
       "id": "kis",
@@ -967,6 +919,54 @@
       "updatedAt": 1786625769845,
       "owner": "reading-sim (M_הבנת הנקרא — סימולציות)",
       "next": "טיוב: סימולציות 2-5 (tiuv_sim) · במקביל: הכרעות אלעד (מפתחות + ערפל/אילו/רלטיביזם + כאב/החלטות + תקן פתרונות) ← סבב החלה",
+      "blockers": []
+    },
+    {
+      "id": "hibur",
+      "owner": "אלעד 2 · Office Cloud",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: 3 חלקים + PDF דפו"
+        },
+        "claim": {
+          "s": "d",
+          "t": "נתפס 12:49 · claims/hibu"
+        },
+        "survey": {
+          "s": "d",
+          "t": "כ-9,000 פסקאות · 138 טבל"
+        },
+        "proof": {
+          "s": "r",
+          "t": "פיילוט U02 הושלם (1/23 י"
+        },
+        "verify": {
+          "s": "r",
+          "t": "אימות יריב על U02: 16/17"
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786625771049,
+      "claimedAt": 1785920763470,
+      "claimedAcc": "acc-office",
+      "updatedBy": "mini · אלעד 2",
+      "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
       "blockers": []
     }
   ]
