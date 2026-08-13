@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786625772458,
-  "savedBy": "dashboard",
+  "savedAt": 1786625773556,
+  "savedBy": "mini · אלעד 2",
   "books": [
     {
       "id": "_tasks",
@@ -877,54 +877,6 @@
       "decisionsPath": "04_inbox/geometry/M3--20260806-1245/הכרעות אלעד - גיאומטריה 20260806.md"
     },
     {
-      "id": "hibur",
-      "owner": "אלעד 2 · Office Cloud",
-      "stages": {
-        "content": {
-          "s": "d",
-          "t": "מאסטר: 3 חלקים + PDF דפו"
-        },
-        "claim": {
-          "s": "d",
-          "t": "נתפס 12:49 · claims/hibu"
-        },
-        "survey": {
-          "s": "d",
-          "t": "כ-9,000 פסקאות · 138 טבל"
-        },
-        "proof": {
-          "s": "r",
-          "t": "פיילוט U02 הושלם (1/23 י"
-        },
-        "verify": {
-          "s": "r",
-          "t": "אימות יריב על U02: 16/17"
-        },
-        "apply": {
-          "s": "n",
-          "t": ""
-        },
-        "deliver": {
-          "s": "n",
-          "t": ""
-        },
-        "decide": {
-          "s": "n",
-          "t": ""
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1786625771049,
-      "claimedAt": 1785920763470,
-      "claimedAcc": "acc-office",
-      "updatedBy": "mini · אלעד 2",
-      "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
-      "blockers": []
-    },
-    {
       "id": "reading_sim",
       "stages": {
         "content": {
@@ -967,6 +919,54 @@
       "updatedAt": 1786625772458,
       "owner": "reading-sim (M_הבנת הנקרא — סימולציות)",
       "next": "טיוב: סימולציות 2-5 (tiuv_sim) · במקביל: הכרעות אלעד (מפתחות + ערפל/אילו/רלטיביזם + כאב/החלטות + תקן פתרונות) ← סבב החלה",
+      "blockers": []
+    },
+    {
+      "id": "hibur",
+      "owner": "אלעד 2 · Office Cloud",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: 3 חלקים + PDF דפו"
+        },
+        "claim": {
+          "s": "d",
+          "t": "נתפס 12:49 · claims/hibu"
+        },
+        "survey": {
+          "s": "d",
+          "t": "כ-9,000 פסקאות · 138 טבל"
+        },
+        "proof": {
+          "s": "r",
+          "t": "פיילוט U02 הושלם (1/23 י"
+        },
+        "verify": {
+          "s": "r",
+          "t": "אימות יריב על U02: 16/17"
+        },
+        "apply": {
+          "s": "n",
+          "t": ""
+        },
+        "deliver": {
+          "s": "n",
+          "t": ""
+        },
+        "decide": {
+          "s": "n",
+          "t": ""
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1786625773556,
+      "claimedAt": 1785920763470,
+      "claimedAcc": "acc-office",
+      "updatedBy": "mini · אלעד 2",
+      "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
       "blockers": []
     }
   ]
