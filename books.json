@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786625862156,
-  "savedBy": "מנהל",
+  "savedAt": 1786625863343,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_tasks",
@@ -59,14 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "tirgul_kamuti",
-      "owner": null,
-      "next": "אישור אלעד ל-9 הכרטיסים, ואז סבב הגהה מלא",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786625110827
     },
     {
       "id": "yesodot_a",
@@ -968,6 +960,14 @@
         "ההכרעה המבנית חוסמת בנייה מחדש (DB מול ספר)"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "tirgul_kamuti",
+      "owner": null,
+      "next": "אישור אלעד ל-9 הכרטיסים, ואז סבב הגהה מלא",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786625863343
     }
   ]
 }
