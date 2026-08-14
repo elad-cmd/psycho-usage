@@ -216,6 +216,13 @@ function readPrevSavedAt(raw) {
   try { const b = JSON.parse(raw); return (b && typeof b.savedAt === "number") ? b.savedAt : 0; }
   catch { return 0; }
 }
+/* 8.46 — הבלוב השלם של הקובץ הקודם. נחוץ כדי לשמר בלוקים שלא הצלחנו לקרוא
+   בסבב הזה (ראה attachBlocks). readStore מחזיר accounts בלבד, וזה לא מספיק. */
+function readPrevBlob(raw) {
+  if (!raw) return null;
+  try { const b = JSON.parse(raw); return (b && typeof b === "object") ? b : null; }
+  catch { return null; }
+}
 function readStore(raw) {
   if (raw === null) { console.log("usage.json לא קיים — הקמה ראשונה מה-SEED."); return SEED.map((a) => ({ ...a })); }
   let blob;
@@ -265,27 +272,45 @@ function merge(accounts, fresh, prevSavedAt) {
   ensureRoster(accounts);
   /* 8.42 — מדידת עבודה-בפועל, בשיטת «מדידת זמני עבודה אמיתיים» (דוח 11.08):
      ev שהתקדם בין שתי כתיבות = השיחה עבדה בחלון הזה; wm (דקות) צובר.
-     ev קפוא = שינה/המתנה — לא נספר. חור ארוך בין כתיבות נספר עד 25 דק'. */
-  const winMin = prevSavedAt ? Math.round(Math.min(Math.max(now - prevSavedAt, 0), 25 * 60e3) / 60000) : 0;
+     ev קפוא = שינה/המתנה — לא נספר. חור ארוך בין כתיבות נספר עד 25 דק'.
+
+     8.46 — שני תיקונים למדידה הזאת (14.08):
+     (א) החלון היה גלובלי (savedAt הקודם של הקובץ) ומשותף לכל החשבונות. כששני
+         פולרים כותבים לסירוגין — מקומי ו-Actions — savedAt קופץ, והחלון של
+         חשבון שסונכרן לפני 12 דקות נמדד לפי כתיבה של פולר אחר מלפני דקה.
+         עכשיו כל חשבון נמדד מול lastSyncAt שלו עצמו.
+     (ב) wm התאפס ל-0 כששיחה לא חזרה מה-API בסבב אחד וחזרה בסבב הבא, כי
+         prevByU נבנה מהרשימה שהוחלפה. עכשיו יש wmMemo לכל חשבון — זיכרון
+         דקות לפי u — והמדידה שורדת היעלמות זמנית. */
   for (const r of fresh) {
     let acc = accounts.find((a) => (a.label || "").toLowerCase().trim() === r.email.toLowerCase().trim());
     if (!acc) {
       acc = { id: "acc-" + r.email.replace(/[^a-z0-9]/gi, "").slice(0, 14), label: r.email, plan: "Max (20x)", notes: "", sessions: [] };
       accounts.push(acc);
     }
+    /* לפני שדורסים את lastSyncAt — זה חלון הדגימה של החשבון הזה. */
+    const accPrev = (typeof acc.lastSyncAt === "number" && acc.lastSyncAt > 0) ? acc.lastSyncAt : 0;
+    const winMin = accPrev ? Math.round(Math.min(Math.max(now - accPrev, 0), 25 * 60e3) / 60000) : 0;
     acc.usage = carryUsage(acc.usage, r.usage, now);
     acc.lastSyncAt = now;
     acc.updatedAt = now;
     if (Array.isArray(r.sessions)) {
+      const memo = (acc.wmMemo && typeof acc.wmMemo === "object") ? acc.wmMemo : {};
       const prevByU = {};
       for (const x of acc.sessions || []) if (x && x.u) prevByU[x.u] = x;
       for (const s of r.sessions) {
         const old = s && s.u ? prevByU[s.u] : null;
-        let wm = (old && typeof old.wm === "number") ? old.wm : 0;
+        let wm = (old && typeof old.wm === "number") ? old.wm
+               : (s && s.u && typeof memo[s.u] === "number") ? memo[s.u] : 0;
         if (winMin > 0 && old && old.ev && s.ev && old.ev !== s.ev) wm += winMin;
-        if (wm > 0) s.wm = wm;
+        if (wm > 0) { s.wm = wm; if (s.u) memo[s.u] = wm; }
       }
       acc.sessions = r.sessions; // רק אם באמת נמשכו — אחרת משאירים את הקודמות
+      /* גיזום הזיכרון — 400 מזהים אחרונים, שהקובץ לא יתפח לנצח. */
+      const mk = Object.keys(memo);
+      if (mk.length > 400) { const live = new Set(r.sessions.map((s) => s && s.u).filter(Boolean));
+        for (const k of mk.slice(0, mk.length - 400)) if (!live.has(k)) delete memo[k]; }
+      acc.wmMemo = memo;
     }
     // ניקוי: מציגים אך ורק שיחות Cowork אמיתיות. רשומות ישנות של שיחות צ׳אט
     // (‎/chat/…) נשארו במאגר מגרסה קודמת והוצגו בטעות ככותרת "שיחות Cowork".
@@ -391,6 +416,77 @@ function collectMailFeed() {
   return out;
 }
 
+/* ==================================================================== *
+ * 8.46 (14.08) — התיקון המרכזי: ארבעת הבלוקים האלה נקראים מדיסק Windows
+ * מקומי (C:\PsychoShared). כשהפולר רץ ב-GitHub Actions על ubuntu הנתיבים
+ * אינם קיימים, ה-collect* מחזירים ריק — וקודם זה נכתב כהשמה ישירה:
+ *     payload.seats = seats;            // {} בענן
+ * כלומר כל ריצת ענן (כל 5 דקות) מחקה את מה שהפולר המקומי כתב, והדשבורד
+ * התחלף בין שתי תמונות שונות לגמרי לפי מי כתב אחרון. זה היה המקור המרכזי
+ * ל«כל פעם משהו אחר לא מעודכן».
+ *
+ * הכלל החדש: **ריק = «לא הצלחתי לקרוא», לא «אין נתונים»**. בלוק שלא נקרא
+ * שומר את ערכו הקודם, ולכל בלוק מוצמדת חותמת זמן משלו ב-payload.stamps —
+ * כדי שהדשבורד יציג את הגיל האמיתי של כל נתון ולא את שעון הדפדפן.
+ * bookStates ממוזג לכל ספר בנפרד: ספר שקובץ המצב שלו לא נקרא בסבב הזה
+ * שומר את רשומתו ואת החותמת שלה, ולא נעלם מהמטריצה.
+ * ==================================================================== */
+const BLOCK_NAMES = ["seats", "mailFeed", "bookStates", "metrics"];
+/* «ריק» כאן הוא רקורסיבי, בכוונה: collectMailFeed מחזיר תמיד את המבנה
+   {M1:[],…,M6:[]} גם כשאין שום גישה לדיסק, כך שבדיקת «יש מפתחות» הייתה
+   מסמנת אותו כנקרא-בהצלחה ודורסת את הפיד. אובייקט שכל ערכיו ריקים = לא נקרא.
+   (המשמעות: מחיקת כל המכתבים של מושב תשאיר את הפיד הקודם עד הסבב הבא שבו
+   יש בו מכתב — מקובל, כי החותמת ליד הפיד תיראה ישנה.) */
+function isEmptyBlock(v) {
+  if (v === null || v === undefined) return true;
+  if (Array.isArray(v)) return v.length === 0;
+  if (typeof v !== "object") return false;
+  const ks = Object.keys(v);
+  if (!ks.length) return true;
+  return ks.every((k) => isEmptyBlock(v[k]));
+}
+function attachBlocks(payload, prev, now, who) {
+  const prevStamps = (prev && prev.stamps && typeof prev.stamps === "object") ? prev.stamps : {};
+  const stamps = {};
+  const collected = {
+    seats: collectSeats(),
+    mailFeed: collectMailFeed(),
+    bookStates: collectBookStates(),
+    metrics: collectMetrics(),
+  };
+  for (const name of BLOCK_NAMES) {
+    const freshBlock = collected[name];
+    const prevBlock = prev ? prev[name] : undefined;
+    if (!isEmptyBlock(freshBlock)) {
+      if (name === "bookStates" && prevBlock && typeof prevBlock === "object") {
+        const merged = { ...prevBlock };
+        const per = { ...((prevStamps.bookStates && prevStamps.bookStates.per) || {}) };
+        let kept = 0;
+        for (const id of Object.keys(prevBlock)) if (!(id in freshBlock)) kept++;
+        for (const id of Object.keys(freshBlock)) { merged[id] = freshBlock[id]; per[id] = now; }
+        payload[name] = merged;
+        stamps[name] = { at: now, by: who, per };
+        if (kept) console.log(`· bookStates: ${Object.keys(freshBlock).length} נקראו, ${kept} נשמרו מהסבב הקודם.`);
+        continue;
+      }
+      payload[name] = freshBlock;
+      stamps[name] = { at: now, by: who };
+      continue;
+    }
+    /* לא נקרא — שומרים את הקודם עם החותמת הקודמת שלו. */
+    payload[name] = (prevBlock !== undefined) ? prevBlock : (name === "metrics" ? null : {});
+    stamps[name] = prevStamps[name] || { at: null, by: null };
+    if (!isEmptyBlock(prevBlock)) {
+      const at = stamps[name] && stamps[name].at;
+      console.log(`· ${name}: לא נקרא בסבב הזה (אין גישה ל-C:\\PsychoShared) — נשמר הקודם` +
+                  (at ? ` מ-${new Date(at).toISOString()}` : " (חותמת לא ידועה)") + ".");
+    }
+  }
+  stamps.accounts = { at: now, by: who };
+  payload.stamps = stamps;
+  return payload;
+}
+
 async function main() {
   const keys = loadKeys();
   if (!Array.isArray(keys) || !keys.length) throw new Error("רשימת המפתחות ריקה");
@@ -409,14 +505,13 @@ async function main() {
   }
   if (!fresh.length) { console.log("אף חשבון לא סונכרן — לא נוגעים ב-usage.json."); process.exit(1); }
 
-  const seats = collectSeats(), mailFeed = collectMailFeed();
+  const WHO = PUSH ? "poller:local" : "poller:github";
 
   if (!PUSH) {
     const raw = existsSync(STORE) ? readFileSync(STORE, "utf8") : null;
+    const prevBlob = readPrevBlob(raw);
     const payload = merge(readStore(raw), fresh, raw ? readPrevSavedAt(raw) : 0);
-    payload.seats = seats; payload.mailFeed = mailFeed;
-  payload.bookStates = collectBookStates();
-    payload.metrics = collectMetrics();
+    attachBlocks(payload, prevBlob, payload.savedAt, WHO);
     writeFileSync(STORE, JSON.stringify(payload, null, 2));
     console.log(`✓ usage.json עודכן — ${fresh.length}/${keys.length} חשבונות סונכרנו, ${payload.accounts.length} בקובץ.`);
     return;
@@ -425,10 +520,9 @@ async function main() {
   const token = loadToken();
   for (let attempt = 1; attempt <= 3; attempt++) {
     const { sha, raw } = await ghGet(token);
+    const prevBlob = readPrevBlob(raw);
     const payload = merge(readStore(raw), fresh, raw ? readPrevSavedAt(raw) : 0);
-    payload.seats = seats; payload.mailFeed = mailFeed;
-    payload.bookStates = collectBookStates();
-    payload.metrics = collectMetrics(); // 8.30 — גם במסלול הדחיפה (מוני eladQ והברים החיים)
+    attachBlocks(payload, prevBlob, payload.savedAt, WHO); // 8.30 → 8.46: מיזוג, לא דריסה
     try { writeFileSync(STORE, JSON.stringify(payload, null, 2)); } catch {} // 8.16 — עותק מקומי גם בדחיפה (למעקב המנהל)
     const put = await ghPut(token, payload, sha);
     if (put.ok) {
