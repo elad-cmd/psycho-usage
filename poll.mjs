@@ -487,7 +487,169 @@ function attachBlocks(payload, prev, now, who) {
   return payload;
 }
 
+/* ==================================================================== *
+ * 8.47 — הפולר הוא המפרסם היחיד של מצב הספרים
+ *
+ * הכלל של אלעד היה כתוב מזמן: שיחה לא נוגעת בדשבורד, היא מעדכנת קובץ מצב
+ * אחד — 05_state\sessions\<book-id>.json — ומישהו אחד קורא את כולם ומסנכרן.
+ * מה שלא היה: המסנכרן רץ רק בלחיצה ידנית (Sync-Dashboard.ps1), ולכן בפועל
+ * הדשבורד היה מעודכן רק כשאלעד נזכר ללחוץ, ושיחות «קיצרו» ופרסמו לבד.
+ *
+ * מכאן: הפרסום רוכב על אותו שעון של המכסות — כל 5 דקות, אותה ריצה, אותו
+ * מקור. אין יותר שני זמנים ואין כפתור שצריך ללחוץ.
+ *
+ * שלוש מגבלות שנבנו לתוך זה בכוונה:
+ *
+ * 1. פרסום רק כשקובצי המצב באמת נקראו. בענן (GitHub Actions) הנתיב
+ *    C:\PsychoShared לא קיים ⟹ readStateFiles מחזיר ריק ⟹ לא מפורסם כלום.
+ *    זו בדיוק אותה מלכודת שמחקה את המושבים והמדדים עד 8.46 — כאן היא
+ *    נחסמת בשורש: אין קריאה, אין כתיבה.
+ *
+ * 2. פרסום רק על שינוי. published.json (ליד usage.json, לא נדחף לענן) שומר
+ *    טביעת אצבע של מה שפורסם לכל ספר. בלי זה כל 5 דקות היו נכתבים
+ *    עשרות commits ל-books.json בלי שום שינוי אמיתי.
+ *
+ * 3. יש שדות שהמפרסם לא נוגע בהם לעולם — ראה DASHBOARD_OWNED למטה.
+ *    השיוך שאלעד עושה בדשבורד (onAssign) הוא הכרעה שלו, לא של השיחה;
+ *    Sync-Dashboard.ps1 כן שלח owner מקובץ המצב, וזה בדיוק מה שהחזיר
+ *    שיוכים אחורה אחרי שאלעד שינה אותם.
+ * ==================================================================== */
+const BOOKS_API = process.env.BOOKS_API || "https://learning-systems-tau.vercel.app/api/books";
+const STATE_DIR = process.env.PSYCHO_STATE_DIR || (SHARED + "\\05_state\\sessions");
+const LEDGER = join(HERE, "published.json");
+const NO_PUBLISH = process.argv.includes("--no-publish") || process.env.NO_PUBLISH === "1";
+/* --dry: מדפיס מה היה מתפרסם ולא שולח כלום (אותו הרגל כמו Sync-Dashboard.ps1
+   בלי ‎-Apply). לא נוגע ב-published.json, כך שהריצה הבאה עדיין תשלח. */
+const DRY = process.argv.includes("--dry");
+
+/* שדות בבעלות בלעדית של הדשבורד — הכרעות של אלעד בדפדפן, לא של השיחה:
+   owner (שיוך יוזר), claimedAt/claimedAcc (חותמת «אושר»), prio (סדר).
+   המפרסם לא שולח אותם גם אם הם מופיעים בקובץ המצב. */
+const DASHBOARD_OWNED = ["owner", "claimedAt", "claimedAcc", "prio"];
+const STAGE_KEYS_PUB = ["content", "claim", "survey", "proof", "verify", "apply", "deliver", "decide", "close"];
+const STAGE_STATES_PUB = ["d", "r", "w", "n", "x"];
+
+function readStateFiles() {
+  const out = [];
+  try {
+    for (const f of readdirSync(STATE_DIR)) {
+      if (!f.endsWith(".json")) continue;
+      try {
+        const d = JSON.parse(readFileSync(join(STATE_DIR, f), "utf8"));
+        if (!d || typeof d !== "object") continue;
+        if (typeof d.schema === "string" && !d.schema.startsWith("psycho-book-state/")) continue;
+        if (!d.id) d.id = f.replace(/\.json$/, "");
+        out.push(d);
+      } catch (e) { console.log(`· קובץ מצב פגום, מדולג: ${f}`); }
+    }
+  } catch (e) { /* אין תיקייה (ענן) — ריק, ואז לא מפרסמים */ }
+  return out;
+}
+
+/* מה מתוך קובץ המצב הופך לרשומת ספר. שדה חסר = לא נשלח (המיזוג בשרת רדוד,
+   ולכן undefined משמר את הקיים במקום למחוק אותו). */
+function publishPayload(st) {
+  const book = {};
+  const str = (v) => (typeof v === "string" && v.trim() ? v : undefined);
+  const arr = (v) => (Array.isArray(v) && v.length ? v.filter((x) => typeof x === "string") : undefined);
+  const num = (v) => (typeof v === "number" && isFinite(v) ? v : undefined);
+
+  const stages = {};
+  for (const k of STAGE_KEYS_PUB) {
+    const v = st.stages && st.stages[k];
+    if (!v || typeof v !== "object" || !STAGE_STATES_PUB.includes(v.s)) continue;
+    stages[k] = { s: v.s, t: typeof v.t === "string" ? v.t.slice(0, 24) : "" };
+  }
+  if (Object.keys(stages).length) book.stages = stages;
+
+  const next = str(st.next);            if (next !== undefined) book.next = next;
+  const blockers = arr(st.blockers);    if (blockers !== undefined) book.blockers = blockers;
+  const facts = arr(st.facts);          if (facts !== undefined) book.facts = facts;
+  const dp = str(st.decisions && st.decisions.sourcePath);
+  if (dp !== undefined) book.decisionsPath = dp;
+
+  /* מדידת עלות המכסה — או תחת st.cost, או שטוח בשורש. שתי הצורות קיימות
+     בקבצים שנכתבו עד היום, ואין סיבה להכריח כתיבה מחדש של קבצים תקינים. */
+  const c = (st.cost && typeof st.cost === "object") ? st.cost : st;
+  for (const [k, v] of [["costStart", num(c.costStart)], ["costEnd", num(c.costEnd)], ["costPct", num(c.costPct)]])
+    if (v !== undefined) book[k] = v;
+  const ca = str(c.costAcc); if (ca !== undefined) book.costAcc = ca;
+
+  for (const k of DASHBOARD_OWNED) delete book[k];
+  return book;
+}
+
+function loadLedger() {
+  try { return JSON.parse(readFileSync(LEDGER, "utf8")) || {}; } catch (e) { return {}; }
+}
+function saveLedger(l) {
+  try { writeFileSync(LEDGER, JSON.stringify(l, null, 2)); } catch (e) { console.log("⚠ published.json לא נשמר: " + ((e && e.message) || e)); }
+}
+
+async function postBook(id, book, by) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const r = await fetch(BOOKS_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        body: JSON.stringify({ id, book, by }),
+      });
+      if (r.ok) return { ok: true };
+      const txt = (await r.text()).slice(0, 160);
+      if (r.status === 409 && attempt < 3) { await new Promise((s) => setTimeout(s, 300 * attempt)); continue; }
+      return { ok: false, why: `${r.status} ${txt}` };
+    } catch (e) {
+      if (attempt < 3) { await new Promise((s) => setTimeout(s, 300 * attempt)); continue; }
+      return { ok: false, why: (e && e.message) || String(e) };
+    }
+  }
+  return { ok: false, why: "409 אחרי 3 ניסיונות" };
+}
+
+/* מפרסם את כל הספרים שהשתנו. מחזיר סיכום לשורת הלוג. */
+async function publishStates(who) {
+  if (NO_PUBLISH) return { skipped: "--no-publish" };
+  const states = readStateFiles();
+  if (!states.length) return { skipped: "אין גישה לקובצי המצב" };
+
+  const ledger = loadLedger();
+  let sent = 0, same = 0, failed = 0;
+  for (const st of states) {
+    const id = String(st.id).slice(0, 64);
+    if (!id || id.startsWith("_")) continue;
+    const book = publishPayload(st);
+    if (!Object.keys(book).length) continue;
+    const fp = JSON.stringify(book);
+    if (ledger[id] && ledger[id].fp === fp) { same++; continue; }
+    const by = String(st.machine || who || "poller").slice(0, 60);
+    if (DRY) { sent++; console.log(`  [DRY] היה מפרסם ${id}: ${fp.slice(0, 300)}`); continue; }
+    const r = await postBook(id, book, by);
+    if (r.ok) {
+      ledger[id] = { fp, at: Date.now(), by };
+      sent++;
+      console.log(`· פורסם ${id} (${Object.keys(book.stages || {}).length} שלבים, by ${by})`);
+    } else {
+      failed++;
+      console.log(`✗ פרסום ${id} נכשל: ${r.why}`);
+    }
+    await new Promise((s) => setTimeout(s, 150));
+  }
+  if (!DRY) saveLedger(ledger);
+  return { sent, same, failed, total: states.length, dry: DRY };
+}
+
+function logPublish(res) {
+  if (res.skipped) { console.log(`· פרסום ספרים: מדולג (${res.skipped}).`); return; }
+  console.log(`· פרסום ספרים${res.dry ? " [DRY]" : ""}: ${res.sent} ${res.dry ? "היו מתפרסמים" : "פורסמו"} · ${res.same} ללא שינוי · ${res.failed} נכשלו (מתוך ${res.total}).`);
+}
+
 async function main() {
+  /* קודם כל — פרסום מצב הספרים. בכוונה לפני קריאת המכסות ובתוך try משלו:
+     מפתח claude.ai שפג, רשת שנפלה או חשבון שנחסם אסור שיעצרו את הדבר
+     היחיד שמעדכן את מטריצת השלבים בדשבורד. */
+  try { logPublish(await publishStates(PUSH ? "poller:local" : "poller:github")); }
+  catch (e) { console.log("✗ פרסום הספרים נכשל כולו: " + ((e && e.message) || e)); }
+
   const keys = loadKeys();
   if (!Array.isArray(keys) || !keys.length) throw new Error("רשימת המפתחות ריקה");
 
