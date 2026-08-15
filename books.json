@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786830746623,
+  "savedAt": 1786830747909,
   "savedBy": "dashboard",
   "books": [
     {
@@ -916,6 +916,14 @@
       "updatedAt": 1786830744784
     },
     {
+      "id": "analogies_extra",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786830746623
+    },
+    {
       "id": "reading_zmanim",
       "stages": {
         "content": {
@@ -955,18 +963,10 @@
           "t": "הטמעה בספר האם ← המנהל"
         }
       },
-      "updatedAt": 1786830745612,
+      "updatedAt": 1786830747909,
       "owner": null,
       "next": "הכרעות אלעד על הצעות הטיוב ← החלה (אחרי הכרעות) ← תיאום מול תור M3 והתאום בסימ' 2",
       "blockers": []
-    },
-    {
-      "id": "analogies_extra",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786830746623
     }
   ]
 }
