@@ -417,6 +417,67 @@ function collectMailFeed() {
 }
 
 /* ==================================================================== *
+ * צי הענן (16.08, הוראת אלעד) — בלוק fleet: תיבות הדואר של חשבונות הקלוד.
+ * המקור: המראה המקומית של Google Drive במיני —
+ *   C:\Users\elad\My Drive (claude.psycho.co.il@gmail.com)\PsychoCloud\mail
+ * לכל חשבון: תיבת נכנס to_<חשבון> (מכתבי משימה — מה קיבל ומתי), תיבת יוצא
+ * from_<חשבון> (מה החזיר), ויומני הריצה from_<חשבון>/log (הוכחת השכמות).
+ * קריאה בלבד; בענן (GitHub Actions) הנתיב לא קיים ⟹ {} ⟹ attachBlocks
+ * משמר את הקודם — אותו כלל כמו שאר הבלוקים.
+ * ==================================================================== */
+const FLEET_ACCOUNTS = ["office", "info", "essay", "claude2", "claude3", "elad362", "eladpsycho"];
+const CLOUD_MAIL_CANDIDATES = [
+  process.env.PSYCHO_CLOUD_MAIL,
+  "C:\\Users\\elad\\My Drive (claude.psycho.co.il@gmail.com)\\PsychoCloud\\mail",
+  "H:\\My Drive\\PsychoCloud\\mail",
+  "H:\\PsychoCloud\\mail",
+].filter(Boolean);
+function cloudMailDir() {
+  for (const p of CLOUD_MAIL_CANDIDATES) { try { if (existsSync(p)) return p; } catch {} }
+  return null;
+}
+/* קובצי דואר במראה: ‎.md אמיתיים (מה שהמנהל מעלה) וגם ‎.gdoc — מצביעי
+   Google Docs שהעובדים יוצרים דרך המחבר. שניהם נספרים; הסיומת מוסרת מהשם. */
+function listMailDir(dir, cap) {
+  const out = [];
+  let found = false;
+  try {
+    for (const f of readdirSync(dir)) {
+      found = true;
+      if (!/\.(md|gdoc|gsheet|txt)$/i.test(f)) continue;
+      try {
+        const st = statSync(join(dir, f));
+        if (!st.isFile()) continue;
+        out.push({ n: f.replace(/\.(gdoc|gsheet)$/i, "").slice(0, 90), at: st.mtimeMs });
+      } catch {}
+    }
+  } catch { return null; }
+  out.sort((a, b) => b.at - a.at);
+  return out.slice(0, cap ?? 6);
+}
+function collectFleet() {
+  const base = cloudMailDir();
+  if (!base) return {};
+  const out = {};
+  for (const acc of FLEET_ACCOUNTS) {
+    const inbox = listMailDir(join(base, "to_" + acc), 6);
+    const outbox = listMailDir(join(base, "from_" + acc), 6);
+    const logs = listMailDir(join(base, "from_" + acc, "log"), 1);
+    let logN = 0;
+    try { logN = readdirSync(join(base, "from_" + acc, "log")).length; } catch {}
+    if (inbox === null && outbox === null) continue; // התיבות לא קיימות במראה
+    out[acc] = {
+      inbox: inbox || [],
+      out: outbox || [],
+      logAt: logs && logs.length ? logs[0].at : null,
+      logN,
+      task: inbox && inbox.length ? inbox[0].n : null,
+    };
+  }
+  return out;
+}
+
+/* ==================================================================== *
  * 8.46 (14.08) — התיקון המרכזי: ארבעת הבלוקים האלה נקראים מדיסק Windows
  * מקומי (C:\PsychoShared). כשהפולר רץ ב-GitHub Actions על ubuntu הנתיבים
  * אינם קיימים, ה-collect* מחזירים ריק — וקודם זה נכתב כהשמה ישירה:
@@ -431,7 +492,7 @@ function collectMailFeed() {
  * bookStates ממוזג לכל ספר בנפרד: ספר שקובץ המצב שלו לא נקרא בסבב הזה
  * שומר את רשומתו ואת החותמת שלה, ולא נעלם מהמטריצה.
  * ==================================================================== */
-const BLOCK_NAMES = ["seats", "mailFeed", "bookStates", "metrics"];
+const BLOCK_NAMES = ["seats", "mailFeed", "bookStates", "metrics", "fleet"];
 /* «ריק» כאן הוא רקורסיבי, בכוונה: collectMailFeed מחזיר תמיד את המבנה
    {M1:[],…,M6:[]} גם כשאין שום גישה לדיסק, כך שבדיקת «יש מפתחות» הייתה
    מסמנת אותו כנקרא-בהצלחה ודורסת את הפיד. אובייקט שכל ערכיו ריקים = לא נקרא.
@@ -453,6 +514,7 @@ function attachBlocks(payload, prev, now, who) {
     mailFeed: collectMailFeed(),
     bookStates: collectBookStates(),
     metrics: collectMetrics(),
+    fleet: collectFleet(), // צי הענן — תיבות PsychoCloud/mail מהמראה המקומית
   };
   for (const name of BLOCK_NAMES) {
     const freshBlock = collected[name];
@@ -483,6 +545,10 @@ function attachBlocks(payload, prev, now, who) {
     }
   }
   stamps.accounts = { at: now, by: who };
+  /* דופק המפרסם — רק אם הוא באמת רץ בסבב הזה. בענן אין קובצי מצב, ולכן
+     החותמת הקודמת נשמרת ולא מוחלפת בשקר של «נבדק עכשיו». */
+  if (LAST_PUBLISH) stamps.booksPublished = LAST_PUBLISH;
+  else if (prev && prev.stamps && prev.stamps.booksPublished) stamps.booksPublished = prev.stamps.booksPublished;
   payload.stamps = stamps;
   return payload;
 }
@@ -638,6 +704,12 @@ async function publishStates(who) {
   return { sent, same, failed, total: states.length, dry: DRY };
 }
 
+/* 8.47 — דופק המפרסם. `savedAt` של books.json זז רק כשמשהו באמת השתנה, ולכן
+   יום שקט נראה בדשבורד בדיוק כמו פולר שמת. כאן נרשם מתי המפרסם **בדק** —
+   בכל סבב, גם כשלא פורסם כלום — והדשבורד מציג את שני הזמנים בנפרד.
+   נכתב לתוך usage.json שהפולר כותב ממילא: אפס תעבורה נוספת. */
+let LAST_PUBLISH = null;
+
 function logPublish(res) {
   if (res.skipped) { console.log(`· פרסום ספרים: מדולג (${res.skipped}).`); return; }
   console.log(`· פרסום ספרים${res.dry ? " [DRY]" : ""}: ${res.sent} ${res.dry ? "היו מתפרסמים" : "פורסמו"} · ${res.same} ללא שינוי · ${res.failed} נכשלו (מתוך ${res.total}).`);
@@ -647,8 +719,12 @@ async function main() {
   /* קודם כל — פרסום מצב הספרים. בכוונה לפני קריאת המכסות ובתוך try משלו:
      מפתח claude.ai שפג, רשת שנפלה או חשבון שנחסם אסור שיעצרו את הדבר
      היחיד שמעדכן את מטריצת השלבים בדשבורד. */
-  try { logPublish(await publishStates(PUSH ? "poller:local" : "poller:github")); }
-  catch (e) { console.log("✗ פרסום הספרים נכשל כולו: " + ((e && e.message) || e)); }
+  const WHO0 = PUSH ? "poller:local" : "poller:github";
+  try {
+    const res = await publishStates(WHO0);
+    logPublish(res);
+    if (!res.skipped) LAST_PUBLISH = { at: Date.now(), by: WHO0, sent: res.sent, same: res.same, failed: res.failed, total: res.total };
+  } catch (e) { console.log("✗ פרסום הספרים נכשל כולו: " + ((e && e.message) || e)); }
 
   const keys = loadKeys();
   if (!Array.isArray(keys) || !keys.length) throw new Error("רשימת המפתחות ריקה");
