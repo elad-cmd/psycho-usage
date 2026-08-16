@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786877542211,
-  "savedBy": "מנהל",
+  "savedAt": 1786877543103,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_tasks",
@@ -510,15 +510,6 @@
       "decisionsPath": "04_inbox/zmanim/M3--20260811-2306-hachraot-misparim/ממתין לאלעד - ניהול זמנים 20260811.md · 04_inbox/zmanim/M3--20260812-1155-hachraot-sgirat-yehidot/ממתין לאלעד - עשר הכרעות שסוגרות שש יחידות 20260812.md"
     },
     {
-      "id": "analogies1000",
-      "owner": null,
-      "next": "להסיר מהדשבורד",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786877450773,
-      "updatedBy": "poller:local"
-    },
-    {
       "id": "analogies_extra",
       "owner": null,
       "next": "סקר בסיס",
@@ -975,6 +966,15 @@
         "ההכרעה המבנית חוסמת בנייה מחדש (DB מול ספר)"
       ],
       "decisionsPath": "01_readonly\\projects\\proofing-2026\\miluli\\הוכרע כבר - לא לשאול שוב 20260805.md"
+    },
+    {
+      "id": "analogies1000",
+      "owner": null,
+      "next": "להסיר מהדשבורד",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786877543103,
+      "updatedBy": "poller:local"
     }
   ]
 }
