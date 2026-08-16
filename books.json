@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786890737234,
+  "savedAt": 1786890738308,
   "savedBy": "dashboard",
   "books": [
     {
@@ -59,15 +59,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786386755321
-    },
-    {
-      "id": "analogies_extra",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786890139900,
-      "updatedBy": "poller:local"
     },
     {
       "id": "bchanim",
@@ -977,6 +968,15 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786890737234,
+      "updatedBy": "poller:local"
+    },
+    {
+      "id": "analogies_extra",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786890738308,
       "updatedBy": "poller:local"
     }
   ]
