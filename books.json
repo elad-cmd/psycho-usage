@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786877792786,
+  "savedAt": 1786877793944,
   "savedBy": "dashboard",
   "books": [
     {
@@ -323,15 +323,6 @@
       "next": "שיחת המשך לפי המסירה: 03_work/elad2/hibur/הגהה_20260805/מסירה - שיחת המשך hibur 20260805.md · הפרומפט אצל המנהל",
       "blockers": [],
       "costStart": 5
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786877656105,
-      "updatedBy": "poller:local"
     },
     {
       "id": "kis",
@@ -974,6 +965,15 @@
       "owner": null,
       "next": "הכרעות אלעד על הצעות הטיוב ← החלה (אחרי הכרעות) ← תיאום מול תור M3 והתאום בסימ' 2",
       "blockers": [],
+      "updatedBy": "poller:local"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786877793944,
       "updatedBy": "poller:local"
     }
   ]
