@@ -425,7 +425,7 @@ function collectMailFeed() {
  * קריאה בלבד; בענן (GitHub Actions) הנתיב לא קיים ⟹ {} ⟹ attachBlocks
  * משמר את הקודם — אותו כלל כמו שאר הבלוקים.
  * ==================================================================== */
-const FLEET_ACCOUNTS = ["office", "info", "essay", "claude2", "claude3", "elad362", "eladpsycho"];
+const FLEET_ACCOUNTS = ["office", "info", "essay", "claude2", "claude3", "claude4", "elad362", "eladpsycho"];
 const CLOUD_MAIL_CANDIDATES = [
   process.env.PSYCHO_CLOUD_MAIL,
   "C:\\Users\\elad\\My Drive (claude.psycho.co.il@gmail.com)\\PsychoCloud\\mail",
@@ -456,6 +456,19 @@ function listMailDir(dir, cap) {
   return out.slice(0, cap ?? 6);
 }
 function collectFleet() {
+  /* מקור ראשי: fleet.json שמנהל הצי כותב מהמחבר בכל סבב עיבוד תיבות —
+     אמת ישירה מהענן, לא תלויה ב-Drive for Desktop. ה-at שלו הוא גם
+     חותמת «המנהל עיבד תיבות לפני X» (הכרעה 4 במסירת הדשבורד). */
+  try {
+    const j = JSON.parse(readFileSync(SHARED + "\\05_state\\fleet.json", "utf8"));
+    if (j && j.accounts && typeof j.accounts === "object" && Object.keys(j.accounts).length) {
+      const out = {};
+      for (const [k, v] of Object.entries(j.accounts)) if (v && typeof v === "object") out[k] = v;
+      if (j.at) out._managerAt = j.at;
+      return out;
+    }
+  } catch {}
+  /* נפילה: המראה המקומית של הדרייב (דורשת Drive for Desktop חי) */
   const base = cloudMailDir();
   if (!base) return {};
   const out = {};
