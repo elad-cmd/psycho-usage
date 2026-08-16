@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1786898537776,
+  "savedAt": 1786898538843,
   "savedBy": "dashboard",
   "books": [
     {
@@ -322,15 +322,6 @@
       },
       "updatedAt": 1786897453488,
       "updatedBy": "מנהל הצי (עיבוד תיבות הענן)"
-    },
-    {
-      "id": "analogies_extra",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786897939641,
-      "updatedBy": "poller:local"
     },
     {
       "id": "bchanim",
@@ -977,6 +968,15 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786898537776,
+      "updatedBy": "poller:local"
+    },
+    {
+      "id": "analogies_extra",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786898538843,
       "updatedBy": "poller:local"
     }
   ]
