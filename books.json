@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1786941897806,
-  "savedBy": "M3 (אלעד 3)",
+  "savedAt": 1786941898892,
+  "savedBy": "dashboard",
   "books": [
     {
       "id": "_tasks",
@@ -76,15 +76,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786914740678,
-      "updatedBy": "poller:local"
-    },
-    {
-      "id": "tirgul_kamuti",
-      "owner": null,
-      "next": "אישור אלעד ל-9 הכרטיסים, ואז סבב הגהה מלא",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1786941311686,
       "updatedBy": "poller:local"
     },
     {
@@ -978,6 +969,15 @@
         "PDF מוורד ל-293 סרטוטים (אלעד, לא חוסם)",
         "H381 גרפי (אלעד, לא חוסם)"
       ]
+    },
+    {
+      "id": "tirgul_kamuti",
+      "owner": null,
+      "next": "אישור אלעד ל-9 הכרטיסים, ואז סבב הגהה מלא",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1786941898892,
+      "updatedBy": "poller:local"
     }
   ]
 }
