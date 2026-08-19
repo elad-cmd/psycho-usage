@@ -1,7 +1,7 @@
 {
   "v": 1,
-  "savedAt": 1787157781821,
-  "savedBy": "M_שיחת מנהל - יוזר M3 · claude.psycho",
+  "savedAt": 1787157782952,
+  "savedBy": "מנהל הצי (עיבוד תיבות הענן)",
   "books": [
     {
       "id": "_tasks",
@@ -533,55 +533,6 @@
       "decisionsPath": "04_inbox/zmanim/M3--20260811-2306-hachraot-misparim/ממתין לאלעד - ניהול זמנים 20260811.md · 04_inbox/zmanim/M3--20260812-1155-hachraot-sgirat-yehidot/ממתין לאלעד - עשר הכרעות שסוגרות שש יחידות 20260812.md"
     },
     {
-      "id": "hibur",
-      "owner": "אלעד 2 · Office Cloud",
-      "stages": {
-        "content": {
-          "s": "d",
-          "t": "מאסטר: 3 חלקים + PDF דפו"
-        },
-        "claim": {
-          "s": "d",
-          "t": "נתפס 12:49 · claims/hibu"
-        },
-        "survey": {
-          "s": "d",
-          "t": "כ-9,000 פסקאות · 138 טבל"
-        },
-        "proof": {
-          "s": "d",
-          "t": "הושלם 17.08 — 22/22 יחיד"
-        },
-        "verify": {
-          "s": "d",
-          "t": "אימות יריב הושלם 17.08 —"
-        },
-        "apply": {
-          "s": "d",
-          "t": "שבע מנות. מאסטר סופי 2d2"
-        },
-        "deliver": {
-          "s": "w",
-          "t": "ממתין ל-Compare של אלעד."
-        },
-        "decide": {
-          "s": "d",
-          "t": "נסגר במלואו 17.08. אלעד:"
-        },
-        "close": {
-          "s": "n",
-          "t": ""
-        }
-      },
-      "updatedAt": 1787157198837,
-      "claimedAt": 1785920763470,
-      "claimedAcc": "acc-office",
-      "updatedBy": "מנהל הצי (עיבוד תיבות הענן)",
-      "next": "2_נוכחי מהמאסטר החדש ⟵ Compare של אלעד ⟵ ניקוי רפאים ⟵ PDF ⟵ מיכל",
-      "blockers": [],
-      "costStart": 5
-    },
-    {
       "id": "kis",
       "stages": {
         "content": {
@@ -983,6 +934,55 @@
       "claimedAt": 1785845068130,
       "claimedAcc": "acc-claude4",
       "decisionsPath": "04_inbox/geometry/M3--20260806-1245/הכרעות אלעד - גיאומטריה 20260806.md"
+    },
+    {
+      "id": "hibur",
+      "owner": "אלעד 2 · Office Cloud",
+      "stages": {
+        "content": {
+          "s": "d",
+          "t": "מאסטר: 3 חלקים + PDF דפו"
+        },
+        "claim": {
+          "s": "d",
+          "t": "נתפס 12:49 · claims/hibu"
+        },
+        "survey": {
+          "s": "d",
+          "t": "כ-9,000 פסקאות · 138 טבל"
+        },
+        "proof": {
+          "s": "d",
+          "t": "הושלם 17.08 — 22/22 יחיד"
+        },
+        "verify": {
+          "s": "d",
+          "t": "אימות יריב הושלם 17.08 —"
+        },
+        "apply": {
+          "s": "d",
+          "t": "שבע מנות. מאסטר סופי 2d2"
+        },
+        "deliver": {
+          "s": "w",
+          "t": "ממתין ל-Compare של אלעד."
+        },
+        "decide": {
+          "s": "d",
+          "t": "נסגר במלואו 17.08. אלעד:"
+        },
+        "close": {
+          "s": "n",
+          "t": ""
+        }
+      },
+      "updatedAt": 1787157782952,
+      "claimedAt": 1785920763470,
+      "claimedAcc": "acc-office",
+      "updatedBy": "מנהל הצי (עיבוד תיבות הענן)",
+      "next": "2_נוכחי מהמאסטר החדש ⟵ Compare של אלעד ⟵ ניקוי רפאים ⟵ PDF ⟵ מיכל",
+      "blockers": [],
+      "costStart": 5
     }
   ]
 }
