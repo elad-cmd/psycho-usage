@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "savedAt": 1787149500296,
+  "savedAt": 1787149502052,
   "savedBy": "dashboard",
   "books": [
     {
@@ -76,15 +76,6 @@
       "blockers": [],
       "stages": {},
       "updatedAt": 1786914740678,
-      "updatedBy": "poller:local"
-    },
-    {
-      "id": "simulaziot",
-      "owner": null,
-      "next": "סקר בסיס",
-      "blockers": [],
-      "stages": {},
-      "updatedAt": 1787148916239,
       "updatedBy": "poller:local"
     },
     {
@@ -982,6 +973,15 @@
       "owner": null,
       "next": "הכרעות אלעד על הצעות הטיוב ← החלה (אחרי הכרעות) ← תיאום מול תור M3 והתאום בסימ' 2",
       "blockers": [],
+      "updatedBy": "poller:local"
+    },
+    {
+      "id": "simulaziot",
+      "owner": null,
+      "next": "סקר בסיס",
+      "blockers": [],
+      "stages": {},
+      "updatedAt": 1787149502052,
       "updatedBy": "poller:local"
     }
   ]
