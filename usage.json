@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1788821845742,
+  "savedAt": 1788822146242,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -13,14 +13,26 @@
           "t": "מנהל קמפוס",
           "u": "https://claude.ai/cowork/cse_01C7X69CS1JV6RnB2EAkRug7",
           "st": "active",
-          "sb": "blocked",
-          "ev": "2026-09-07T22:54:03.569041Z",
+          "sb": "working",
+          "ev": "2026-09-07T22:59:06.961116Z",
           "c": "2026-09-07T17:18:03.717801Z",
-          "ws": "idle",
+          "ws": "running",
           "tag": "remote",
           "bd": "Claude Desktop (Windows)",
           "bdid": "add9c9a9-e570-41eb-90bd-88e5cc844b9a",
-          "wm": 135
+          "wm": 140
+        },
+        {
+          "t": "Fleet-temp M1 kickoff",
+          "u": "https://claude.ai/cowork/cse_01VJfuj1zxtZvYLC2uX7gw6U",
+          "st": "active",
+          "sb": "review_ready",
+          "ev": "2026-09-07T22:55:49.793552Z",
+          "c": "2026-09-07T22:54:32.591765Z",
+          "ws": "idle",
+          "tag": "remote",
+          "bd": "Claude Desktop (Windows)",
+          "bdid": "add9c9a9-e570-41eb-90bd-88e5cc844b9a"
         },
         {
           "t": "סקיל פתרונות חשיבה מילולית",
@@ -617,19 +629,19 @@
       "usage": {
         "session": {
           "pct": 34,
-          "resetsAt": "2026-09-07T23:39:59.176113+00:00"
+          "resetsAt": "2026-09-07T23:39:59.935056+00:00"
         },
         "weeklyAll": {
           "pct": 24,
-          "resetsAt": "2026-09-09T05:59:59.176133+00:00"
+          "resetsAt": "2026-09-09T05:59:59.935078+00:00"
         },
         "weeklyFable": {
-          "pct": 46,
-          "resetsAt": "2026-09-09T05:59:59.176320+00:00"
+          "pct": 47,
+          "resetsAt": "2026-09-09T05:59:59.935307+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_015uGP22xVJ5XkUe485ZTFhF": 610,
         "https://claude.ai/cowork/cse_01WikhQJXhwwwaXpU2Rk122p": 360,
@@ -654,7 +666,7 @@
         "https://claude.ai/cowork/cse_01RMaUTgxu91waQraEmyTXj7": 145,
         "https://claude.ai/cowork/cse_016bejknHNtREn3SkcBG33Fw": 115,
         "https://claude.ai/cowork/cse_012YLqvFNNYKLpqbbiXP7fSj": 5,
-        "https://claude.ai/cowork/cse_01C7X69CS1JV6RnB2EAkRug7": 135,
+        "https://claude.ai/cowork/cse_01C7X69CS1JV6RnB2EAkRug7": 140,
         "https://claude.ai/cowork/cse_01YSVCMPRmTXWcbWBiaW6dY3": 100,
         "https://claude.ai/cowork/cse_01D9uxMFU1u8QvqmJz6S2sZW": 15,
         "https://claude.ai/cowork/cse_017f77jBnB1dzNSqbkGqhHrW": 55
@@ -1290,19 +1302,19 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-09-07T22:59:59.827248+00:00"
+          "resetsAt": "2026-09-07T22:59:59.942506+00:00"
         },
         "weeklyAll": {
           "pct": 40,
-          "resetsAt": "2026-09-08T18:59:59.827267+00:00"
+          "resetsAt": "2026-09-08T18:59:59.942528+00:00"
         },
         "weeklyFable": {
           "pct": 18,
-          "resetsAt": "2026-09-08T18:59:59.827441+00:00"
+          "resetsAt": "2026-09-08T18:59:59.942783+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01FGzwJWMkeh45swHYuRR5i2": 170,
         "https://claude.ai/cowork/cse_017XocR2xy7g1yKNgMgf7bMm": 365,
@@ -1411,19 +1423,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-09-08T03:10:00.741887+00:00"
+          "resetsAt": "2026-09-08T03:10:00.537182+00:00"
         },
         "weeklyAll": {
           "pct": 2,
-          "resetsAt": "2026-09-11T00:00:00.741903+00:00"
+          "resetsAt": "2026-09-11T00:00:00.537200+00:00"
         },
         "weeklyFable": {
           "pct": 3,
-          "resetsAt": "2026-09-11T00:00:00.742044+00:00"
+          "resetsAt": "2026-09-11T00:00:00.537396+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01DQjDob4F5LdU6JzShT6XuK": 145,
         "https://claude.ai/cowork/cse_01KnUFDWC9KPqQbqavtdfDtM": 25,
@@ -1798,19 +1810,19 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-09-07T23:50:00.731246+00:00"
+          "resetsAt": "2026-09-07T23:50:00.706696+00:00"
         },
         "weeklyAll": {
           "pct": 14,
-          "resetsAt": "2026-09-13T04:00:00.731269+00:00"
+          "resetsAt": "2026-09-13T04:00:00.706716+00:00"
         },
         "weeklyFable": {
           "pct": 18,
-          "resetsAt": "2026-09-13T04:00:00.731490+00:00"
+          "resetsAt": "2026-09-13T04:00:00.706894+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Ro4izbmWZDN8T5MTTrQMbJ": 231,
         "https://claude.ai/cowork/cse_01GgqzJ1vk5oaB3BFnTLSQsS": 40,
@@ -2272,15 +2284,15 @@
         },
         "weeklyAll": {
           "pct": 58,
-          "resetsAt": "2026-09-08T11:59:59.714092+00:00"
+          "resetsAt": "2026-09-08T11:59:59.553866+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-09-08T11:59:59.714293+00:00"
+          "resetsAt": "2026-09-08T11:59:59.554171+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Az2nBjXGZujmMkA67FamCU": 410,
         "https://claude.ai/cowork/cse_01TLesX6QsoP8Y5nNsosNvew": 25,
@@ -2923,19 +2935,19 @@
       "usage": {
         "session": {
           "pct": 4,
-          "resetsAt": "2026-09-07T23:00:00.720592+00:00"
+          "resetsAt": "2026-09-07T23:00:00.505265+00:00"
         },
         "weeklyAll": {
           "pct": 3,
-          "resetsAt": "2026-09-14T03:00:00.720611+00:00"
+          "resetsAt": "2026-09-14T03:00:00.505286+00:00"
         },
         "weeklyFable": {
           "pct": 5,
-          "resetsAt": "2026-09-14T03:00:00.720784+00:00"
+          "resetsAt": "2026-09-14T03:00:00.505501+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773": 225,
         "https://claude.ai/cowork/cse_015b6tJ1GJqSXWDeaZytucXe": 10,
@@ -3080,15 +3092,15 @@
         },
         "weeklyAll": {
           "pct": 0,
-          "resetsAt": "2026-09-13T00:59:59.985857+00:00"
+          "resetsAt": "2026-09-13T01:00:00.299588+00:00"
         },
         "weeklyFable": {
           "pct": 0,
-          "resetsAt": "2026-09-13T00:59:59.986095+00:00"
+          "resetsAt": "2026-09-13T01:00:00.299851+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01NsNk8AYShhiM6QVBLCQ9vK": 70,
         "https://claude.ai/cowork/cse_018bchSLS1JtBnd6WvPMJdCy": 605,
@@ -3128,6 +3140,19 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "Fleet-temp setup kickoff",
+          "u": "https://claude.ai/cowork/cse_014TLCLWqu3B59kcanWxG188",
+          "st": "active",
+          "sb": "failed",
+          "ev": "2026-09-07T22:56:39.797024Z",
+          "c": "2026-09-07T22:56:31.340055Z",
+          "ws": "idle",
+          "tag": "remote",
+          "bd": "Elad_mini",
+          "bdid": "625396dc-174c-4b64-9614-40e2a4983dd9",
+          "load": 0
+        },
         {
           "t": "מאגר תרגול מאלו",
           "u": "https://claude.ai/cowork/cse_01HNScD7pqauCaUMQdUsojtY",
@@ -3483,19 +3508,19 @@
       "usage": {
         "session": {
           "pct": 2,
-          "resetsAt": "2026-09-07T23:19:59.520090+00:00"
+          "resetsAt": "2026-09-07T23:19:59.348087+00:00"
         },
         "weeklyAll": {
           "pct": 55,
-          "resetsAt": "2026-09-08T08:59:59.520111+00:00"
+          "resetsAt": "2026-09-08T08:59:59.348108+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-09-08T08:59:59.520310+00:00"
+          "resetsAt": "2026-09-08T08:59:59.348298+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Dg4aaAG8CUzq2MVVL3nyEd": 75,
         "https://claude.ai/cowork/cse_01UqqSrY74uU7sPzTMYb2ckb": 280,
@@ -3817,19 +3842,19 @@
       "usage": {
         "session": {
           "pct": 5,
-          "resetsAt": "2026-09-07T23:09:59.872214+00:00"
+          "resetsAt": "2026-09-07T23:09:59.575272+00:00"
         },
         "weeklyAll": {
           "pct": 20,
-          "resetsAt": "2026-09-11T21:59:59.872235+00:00"
+          "resetsAt": "2026-09-11T21:59:59.575295+00:00"
         },
         "weeklyFable": {
           "pct": 30,
-          "resetsAt": "2026-09-11T21:59:59.872439+00:00"
+          "resetsAt": "2026-09-11T21:59:59.575497+00:00"
         }
       },
-      "lastSyncAt": 1788821845742,
-      "updatedAt": 1788821845742,
+      "lastSyncAt": 1788822146242,
+      "updatedAt": 1788822146242,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01ED9Vui5nSzLtKWGZYTADwL": 25,
         "https://claude.ai/cowork/cse_013tbdQmroSq6fFEkRMmLnUg": 5,
@@ -5277,35 +5302,35 @@
       "by": "poller:local"
     },
     "mailFeed": {
-      "at": 1788821845742,
+      "at": 1788822146242,
       "by": "poller:local"
     },
     "bookStates": {
-      "at": 1788821845742,
+      "at": 1788822146242,
       "by": "poller:local",
       "per": {
-        "algebra": 1788821845742,
+        "algebra": 1788822146242,
         "analogies1000": 1786914743357,
         "analogies_extra": 1786914743357,
-        "bchanim": 1788821845742,
-        "beayot": 1788821845742,
-        "geometry": 1788821845742,
-        "hibur": 1788821845742,
-        "kis": 1788821845742,
-        "maraton": 1788821845742,
-        "mikud700": 1788821845742,
-        "miluli": 1788821845742,
-        "psychometrit": 1788821845742,
-        "reading_maraton": 1788821845742,
-        "reading_sim": 1788821845742,
-        "reading_zmanim": 1788821845742,
-        "simulaziot": 1788821845742,
-        "tarshimim": 1788821845742,
-        "tirgul700": 1788821845742,
-        "tirgul_kamuti": 1788821845742,
-        "yesodot_a": 1788821845742,
-        "yesodot_b": 1788821845742,
-        "zmanim": 1788821845742,
+        "bchanim": 1788822146242,
+        "beayot": 1788822146242,
+        "geometry": 1788822146242,
+        "hibur": 1788822146242,
+        "kis": 1788822146242,
+        "maraton": 1788822146242,
+        "mikud700": 1788822146242,
+        "miluli": 1788822146242,
+        "psychometrit": 1788822146242,
+        "reading_maraton": 1788822146242,
+        "reading_sim": 1788822146242,
+        "reading_zmanim": 1788822146242,
+        "simulaziot": 1788822146242,
+        "tarshimim": 1788822146242,
+        "tirgul700": 1788822146242,
+        "tirgul_kamuti": 1788822146242,
+        "yesodot_a": 1788822146242,
+        "yesodot_b": 1788822146242,
+        "zmanim": 1788822146242,
         "mikud700-3-geometria": 1786915043431,
         "mikud700-2-beayot": 1786915043431,
         "sources_text-coverage": 1786915043431,
@@ -5319,19 +5344,19 @@
       }
     },
     "metrics": {
-      "at": 1788821845742,
+      "at": 1788822146242,
       "by": "poller:local"
     },
     "fleet": {
-      "at": 1788821845742,
+      "at": 1788822146242,
       "by": "poller:local"
     },
     "accounts": {
-      "at": 1788821845742,
+      "at": 1788822146242,
       "by": "poller:local"
     },
     "booksPublished": {
-      "at": 1788821827111,
+      "at": 1788822127213,
       "by": "poller:local",
       "sent": 0,
       "same": 20,
