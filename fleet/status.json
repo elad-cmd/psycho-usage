@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-15T14:17:01.347Z",
+ "generatedAt": "2026-10-15T14:27:01.357Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M2",
     "kind": "stuck",
-    "text": "תקוע על משימה - 168 דק' במקום 18"
+    "text": "תקוע על משימה - 178 דק' במקום 18"
    },
    {
     "seat": "M2",
@@ -24,7 +24,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 3:10 שעות"
+    "text": "הצבר לא התעדכן 3:20 שעות"
    }
   ],
   "doneToday": 105,
@@ -43,23 +43,30 @@
    "flags": [],
    "current": {
     "task": {
-     "prio": 7004,
-     "id": "AR-algebra-R03",
+     "prio": 7006,
+     "id": "AR-algebra-R04",
      "book": "algebra",
      "stage": "R",
-     "n": 3,
+     "n": 4,
      "attempt": 1
     },
-    "startedAt": "2026-10-15T14:14:00.000Z",
-    "elapsedMin": 3,
+    "startedAt": "2026-10-15T14:22:00.000Z",
+    "elapsedMin": 5,
     "estimateMin": 12,
-    "ratio": 0.25
+    "ratio": 0.42
    },
-   "lastHeartbeatAt": "2026-10-15T14:14:00.000Z",
+   "lastHeartbeatAt": "2026-10-15T14:22:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "7004-AR-algebra-R03-n1",
-   "minutesSinceHeartbeat": 3,
+   "lastHeartbeatDetail": "7006-AR-algebra-R04-n1",
+   "minutesSinceHeartbeat": 5,
    "pending": [
+    {
+     "name": "3027-AR-beayot-C14-n1",
+     "id": "AR-beayot-C14",
+     "book": "beayot",
+     "stage": "C",
+     "n": 14
+    },
     {
      "name": "5002-AR-geometry1-R02-n1",
      "id": "AR-geometry1-R02",
@@ -103,13 +110,6 @@
      "n": 8
     },
     {
-     "name": "7006-AR-algebra-R04-n1",
-     "id": "AR-algebra-R04",
-     "book": "algebra",
-     "stage": "R",
-     "n": 4
-    },
-    {
      "name": "7008-AR-algebra-R05-n1",
      "id": "AR-algebra-R05",
      "book": "algebra",
@@ -147,12 +147,12 @@
    ],
    "pendingCount": 12,
    "doingCount": 1,
-   "doneToday": 39,
+   "doneToday": 40,
    "failedToday": 1,
    "util": {
     "pct": 100,
-    "workMin": 1327,
-    "awakeMin": 1331,
+    "workMin": 1337,
+    "awakeMin": 1341,
     "awakeFrom": "2026-10-14T15:06:00.000Z",
     "sleepMin": 4
    },
@@ -389,11 +389,31 @@
     },
     {
      "from": "2026-10-15T14:14:00.000Z",
-     "to": "2026-10-15T14:17:01.347Z",
+     "to": "2026-10-15T14:22:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T14:22:00.000Z",
+     "to": "2026-10-15T14:27:01.357Z",
      "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 7006,
+      "id": "AR-algebra-R04",
+      "book": "algebra",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T14:22:00.000Z",
+     "endedAt": null,
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": null
+    },
     {
      "task": {
       "prio": 7004,
@@ -404,10 +424,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-15T14:14:00.000Z",
-     "endedAt": null,
-     "minutes": 3,
+     "endedAt": "2026-10-15T14:22:00.000Z",
+     "minutes": 8,
      "estimateMin": 12,
-     "ok": null
+     "ok": true
     },
     {
      "task": {
@@ -1562,6 +1582,18 @@
       "kind": "בוצע",
       "minutes": 10
      }
+    },
+    {
+     "name": "7004-AR-algebra-R03-n1",
+     "id": "AR-algebra-R03",
+     "book": "algebra",
+     "stage": "R",
+     "n": 3,
+     "result": {
+      "at": "2026-10-15T14:22:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
     }
    ]
   },
@@ -1575,7 +1607,7 @@
    "flags": [
     {
      "kind": "stuck",
-     "text": "תקוע על משימה - 168 דק' במקום 18"
+     "text": "תקוע על משימה - 178 דק' במקום 18"
     },
     {
      "kind": "silent",
@@ -1596,14 +1628,14 @@
      "attempt": 1
     },
     "startedAt": "2026-10-15T11:29:00.000Z",
-    "elapsedMin": 168,
+    "elapsedMin": 178,
     "estimateMin": 18,
-    "ratio": 9.33
+    "ratio": 9.89
    },
    "lastHeartbeatAt": "2026-10-15T11:29:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "5001-AR-geometry1-C01-n1",
-   "minutesSinceHeartbeat": 168,
+   "minutesSinceHeartbeat": 178,
    "pending": [
     {
      "name": "4999-AR-kurs-S-n1",
@@ -1703,8 +1735,8 @@
    "failedToday": 0,
    "util": {
     "pct": 67,
-    "workMin": 901,
-    "awakeMin": 1349,
+    "workMin": 911,
+    "awakeMin": 1359,
     "awakeFrom": "2026-10-14T14:48:00.000Z",
     "sleepMin": 448
    },
@@ -2151,7 +2183,7 @@
     },
     {
      "from": "2026-10-15T11:29:00.000Z",
-     "to": "2026-10-15T14:17:01.347Z",
+     "to": "2026-10-15T14:27:01.357Z",
      "kind": "work"
     }
    ],
@@ -2167,7 +2199,7 @@
      },
      "startedAt": "2026-10-15T11:29:00.000Z",
      "endedAt": null,
-     "minutes": 168,
+     "minutes": 178,
      "estimateMin": 18,
      "ok": null
     },
@@ -4220,7 +4252,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 190
+  "minutesSinceBacklog": 200
  },
  "progress": {
   "books": [
@@ -4464,6 +4496,22 @@
     {
      "seat": "M6",
      "task": {
+      "prio": 7004,
+      "id": "AR-algebra-R03",
+      "book": "algebra",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T14:14:00.000Z",
+     "endedAt": "2026-10-15T14:22:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
       "prio": 7002,
       "id": "AR-algebra-R02",
       "book": "algebra",
@@ -4540,22 +4588,6 @@
      "minutes": 9,
      "estimateMin": 12,
      "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": {
-      "prio": 6006,
-      "id": "AR-geometry2-R04",
-      "book": "geometry2",
-      "stage": "R",
-      "n": 4,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T13:15:00.000Z",
-     "endedAt": "2026-10-15T13:24:00.000Z",
-     "minutes": 9,
-     "estimateMin": 12,
-     "ok": true
     }
    ],
    "flags": [
@@ -4571,6 +4603,22 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 7004,
+      "id": "AR-algebra-R03",
+      "book": "algebra",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T14:14:00.000Z",
+     "endedAt": "2026-10-15T14:22:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
