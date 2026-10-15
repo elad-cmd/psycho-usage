@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-15T15:37:01.390Z",
+ "generatedAt": "2026-10-15T15:47:01.389Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M2",
     "kind": "stuck",
-    "text": "תקוע על משימה - 248 דק' במקום 18"
+    "text": "תקוע על משימה - 258 דק' במקום 18"
    },
    {
     "seat": "M2",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 70% מהזמן (היעד 80%)"
+    "text": "עבד 71% מהזמן (היעד 80%)"
    }
   ],
   "doneToday": 117,
@@ -38,30 +38,23 @@
    "flags": [],
    "current": {
     "task": {
-     "prio": 3999,
-     "id": "AR-beayot-S",
-     "book": "beayot",
+     "prio": 4999,
+     "id": "AR-kurs-S",
+     "book": "kurs",
      "stage": "S",
      "n": 0,
      "attempt": 1
     },
-    "startedAt": "2026-10-15T15:14:00.000Z",
-    "elapsedMin": 23,
+    "startedAt": "2026-10-15T15:39:00.000Z",
+    "elapsedMin": 8,
     "estimateMin": 20,
-    "ratio": 1.15
+    "ratio": 0.4
    },
-   "lastHeartbeatAt": "2026-10-15T15:14:00.000Z",
+   "lastHeartbeatAt": "2026-10-15T15:39:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "3999-AR-beayot-S-n1",
-   "minutesSinceHeartbeat": 23,
+   "lastHeartbeatDetail": "4999-AR-kurs-S-n1",
+   "minutesSinceHeartbeat": 8,
    "pending": [
-    {
-     "name": "4999-AR-kurs-S-n1",
-     "id": "AR-kurs-S",
-     "book": "kurs",
-     "stage": "S",
-     "n": 0
-    },
     {
      "name": "5003-AR-geometry1-C02-n1",
      "id": "AR-geometry1-C02",
@@ -133,20 +126,20 @@
      "n": 9
     }
    ],
-   "pendingCount": 11,
+   "pendingCount": 10,
    "doingCount": 1,
-   "doneToday": 45,
+   "doneToday": 46,
    "failedToday": 1,
    "util": {
     "pct": 100,
-    "workMin": 1407,
+    "workMin": 1417,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-14T15:37:01.390Z",
+    "awakeFrom": "2026-10-14T15:47:01.389Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-14T15:37:01.390Z",
+     "from": "2026-10-14T15:47:01.389Z",
      "to": "2026-10-14T16:05:00.000Z",
      "kind": "gap"
     },
@@ -407,11 +400,31 @@
     },
     {
      "from": "2026-10-15T15:14:00.000Z",
-     "to": "2026-10-15T15:37:01.390Z",
+     "to": "2026-10-15T15:39:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T15:39:00.000Z",
+     "to": "2026-10-15T15:47:01.389Z",
      "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 4999,
+      "id": "AR-kurs-S",
+      "book": "kurs",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T15:39:00.000Z",
+     "endedAt": null,
+     "minutes": 8,
+     "estimateMin": 20,
+     "ok": null
+    },
     {
      "task": {
       "prio": 3999,
@@ -422,10 +435,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-15T15:14:00.000Z",
-     "endedAt": null,
-     "minutes": 23,
+     "endedAt": "2026-10-15T15:39:00.000Z",
+     "minutes": 25,
      "estimateMin": 20,
-     "ok": null
+     "ok": true
     },
     {
      "task": {
@@ -1564,6 +1577,18 @@
      }
     },
     {
+     "name": "3999-AR-beayot-S-n1",
+     "id": "AR-beayot-S",
+     "book": "beayot",
+     "stage": "S",
+     "n": 0,
+     "result": {
+      "at": "2026-10-15T15:39:00.000Z",
+      "kind": "בוצע",
+      "minutes": 25
+     }
+    },
+    {
      "name": "4001-AR-kurs-C01-n1",
      "id": "AR-kurs-C01",
      "book": "kurs",
@@ -1755,7 +1780,7 @@
    "flags": [
     {
      "kind": "stuck",
-     "text": "תקוע על משימה - 248 דק' במקום 18"
+     "text": "תקוע על משימה - 258 דק' במקום 18"
     },
     {
      "kind": "silent",
@@ -1763,7 +1788,7 @@
     },
     {
      "kind": "util",
-     "text": "עבד 70% מהזמן (היעד 80%)"
+     "text": "עבד 71% מהזמן (היעד 80%)"
     }
    ],
    "current": {
@@ -1776,14 +1801,14 @@
      "attempt": 1
     },
     "startedAt": "2026-10-15T11:29:00.000Z",
-    "elapsedMin": 248,
+    "elapsedMin": 258,
     "estimateMin": 18,
-    "ratio": 13.78
+    "ratio": 14.33
    },
    "lastHeartbeatAt": "2026-10-15T11:29:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "5001-AR-geometry1-C01-n1",
-   "minutesSinceHeartbeat": 248,
+   "minutesSinceHeartbeat": 258,
    "pending": [
     {
      "name": "4999-AR-kurs-S-n1",
@@ -1882,15 +1907,15 @@
    "doneToday": 73,
    "failedToday": 0,
    "util": {
-    "pct": 70,
-    "workMin": 965,
+    "pct": 71,
+    "workMin": 975,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-14T15:37:01.390Z",
-    "sleepMin": 415
+    "awakeFrom": "2026-10-14T15:47:01.389Z",
+    "sleepMin": 405
    },
    "segments": [
     {
-     "from": "2026-10-14T15:37:01.390Z",
+     "from": "2026-10-14T15:47:01.389Z",
      "to": "2026-10-14T16:59:00.000Z",
      "kind": "silent"
     },
@@ -2311,7 +2336,7 @@
     },
     {
      "from": "2026-10-15T11:29:00.000Z",
-     "to": "2026-10-15T15:37:01.390Z",
+     "to": "2026-10-15T15:47:01.389Z",
      "kind": "work"
     }
    ],
@@ -2327,7 +2352,7 @@
      },
      "startedAt": "2026-10-15T11:29:00.000Z",
      "endedAt": null,
-     "minutes": 248,
+     "minutes": 258,
      "estimateMin": 18,
      "ok": null
     },
@@ -4350,7 +4375,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 32
+  "minutesSinceBacklog": 42
  },
  "progress": {
   "books": [
@@ -4415,11 +4440,9 @@
     "total": 35,
     "done": 34,
     "doneToday": 34,
-    "doneHour": 1,
+    "doneHour": 0,
     "pct": 97,
-    "working": [
-     "M6"
-    ],
+    "working": [],
     "byStage": {
      "R": {
       "total": 17,
@@ -4446,7 +4469,9 @@
     "doneToday": 36,
     "doneHour": 0,
     "pct": 97,
-    "working": [],
+    "working": [
+     "M6"
+    ],
     "byStage": {
      "R": {
       "total": 18,
@@ -4579,7 +4604,7 @@
   "done": 119,
   "pct": 45,
   "doneToday": 117,
-  "doneHour": 3,
+  "doneHour": 2,
   "counts": {
    "ready": 57,
    "waiting": 68,
@@ -4591,6 +4616,22 @@
  "changes": {
   "hour": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3999,
+      "id": "AR-beayot-S",
+      "book": "beayot",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T15:14:00.000Z",
+     "endedAt": "2026-10-15T15:39:00.000Z",
+     "minutes": 25,
+     "estimateMin": 20,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -4638,22 +4679,6 @@
      "minutes": 10,
      "estimateMin": 12,
      "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": {
-      "prio": 3027,
-      "id": "AR-beayot-C14",
-      "book": "beayot",
-      "stage": "C",
-      "n": 14,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T14:30:00.000Z",
-     "endedAt": "2026-10-15T14:39:00.000Z",
-     "minutes": 9,
-     "estimateMin": 18,
-     "ok": true
     }
    ],
    "flags": [],
@@ -4661,6 +4686,22 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3999,
+      "id": "AR-beayot-S",
+      "book": "beayot",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T15:14:00.000Z",
+     "endedAt": "2026-10-15T15:39:00.000Z",
+     "minutes": 25,
+     "estimateMin": 20,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
