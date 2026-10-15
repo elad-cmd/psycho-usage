@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-15T20:27:01.637Z",
+ "generatedAt": "2026-10-15T20:37:01.656Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M2",
     "kind": "stuck",
-    "text": "תקוע על משימה - 538 דק' במקום 18"
+    "text": "תקוע על משימה - 548 דק' במקום 18"
    },
    {
     "seat": "M2",
@@ -17,7 +17,7 @@
     "text": "לקח משימה ב-14:29 ולא סיים/דיווח מאז"
    }
   ],
-  "doneToday": 120,
+  "doneToday": 118,
   "working": 2,
   "flags": 3,
   "decisions": 0
@@ -33,30 +33,23 @@
    "flags": [],
    "current": {
     "task": {
-     "prio": 6003,
-     "id": "AR-geometry2-C02",
-     "book": "geometry2",
-     "stage": "C",
-     "n": 2,
-     "attempt": 1
-    },
-    "startedAt": "2026-10-15T20:17:00.000Z",
-    "elapsedMin": 10,
-    "estimateMin": 18,
-    "ratio": 0.56
-   },
-   "lastHeartbeatAt": "2026-10-15T20:17:00.000Z",
-   "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "6003-AR-geometry2-C02-n1",
-   "minutesSinceHeartbeat": 10,
-   "pending": [
-    {
-     "name": "6005-AR-geometry2-C03-n1",
+     "prio": 6005,
      "id": "AR-geometry2-C03",
      "book": "geometry2",
      "stage": "C",
-     "n": 3
+     "n": 3,
+     "attempt": 1
     },
+    "startedAt": "2026-10-15T20:31:00.000Z",
+    "elapsedMin": 6,
+    "estimateMin": 18,
+    "ratio": 0.33
+   },
+   "lastHeartbeatAt": "2026-10-15T20:31:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "6005-AR-geometry2-C03-n1",
+   "minutesSinceHeartbeat": 6,
+   "pending": [
     {
      "name": "6011-AR-geometry2-C06-n1",
      "id": "AR-geometry2-C06",
@@ -121,25 +114,20 @@
      "n": 9
     }
    ],
-   "pendingCount": 10,
+   "pendingCount": 9,
    "doingCount": 1,
    "doneToday": 56,
    "failedToday": 1,
    "util": {
     "pct": 100,
-    "workMin": 1437,
+    "workMin": 1436,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-14T20:27:01.637Z",
+    "awakeFrom": "2026-10-14T20:37:01.656Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-14T20:27:01.637Z",
-     "to": "2026-10-14T20:28:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-14T20:28:00.000Z",
+     "from": "2026-10-14T20:37:01.656Z",
      "to": "2026-10-14T20:54:00.000Z",
      "kind": "work"
     },
@@ -435,11 +423,36 @@
     },
     {
      "from": "2026-10-15T20:17:00.000Z",
-     "to": "2026-10-15T20:27:01.637Z",
+     "to": "2026-10-15T20:30:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T20:30:00.000Z",
+     "to": "2026-10-15T20:31:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-15T20:31:00.000Z",
+     "to": "2026-10-15T20:37:01.656Z",
      "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 6005,
+      "id": "AR-geometry2-C03",
+      "book": "geometry2",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T20:31:00.000Z",
+     "endedAt": null,
+     "minutes": 6,
+     "estimateMin": 18,
+     "ok": null
+    },
     {
      "task": {
       "prio": 6003,
@@ -450,10 +463,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-15T20:17:00.000Z",
-     "endedAt": null,
-     "minutes": 10,
+     "endedAt": "2026-10-15T20:30:00.000Z",
+     "minutes": 13,
      "estimateMin": 18,
-     "ok": null
+     "ok": true
     },
     {
      "task": {
@@ -1294,21 +1307,6 @@
      "minutes": 26,
      "estimateMin": 20,
      "ok": true
-    },
-    {
-     "task": {
-      "prio": 2007,
-      "id": "AR-zmanim-C04",
-      "book": "zmanim",
-      "stage": "C",
-      "n": 4,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-14T20:14:00.000Z",
-     "endedAt": "2026-10-14T20:28:00.000Z",
-     "minutes": 14,
-     "estimateMin": 20,
-     "ok": true
     }
    ],
    "doneFiles": [
@@ -2081,6 +2079,18 @@
      }
     },
     {
+     "name": "6003-AR-geometry2-C02-n1",
+     "id": "AR-geometry2-C02",
+     "book": "geometry2",
+     "stage": "C",
+     "n": 2,
+     "result": {
+      "at": "2026-10-15T20:30:00.000Z",
+      "kind": "בוצע",
+      "minutes": 13
+     }
+    },
+    {
      "name": "6004-AR-geometry2-R03-n1",
      "id": "AR-geometry2-R03",
      "book": "geometry2",
@@ -2224,7 +2234,7 @@
    "flags": [
     {
      "kind": "stuck",
-     "text": "תקוע על משימה - 538 דק' במקום 18"
+     "text": "תקוע על משימה - 548 דק' במקום 18"
     },
     {
      "kind": "silent",
@@ -2241,14 +2251,14 @@
      "attempt": 1
     },
     "startedAt": "2026-10-15T11:29:00.000Z",
-    "elapsedMin": 538,
+    "elapsedMin": 548,
     "estimateMin": 18,
-    "ratio": 29.89
+    "ratio": 30.44
    },
    "lastHeartbeatAt": "2026-10-15T11:29:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "5001-AR-geometry1-C01-n1",
-   "minutesSinceHeartbeat": 538,
+   "minutesSinceHeartbeat": 548,
    "pending": [
     {
      "name": "4999-AR-kurs-S-n1",
@@ -2344,23 +2354,18 @@
    ],
    "pendingCount": 13,
    "doingCount": 1,
-   "doneToday": 65,
+   "doneToday": 64,
    "failedToday": 0,
    "util": {
     "pct": 86,
     "workMin": 1186,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-14T20:27:01.637Z",
+    "awakeFrom": "2026-10-14T20:37:01.656Z",
     "sleepMin": 194
    },
    "segments": [
     {
-     "from": "2026-10-14T20:27:01.637Z",
-     "to": "2026-10-14T20:29:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-14T20:29:00.000Z",
+     "from": "2026-10-14T20:37:01.656Z",
      "to": "2026-10-14T20:39:00.000Z",
      "kind": "work"
     },
@@ -2711,7 +2716,7 @@
     },
     {
      "from": "2026-10-15T11:29:00.000Z",
-     "to": "2026-10-15T20:27:01.637Z",
+     "to": "2026-10-15T20:37:01.656Z",
      "kind": "work"
     }
    ],
@@ -2727,7 +2732,7 @@
      },
      "startedAt": "2026-10-15T11:29:00.000Z",
      "endedAt": null,
-     "minutes": 538,
+     "minutes": 548,
      "estimateMin": 18,
      "ok": null
     },
@@ -3687,21 +3692,6 @@
      },
      "startedAt": "2026-10-14T20:29:00.000Z",
      "endedAt": "2026-10-14T20:39:00.000Z",
-     "minutes": 10,
-     "estimateMin": 20,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 2001,
-      "id": "AR-zmanim-C01",
-      "book": "zmanim",
-      "stage": "C",
-      "n": 1,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-14T20:19:00.000Z",
-     "endedAt": "2026-10-14T20:29:00.000Z",
      "minutes": 10,
      "estimateMin": 20,
      "ok": true
@@ -4630,7 +4620,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 21
+  "minutesSinceBacklog": 31
  },
  "progress": {
   "books": [
@@ -4667,7 +4657,7 @@
     "pages": 208,
     "total": 23,
     "done": 23,
-    "doneToday": 15,
+    "doneToday": 13,
     "doneHour": 0,
     "pct": 100,
     "working": [],
@@ -4749,7 +4739,7 @@
     "total": 21,
     "done": 19,
     "doneToday": 19,
-    "doneHour": 2,
+    "doneHour": 1,
     "pct": 90,
     "working": [
      "M2"
@@ -4858,8 +4848,8 @@
   "total": 264,
   "done": 142,
   "pct": 54,
-  "doneToday": 120,
-  "doneHour": 4,
+  "doneToday": 118,
+  "doneHour": 3,
   "counts": {
    "ready": 51,
    "waiting": 58,
@@ -4871,6 +4861,22 @@
  "changes": {
   "hour": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 6003,
+      "id": "AR-geometry2-C02",
+      "book": "geometry2",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T20:17:00.000Z",
+     "endedAt": "2026-10-15T20:30:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -4934,22 +4940,6 @@
      "minutes": 6,
      "estimateMin": 18,
      "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": {
-      "prio": 5017,
-      "id": "AR-geometry1-C09",
-      "book": "geometry1",
-      "stage": "C",
-      "n": 9,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T19:18:00.000Z",
-     "endedAt": "2026-10-15T19:33:00.000Z",
-     "minutes": 15,
-     "estimateMin": 18,
-     "ok": true
     }
    ],
    "flags": [
@@ -4965,6 +4955,22 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 6003,
+      "id": "AR-geometry2-C02",
+      "book": "geometry2",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T20:17:00.000Z",
+     "endedAt": "2026-10-15T20:30:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -5858,22 +5864,6 @@
      "startedAt": "2026-10-14T20:28:00.000Z",
      "endedAt": "2026-10-14T20:54:00.000Z",
      "minutes": 26,
-     "estimateMin": 20,
-     "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": {
-      "prio": 2007,
-      "id": "AR-zmanim-C04",
-      "book": "zmanim",
-      "stage": "C",
-      "n": 4,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-14T20:14:00.000Z",
-     "endedAt": "2026-10-14T20:28:00.000Z",
-     "minutes": 14,
      "estimateMin": 20,
      "ok": true
     },
@@ -6897,22 +6887,6 @@
      },
      "startedAt": "2026-10-14T20:29:00.000Z",
      "endedAt": "2026-10-14T20:39:00.000Z",
-     "minutes": 10,
-     "estimateMin": 20,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 2001,
-      "id": "AR-zmanim-C01",
-      "book": "zmanim",
-      "stage": "C",
-      "n": 1,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-14T20:19:00.000Z",
-     "endedAt": "2026-10-14T20:29:00.000Z",
      "minutes": 10,
      "estimateMin": 20,
      "ok": true
