@@ -1,0 +1,5929 @@
+{
+ "build": 1,
+ "generatedAt": "2026-10-15T11:37:46.894Z",
+ "generatedBy": "Elad_mini",
+ "project": "arabic-books-check",
+ "summary": {
+  "ok": false,
+  "problems": [
+   {
+    "seat": "M6",
+    "kind": "stuck",
+    "text": "תקוע על משימה - 518 דק' במקום 30"
+   },
+   {
+    "seat": "M6",
+    "kind": "silent",
+    "text": "לקח משימה ב-06:00 ולא סיים/דיווח מאז"
+   },
+   {
+    "seat": "M2",
+    "kind": "util",
+    "text": "עבד 62% מהזמן (היעד 80%)"
+   }
+  ],
+  "doneToday": 105,
+  "working": 2,
+  "flags": 1,
+  "decisions": 0
+ },
+ "seats": [
+  {
+   "id": "M6",
+   "account": "claude4.psycho.co.il@gmail.com",
+   "color": "#2563eb",
+   "colorName": "כחול",
+   "state": "silent",
+   "stateText": "לא נותן סימן חיים",
+   "flags": [
+    {
+     "kind": "stuck",
+     "text": "תקוע על משימה - 518 דק' במקום 30"
+    },
+    {
+     "kind": "silent",
+     "text": "לקח משימה ב-06:00 ולא סיים/דיווח מאז"
+    }
+   ],
+   "current": {
+    "task": {
+     "prio": 3026,
+     "id": "AR-beayot-R14",
+     "book": "beayot",
+     "stage": "R",
+     "n": 14,
+     "attempt": 1
+    },
+    "startedAt": "2026-10-15T03:00:00.000Z",
+    "elapsedMin": 518,
+    "estimateMin": 30,
+    "ratio": 17.27
+   },
+   "lastHeartbeatAt": "2026-10-15T03:00:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "3026-AR-beayot-R14-n1",
+   "minutesSinceHeartbeat": 518,
+   "pending": [
+    {
+     "name": "3029-AR-beayot-C15-n1",
+     "id": "AR-beayot-C15",
+     "book": "beayot",
+     "stage": "C",
+     "n": 15
+    },
+    {
+     "name": "3031-AR-beayot-C16-n1",
+     "id": "AR-beayot-C16",
+     "book": "beayot",
+     "stage": "C",
+     "n": 16
+    },
+    {
+     "name": "3033-AR-beayot-C17-n1",
+     "id": "AR-beayot-C17",
+     "book": "beayot",
+     "stage": "C",
+     "n": 17
+    },
+    {
+     "name": "4001-AR-kurs-C01-n1",
+     "id": "AR-kurs-C01",
+     "book": "kurs",
+     "stage": "C",
+     "n": 1
+    },
+    {
+     "name": "4002-AR-kurs-R02-n1",
+     "id": "AR-kurs-R02",
+     "book": "kurs",
+     "stage": "R",
+     "n": 2
+    },
+    {
+     "name": "4016-AR-kurs-R09-n1",
+     "id": "AR-kurs-R09",
+     "book": "kurs",
+     "stage": "R",
+     "n": 9
+    },
+    {
+     "name": "4018-AR-kurs-R10-n1",
+     "id": "AR-kurs-R10",
+     "book": "kurs",
+     "stage": "R",
+     "n": 10
+    }
+   ],
+   "pendingCount": 7,
+   "doingCount": 1,
+   "doneToday": 32,
+   "failedToday": 0,
+   "util": {
+    "pct": 100,
+    "workMin": 1169,
+    "awakeMin": 1172,
+    "awakeFrom": "2026-10-14T15:06:00.000Z",
+    "sleepMin": 3
+   },
+   "segments": [
+    {
+     "from": "2026-10-14T15:06:00.000Z",
+     "to": "2026-10-14T16:05:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T16:05:00.000Z",
+     "to": "2026-10-14T16:40:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T16:40:00.000Z",
+     "to": "2026-10-14T16:56:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T16:56:00.000Z",
+     "to": "2026-10-14T17:17:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:17:00.000Z",
+     "to": "2026-10-14T17:36:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:36:00.000Z",
+     "to": "2026-10-14T17:37:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T17:37:00.000Z",
+     "to": "2026-10-14T18:06:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T18:06:00.000Z",
+     "to": "2026-10-14T18:29:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T18:29:00.000Z",
+     "to": "2026-10-14T18:30:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T18:30:00.000Z",
+     "to": "2026-10-14T18:45:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T18:45:00.000Z",
+     "to": "2026-10-14T19:04:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T19:04:00.000Z",
+     "to": "2026-10-14T19:19:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T19:19:00.000Z",
+     "to": "2026-10-14T19:34:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T19:34:00.000Z",
+     "to": "2026-10-14T19:51:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T19:51:00.000Z",
+     "to": "2026-10-14T20:14:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:14:00.000Z",
+     "to": "2026-10-14T20:28:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:28:00.000Z",
+     "to": "2026-10-14T20:54:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:54:00.000Z",
+     "to": "2026-10-14T20:55:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T20:55:00.000Z",
+     "to": "2026-10-14T21:16:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:16:00.000Z",
+     "to": "2026-10-14T21:17:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T21:17:00.000Z",
+     "to": "2026-10-14T21:38:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:38:00.000Z",
+     "to": "2026-10-14T22:01:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T22:01:00.000Z",
+     "to": "2026-10-14T22:14:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T22:14:00.000Z",
+     "to": "2026-10-14T22:42:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T22:42:00.000Z",
+     "to": "2026-10-14T23:05:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:05:00.000Z",
+     "to": "2026-10-14T23:20:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:20:00.000Z",
+     "to": "2026-10-14T23:38:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:38:00.000Z",
+     "to": "2026-10-15T00:07:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T00:07:00.000Z",
+     "to": "2026-10-15T00:28:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T00:28:00.000Z",
+     "to": "2026-10-15T00:50:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T00:50:00.000Z",
+     "to": "2026-10-15T01:05:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:05:00.000Z",
+     "to": "2026-10-15T01:24:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:24:00.000Z",
+     "to": "2026-10-15T01:41:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:41:00.000Z",
+     "to": "2026-10-15T02:04:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T02:04:00.000Z",
+     "to": "2026-10-15T02:20:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T02:20:00.000Z",
+     "to": "2026-10-15T02:36:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T02:36:00.000Z",
+     "to": "2026-10-15T03:00:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:00:00.000Z",
+     "to": "2026-10-15T11:37:46.894Z",
+     "kind": "work"
+    }
+   ],
+   "history": [
+    {
+     "task": {
+      "prio": 3026,
+      "id": "AR-beayot-R14",
+      "book": "beayot",
+      "stage": "R",
+      "n": 14,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:00:00.000Z",
+     "endedAt": null,
+     "minutes": 518,
+     "estimateMin": 30,
+     "ok": null
+    },
+    {
+     "task": {
+      "prio": 3025,
+      "id": "AR-beayot-C13",
+      "book": "beayot",
+      "stage": "C",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:36:00.000Z",
+     "endedAt": "2026-10-15T03:00:00.000Z",
+     "minutes": 24,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3023,
+      "id": "AR-beayot-C12",
+      "book": "beayot",
+      "stage": "C",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:20:00.000Z",
+     "endedAt": "2026-10-15T02:36:00.000Z",
+     "minutes": 16,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3021,
+      "id": "AR-beayot-C11",
+      "book": "beayot",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:04:00.000Z",
+     "endedAt": "2026-10-15T02:20:00.000Z",
+     "minutes": 16,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3019,
+      "id": "AR-beayot-C10",
+      "book": "beayot",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:41:00.000Z",
+     "endedAt": "2026-10-15T02:04:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3017,
+      "id": "AR-beayot-C09",
+      "book": "beayot",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:24:00.000Z",
+     "endedAt": "2026-10-15T01:41:00.000Z",
+     "minutes": 17,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3015,
+      "id": "AR-beayot-C08",
+      "book": "beayot",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:05:00.000Z",
+     "endedAt": "2026-10-15T01:24:00.000Z",
+     "minutes": 19,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3013,
+      "id": "AR-beayot-C07",
+      "book": "beayot",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:50:00.000Z",
+     "endedAt": "2026-10-15T01:05:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3011,
+      "id": "AR-beayot-C06",
+      "book": "beayot",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:28:00.000Z",
+     "endedAt": "2026-10-15T00:50:00.000Z",
+     "minutes": 22,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3009,
+      "id": "AR-beayot-C05",
+      "book": "beayot",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:07:00.000Z",
+     "endedAt": "2026-10-15T00:28:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3006,
+      "id": "AR-beayot-R04",
+      "book": "beayot",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:38:00.000Z",
+     "endedAt": "2026-10-15T00:07:00.000Z",
+     "minutes": 29,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3004,
+      "id": "AR-beayot-R03",
+      "book": "beayot",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:20:00.000Z",
+     "endedAt": "2026-10-14T23:38:00.000Z",
+     "minutes": 18,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3002,
+      "id": "AR-beayot-R02",
+      "book": "beayot",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:05:00.000Z",
+     "endedAt": "2026-10-14T23:20:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3001,
+      "id": "AR-beayot-C01",
+      "book": "beayot",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:42:00.000Z",
+     "endedAt": "2026-10-14T23:05:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2019,
+      "id": "AR-zmanim-C10",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:14:00.000Z",
+     "endedAt": "2026-10-14T22:42:00.000Z",
+     "minutes": 28,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2020,
+      "id": "AR-zmanim-R11",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:01:00.000Z",
+     "endedAt": "2026-10-14T22:14:00.000Z",
+     "minutes": 13,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2017,
+      "id": "AR-zmanim-C09",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:38:00.000Z",
+     "endedAt": "2026-10-14T22:01:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2015,
+      "id": "AR-zmanim-C08",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:17:00.000Z",
+     "endedAt": "2026-10-14T21:38:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2013,
+      "id": "AR-zmanim-C07",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:55:00.000Z",
+     "endedAt": "2026-10-14T21:16:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2011,
+      "id": "AR-zmanim-C06",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:28:00.000Z",
+     "endedAt": "2026-10-14T20:54:00.000Z",
+     "minutes": 26,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2007,
+      "id": "AR-zmanim-C04",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:14:00.000Z",
+     "endedAt": "2026-10-14T20:28:00.000Z",
+     "minutes": 14,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2003,
+      "id": "AR-zmanim-C02",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:51:00.000Z",
+     "endedAt": "2026-10-14T20:14:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1013,
+      "id": "AR-tarshimim-C07",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:34:00.000Z",
+     "endedAt": "2026-10-14T19:51:00.000Z",
+     "minutes": 17,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1009,
+      "id": "AR-tarshimim-C05",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:19:00.000Z",
+     "endedAt": "2026-10-14T19:34:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2008,
+      "id": "AR-zmanim-R05",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:04:00.000Z",
+     "endedAt": "2026-10-14T19:19:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2004,
+      "id": "AR-zmanim-R03",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:45:00.000Z",
+     "endedAt": "2026-10-14T19:04:00.000Z",
+     "minutes": 19,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2000,
+      "id": "AR-zmanim-R01",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:30:00.000Z",
+     "endedAt": "2026-10-14T18:45:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1005,
+      "id": "AR-tarshimim-C03",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:06:00.000Z",
+     "endedAt": "2026-10-14T18:29:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1003,
+      "id": "AR-tarshimim-C02",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:37:00.000Z",
+     "endedAt": "2026-10-14T18:06:00.000Z",
+     "minutes": 29,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1001,
+      "id": "AR-tarshimim-C01",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:17:00.000Z",
+     "endedAt": "2026-10-14T17:36:00.000Z",
+     "minutes": 19,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1010,
+      "id": "AR-tarshimim-R06",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:56:00.000Z",
+     "endedAt": "2026-10-14T17:17:00.000Z",
+     "minutes": 21,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1006,
+      "id": "AR-tarshimim-R04",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:40:00.000Z",
+     "endedAt": "2026-10-14T16:56:00.000Z",
+     "minutes": 16,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1002,
+      "id": "AR-tarshimim-R02",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:05:00.000Z",
+     "endedAt": "2026-10-14T16:40:00.000Z",
+     "minutes": 35,
+     "estimateMin": 30,
+     "ok": true
+    }
+   ],
+   "doneFiles": [
+    {
+     "name": "1001-AR-tarshimim-C01-n1",
+     "id": "AR-tarshimim-C01",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T17:36:00.000Z",
+      "kind": "בוצע",
+      "minutes": 19
+     }
+    },
+    {
+     "name": "1002-AR-tarshimim-R02-n1",
+     "id": "AR-tarshimim-R02",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 2,
+     "result": {
+      "at": "2026-10-14T16:40:00.000Z",
+      "kind": "בוצע",
+      "minutes": 35
+     }
+    },
+    {
+     "name": "1003-AR-tarshimim-C02-n1",
+     "id": "AR-tarshimim-C02",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 2,
+     "result": {
+      "at": "2026-10-14T18:06:00.000Z",
+      "kind": "בוצע",
+      "minutes": 29
+     }
+    },
+    {
+     "name": "1005-AR-tarshimim-C03-n1",
+     "id": "AR-tarshimim-C03",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 3,
+     "result": {
+      "at": "2026-10-14T18:29:00.000Z",
+      "kind": "בוצע",
+      "minutes": 23
+     }
+    },
+    {
+     "name": "1006-AR-tarshimim-R04-n1",
+     "id": "AR-tarshimim-R04",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 4,
+     "result": {
+      "at": "2026-10-14T16:56:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "1009-AR-tarshimim-C05-n1",
+     "id": "AR-tarshimim-C05",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 5,
+     "result": {
+      "at": "2026-10-14T19:34:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "1010-AR-tarshimim-R06-n1",
+     "id": "AR-tarshimim-R06",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 6,
+     "result": {
+      "at": "2026-10-14T17:17:00.000Z",
+      "kind": "בוצע",
+      "minutes": 21
+     }
+    },
+    {
+     "name": "1013-AR-tarshimim-C07-n1",
+     "id": "AR-tarshimim-C07",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 7,
+     "result": {
+      "at": "2026-10-14T19:51:00.000Z",
+      "kind": "בוצע",
+      "minutes": 17
+     }
+    },
+    {
+     "name": "2000-AR-zmanim-R01-n1",
+     "id": "AR-zmanim-R01",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T18:45:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "2003-AR-zmanim-C02-n1",
+     "id": "AR-zmanim-C02",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 2,
+     "result": {
+      "at": "2026-10-14T20:14:00.000Z",
+      "kind": "בוצע",
+      "minutes": 23
+     }
+    },
+    {
+     "name": "2004-AR-zmanim-R03-n1",
+     "id": "AR-zmanim-R03",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 3,
+     "result": {
+      "at": "2026-10-14T19:04:00.000Z",
+      "kind": "בוצע",
+      "minutes": 19
+     }
+    },
+    {
+     "name": "2007-AR-zmanim-C04-n1",
+     "id": "AR-zmanim-C04",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 4,
+     "result": {
+      "at": "2026-10-14T20:28:00.000Z",
+      "kind": "בוצע",
+      "minutes": 14
+     }
+    },
+    {
+     "name": "2008-AR-zmanim-R05-n1",
+     "id": "AR-zmanim-R05",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 5,
+     "result": {
+      "at": "2026-10-14T19:19:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "2011-AR-zmanim-C06-n1",
+     "id": "AR-zmanim-C06",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 6,
+     "result": {
+      "at": "2026-10-14T20:54:00.000Z",
+      "kind": "בוצע",
+      "minutes": 26
+     }
+    },
+    {
+     "name": "2013-AR-zmanim-C07-n1",
+     "id": "AR-zmanim-C07",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 7,
+     "result": {
+      "at": "2026-10-14T21:16:00.000Z",
+      "kind": "בוצע",
+      "minutes": 21
+     }
+    },
+    {
+     "name": "2015-AR-zmanim-C08-n1",
+     "id": "AR-zmanim-C08",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 8,
+     "result": {
+      "at": "2026-10-14T21:38:00.000Z",
+      "kind": "בוצע",
+      "minutes": 21
+     }
+    },
+    {
+     "name": "2017-AR-zmanim-C09-n1",
+     "id": "AR-zmanim-C09",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 9,
+     "result": {
+      "at": "2026-10-14T22:01:00.000Z",
+      "kind": "בוצע",
+      "minutes": 23
+     }
+    },
+    {
+     "name": "2019-AR-zmanim-C10-n1",
+     "id": "AR-zmanim-C10",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 10,
+     "result": {
+      "at": "2026-10-14T22:42:00.000Z",
+      "kind": "בוצע",
+      "minutes": 28
+     }
+    },
+    {
+     "name": "2020-AR-zmanim-R11-n1",
+     "id": "AR-zmanim-R11",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 11,
+     "result": {
+      "at": "2026-10-14T22:14:00.000Z",
+      "kind": "בוצע",
+      "minutes": 13
+     }
+    },
+    {
+     "name": "3001-AR-beayot-C01-n1",
+     "id": "AR-beayot-C01",
+     "book": "beayot",
+     "stage": "C",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T23:05:00.000Z",
+      "kind": "בוצע",
+      "minutes": 23
+     }
+    },
+    {
+     "name": "3002-AR-beayot-R02-n1",
+     "id": "AR-beayot-R02",
+     "book": "beayot",
+     "stage": "R",
+     "n": 2,
+     "result": {
+      "at": "2026-10-14T23:20:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "3004-AR-beayot-R03-n1",
+     "id": "AR-beayot-R03",
+     "book": "beayot",
+     "stage": "R",
+     "n": 3,
+     "result": {
+      "at": "2026-10-14T23:38:00.000Z",
+      "kind": "בוצע",
+      "minutes": 18
+     }
+    },
+    {
+     "name": "3006-AR-beayot-R04-n1",
+     "id": "AR-beayot-R04",
+     "book": "beayot",
+     "stage": "R",
+     "n": 4,
+     "result": {
+      "at": "2026-10-15T00:07:00.000Z",
+      "kind": "בוצע",
+      "minutes": 29
+     }
+    },
+    {
+     "name": "3009-AR-beayot-C05-n1",
+     "id": "AR-beayot-C05",
+     "book": "beayot",
+     "stage": "C",
+     "n": 5,
+     "result": {
+      "at": "2026-10-15T00:28:00.000Z",
+      "kind": "בוצע",
+      "minutes": 21
+     }
+    },
+    {
+     "name": "3011-AR-beayot-C06-n1",
+     "id": "AR-beayot-C06",
+     "book": "beayot",
+     "stage": "C",
+     "n": 6,
+     "result": {
+      "at": "2026-10-15T00:50:00.000Z",
+      "kind": "בוצע",
+      "minutes": 22
+     }
+    },
+    {
+     "name": "3013-AR-beayot-C07-n1",
+     "id": "AR-beayot-C07",
+     "book": "beayot",
+     "stage": "C",
+     "n": 7,
+     "result": {
+      "at": "2026-10-15T01:05:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "3015-AR-beayot-C08-n1",
+     "id": "AR-beayot-C08",
+     "book": "beayot",
+     "stage": "C",
+     "n": 8,
+     "result": {
+      "at": "2026-10-15T01:24:00.000Z",
+      "kind": "בוצע",
+      "minutes": 19
+     }
+    },
+    {
+     "name": "3017-AR-beayot-C09-n1",
+     "id": "AR-beayot-C09",
+     "book": "beayot",
+     "stage": "C",
+     "n": 9,
+     "result": {
+      "at": "2026-10-15T01:41:00.000Z",
+      "kind": "בוצע",
+      "minutes": 17
+     }
+    },
+    {
+     "name": "3019-AR-beayot-C10-n1",
+     "id": "AR-beayot-C10",
+     "book": "beayot",
+     "stage": "C",
+     "n": 10,
+     "result": {
+      "at": "2026-10-15T02:04:00.000Z",
+      "kind": "בוצע",
+      "minutes": 23
+     }
+    },
+    {
+     "name": "3021-AR-beayot-C11-n1",
+     "id": "AR-beayot-C11",
+     "book": "beayot",
+     "stage": "C",
+     "n": 11,
+     "result": {
+      "at": "2026-10-15T02:20:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "3023-AR-beayot-C12-n1",
+     "id": "AR-beayot-C12",
+     "book": "beayot",
+     "stage": "C",
+     "n": 12,
+     "result": {
+      "at": "2026-10-15T02:36:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "3025-AR-beayot-C13-n1",
+     "id": "AR-beayot-C13",
+     "book": "beayot",
+     "stage": "C",
+     "n": 13,
+     "result": {
+      "at": "2026-10-15T03:00:00.000Z",
+      "kind": "בוצע",
+      "minutes": 24
+     }
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "account": "claude2.psycho.co.il@gmail.com",
+   "color": "#ea580c",
+   "colorName": "כתום",
+   "state": "working",
+   "stateText": "עובד",
+   "flags": [
+    {
+     "kind": "util",
+     "text": "עבד 62% מהזמן (היעד 80%)"
+    }
+   ],
+   "current": {
+    "task": {
+     "prio": 5001,
+     "id": "AR-geometry1-C01",
+     "book": "geometry1",
+     "stage": "C",
+     "n": 1,
+     "attempt": 1
+    },
+    "startedAt": "2026-10-15T11:29:00.000Z",
+    "elapsedMin": 9,
+    "estimateMin": 18,
+    "ratio": 0.5
+   },
+   "lastHeartbeatAt": "2026-10-15T11:29:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "5001-AR-geometry1-C01-n1",
+   "minutesSinceHeartbeat": 9,
+   "pending": [
+    {
+     "name": "5002-AR-geometry1-R02-n1",
+     "id": "AR-geometry1-R02",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 2
+    },
+    {
+     "name": "5004-AR-geometry1-R03-n1",
+     "id": "AR-geometry1-R03",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 3
+    },
+    {
+     "name": "5006-AR-geometry1-R04-n1",
+     "id": "AR-geometry1-R04",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 4
+    },
+    {
+     "name": "5008-AR-geometry1-R05-n1",
+     "id": "AR-geometry1-R05",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 5
+    },
+    {
+     "name": "5010-AR-geometry1-R06-n1",
+     "id": "AR-geometry1-R06",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 6
+    },
+    {
+     "name": "5012-AR-geometry1-R07-n1",
+     "id": "AR-geometry1-R07",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 7
+    },
+    {
+     "name": "5014-AR-geometry1-R08-n1",
+     "id": "AR-geometry1-R08",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 8
+    },
+    {
+     "name": "5016-AR-geometry1-R09-n1",
+     "id": "AR-geometry1-R09",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 9
+    },
+    {
+     "name": "5018-AR-geometry1-R10-n1",
+     "id": "AR-geometry1-R10",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 10
+    },
+    {
+     "name": "6000-AR-geometry2-R01-n1",
+     "id": "AR-geometry2-R01",
+     "book": "geometry2",
+     "stage": "R",
+     "n": 1
+    },
+    {
+     "name": "6002-AR-geometry2-R02-n1",
+     "id": "AR-geometry2-R02",
+     "book": "geometry2",
+     "stage": "R",
+     "n": 2
+    }
+   ],
+   "pendingCount": 11,
+   "doingCount": 1,
+   "doneToday": 75,
+   "failedToday": 0,
+   "util": {
+    "pct": 62,
+    "workMin": 742,
+    "awakeMin": 1190,
+    "awakeFrom": "2026-10-14T14:48:00.000Z",
+    "sleepMin": 448
+   },
+   "segments": [
+    {
+     "from": "2026-10-14T14:48:00.000Z",
+     "to": "2026-10-14T14:49:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T14:49:00.000Z",
+     "to": "2026-10-14T14:58:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T14:58:00.000Z",
+     "to": "2026-10-14T14:59:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T14:59:00.000Z",
+     "to": "2026-10-14T15:06:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T15:06:00.000Z",
+     "to": "2026-10-14T16:59:00.000Z",
+     "kind": "silent"
+    },
+    {
+     "from": "2026-10-14T16:59:00.000Z",
+     "to": "2026-10-14T17:06:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:06:00.000Z",
+     "to": "2026-10-14T17:12:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:12:00.000Z",
+     "to": "2026-10-14T17:22:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:22:00.000Z",
+     "to": "2026-10-14T17:28:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:28:00.000Z",
+     "to": "2026-10-14T17:34:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:34:00.000Z",
+     "to": "2026-10-14T17:40:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T17:40:00.000Z",
+     "to": "2026-10-14T17:59:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-14T17:59:00.000Z",
+     "to": "2026-10-14T18:58:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-14T18:58:00.000Z",
+     "to": "2026-10-14T19:58:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-14T19:58:00.000Z",
+     "to": "2026-10-14T19:59:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T19:59:00.000Z",
+     "to": "2026-10-14T20:08:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:08:00.000Z",
+     "to": "2026-10-14T20:19:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:19:00.000Z",
+     "to": "2026-10-14T20:29:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:29:00.000Z",
+     "to": "2026-10-14T20:39:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:39:00.000Z",
+     "to": "2026-10-14T20:48:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:48:00.000Z",
+     "to": "2026-10-14T20:59:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T20:59:00.000Z",
+     "to": "2026-10-14T21:09:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:09:00.000Z",
+     "to": "2026-10-14T21:20:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:20:00.000Z",
+     "to": "2026-10-14T21:37:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:37:00.000Z",
+     "to": "2026-10-14T21:46:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:46:00.000Z",
+     "to": "2026-10-14T21:54:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T21:54:00.000Z",
+     "to": "2026-10-14T22:04:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T22:04:00.000Z",
+     "to": "2026-10-14T22:05:00.000Z",
+     "kind": "gap"
+    },
+    {
+     "from": "2026-10-14T22:05:00.000Z",
+     "to": "2026-10-14T22:58:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-14T22:58:00.000Z",
+     "to": "2026-10-14T23:03:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:03:00.000Z",
+     "to": "2026-10-14T23:10:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:10:00.000Z",
+     "to": "2026-10-14T23:15:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:15:00.000Z",
+     "to": "2026-10-14T23:21:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:21:00.000Z",
+     "to": "2026-10-14T23:26:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:26:00.000Z",
+     "to": "2026-10-14T23:31:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:31:00.000Z",
+     "to": "2026-10-14T23:37:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:37:00.000Z",
+     "to": "2026-10-14T23:44:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-14T23:44:00.000Z",
+     "to": "2026-10-14T23:59:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-14T23:59:00.000Z",
+     "to": "2026-10-15T00:59:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-15T00:59:00.000Z",
+     "to": "2026-10-15T01:16:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:16:00.000Z",
+     "to": "2026-10-15T01:26:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:26:00.000Z",
+     "to": "2026-10-15T01:35:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:35:00.000Z",
+     "to": "2026-10-15T01:41:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:41:00.000Z",
+     "to": "2026-10-15T01:46:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:46:00.000Z",
+     "to": "2026-10-15T01:53:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T01:53:00.000Z",
+     "to": "2026-10-15T02:04:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T02:04:00.000Z",
+     "to": "2026-10-15T02:59:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-15T02:59:00.000Z",
+     "to": "2026-10-15T03:11:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:11:00.000Z",
+     "to": "2026-10-15T03:21:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:21:00.000Z",
+     "to": "2026-10-15T03:29:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:29:00.000Z",
+     "to": "2026-10-15T03:37:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:37:00.000Z",
+     "to": "2026-10-15T03:48:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T03:48:00.000Z",
+     "to": "2026-10-15T04:58:00.000Z",
+     "kind": "silent"
+    },
+    {
+     "from": "2026-10-15T04:58:00.000Z",
+     "to": "2026-10-15T05:03:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:03:00.000Z",
+     "to": "2026-10-15T05:12:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:12:00.000Z",
+     "to": "2026-10-15T05:21:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:21:00.000Z",
+     "to": "2026-10-15T05:29:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:29:00.000Z",
+     "to": "2026-10-15T05:39:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:39:00.000Z",
+     "to": "2026-10-15T05:48:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:48:00.000Z",
+     "to": "2026-10-15T05:57:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T05:57:00.000Z",
+     "to": "2026-10-15T06:07:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:07:00.000Z",
+     "to": "2026-10-15T06:16:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:16:00.000Z",
+     "to": "2026-10-15T06:24:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:24:00.000Z",
+     "to": "2026-10-15T06:33:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:33:00.000Z",
+     "to": "2026-10-15T06:40:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:40:00.000Z",
+     "to": "2026-10-15T06:55:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T06:55:00.000Z",
+     "to": "2026-10-15T07:03:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:03:00.000Z",
+     "to": "2026-10-15T07:19:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:19:00.000Z",
+     "to": "2026-10-15T07:31:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:31:00.000Z",
+     "to": "2026-10-15T07:39:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:39:00.000Z",
+     "to": "2026-10-15T07:45:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:45:00.000Z",
+     "to": "2026-10-15T07:59:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T07:59:00.000Z",
+     "to": "2026-10-15T08:08:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T08:08:00.000Z",
+     "to": "2026-10-15T08:21:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T08:21:00.000Z",
+     "to": "2026-10-15T08:38:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T08:38:00.000Z",
+     "to": "2026-10-15T08:47:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T08:47:00.000Z",
+     "to": "2026-10-15T09:00:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T09:00:00.000Z",
+     "to": "2026-10-15T09:16:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T09:16:00.000Z",
+     "to": "2026-10-15T09:32:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T09:32:00.000Z",
+     "to": "2026-10-15T09:42:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T09:42:00.000Z",
+     "to": "2026-10-15T09:54:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T09:54:00.000Z",
+     "to": "2026-10-15T10:07:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T10:07:00.000Z",
+     "to": "2026-10-15T10:22:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T10:22:00.000Z",
+     "to": "2026-10-15T10:31:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T10:31:00.000Z",
+     "to": "2026-10-15T10:43:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T10:43:00.000Z",
+     "to": "2026-10-15T11:01:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T11:01:00.000Z",
+     "to": "2026-10-15T11:17:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T11:17:00.000Z",
+     "to": "2026-10-15T11:29:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-15T11:29:00.000Z",
+     "to": "2026-10-15T11:37:46.894Z",
+     "kind": "work"
+    }
+   ],
+   "history": [
+    {
+     "task": {
+      "prio": 5001,
+      "id": "AR-geometry1-C01",
+      "book": "geometry1",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:29:00.000Z",
+     "endedAt": null,
+     "minutes": 9,
+     "estimateMin": 18,
+     "ok": null
+    },
+    {
+     "task": {
+      "prio": 4035,
+      "id": "AR-kurs-C18",
+      "book": "kurs",
+      "stage": "C",
+      "n": 18,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:17:00.000Z",
+     "endedAt": "2026-10-15T11:29:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4033,
+      "id": "AR-kurs-C17",
+      "book": "kurs",
+      "stage": "C",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:01:00.000Z",
+     "endedAt": "2026-10-15T11:17:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4031,
+      "id": "AR-kurs-C16",
+      "book": "kurs",
+      "stage": "C",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:43:00.000Z",
+     "endedAt": "2026-10-15T11:01:00.000Z",
+     "minutes": 18,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4029,
+      "id": "AR-kurs-C15",
+      "book": "kurs",
+      "stage": "C",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:31:00.000Z",
+     "endedAt": "2026-10-15T10:43:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4027,
+      "id": "AR-kurs-C14",
+      "book": "kurs",
+      "stage": "C",
+      "n": 14,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:22:00.000Z",
+     "endedAt": "2026-10-15T10:31:00.000Z",
+     "minutes": 9,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4025,
+      "id": "AR-kurs-C13",
+      "book": "kurs",
+      "stage": "C",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:07:00.000Z",
+     "endedAt": "2026-10-15T10:22:00.000Z",
+     "minutes": 15,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4023,
+      "id": "AR-kurs-C12",
+      "book": "kurs",
+      "stage": "C",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:54:00.000Z",
+     "endedAt": "2026-10-15T10:07:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4021,
+      "id": "AR-kurs-C11",
+      "book": "kurs",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:42:00.000Z",
+     "endedAt": "2026-10-15T09:54:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4019,
+      "id": "AR-kurs-C10",
+      "book": "kurs",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:32:00.000Z",
+     "endedAt": "2026-10-15T09:42:00.000Z",
+     "minutes": 10,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4017,
+      "id": "AR-kurs-C09",
+      "book": "kurs",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:16:00.000Z",
+     "endedAt": "2026-10-15T09:32:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4015,
+      "id": "AR-kurs-C08",
+      "book": "kurs",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:00:00.000Z",
+     "endedAt": "2026-10-15T09:16:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4013,
+      "id": "AR-kurs-C07",
+      "book": "kurs",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:47:00.000Z",
+     "endedAt": "2026-10-15T09:00:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4011,
+      "id": "AR-kurs-C06",
+      "book": "kurs",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:38:00.000Z",
+     "endedAt": "2026-10-15T08:47:00.000Z",
+     "minutes": 9,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4009,
+      "id": "AR-kurs-C05",
+      "book": "kurs",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:21:00.000Z",
+     "endedAt": "2026-10-15T08:38:00.000Z",
+     "minutes": 17,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 5000,
+      "id": "AR-geometry1-R01",
+      "book": "geometry1",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:08:00.000Z",
+     "endedAt": "2026-10-15T08:21:00.000Z",
+     "minutes": 13,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4034,
+      "id": "AR-kurs-R18",
+      "book": "kurs",
+      "stage": "R",
+      "n": 18,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:59:00.000Z",
+     "endedAt": "2026-10-15T08:08:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4018,
+      "id": "AR-kurs-R10",
+      "book": "kurs",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:45:00.000Z",
+     "endedAt": "2026-10-15T07:59:00.000Z",
+     "minutes": 14,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4007,
+      "id": "AR-kurs-C04",
+      "book": "kurs",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:39:00.000Z",
+     "endedAt": "2026-10-15T07:45:00.000Z",
+     "minutes": 6,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4005,
+      "id": "AR-kurs-C03",
+      "book": "kurs",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:31:00.000Z",
+     "endedAt": "2026-10-15T07:39:00.000Z",
+     "minutes": 8,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4003,
+      "id": "AR-kurs-C02",
+      "book": "kurs",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:19:00.000Z",
+     "endedAt": "2026-10-15T07:31:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4016,
+      "id": "AR-kurs-R09",
+      "book": "kurs",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:03:00.000Z",
+     "endedAt": "2026-10-15T07:19:00.000Z",
+     "minutes": 16,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4002,
+      "id": "AR-kurs-R02",
+      "book": "kurs",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:55:00.000Z",
+     "endedAt": "2026-10-15T07:03:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4001,
+      "id": "AR-kurs-C01",
+      "book": "kurs",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:40:00.000Z",
+     "endedAt": "2026-10-15T06:55:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3033,
+      "id": "AR-beayot-C17",
+      "book": "beayot",
+      "stage": "C",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:33:00.000Z",
+     "endedAt": "2026-10-15T06:40:00.000Z",
+     "minutes": 7,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3031,
+      "id": "AR-beayot-C16",
+      "book": "beayot",
+      "stage": "C",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:24:00.000Z",
+     "endedAt": "2026-10-15T06:33:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3029,
+      "id": "AR-beayot-C15",
+      "book": "beayot",
+      "stage": "C",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:16:00.000Z",
+     "endedAt": "2026-10-15T06:24:00.000Z",
+     "minutes": 8,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4032,
+      "id": "AR-kurs-R17",
+      "book": "kurs",
+      "stage": "R",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:07:00.000Z",
+     "endedAt": "2026-10-15T06:16:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4030,
+      "id": "AR-kurs-R16",
+      "book": "kurs",
+      "stage": "R",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:57:00.000Z",
+     "endedAt": "2026-10-15T06:07:00.000Z",
+     "minutes": 10,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4028,
+      "id": "AR-kurs-R15",
+      "book": "kurs",
+      "stage": "R",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:48:00.000Z",
+     "endedAt": "2026-10-15T05:57:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4026,
+      "id": "AR-kurs-R14",
+      "book": "kurs",
+      "stage": "R",
+      "n": 14,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:39:00.000Z",
+     "endedAt": "2026-10-15T05:48:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4024,
+      "id": "AR-kurs-R13",
+      "book": "kurs",
+      "stage": "R",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:29:00.000Z",
+     "endedAt": "2026-10-15T05:39:00.000Z",
+     "minutes": 10,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4022,
+      "id": "AR-kurs-R12",
+      "book": "kurs",
+      "stage": "R",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:21:00.000Z",
+     "endedAt": "2026-10-15T05:29:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4020,
+      "id": "AR-kurs-R11",
+      "book": "kurs",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:12:00.000Z",
+     "endedAt": "2026-10-15T05:21:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4014,
+      "id": "AR-kurs-R08",
+      "book": "kurs",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:03:00.000Z",
+     "endedAt": "2026-10-15T05:12:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4012,
+      "id": "AR-kurs-R07",
+      "book": "kurs",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T04:58:00.000Z",
+     "endedAt": "2026-10-15T05:03:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4010,
+      "id": "AR-kurs-R06",
+      "book": "kurs",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:37:00.000Z",
+     "endedAt": "2026-10-15T03:48:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4008,
+      "id": "AR-kurs-R05",
+      "book": "kurs",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:29:00.000Z",
+     "endedAt": "2026-10-15T03:37:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4006,
+      "id": "AR-kurs-R04",
+      "book": "kurs",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:21:00.000Z",
+     "endedAt": "2026-10-15T03:29:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4004,
+      "id": "AR-kurs-R03",
+      "book": "kurs",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:11:00.000Z",
+     "endedAt": "2026-10-15T03:21:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3007,
+      "id": "AR-beayot-C04",
+      "book": "beayot",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:59:00.000Z",
+     "endedAt": "2026-10-15T03:11:00.000Z",
+     "minutes": 12,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 4000,
+      "id": "AR-kurs-R01",
+      "book": "kurs",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:53:00.000Z",
+     "endedAt": "2026-10-15T02:04:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3032,
+      "id": "AR-beayot-R17",
+      "book": "beayot",
+      "stage": "R",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:46:00.000Z",
+     "endedAt": "2026-10-15T01:53:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3030,
+      "id": "AR-beayot-R16",
+      "book": "beayot",
+      "stage": "R",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:41:00.000Z",
+     "endedAt": "2026-10-15T01:46:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3028,
+      "id": "AR-beayot-R15",
+      "book": "beayot",
+      "stage": "R",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:35:00.000Z",
+     "endedAt": "2026-10-15T01:41:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3005,
+      "id": "AR-beayot-C03",
+      "book": "beayot",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:26:00.000Z",
+     "endedAt": "2026-10-15T01:35:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3003,
+      "id": "AR-beayot-C02",
+      "book": "beayot",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:16:00.000Z",
+     "endedAt": "2026-10-15T01:26:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2999,
+      "id": "AR-zmanim-S",
+      "book": "zmanim",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:59:00.000Z",
+     "endedAt": "2026-10-15T01:16:00.000Z",
+     "minutes": 17,
+     "estimateMin": 40,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3024,
+      "id": "AR-beayot-R13",
+      "book": "beayot",
+      "stage": "R",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:37:00.000Z",
+     "endedAt": "2026-10-14T23:44:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2021,
+      "id": "AR-zmanim-C11",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:31:00.000Z",
+     "endedAt": "2026-10-14T23:37:00.000Z",
+     "minutes": 6,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3022,
+      "id": "AR-beayot-R12",
+      "book": "beayot",
+      "stage": "R",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:26:00.000Z",
+     "endedAt": "2026-10-14T23:31:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3020,
+      "id": "AR-beayot-R11",
+      "book": "beayot",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:21:00.000Z",
+     "endedAt": "2026-10-14T23:26:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3018,
+      "id": "AR-beayot-R10",
+      "book": "beayot",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:15:00.000Z",
+     "endedAt": "2026-10-14T23:21:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3016,
+      "id": "AR-beayot-R09",
+      "book": "beayot",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:10:00.000Z",
+     "endedAt": "2026-10-14T23:15:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3014,
+      "id": "AR-beayot-R08",
+      "book": "beayot",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:03:00.000Z",
+     "endedAt": "2026-10-14T23:10:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3012,
+      "id": "AR-beayot-R07",
+      "book": "beayot",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:58:00.000Z",
+     "endedAt": "2026-10-14T23:03:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3010,
+      "id": "AR-beayot-R06",
+      "book": "beayot",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:54:00.000Z",
+     "endedAt": "2026-10-14T22:04:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3008,
+      "id": "AR-beayot-R05",
+      "book": "beayot",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:46:00.000Z",
+     "endedAt": "2026-10-14T21:54:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2009,
+      "id": "AR-zmanim-C05",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:37:00.000Z",
+     "endedAt": "2026-10-14T21:46:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1999,
+      "id": "AR-tarshimim-S",
+      "book": "tarshimim",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:20:00.000Z",
+     "endedAt": "2026-10-14T21:37:00.000Z",
+     "minutes": 17,
+     "estimateMin": 40,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 3000,
+      "id": "AR-beayot-R01",
+      "book": "beayot",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:09:00.000Z",
+     "endedAt": "2026-10-14T21:20:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2018,
+      "id": "AR-zmanim-R10",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:59:00.000Z",
+     "endedAt": "2026-10-14T21:09:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2016,
+      "id": "AR-zmanim-R09",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:48:00.000Z",
+     "endedAt": "2026-10-14T20:59:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2014,
+      "id": "AR-zmanim-R08",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:39:00.000Z",
+     "endedAt": "2026-10-14T20:48:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2005,
+      "id": "AR-zmanim-C03",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:29:00.000Z",
+     "endedAt": "2026-10-14T20:39:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2001,
+      "id": "AR-zmanim-C01",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:19:00.000Z",
+     "endedAt": "2026-10-14T20:29:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1011,
+      "id": "AR-tarshimim-C06",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:08:00.000Z",
+     "endedAt": "2026-10-14T20:19:00.000Z",
+     "minutes": 11,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1007,
+      "id": "AR-tarshimim-C04",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:59:00.000Z",
+     "endedAt": "2026-10-14T20:08:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2012,
+      "id": "AR-zmanim-R07",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:34:00.000Z",
+     "endedAt": "2026-10-14T17:40:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2010,
+      "id": "AR-zmanim-R06",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:28:00.000Z",
+     "endedAt": "2026-10-14T17:34:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2006,
+      "id": "AR-zmanim-R04",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:22:00.000Z",
+     "endedAt": "2026-10-14T17:28:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 2002,
+      "id": "AR-zmanim-R02",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:12:00.000Z",
+     "endedAt": "2026-10-14T17:22:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1012,
+      "id": "AR-tarshimim-R07",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:06:00.000Z",
+     "endedAt": "2026-10-14T17:12:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1008,
+      "id": "AR-tarshimim-R05",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:59:00.000Z",
+     "endedAt": "2026-10-14T17:06:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1004,
+      "id": "AR-tarshimim-R03",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T14:59:00.000Z",
+     "endedAt": "2026-10-14T15:06:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "task": {
+      "prio": 1000,
+      "id": "AR-tarshimim-R01",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T14:49:00.000Z",
+     "endedAt": "2026-10-14T14:58:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    }
+   ],
+   "doneFiles": [
+    {
+     "name": "1000-AR-tarshimim-R01-n1",
+     "id": "AR-tarshimim-R01",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T14:58:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "1004-AR-tarshimim-R03-n1",
+     "id": "AR-tarshimim-R03",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 3,
+     "result": {
+      "at": "2026-10-14T15:06:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "1007-AR-tarshimim-C04-n1",
+     "id": "AR-tarshimim-C04",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 4,
+     "result": {
+      "at": "2026-10-14T20:08:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "1008-AR-tarshimim-R05-n1",
+     "id": "AR-tarshimim-R05",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 5,
+     "result": {
+      "at": "2026-10-14T17:06:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "1011-AR-tarshimim-C06-n1",
+     "id": "AR-tarshimim-C06",
+     "book": "tarshimim",
+     "stage": "C",
+     "n": 6,
+     "result": {
+      "at": "2026-10-14T20:19:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "1012-AR-tarshimim-R07-n1",
+     "id": "AR-tarshimim-R07",
+     "book": "tarshimim",
+     "stage": "R",
+     "n": 7,
+     "result": {
+      "at": "2026-10-14T17:12:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "1999-AR-tarshimim-S-n1",
+     "id": "AR-tarshimim-S",
+     "book": "tarshimim",
+     "stage": "S",
+     "n": 0,
+     "result": {
+      "at": "2026-10-14T21:37:00.000Z",
+      "kind": "בוצע",
+      "minutes": 17
+     }
+    },
+    {
+     "name": "2001-AR-zmanim-C01-n1",
+     "id": "AR-zmanim-C01",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T20:29:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "2002-AR-zmanim-R02-n1",
+     "id": "AR-zmanim-R02",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 2,
+     "result": {
+      "at": "2026-10-14T17:22:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "2005-AR-zmanim-C03-n1",
+     "id": "AR-zmanim-C03",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 3,
+     "result": {
+      "at": "2026-10-14T20:39:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "2006-AR-zmanim-R04-n1",
+     "id": "AR-zmanim-R04",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 4,
+     "result": {
+      "at": "2026-10-14T17:28:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "2009-AR-zmanim-C05-n1",
+     "id": "AR-zmanim-C05",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 5,
+     "result": {
+      "at": "2026-10-14T21:46:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "2010-AR-zmanim-R06-n1",
+     "id": "AR-zmanim-R06",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 6,
+     "result": {
+      "at": "2026-10-14T17:34:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "2012-AR-zmanim-R07-n1",
+     "id": "AR-zmanim-R07",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 7,
+     "result": {
+      "at": "2026-10-14T17:40:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "2014-AR-zmanim-R08-n1",
+     "id": "AR-zmanim-R08",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 8,
+     "result": {
+      "at": "2026-10-14T20:48:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "2016-AR-zmanim-R09-n1",
+     "id": "AR-zmanim-R09",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 9,
+     "result": {
+      "at": "2026-10-14T20:59:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "2018-AR-zmanim-R10-n1",
+     "id": "AR-zmanim-R10",
+     "book": "zmanim",
+     "stage": "R",
+     "n": 10,
+     "result": {
+      "at": "2026-10-14T21:09:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "2021-AR-zmanim-C11-n1",
+     "id": "AR-zmanim-C11",
+     "book": "zmanim",
+     "stage": "C",
+     "n": 11,
+     "result": {
+      "at": "2026-10-14T23:37:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "2999-AR-zmanim-S-n1",
+     "id": "AR-zmanim-S",
+     "book": "zmanim",
+     "stage": "S",
+     "n": 0,
+     "result": {
+      "at": "2026-10-15T01:16:00.000Z",
+      "kind": "בוצע",
+      "minutes": 17
+     }
+    },
+    {
+     "name": "3000-AR-beayot-R01-n1",
+     "id": "AR-beayot-R01",
+     "book": "beayot",
+     "stage": "R",
+     "n": 1,
+     "result": {
+      "at": "2026-10-14T21:20:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "3003-AR-beayot-C02-n1",
+     "id": "AR-beayot-C02",
+     "book": "beayot",
+     "stage": "C",
+     "n": 2,
+     "result": {
+      "at": "2026-10-15T01:26:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "3005-AR-beayot-C03-n1",
+     "id": "AR-beayot-C03",
+     "book": "beayot",
+     "stage": "C",
+     "n": 3,
+     "result": {
+      "at": "2026-10-15T01:35:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "3007-AR-beayot-C04-n1",
+     "id": "AR-beayot-C04",
+     "book": "beayot",
+     "stage": "C",
+     "n": 4,
+     "result": {
+      "at": "2026-10-15T03:11:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "3008-AR-beayot-R05-n1",
+     "id": "AR-beayot-R05",
+     "book": "beayot",
+     "stage": "R",
+     "n": 5,
+     "result": {
+      "at": "2026-10-14T21:54:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "3010-AR-beayot-R06-n1",
+     "id": "AR-beayot-R06",
+     "book": "beayot",
+     "stage": "R",
+     "n": 6,
+     "result": {
+      "at": "2026-10-14T22:04:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "3012-AR-beayot-R07-n1",
+     "id": "AR-beayot-R07",
+     "book": "beayot",
+     "stage": "R",
+     "n": 7,
+     "result": {
+      "at": "2026-10-14T23:03:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "3014-AR-beayot-R08-n1",
+     "id": "AR-beayot-R08",
+     "book": "beayot",
+     "stage": "R",
+     "n": 8,
+     "result": {
+      "at": "2026-10-14T23:10:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "3016-AR-beayot-R09-n1",
+     "id": "AR-beayot-R09",
+     "book": "beayot",
+     "stage": "R",
+     "n": 9,
+     "result": {
+      "at": "2026-10-14T23:15:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "3018-AR-beayot-R10-n1",
+     "id": "AR-beayot-R10",
+     "book": "beayot",
+     "stage": "R",
+     "n": 10,
+     "result": {
+      "at": "2026-10-14T23:21:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "3020-AR-beayot-R11-n1",
+     "id": "AR-beayot-R11",
+     "book": "beayot",
+     "stage": "R",
+     "n": 11,
+     "result": {
+      "at": "2026-10-14T23:26:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "3022-AR-beayot-R12-n1",
+     "id": "AR-beayot-R12",
+     "book": "beayot",
+     "stage": "R",
+     "n": 12,
+     "result": {
+      "at": "2026-10-14T23:31:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "3024-AR-beayot-R13-n1",
+     "id": "AR-beayot-R13",
+     "book": "beayot",
+     "stage": "R",
+     "n": 13,
+     "result": {
+      "at": "2026-10-14T23:44:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "3028-AR-beayot-R15-n1",
+     "id": "AR-beayot-R15",
+     "book": "beayot",
+     "stage": "R",
+     "n": 15,
+     "result": {
+      "at": "2026-10-15T01:41:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "3029-AR-beayot-C15-n1",
+     "id": "AR-beayot-C15",
+     "book": "beayot",
+     "stage": "C",
+     "n": 15,
+     "result": {
+      "at": "2026-10-15T06:24:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "3030-AR-beayot-R16-n1",
+     "id": "AR-beayot-R16",
+     "book": "beayot",
+     "stage": "R",
+     "n": 16,
+     "result": {
+      "at": "2026-10-15T01:46:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "3031-AR-beayot-C16-n1",
+     "id": "AR-beayot-C16",
+     "book": "beayot",
+     "stage": "C",
+     "n": 16,
+     "result": {
+      "at": "2026-10-15T06:33:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "3032-AR-beayot-R17-n1",
+     "id": "AR-beayot-R17",
+     "book": "beayot",
+     "stage": "R",
+     "n": 17,
+     "result": {
+      "at": "2026-10-15T01:53:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "3033-AR-beayot-C17-n1",
+     "id": "AR-beayot-C17",
+     "book": "beayot",
+     "stage": "C",
+     "n": 17,
+     "result": {
+      "at": "2026-10-15T06:40:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "4000-AR-kurs-R01-n1",
+     "id": "AR-kurs-R01",
+     "book": "kurs",
+     "stage": "R",
+     "n": 1,
+     "result": {
+      "at": "2026-10-15T02:04:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "4001-AR-kurs-C01-n1",
+     "id": "AR-kurs-C01",
+     "book": "kurs",
+     "stage": "C",
+     "n": 1,
+     "result": {
+      "at": "2026-10-15T06:55:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "4002-AR-kurs-R02-n1",
+     "id": "AR-kurs-R02",
+     "book": "kurs",
+     "stage": "R",
+     "n": 2,
+     "result": {
+      "at": "2026-10-15T07:03:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
+    },
+    {
+     "name": "4003-AR-kurs-C02-n1",
+     "id": "AR-kurs-C02",
+     "book": "kurs",
+     "stage": "C",
+     "n": 2,
+     "result": {
+      "at": "2026-10-15T07:31:00.000Z",
+      "kind": "בוצע",
+      "minutes": 12
+     }
+    },
+    {
+     "name": "4004-AR-kurs-R03-n1",
+     "id": "AR-kurs-R03",
+     "book": "kurs",
+     "stage": "R",
+     "n": 3,
+     "result": {
+      "at": "2026-10-15T03:21:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "4005-AR-kurs-C03-n1",
+     "id": "AR-kurs-C03",
+     "book": "kurs",
+     "stage": "C",
+     "n": 3,
+     "result": {
+      "at": "2026-10-15T07:39:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "4006-AR-kurs-R04-n1",
+     "id": "AR-kurs-R04",
+     "book": "kurs",
+     "stage": "R",
+     "n": 4,
+     "result": {
+      "at": "2026-10-15T03:29:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "4007-AR-kurs-C04-n1",
+     "id": "AR-kurs-C04",
+     "book": "kurs",
+     "stage": "C",
+     "n": 4,
+     "result": {
+      "at": "2026-10-15T07:45:00.000Z",
+      "kind": "בוצע",
+      "minutes": 6
+     }
+    },
+    {
+     "name": "4008-AR-kurs-R05-n1",
+     "id": "AR-kurs-R05",
+     "book": "kurs",
+     "stage": "R",
+     "n": 5,
+     "result": {
+      "at": "2026-10-15T03:37:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "4009-AR-kurs-C05-n1",
+     "id": "AR-kurs-C05",
+     "book": "kurs",
+     "stage": "C",
+     "n": 5,
+     "result": {
+      "at": "2026-10-15T08:38:00.000Z",
+      "kind": "בוצע",
+      "minutes": 17
+     }
+    },
+    {
+     "name": "4010-AR-kurs-R06-n1",
+     "id": "AR-kurs-R06",
+     "book": "kurs",
+     "stage": "R",
+     "n": 6,
+     "result": {
+      "at": "2026-10-15T03:48:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "4011-AR-kurs-C06-n1",
+     "id": "AR-kurs-C06",
+     "book": "kurs",
+     "stage": "C",
+     "n": 6,
+     "result": {
+      "at": "2026-10-15T08:47:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4012-AR-kurs-R07-n1",
+     "id": "AR-kurs-R07",
+     "book": "kurs",
+     "stage": "R",
+     "n": 7,
+     "result": {
+      "at": "2026-10-15T05:03:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "4013-AR-kurs-C07-n1",
+     "id": "AR-kurs-C07",
+     "book": "kurs",
+     "stage": "C",
+     "n": 7,
+     "result": {
+      "at": "2026-10-15T09:00:00.000Z",
+      "kind": "בוצע",
+      "minutes": 13
+     }
+    },
+    {
+     "name": "4014-AR-kurs-R08-n1",
+     "id": "AR-kurs-R08",
+     "book": "kurs",
+     "stage": "R",
+     "n": 8,
+     "result": {
+      "at": "2026-10-15T05:12:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4015-AR-kurs-C08-n1",
+     "id": "AR-kurs-C08",
+     "book": "kurs",
+     "stage": "C",
+     "n": 8,
+     "result": {
+      "at": "2026-10-15T09:16:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "4016-AR-kurs-R09-n1",
+     "id": "AR-kurs-R09",
+     "book": "kurs",
+     "stage": "R",
+     "n": 9,
+     "result": {
+      "at": "2026-10-15T07:19:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "4017-AR-kurs-C09-n1",
+     "id": "AR-kurs-C09",
+     "book": "kurs",
+     "stage": "C",
+     "n": 9,
+     "result": {
+      "at": "2026-10-15T09:32:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "4018-AR-kurs-R10-n1",
+     "id": "AR-kurs-R10",
+     "book": "kurs",
+     "stage": "R",
+     "n": 10,
+     "result": {
+      "at": "2026-10-15T07:59:00.000Z",
+      "kind": "בוצע",
+      "minutes": 14
+     }
+    },
+    {
+     "name": "4019-AR-kurs-C10-n1",
+     "id": "AR-kurs-C10",
+     "book": "kurs",
+     "stage": "C",
+     "n": 10,
+     "result": {
+      "at": "2026-10-15T09:42:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "4020-AR-kurs-R11-n1",
+     "id": "AR-kurs-R11",
+     "book": "kurs",
+     "stage": "R",
+     "n": 11,
+     "result": {
+      "at": "2026-10-15T05:21:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4021-AR-kurs-C11-n1",
+     "id": "AR-kurs-C11",
+     "book": "kurs",
+     "stage": "C",
+     "n": 11,
+     "result": {
+      "at": "2026-10-15T09:54:00.000Z",
+      "kind": "בוצע",
+      "minutes": 12
+     }
+    },
+    {
+     "name": "4022-AR-kurs-R12-n1",
+     "id": "AR-kurs-R12",
+     "book": "kurs",
+     "stage": "R",
+     "n": 12,
+     "result": {
+      "at": "2026-10-15T05:29:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "4023-AR-kurs-C12-n1",
+     "id": "AR-kurs-C12",
+     "book": "kurs",
+     "stage": "C",
+     "n": 12,
+     "result": {
+      "at": "2026-10-15T10:07:00.000Z",
+      "kind": "בוצע",
+      "minutes": 13
+     }
+    },
+    {
+     "name": "4024-AR-kurs-R13-n1",
+     "id": "AR-kurs-R13",
+     "book": "kurs",
+     "stage": "R",
+     "n": 13,
+     "result": {
+      "at": "2026-10-15T05:39:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "4025-AR-kurs-C13-n1",
+     "id": "AR-kurs-C13",
+     "book": "kurs",
+     "stage": "C",
+     "n": 13,
+     "result": {
+      "at": "2026-10-15T10:22:00.000Z",
+      "kind": "בוצע",
+      "minutes": 15
+     }
+    },
+    {
+     "name": "4026-AR-kurs-R14-n1",
+     "id": "AR-kurs-R14",
+     "book": "kurs",
+     "stage": "R",
+     "n": 14,
+     "result": {
+      "at": "2026-10-15T05:48:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4027-AR-kurs-C14-n1",
+     "id": "AR-kurs-C14",
+     "book": "kurs",
+     "stage": "C",
+     "n": 14,
+     "result": {
+      "at": "2026-10-15T10:31:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4028-AR-kurs-R15-n1",
+     "id": "AR-kurs-R15",
+     "book": "kurs",
+     "stage": "R",
+     "n": 15,
+     "result": {
+      "at": "2026-10-15T05:57:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4029-AR-kurs-C15-n1",
+     "id": "AR-kurs-C15",
+     "book": "kurs",
+     "stage": "C",
+     "n": 15,
+     "result": {
+      "at": "2026-10-15T10:43:00.000Z",
+      "kind": "בוצע",
+      "minutes": 11
+     }
+    },
+    {
+     "name": "4030-AR-kurs-R16-n1",
+     "id": "AR-kurs-R16",
+     "book": "kurs",
+     "stage": "R",
+     "n": 16,
+     "result": {
+      "at": "2026-10-15T06:07:00.000Z",
+      "kind": "בוצע",
+      "minutes": 10
+     }
+    },
+    {
+     "name": "4031-AR-kurs-C16-n1",
+     "id": "AR-kurs-C16",
+     "book": "kurs",
+     "stage": "C",
+     "n": 16,
+     "result": {
+      "at": "2026-10-15T11:01:00.000Z",
+      "kind": "בוצע",
+      "minutes": 18
+     }
+    },
+    {
+     "name": "4032-AR-kurs-R17-n1",
+     "id": "AR-kurs-R17",
+     "book": "kurs",
+     "stage": "R",
+     "n": 17,
+     "result": {
+      "at": "2026-10-15T06:16:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "4033-AR-kurs-C17-n1",
+     "id": "AR-kurs-C17",
+     "book": "kurs",
+     "stage": "C",
+     "n": 17,
+     "result": {
+      "at": "2026-10-15T11:17:00.000Z",
+      "kind": "בוצע",
+      "minutes": 16
+     }
+    },
+    {
+     "name": "4034-AR-kurs-R18-n1",
+     "id": "AR-kurs-R18",
+     "book": "kurs",
+     "stage": "R",
+     "n": 18,
+     "result": {
+      "at": "2026-10-15T08:08:00.000Z",
+      "kind": "בוצע",
+      "minutes": 8
+     }
+    },
+    {
+     "name": "4035-AR-kurs-C18-n1",
+     "id": "AR-kurs-C18",
+     "book": "kurs",
+     "stage": "C",
+     "n": 18,
+     "result": {
+      "at": "2026-10-15T11:29:00.000Z",
+      "kind": "בוצע",
+      "minutes": 12
+     }
+    },
+    {
+     "name": "5000-AR-geometry1-R01-n1",
+     "id": "AR-geometry1-R01",
+     "book": "geometry1",
+     "stage": "R",
+     "n": 1,
+     "result": {
+      "at": "2026-10-15T08:21:00.000Z",
+      "kind": "בוצע",
+      "minutes": 12
+     }
+    }
+   ]
+  }
+ ],
+ "manager": {
+  "lastBacklogAt": "2026-10-15T11:07:00.000Z",
+  "backlogFile": "backlog-20261015-1407.md",
+  "versions24h": 20,
+  "versionsHour": 1,
+  "flagsOpen24h": 1,
+  "lastFlag": {
+   "file": "20261015-0910-silent-M6.md",
+   "at": "2026-10-15T06:10:00.000Z",
+   "kind": "silent",
+   "target": "M6",
+   "text": "# דגל: מושב שותק - M6 · 15.10.2026 09:10"
+  },
+  "stops": [],
+  "report": {
+   "file": "daily-20261015.md",
+   "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
+  },
+  "starvation": null,
+  "minutesSinceBacklog": 31
+ },
+ "progress": {
+  "books": [
+   {
+    "code": "tarshimim",
+    "name": "תרשימים",
+    "pages": 137,
+    "total": 15,
+    "done": 15,
+    "doneToday": 15,
+    "doneHour": 0,
+    "pct": 100,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 7,
+      "done": 7
+     },
+     "C": {
+      "total": 7,
+      "done": 7
+     },
+     "S": {
+      "total": 1,
+      "done": 1
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "zmanim",
+    "name": "ניהול זמנים",
+    "pages": 208,
+    "total": 23,
+    "done": 23,
+    "doneToday": 23,
+    "doneHour": 0,
+    "pct": 100,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 11,
+      "done": 11
+     },
+     "C": {
+      "total": 11,
+      "done": 11
+     },
+     "S": {
+      "total": 1,
+      "done": 1
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "beayot",
+    "name": "בעיות",
+    "pages": 333,
+    "total": 35,
+    "done": 32,
+    "doneToday": 32,
+    "doneHour": 0,
+    "pct": 91,
+    "working": [
+     "M6"
+    ],
+    "byStage": {
+     "R": {
+      "total": 17,
+      "done": 16
+     },
+     "C": {
+      "total": 17,
+      "done": 16
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "kurs",
+    "name": "ספר הקורס",
+    "pages": 356,
+    "total": 37,
+    "done": 34,
+    "doneToday": 34,
+    "doneHour": 2,
+    "pct": 92,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 18,
+      "done": 18
+     },
+     "C": {
+      "total": 18,
+      "done": 16
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "geometry1",
+    "name": "גיאומטריה 1",
+    "pages": 182,
+    "total": 21,
+    "done": 1,
+    "doneToday": 1,
+    "doneHour": 0,
+    "pct": 5,
+    "working": [
+     "M2"
+    ],
+    "byStage": {
+     "R": {
+      "total": 10,
+      "done": 1
+     },
+     "C": {
+      "total": 10,
+      "done": 0
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "geometry2",
+    "name": "גיאומטריה 2",
+    "pages": 140,
+    "total": 15,
+    "done": 0,
+    "doneToday": 0,
+    "doneHour": 0,
+    "pct": 0,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 7,
+      "done": 0
+     },
+     "C": {
+      "total": 7,
+      "done": 0
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "algebra",
+    "name": "אלגברה",
+    "pages": 548,
+    "total": 57,
+    "done": 0,
+    "doneToday": 0,
+    "doneHour": 0,
+    "pct": 0,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 28,
+      "done": 0
+     },
+     "C": {
+      "total": 28,
+      "done": 0
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   },
+   {
+    "code": "miluli",
+    "name": "חשיבה מילולית",
+    "pages": 597,
+    "total": 61,
+    "done": 0,
+    "doneToday": 0,
+    "doneHour": 0,
+    "pct": 0,
+    "working": [],
+    "byStage": {
+     "R": {
+      "total": 30,
+      "done": 0
+     },
+     "C": {
+      "total": 30,
+      "done": 0
+     },
+     "S": {
+      "total": 1,
+      "done": 0
+     }
+    },
+    "failed": 0,
+    "decisions": 0
+   }
+  ],
+  "total": 264,
+  "done": 105,
+  "pct": 40,
+  "doneToday": 105,
+  "doneHour": 2,
+  "counts": {
+   "ready": 63,
+   "waiting": 81,
+   "assigned": 15,
+   "failed": 0,
+   "decisions": 0
+  }
+ },
+ "changes": {
+  "hour": {
+   "done": [
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4035,
+      "id": "AR-kurs-C18",
+      "book": "kurs",
+      "stage": "C",
+      "n": 18,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:17:00.000Z",
+     "endedAt": "2026-10-15T11:29:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4033,
+      "id": "AR-kurs-C17",
+      "book": "kurs",
+      "stage": "C",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:01:00.000Z",
+     "endedAt": "2026-10-15T11:17:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4031,
+      "id": "AR-kurs-C16",
+      "book": "kurs",
+      "stage": "C",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:43:00.000Z",
+     "endedAt": "2026-10-15T11:01:00.000Z",
+     "minutes": 18,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4029,
+      "id": "AR-kurs-C15",
+      "book": "kurs",
+      "stage": "C",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:31:00.000Z",
+     "endedAt": "2026-10-15T10:43:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    }
+   ],
+   "flags": [],
+   "backlogVersions": 1
+  },
+  "day": {
+   "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3025,
+      "id": "AR-beayot-C13",
+      "book": "beayot",
+      "stage": "C",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:36:00.000Z",
+     "endedAt": "2026-10-15T03:00:00.000Z",
+     "minutes": 24,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3023,
+      "id": "AR-beayot-C12",
+      "book": "beayot",
+      "stage": "C",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:20:00.000Z",
+     "endedAt": "2026-10-15T02:36:00.000Z",
+     "minutes": 16,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3021,
+      "id": "AR-beayot-C11",
+      "book": "beayot",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:04:00.000Z",
+     "endedAt": "2026-10-15T02:20:00.000Z",
+     "minutes": 16,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3019,
+      "id": "AR-beayot-C10",
+      "book": "beayot",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:41:00.000Z",
+     "endedAt": "2026-10-15T02:04:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3017,
+      "id": "AR-beayot-C09",
+      "book": "beayot",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:24:00.000Z",
+     "endedAt": "2026-10-15T01:41:00.000Z",
+     "minutes": 17,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3015,
+      "id": "AR-beayot-C08",
+      "book": "beayot",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:05:00.000Z",
+     "endedAt": "2026-10-15T01:24:00.000Z",
+     "minutes": 19,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3013,
+      "id": "AR-beayot-C07",
+      "book": "beayot",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:50:00.000Z",
+     "endedAt": "2026-10-15T01:05:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3011,
+      "id": "AR-beayot-C06",
+      "book": "beayot",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:28:00.000Z",
+     "endedAt": "2026-10-15T00:50:00.000Z",
+     "minutes": 22,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3009,
+      "id": "AR-beayot-C05",
+      "book": "beayot",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:07:00.000Z",
+     "endedAt": "2026-10-15T00:28:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3006,
+      "id": "AR-beayot-R04",
+      "book": "beayot",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:38:00.000Z",
+     "endedAt": "2026-10-15T00:07:00.000Z",
+     "minutes": 29,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3004,
+      "id": "AR-beayot-R03",
+      "book": "beayot",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:20:00.000Z",
+     "endedAt": "2026-10-14T23:38:00.000Z",
+     "minutes": 18,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3002,
+      "id": "AR-beayot-R02",
+      "book": "beayot",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:05:00.000Z",
+     "endedAt": "2026-10-14T23:20:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 3001,
+      "id": "AR-beayot-C01",
+      "book": "beayot",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:42:00.000Z",
+     "endedAt": "2026-10-14T23:05:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2019,
+      "id": "AR-zmanim-C10",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:14:00.000Z",
+     "endedAt": "2026-10-14T22:42:00.000Z",
+     "minutes": 28,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2020,
+      "id": "AR-zmanim-R11",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:01:00.000Z",
+     "endedAt": "2026-10-14T22:14:00.000Z",
+     "minutes": 13,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2017,
+      "id": "AR-zmanim-C09",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:38:00.000Z",
+     "endedAt": "2026-10-14T22:01:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2015,
+      "id": "AR-zmanim-C08",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:17:00.000Z",
+     "endedAt": "2026-10-14T21:38:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2013,
+      "id": "AR-zmanim-C07",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:55:00.000Z",
+     "endedAt": "2026-10-14T21:16:00.000Z",
+     "minutes": 21,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2011,
+      "id": "AR-zmanim-C06",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:28:00.000Z",
+     "endedAt": "2026-10-14T20:54:00.000Z",
+     "minutes": 26,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2007,
+      "id": "AR-zmanim-C04",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:14:00.000Z",
+     "endedAt": "2026-10-14T20:28:00.000Z",
+     "minutes": 14,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2003,
+      "id": "AR-zmanim-C02",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:51:00.000Z",
+     "endedAt": "2026-10-14T20:14:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1013,
+      "id": "AR-tarshimim-C07",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:34:00.000Z",
+     "endedAt": "2026-10-14T19:51:00.000Z",
+     "minutes": 17,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1009,
+      "id": "AR-tarshimim-C05",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:19:00.000Z",
+     "endedAt": "2026-10-14T19:34:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2008,
+      "id": "AR-zmanim-R05",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:04:00.000Z",
+     "endedAt": "2026-10-14T19:19:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2004,
+      "id": "AR-zmanim-R03",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:45:00.000Z",
+     "endedAt": "2026-10-14T19:04:00.000Z",
+     "minutes": 19,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 2000,
+      "id": "AR-zmanim-R01",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:30:00.000Z",
+     "endedAt": "2026-10-14T18:45:00.000Z",
+     "minutes": 15,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1005,
+      "id": "AR-tarshimim-C03",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T18:06:00.000Z",
+     "endedAt": "2026-10-14T18:29:00.000Z",
+     "minutes": 23,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1003,
+      "id": "AR-tarshimim-C02",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:37:00.000Z",
+     "endedAt": "2026-10-14T18:06:00.000Z",
+     "minutes": 29,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1001,
+      "id": "AR-tarshimim-C01",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:17:00.000Z",
+     "endedAt": "2026-10-14T17:36:00.000Z",
+     "minutes": 19,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1010,
+      "id": "AR-tarshimim-R06",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:56:00.000Z",
+     "endedAt": "2026-10-14T17:17:00.000Z",
+     "minutes": 21,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1006,
+      "id": "AR-tarshimim-R04",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:40:00.000Z",
+     "endedAt": "2026-10-14T16:56:00.000Z",
+     "minutes": 16,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 1002,
+      "id": "AR-tarshimim-R02",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:05:00.000Z",
+     "endedAt": "2026-10-14T16:40:00.000Z",
+     "minutes": 35,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4035,
+      "id": "AR-kurs-C18",
+      "book": "kurs",
+      "stage": "C",
+      "n": 18,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:17:00.000Z",
+     "endedAt": "2026-10-15T11:29:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4033,
+      "id": "AR-kurs-C17",
+      "book": "kurs",
+      "stage": "C",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T11:01:00.000Z",
+     "endedAt": "2026-10-15T11:17:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4031,
+      "id": "AR-kurs-C16",
+      "book": "kurs",
+      "stage": "C",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:43:00.000Z",
+     "endedAt": "2026-10-15T11:01:00.000Z",
+     "minutes": 18,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4029,
+      "id": "AR-kurs-C15",
+      "book": "kurs",
+      "stage": "C",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:31:00.000Z",
+     "endedAt": "2026-10-15T10:43:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4027,
+      "id": "AR-kurs-C14",
+      "book": "kurs",
+      "stage": "C",
+      "n": 14,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:22:00.000Z",
+     "endedAt": "2026-10-15T10:31:00.000Z",
+     "minutes": 9,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4025,
+      "id": "AR-kurs-C13",
+      "book": "kurs",
+      "stage": "C",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T10:07:00.000Z",
+     "endedAt": "2026-10-15T10:22:00.000Z",
+     "minutes": 15,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4023,
+      "id": "AR-kurs-C12",
+      "book": "kurs",
+      "stage": "C",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:54:00.000Z",
+     "endedAt": "2026-10-15T10:07:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4021,
+      "id": "AR-kurs-C11",
+      "book": "kurs",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:42:00.000Z",
+     "endedAt": "2026-10-15T09:54:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4019,
+      "id": "AR-kurs-C10",
+      "book": "kurs",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:32:00.000Z",
+     "endedAt": "2026-10-15T09:42:00.000Z",
+     "minutes": 10,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4017,
+      "id": "AR-kurs-C09",
+      "book": "kurs",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:16:00.000Z",
+     "endedAt": "2026-10-15T09:32:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4015,
+      "id": "AR-kurs-C08",
+      "book": "kurs",
+      "stage": "C",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T09:00:00.000Z",
+     "endedAt": "2026-10-15T09:16:00.000Z",
+     "minutes": 16,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4013,
+      "id": "AR-kurs-C07",
+      "book": "kurs",
+      "stage": "C",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:47:00.000Z",
+     "endedAt": "2026-10-15T09:00:00.000Z",
+     "minutes": 13,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4011,
+      "id": "AR-kurs-C06",
+      "book": "kurs",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:38:00.000Z",
+     "endedAt": "2026-10-15T08:47:00.000Z",
+     "minutes": 9,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4009,
+      "id": "AR-kurs-C05",
+      "book": "kurs",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:21:00.000Z",
+     "endedAt": "2026-10-15T08:38:00.000Z",
+     "minutes": 17,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 5000,
+      "id": "AR-geometry1-R01",
+      "book": "geometry1",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T08:08:00.000Z",
+     "endedAt": "2026-10-15T08:21:00.000Z",
+     "minutes": 13,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4034,
+      "id": "AR-kurs-R18",
+      "book": "kurs",
+      "stage": "R",
+      "n": 18,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:59:00.000Z",
+     "endedAt": "2026-10-15T08:08:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4018,
+      "id": "AR-kurs-R10",
+      "book": "kurs",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:45:00.000Z",
+     "endedAt": "2026-10-15T07:59:00.000Z",
+     "minutes": 14,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4007,
+      "id": "AR-kurs-C04",
+      "book": "kurs",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:39:00.000Z",
+     "endedAt": "2026-10-15T07:45:00.000Z",
+     "minutes": 6,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4005,
+      "id": "AR-kurs-C03",
+      "book": "kurs",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:31:00.000Z",
+     "endedAt": "2026-10-15T07:39:00.000Z",
+     "minutes": 8,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4003,
+      "id": "AR-kurs-C02",
+      "book": "kurs",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:19:00.000Z",
+     "endedAt": "2026-10-15T07:31:00.000Z",
+     "minutes": 12,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4016,
+      "id": "AR-kurs-R09",
+      "book": "kurs",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T07:03:00.000Z",
+     "endedAt": "2026-10-15T07:19:00.000Z",
+     "minutes": 16,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4002,
+      "id": "AR-kurs-R02",
+      "book": "kurs",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:55:00.000Z",
+     "endedAt": "2026-10-15T07:03:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4001,
+      "id": "AR-kurs-C01",
+      "book": "kurs",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:40:00.000Z",
+     "endedAt": "2026-10-15T06:55:00.000Z",
+     "minutes": 15,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3033,
+      "id": "AR-beayot-C17",
+      "book": "beayot",
+      "stage": "C",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:33:00.000Z",
+     "endedAt": "2026-10-15T06:40:00.000Z",
+     "minutes": 7,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3031,
+      "id": "AR-beayot-C16",
+      "book": "beayot",
+      "stage": "C",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:24:00.000Z",
+     "endedAt": "2026-10-15T06:33:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3029,
+      "id": "AR-beayot-C15",
+      "book": "beayot",
+      "stage": "C",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:16:00.000Z",
+     "endedAt": "2026-10-15T06:24:00.000Z",
+     "minutes": 8,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4032,
+      "id": "AR-kurs-R17",
+      "book": "kurs",
+      "stage": "R",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T06:07:00.000Z",
+     "endedAt": "2026-10-15T06:16:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4030,
+      "id": "AR-kurs-R16",
+      "book": "kurs",
+      "stage": "R",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:57:00.000Z",
+     "endedAt": "2026-10-15T06:07:00.000Z",
+     "minutes": 10,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4028,
+      "id": "AR-kurs-R15",
+      "book": "kurs",
+      "stage": "R",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:48:00.000Z",
+     "endedAt": "2026-10-15T05:57:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4026,
+      "id": "AR-kurs-R14",
+      "book": "kurs",
+      "stage": "R",
+      "n": 14,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:39:00.000Z",
+     "endedAt": "2026-10-15T05:48:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4024,
+      "id": "AR-kurs-R13",
+      "book": "kurs",
+      "stage": "R",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:29:00.000Z",
+     "endedAt": "2026-10-15T05:39:00.000Z",
+     "minutes": 10,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4022,
+      "id": "AR-kurs-R12",
+      "book": "kurs",
+      "stage": "R",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:21:00.000Z",
+     "endedAt": "2026-10-15T05:29:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4020,
+      "id": "AR-kurs-R11",
+      "book": "kurs",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:12:00.000Z",
+     "endedAt": "2026-10-15T05:21:00.000Z",
+     "minutes": 9,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4014,
+      "id": "AR-kurs-R08",
+      "book": "kurs",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T05:03:00.000Z",
+     "endedAt": "2026-10-15T05:12:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4012,
+      "id": "AR-kurs-R07",
+      "book": "kurs",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T04:58:00.000Z",
+     "endedAt": "2026-10-15T05:03:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4010,
+      "id": "AR-kurs-R06",
+      "book": "kurs",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:37:00.000Z",
+     "endedAt": "2026-10-15T03:48:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4008,
+      "id": "AR-kurs-R05",
+      "book": "kurs",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:29:00.000Z",
+     "endedAt": "2026-10-15T03:37:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4006,
+      "id": "AR-kurs-R04",
+      "book": "kurs",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:21:00.000Z",
+     "endedAt": "2026-10-15T03:29:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4004,
+      "id": "AR-kurs-R03",
+      "book": "kurs",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T03:11:00.000Z",
+     "endedAt": "2026-10-15T03:21:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3007,
+      "id": "AR-beayot-C04",
+      "book": "beayot",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T02:59:00.000Z",
+     "endedAt": "2026-10-15T03:11:00.000Z",
+     "minutes": 12,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 4000,
+      "id": "AR-kurs-R01",
+      "book": "kurs",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:53:00.000Z",
+     "endedAt": "2026-10-15T02:04:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3032,
+      "id": "AR-beayot-R17",
+      "book": "beayot",
+      "stage": "R",
+      "n": 17,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:46:00.000Z",
+     "endedAt": "2026-10-15T01:53:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3030,
+      "id": "AR-beayot-R16",
+      "book": "beayot",
+      "stage": "R",
+      "n": 16,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:41:00.000Z",
+     "endedAt": "2026-10-15T01:46:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3028,
+      "id": "AR-beayot-R15",
+      "book": "beayot",
+      "stage": "R",
+      "n": 15,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:35:00.000Z",
+     "endedAt": "2026-10-15T01:41:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3005,
+      "id": "AR-beayot-C03",
+      "book": "beayot",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:26:00.000Z",
+     "endedAt": "2026-10-15T01:35:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3003,
+      "id": "AR-beayot-C02",
+      "book": "beayot",
+      "stage": "C",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T01:16:00.000Z",
+     "endedAt": "2026-10-15T01:26:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2999,
+      "id": "AR-zmanim-S",
+      "book": "zmanim",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-15T00:59:00.000Z",
+     "endedAt": "2026-10-15T01:16:00.000Z",
+     "minutes": 17,
+     "estimateMin": 40,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3024,
+      "id": "AR-beayot-R13",
+      "book": "beayot",
+      "stage": "R",
+      "n": 13,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:37:00.000Z",
+     "endedAt": "2026-10-14T23:44:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2021,
+      "id": "AR-zmanim-C11",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:31:00.000Z",
+     "endedAt": "2026-10-14T23:37:00.000Z",
+     "minutes": 6,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3022,
+      "id": "AR-beayot-R12",
+      "book": "beayot",
+      "stage": "R",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:26:00.000Z",
+     "endedAt": "2026-10-14T23:31:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3020,
+      "id": "AR-beayot-R11",
+      "book": "beayot",
+      "stage": "R",
+      "n": 11,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:21:00.000Z",
+     "endedAt": "2026-10-14T23:26:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3018,
+      "id": "AR-beayot-R10",
+      "book": "beayot",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:15:00.000Z",
+     "endedAt": "2026-10-14T23:21:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3016,
+      "id": "AR-beayot-R09",
+      "book": "beayot",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:10:00.000Z",
+     "endedAt": "2026-10-14T23:15:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3014,
+      "id": "AR-beayot-R08",
+      "book": "beayot",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T23:03:00.000Z",
+     "endedAt": "2026-10-14T23:10:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3012,
+      "id": "AR-beayot-R07",
+      "book": "beayot",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T22:58:00.000Z",
+     "endedAt": "2026-10-14T23:03:00.000Z",
+     "minutes": 5,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3010,
+      "id": "AR-beayot-R06",
+      "book": "beayot",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:54:00.000Z",
+     "endedAt": "2026-10-14T22:04:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3008,
+      "id": "AR-beayot-R05",
+      "book": "beayot",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:46:00.000Z",
+     "endedAt": "2026-10-14T21:54:00.000Z",
+     "minutes": 8,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2009,
+      "id": "AR-zmanim-C05",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:37:00.000Z",
+     "endedAt": "2026-10-14T21:46:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1999,
+      "id": "AR-tarshimim-S",
+      "book": "tarshimim",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:20:00.000Z",
+     "endedAt": "2026-10-14T21:37:00.000Z",
+     "minutes": 17,
+     "estimateMin": 40,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 3000,
+      "id": "AR-beayot-R01",
+      "book": "beayot",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T21:09:00.000Z",
+     "endedAt": "2026-10-14T21:20:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2018,
+      "id": "AR-zmanim-R10",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:59:00.000Z",
+     "endedAt": "2026-10-14T21:09:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2016,
+      "id": "AR-zmanim-R09",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:48:00.000Z",
+     "endedAt": "2026-10-14T20:59:00.000Z",
+     "minutes": 11,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2014,
+      "id": "AR-zmanim-R08",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 8,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:39:00.000Z",
+     "endedAt": "2026-10-14T20:48:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2005,
+      "id": "AR-zmanim-C03",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:29:00.000Z",
+     "endedAt": "2026-10-14T20:39:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2001,
+      "id": "AR-zmanim-C01",
+      "book": "zmanim",
+      "stage": "C",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:19:00.000Z",
+     "endedAt": "2026-10-14T20:29:00.000Z",
+     "minutes": 10,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1011,
+      "id": "AR-tarshimim-C06",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T20:08:00.000Z",
+     "endedAt": "2026-10-14T20:19:00.000Z",
+     "minutes": 11,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1007,
+      "id": "AR-tarshimim-C04",
+      "book": "tarshimim",
+      "stage": "C",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T19:59:00.000Z",
+     "endedAt": "2026-10-14T20:08:00.000Z",
+     "minutes": 9,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2012,
+      "id": "AR-zmanim-R07",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:34:00.000Z",
+     "endedAt": "2026-10-14T17:40:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2010,
+      "id": "AR-zmanim-R06",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 6,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:28:00.000Z",
+     "endedAt": "2026-10-14T17:34:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2006,
+      "id": "AR-zmanim-R04",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 4,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:22:00.000Z",
+     "endedAt": "2026-10-14T17:28:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 2002,
+      "id": "AR-zmanim-R02",
+      "book": "zmanim",
+      "stage": "R",
+      "n": 2,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:12:00.000Z",
+     "endedAt": "2026-10-14T17:22:00.000Z",
+     "minutes": 10,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1012,
+      "id": "AR-tarshimim-R07",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 7,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T17:06:00.000Z",
+     "endedAt": "2026-10-14T17:12:00.000Z",
+     "minutes": 6,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1008,
+      "id": "AR-tarshimim-R05",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 5,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T16:59:00.000Z",
+     "endedAt": "2026-10-14T17:06:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1004,
+      "id": "AR-tarshimim-R03",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 3,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T14:59:00.000Z",
+     "endedAt": "2026-10-14T15:06:00.000Z",
+     "minutes": 7,
+     "estimateMin": 30,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 1000,
+      "id": "AR-tarshimim-R01",
+      "book": "tarshimim",
+      "stage": "R",
+      "n": 1,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-14T14:49:00.000Z",
+     "endedAt": "2026-10-14T14:58:00.000Z",
+     "minutes": 9,
+     "estimateMin": 30,
+     "ok": true
+    }
+   ],
+   "flags": [
+    {
+     "file": "20261015-0910-silent-M6.md",
+     "at": "2026-10-15T06:10:00.000Z",
+     "kind": "silent",
+     "target": "M6",
+     "text": "# דגל: מושב שותק - M6 · 15.10.2026 09:10"
+    }
+   ],
+   "backlogVersions": 20
+  }
+ },
+ "rules": {
+  "silentMin": 65,
+  "stuckRatio": 2,
+  "utilTarget": 80,
+  "pause": "06:45-07:45"
+ },
+ "stageNames": {
+  "R": "קריאה",
+  "C": "בקרה",
+  "S": "סיכום",
+  "read-arabic": "קריאה",
+  "check-arabic": "בקרה",
+  "summary-arabic": "סיכום"
+ },
+ "books": [
+  {
+   "code": "tarshimim",
+   "name": "תרשימים",
+   "pages": 137
+  },
+  {
+   "code": "zmanim",
+   "name": "ניהול זמנים",
+   "pages": 208
+  },
+  {
+   "code": "beayot",
+   "name": "בעיות",
+   "pages": 333
+  },
+  {
+   "code": "kurs",
+   "name": "ספר הקורס",
+   "pages": 356
+  },
+  {
+   "code": "geometry1",
+   "name": "גיאומטריה 1",
+   "pages": 182
+  },
+  {
+   "code": "geometry2",
+   "name": "גיאומטריה 2",
+   "pages": 140
+  },
+  {
+   "code": "algebra",
+   "name": "אלגברה",
+   "pages": 548
+  },
+  {
+   "code": "miluli",
+   "name": "חשיבה מילולית",
+   "pages": 597
+  }
+ ]
+}
