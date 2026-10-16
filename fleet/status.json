@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T09:47:01.325Z",
+ "generatedAt": "2026-10-16T09:57:01.320Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,12 +9,12 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 10:15 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 10:25 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 60% מהזמן (היעד 80%)"
+    "text": "עבד 59% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -24,10 +24,10 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 9:45 שעות"
+    "text": "הצבר לא התעדכן 9:55 שעות"
    }
   ],
-  "doneToday": 66,
+  "doneToday": 65,
   "working": 0,
   "flags": 9,
   "decisions": 0
@@ -43,18 +43,18 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 10:15 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 10:25 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
-     "text": "עבד 60% מהזמן (היעד 80%)"
+     "text": "עבד 59% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 615,
+   "minutesSinceHeartbeat": 625,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -146,15 +146,15 @@
    "doneToday": 52,
    "failedToday": 1,
    "util": {
-    "pct": 60,
-    "workMin": 822,
+    "pct": 59,
+    "workMin": 812,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T09:47:01.325Z",
-    "sleepMin": 558
+    "awakeFrom": "2026-10-15T09:57:01.320Z",
+    "sleepMin": 568
    },
    "segments": [
     {
-     "from": "2026-10-15T09:47:01.325Z",
+     "from": "2026-10-15T09:57:01.320Z",
      "to": "2026-10-15T13:05:00.000Z",
      "kind": "work"
     },
@@ -435,7 +435,7 @@
     },
     {
      "from": "2026-10-15T23:32:00.000Z",
-     "to": "2026-10-16T09:47:01.325Z",
+     "to": "2026-10-16T09:57:01.320Z",
      "kind": "silent"
     }
    ],
@@ -2343,7 +2343,7 @@
    "lastHeartbeatAt": "2026-10-16T09:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 47,
+   "minutesSinceHeartbeat": 57,
    "pending": [
     {
      "name": "7047-AR-algebra-C24-n1",
@@ -2418,23 +2418,18 @@
    ],
    "pendingCount": 10,
    "doingCount": 0,
-   "doneToday": 52,
+   "doneToday": 51,
    "failedToday": 1,
    "util": {
-    "pct": 89,
-    "workMin": 1229,
+    "pct": 88,
+    "workMin": 1219,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T09:47:01.325Z",
-    "sleepMin": 151
+    "awakeFrom": "2026-10-15T09:57:01.320Z",
+    "sleepMin": 161
    },
    "segments": [
     {
-     "from": "2026-10-15T09:47:01.325Z",
-     "to": "2026-10-15T09:54:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-15T09:54:00.000Z",
+     "from": "2026-10-15T09:57:01.320Z",
      "to": "2026-10-15T10:07:00.000Z",
      "kind": "work"
     },
@@ -2710,7 +2705,7 @@
     },
     {
      "from": "2026-10-16T09:00:00.000Z",
-     "to": "2026-10-16T09:47:01.325Z",
+     "to": "2026-10-16T09:57:01.320Z",
      "kind": "nowork"
     }
    ],
@@ -3492,21 +3487,6 @@
      "startedAt": "2026-10-15T09:54:00.000Z",
      "endedAt": "2026-10-15T10:07:00.000Z",
      "minutes": 13,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 4021,
-      "id": "AR-kurs-C11",
-      "book": "kurs",
-      "stage": "C",
-      "n": 11,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T09:42:00.000Z",
-     "endedAt": "2026-10-15T09:54:00.000Z",
-     "minutes": 12,
      "estimateMin": 18,
      "ok": true
     }
@@ -5120,7 +5100,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 585
+  "minutesSinceBacklog": 595
  },
  "progress": {
   "books": [
@@ -5211,7 +5191,7 @@
     "pages": 356,
     "total": 37,
     "done": 37,
-    "doneToday": 9,
+    "doneToday": 8,
     "doneHour": 0,
     "pct": 100,
     "working": [],
@@ -5344,7 +5324,7 @@
   "total": 264,
   "done": 165,
   "pct": 63,
-  "doneToday": 66,
+  "doneToday": 65,
   "doneHour": 0,
   "counts": {
    "ready": 26,
@@ -7047,22 +7027,6 @@
      "startedAt": "2026-10-15T09:54:00.000Z",
      "endedAt": "2026-10-15T10:07:00.000Z",
      "minutes": 13,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 4021,
-      "id": "AR-kurs-C11",
-      "book": "kurs",
-      "stage": "C",
-      "n": 11,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T09:42:00.000Z",
-     "endedAt": "2026-10-15T09:54:00.000Z",
-     "minutes": 12,
      "estimateMin": 18,
      "ok": true
     }
