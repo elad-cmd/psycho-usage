@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T18:07:01.707Z",
+ "generatedAt": "2026-10-16T18:17:01.735Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 18:35 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 18:45 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 76% מהזמן (היעד 80%)"
+    "text": "עבד 75% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,10 +29,10 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 18:05 שעות"
+    "text": "הצבר לא התעדכן 18:15 שעות"
    }
   ],
-  "doneToday": 34,
+  "doneToday": 33,
   "working": 0,
   "flags": 9,
   "decisions": 0
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 18:35 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 18:45 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 1115,
+   "minutesSinceHeartbeat": 1125,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -148,23 +148,18 @@
    ],
    "pendingCount": 12,
    "doingCount": 0,
-   "doneToday": 28,
+   "doneToday": 27,
    "failedToday": 0,
    "util": {
     "pct": 23,
-    "workMin": 323,
+    "workMin": 313,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T18:07:01.707Z",
-    "sleepMin": 1057
+    "awakeFrom": "2026-10-15T18:17:01.735Z",
+    "sleepMin": 1067
    },
    "segments": [
     {
-     "from": "2026-10-15T18:07:01.707Z",
-     "to": "2026-10-15T18:14:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-15T18:14:00.000Z",
+     "from": "2026-10-15T18:17:01.735Z",
      "to": "2026-10-15T18:28:00.000Z",
      "kind": "work"
     },
@@ -310,7 +305,7 @@
     },
     {
      "from": "2026-10-15T23:32:00.000Z",
-     "to": "2026-10-16T18:07:01.707Z",
+     "to": "2026-10-16T18:17:01.735Z",
      "kind": "silent"
     }
    ],
@@ -718,21 +713,6 @@
      "endedAt": "2026-10-15T18:28:00.000Z",
      "minutes": 14,
      "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 5016,
-      "id": "AR-geometry1-R09",
-      "book": "geometry1",
-      "stage": "R",
-      "n": 9,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T18:04:00.000Z",
-     "endedAt": "2026-10-15T18:14:00.000Z",
-     "minutes": 10,
-     "estimateMin": 12,
      "ok": true
     }
    ],
@@ -1841,29 +1821,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 76% מהזמן (היעד 80%)"
+     "text": "עבד 75% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-16T18:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 7,
+   "minutesSinceHeartbeat": 17,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 80,
    "failedToday": 1,
    "util": {
-    "pct": 76,
-    "workMin": 1046,
+    "pct": 75,
+    "workMin": 1036,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T18:07:01.707Z",
-    "sleepMin": 334
+    "awakeFrom": "2026-10-15T18:17:01.735Z",
+    "sleepMin": 344
    },
    "segments": [
     {
-     "from": "2026-10-15T18:07:01.707Z",
+     "from": "2026-10-15T18:17:01.735Z",
      "to": "2026-10-15T23:03:00.000Z",
      "kind": "work"
     },
@@ -2304,7 +2284,7 @@
     },
     {
      "from": "2026-10-16T18:00:00.000Z",
-     "to": "2026-10-16T18:07:01.707Z",
+     "to": "2026-10-16T18:17:01.735Z",
      "kind": "nowork"
     }
    ],
@@ -5548,7 +5528,7 @@
  "manager": {
   "lastBacklogAt": "2026-10-16T00:02:00.000Z",
   "backlogFile": "backlog-20261016-0302.md",
-  "versions24h": 6,
+  "versions24h": 5,
   "versionsHour": 0,
   "flagsOpen24h": 9,
   "lastFlag": {
@@ -5566,7 +5546,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1085
+  "minutesSinceBacklog": 1095
  },
  "progress": {
   "books": [
@@ -5684,7 +5664,7 @@
     "pages": 182,
     "total": 21,
     "done": 20,
-    "doneToday": 7,
+    "doneToday": 6,
     "doneHour": 0,
     "pct": 95,
     "working": [],
@@ -5790,7 +5770,7 @@
   "total": 264,
   "done": 165,
   "pct": 63,
-  "doneToday": 34,
+  "doneToday": 33,
   "doneHour": 0,
   "counts": {
    "ready": 26,
@@ -6238,22 +6218,6 @@
      "endedAt": "2026-10-15T18:28:00.000Z",
      "minutes": 14,
      "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": {
-      "prio": 5016,
-      "id": "AR-geometry1-R09",
-      "book": "geometry1",
-      "stage": "R",
-      "n": 9,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T18:04:00.000Z",
-     "endedAt": "2026-10-15T18:14:00.000Z",
-     "minutes": 10,
-     "estimateMin": 12,
      "ok": true
     },
     {
@@ -7618,7 +7582,7 @@
      "text": "# דגל: מושב שותק - M2 · 15.10.2026 23:06"
     }
    ],
-   "backlogVersions": 6
+   "backlogVersions": 5
   }
  },
  "rules": {
