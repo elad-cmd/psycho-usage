@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T18:17:01.735Z",
+ "generatedAt": "2026-10-16T18:27:01.746Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,17 +9,17 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 18:45 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 18:55 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 23% מהזמן (היעד 80%)"
+    "text": "עבד 22% מהזמן (היעד 80%)"
    },
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 75% מהזמן (היעד 80%)"
+    "text": "עבד 74% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,7 +29,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 18:15 שעות"
+    "text": "הצבר לא התעדכן 18:25 שעות"
    }
   ],
   "doneToday": 33,
@@ -48,18 +48,18 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 18:45 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 18:55 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
-     "text": "עבד 23% מהזמן (היעד 80%)"
+     "text": "עבד 22% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 1125,
+   "minutesSinceHeartbeat": 1135,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -151,15 +151,15 @@
    "doneToday": 27,
    "failedToday": 0,
    "util": {
-    "pct": 23,
-    "workMin": 313,
+    "pct": 22,
+    "workMin": 303,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T18:17:01.735Z",
-    "sleepMin": 1067
+    "awakeFrom": "2026-10-15T18:27:01.746Z",
+    "sleepMin": 1077
    },
    "segments": [
     {
-     "from": "2026-10-15T18:17:01.735Z",
+     "from": "2026-10-15T18:27:01.746Z",
      "to": "2026-10-15T18:28:00.000Z",
      "kind": "work"
     },
@@ -305,7 +305,7 @@
     },
     {
      "from": "2026-10-15T23:32:00.000Z",
-     "to": "2026-10-16T18:17:01.735Z",
+     "to": "2026-10-16T18:27:01.746Z",
      "kind": "silent"
     }
    ],
@@ -1821,29 +1821,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 75% מהזמן (היעד 80%)"
+     "text": "עבד 74% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-16T18:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 17,
+   "minutesSinceHeartbeat": 27,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 80,
    "failedToday": 1,
    "util": {
-    "pct": 75,
-    "workMin": 1036,
+    "pct": 74,
+    "workMin": 1026,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T18:17:01.735Z",
-    "sleepMin": 344
+    "awakeFrom": "2026-10-15T18:27:01.746Z",
+    "sleepMin": 354
    },
    "segments": [
     {
-     "from": "2026-10-15T18:17:01.735Z",
+     "from": "2026-10-15T18:27:01.746Z",
      "to": "2026-10-15T23:03:00.000Z",
      "kind": "work"
     },
@@ -2284,7 +2284,7 @@
     },
     {
      "from": "2026-10-16T18:00:00.000Z",
-     "to": "2026-10-16T18:17:01.735Z",
+     "to": "2026-10-16T18:27:01.746Z",
      "kind": "nowork"
     }
    ],
@@ -5546,7 +5546,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1095
+  "minutesSinceBacklog": 1105
  },
  "progress": {
   "books": [
