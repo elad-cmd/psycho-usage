@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T07:07:02.191Z",
+ "generatedAt": "2026-10-16T07:17:02.203Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,12 +9,12 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 7:35 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 7:45 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 71% מהזמן (היעד 80%)"
+    "text": "עבד 70% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -24,12 +24,12 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 7:05 שעות"
+    "text": "הצבר לא התעדכן 7:15 שעות"
    }
   ],
   "doneToday": 79,
   "working": 1,
-  "flags": 6,
+  "flags": 7,
   "decisions": 0
  },
  "seats": [
@@ -43,18 +43,18 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 7:35 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 7:45 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
-     "text": "עבד 71% מהזמן (היעד 80%)"
+     "text": "עבד 70% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 455,
+   "minutesSinceHeartbeat": 465,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -146,15 +146,15 @@
    "doneToday": 52,
    "failedToday": 1,
    "util": {
-    "pct": 71,
-    "workMin": 982,
+    "pct": 70,
+    "workMin": 972,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T07:07:02.191Z",
-    "sleepMin": 398
+    "awakeFrom": "2026-10-15T07:17:02.203Z",
+    "sleepMin": 408
    },
    "segments": [
     {
-     "from": "2026-10-15T07:07:02.191Z",
+     "from": "2026-10-15T07:17:02.203Z",
      "to": "2026-10-15T13:05:00.000Z",
      "kind": "work"
     },
@@ -435,7 +435,7 @@
     },
     {
      "from": "2026-10-15T23:32:00.000Z",
-     "to": "2026-10-16T07:07:02.191Z",
+     "to": "2026-10-16T07:17:02.203Z",
      "kind": "silent"
     }
    ],
@@ -2341,37 +2341,23 @@
    "flags": [],
    "current": {
     "task": {
-     "prio": 8050,
-     "id": "AR-miluli-R26",
+     "prio": 8054,
+     "id": "AR-miluli-R28",
      "book": "miluli",
      "stage": "R",
-     "n": 26,
+     "n": 28,
      "attempt": 1
     },
-    "startedAt": "2026-10-16T07:02:00.000Z",
+    "startedAt": "2026-10-16T07:12:00.000Z",
     "elapsedMin": 5,
     "estimateMin": 12,
     "ratio": 0.42
    },
-   "lastHeartbeatAt": "2026-10-16T07:02:00.000Z",
+   "lastHeartbeatAt": "2026-10-16T07:12:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "8050-AR-miluli-R26-n1",
+   "lastHeartbeatDetail": "8054-AR-miluli-R28-n1",
    "minutesSinceHeartbeat": 5,
    "pending": [
-    {
-     "name": "8052-AR-miluli-R27-n1",
-     "id": "AR-miluli-R27",
-     "book": "miluli",
-     "stage": "R",
-     "n": 27
-    },
-    {
-     "name": "8054-AR-miluli-R28-n1",
-     "id": "AR-miluli-R28",
-     "book": "miluli",
-     "stage": "R",
-     "n": 28
-    },
     {
      "name": "8056-AR-miluli-R29-n1",
      "id": "AR-miluli-R29",
@@ -2387,20 +2373,20 @@
      "n": 30
     }
    ],
-   "pendingCount": 4,
+   "pendingCount": 2,
    "doingCount": 1,
-   "doneToday": 60,
+   "doneToday": 62,
    "failedToday": 1,
    "util": {
     "pct": 99,
     "workMin": 1368,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T07:07:02.191Z",
+    "awakeFrom": "2026-10-15T07:17:02.203Z",
     "sleepMin": 12
    },
    "segments": [
     {
-     "from": "2026-10-15T07:07:02.191Z",
+     "from": "2026-10-15T07:17:02.203Z",
      "to": "2026-10-15T07:19:00.000Z",
      "kind": "work"
     },
@@ -2711,11 +2697,51 @@
     },
     {
      "from": "2026-10-16T07:02:00.000Z",
-     "to": "2026-10-16T07:07:02.191Z",
+     "to": "2026-10-16T07:07:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-16T07:07:00.000Z",
+     "to": "2026-10-16T07:12:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-16T07:12:00.000Z",
+     "to": "2026-10-16T07:17:02.203Z",
      "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 8054,
+      "id": "AR-miluli-R28",
+      "book": "miluli",
+      "stage": "R",
+      "n": 28,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:12:00.000Z",
+     "endedAt": null,
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": null
+    },
+    {
+     "task": {
+      "prio": 8052,
+      "id": "AR-miluli-R27",
+      "book": "miluli",
+      "stage": "R",
+      "n": 27,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:07:00.000Z",
+     "endedAt": "2026-10-16T07:12:00.000Z",
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": true
+    },
     {
      "task": {
       "prio": 8050,
@@ -2726,10 +2752,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-16T07:02:00.000Z",
-     "endedAt": null,
+     "endedAt": "2026-10-16T07:07:00.000Z",
      "minutes": 5,
      "estimateMin": 12,
-     "ok": null
+     "ok": true
     },
     {
      "task": {
@@ -5171,6 +5197,30 @@
       "kind": "בוצע",
       "minutes": 10
      }
+    },
+    {
+     "name": "8050-AR-miluli-R26-n1",
+     "id": "AR-miluli-R26",
+     "book": "miluli",
+     "stage": "R",
+     "n": 26,
+     "result": {
+      "at": "2026-10-16T07:07:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
+    },
+    {
+     "name": "8052-AR-miluli-R27-n1",
+     "id": "AR-miluli-R27",
+     "book": "miluli",
+     "stage": "R",
+     "n": 27,
+     "result": {
+      "at": "2026-10-16T07:12:00.000Z",
+      "kind": "בוצע",
+      "minutes": 5
+     }
     }
    ]
   }
@@ -5180,13 +5230,13 @@
   "backlogFile": "backlog-20261016-0302.md",
   "versions24h": 14,
   "versionsHour": 0,
-  "flagsOpen24h": 6,
+  "flagsOpen24h": 7,
   "lastFlag": {
-   "file": "20261016-0907-manager-blocked.md",
-   "at": "2026-10-16T06:07:00.000Z",
+   "file": "20261016-1005-manager-blocked.md",
+   "at": "2026-10-16T07:05:00.000Z",
    "kind": "manager",
    "target": "blocked",
-   "text": "# המנהל · ריצת 09:02 (16.10.2026) · הצבר לא נכתב לדרייב - חסימה טכנית · שעה חמישית ברצף"
+   "text": "# כתיבת הצבר לדרייב חסומה · 16.10.2026 10:05 (ריצת 10:02)"
   },
   "stops": [
    "STOP-M6.md"
@@ -5196,7 +5246,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 425
+  "minutesSinceBacklog": 435
  },
  "progress": {
   "books": [
@@ -5438,6 +5488,38 @@
     {
      "seat": "M2",
      "task": {
+      "prio": 8052,
+      "id": "AR-miluli-R27",
+      "book": "miluli",
+      "stage": "R",
+      "n": 27,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:07:00.000Z",
+     "endedAt": "2026-10-16T07:12:00.000Z",
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 8050,
+      "id": "AR-miluli-R26",
+      "book": "miluli",
+      "stage": "R",
+      "n": 26,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:02:00.000Z",
+     "endedAt": "2026-10-16T07:07:00.000Z",
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
       "prio": 8048,
       "id": "AR-miluli-R25",
       "book": "miluli",
@@ -5516,7 +5598,15 @@
      "ok": true
     }
    ],
-   "flags": [],
+   "flags": [
+    {
+     "file": "20261016-1005-manager-blocked.md",
+     "at": "2026-10-16T07:05:00.000Z",
+     "kind": "manager",
+     "target": "blocked",
+     "text": "# כתיבת הצבר לדרייב חסומה · 16.10.2026 10:05 (ריצת 10:02)"
+    }
+   ],
    "backlogVersions": 0
   },
   "day": {
@@ -6368,6 +6458,38 @@
      "minutes": 605,
      "estimateMin": 30,
      "ok": false
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 8052,
+      "id": "AR-miluli-R27",
+      "book": "miluli",
+      "stage": "R",
+      "n": 27,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:07:00.000Z",
+     "endedAt": "2026-10-16T07:12:00.000Z",
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 8050,
+      "id": "AR-miluli-R26",
+      "book": "miluli",
+      "stage": "R",
+      "n": 26,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T07:02:00.000Z",
+     "endedAt": "2026-10-16T07:07:00.000Z",
+     "minutes": 5,
+     "estimateMin": 12,
+     "ok": true
     },
     {
      "seat": "M2",
@@ -7347,6 +7469,13 @@
     }
    ],
    "flags": [
+    {
+     "file": "20261016-1005-manager-blocked.md",
+     "at": "2026-10-16T07:05:00.000Z",
+     "kind": "manager",
+     "target": "blocked",
+     "text": "# כתיבת הצבר לדרייב חסומה · 16.10.2026 10:05 (ריצת 10:02)"
+    },
     {
      "file": "20261016-0907-manager-blocked.md",
      "at": "2026-10-16T06:07:00.000Z",
