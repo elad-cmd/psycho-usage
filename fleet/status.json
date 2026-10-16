@@ -1,11 +1,16 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T00:37:01.870Z",
+ "generatedAt": "2026-10-16T00:47:01.859Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
   "ok": false,
   "problems": [
+   {
+    "seat": "M6",
+    "kind": "silent",
+    "text": "לא נותן סימן חיים 1:15 שעות ו-12 משימות מחכות לו"
+   },
    {
     "seat": "מנהל",
     "kind": "stop",
@@ -23,14 +28,19 @@
    "account": "essay@psycho.co.il",
    "color": "#2563eb",
    "colorName": "כחול",
-   "state": "idle",
-   "stateText": "בין השכמות",
-   "flags": [],
+   "state": "silent",
+   "stateText": "לא נותן סימן חיים",
+   "flags": [
+    {
+     "kind": "silent",
+     "text": "לא נותן סימן חיים 1:15 שעות ו-12 משימות מחכות לו"
+    }
+   ],
    "current": null,
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 65,
+   "minutesSinceHeartbeat": 75,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -123,14 +133,14 @@
    "failedToday": 1,
    "util": {
     "pct": 99,
-    "workMin": 1372,
+    "workMin": 1362,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T00:37:01.870Z",
-    "sleepMin": 8
+    "awakeFrom": "2026-10-15T00:47:01.859Z",
+    "sleepMin": 18
    },
    "segments": [
     {
-     "from": "2026-10-15T00:37:01.870Z",
+     "from": "2026-10-15T00:47:01.859Z",
      "to": "2026-10-15T00:50:00.000Z",
      "kind": "work"
     },
@@ -451,8 +461,8 @@
     },
     {
      "from": "2026-10-15T23:32:00.000Z",
-     "to": "2026-10-16T00:37:01.870Z",
-     "kind": "gap"
+     "to": "2026-10-16T00:47:01.859Z",
+     "kind": "silent"
     }
    ],
    "history": [
@@ -2477,37 +2487,23 @@
    "flags": [],
    "current": {
     "task": {
-     "prio": 5999,
-     "id": "AR-geometry1-S",
-     "book": "geometry1",
-     "stage": "S",
-     "n": 0,
-     "attempt": 1
-    },
-    "startedAt": "2026-10-16T00:18:00.000Z",
-    "elapsedMin": 19,
-    "estimateMin": 20,
-    "ratio": 0.95
-   },
-   "lastHeartbeatAt": "2026-10-16T00:18:00.000Z",
-   "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "5999-AR-geometry1-S-n1",
-   "minutesSinceHeartbeat": 19,
-   "pending": [
-    {
-     "name": "7017-AR-algebra-C09-n1",
-     "id": "AR-algebra-C09",
-     "book": "algebra",
-     "stage": "C",
-     "n": 9
-    },
-    {
-     "name": "7019-AR-algebra-C10-n1",
+     "prio": 7019,
      "id": "AR-algebra-C10",
      "book": "algebra",
      "stage": "C",
-     "n": 10
+     "n": 10,
+     "attempt": 1
     },
+    "startedAt": "2026-10-16T00:46:00.000Z",
+    "elapsedMin": 1,
+    "estimateMin": 18,
+    "ratio": 0.06
+   },
+   "lastHeartbeatAt": "2026-10-16T00:46:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "7019-AR-algebra-C10-n1",
+   "minutesSinceHeartbeat": 1,
+   "pending": [
     {
      "name": "7021-AR-algebra-C11-n1",
      "id": "AR-algebra-C11",
@@ -2572,20 +2568,20 @@
      "n": 5
     }
    ],
-   "pendingCount": 11,
+   "pendingCount": 9,
    "doingCount": 1,
-   "doneToday": 54,
+   "doneToday": 56,
    "failedToday": 1,
    "util": {
     "pct": 94,
-    "workMin": 1293,
+    "workMin": 1303,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T00:37:01.870Z",
-    "sleepMin": 87
+    "awakeFrom": "2026-10-15T00:47:01.859Z",
+    "sleepMin": 77
    },
    "segments": [
     {
-     "from": "2026-10-15T00:37:01.870Z",
+     "from": "2026-10-15T00:47:01.859Z",
      "to": "2026-10-15T00:59:00.000Z",
      "kind": "gap"
     },
@@ -2876,11 +2872,51 @@
     },
     {
      "from": "2026-10-16T00:18:00.000Z",
-     "to": "2026-10-16T00:37:01.870Z",
+     "to": "2026-10-16T00:36:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-16T00:36:00.000Z",
+     "to": "2026-10-16T00:46:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-16T00:46:00.000Z",
+     "to": "2026-10-16T00:47:01.859Z",
      "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 7019,
+      "id": "AR-algebra-C10",
+      "book": "algebra",
+      "stage": "C",
+      "n": 10,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:46:00.000Z",
+     "endedAt": null,
+     "minutes": 1,
+     "estimateMin": 18,
+     "ok": null
+    },
+    {
+     "task": {
+      "prio": 7017,
+      "id": "AR-algebra-C09",
+      "book": "algebra",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:36:00.000Z",
+     "endedAt": "2026-10-16T00:46:00.000Z",
+     "minutes": 10,
+     "estimateMin": 18,
+     "ok": true
+    },
     {
      "task": {
       "prio": 5999,
@@ -2891,10 +2927,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-16T00:18:00.000Z",
-     "endedAt": null,
-     "minutes": 19,
+     "endedAt": "2026-10-16T00:36:00.000Z",
+     "minutes": 18,
      "estimateMin": 20,
-     "ok": null
+     "ok": true
     },
     {
      "task": {
@@ -4756,6 +4792,18 @@
      }
     },
     {
+     "name": "5999-AR-geometry1-S-n1",
+     "id": "AR-geometry1-S",
+     "book": "geometry1",
+     "stage": "S",
+     "n": 0,
+     "result": {
+      "at": "2026-10-16T00:36:00.000Z",
+      "kind": "בוצע",
+      "minutes": 18
+     }
+    },
+    {
      "name": "6000-AR-geometry2-R01-n1",
      "id": "AR-geometry2-R01",
      "book": "geometry2",
@@ -4840,6 +4888,18 @@
      }
     },
     {
+     "name": "7017-AR-algebra-C09-n1",
+     "id": "AR-algebra-C09",
+     "book": "algebra",
+     "stage": "C",
+     "n": 9,
+     "result": {
+      "at": "2026-10-16T00:46:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
      "name": "7046-AR-algebra-R24-n1",
      "id": "AR-algebra-R24",
      "book": "algebra",
@@ -4887,7 +4947,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 35
+  "minutesSinceBacklog": 45
  },
  "progress": {
   "books": [
@@ -5008,9 +5068,7 @@
     "doneToday": 20,
     "doneHour": 0,
     "pct": 95,
-    "working": [
-     "M2"
-    ],
+    "working": [],
     "byStage": {
      "R": {
       "total": 10,
@@ -5062,9 +5120,11 @@
     "total": 57,
     "done": 20,
     "doneToday": 20,
-    "doneHour": 4,
+    "doneHour": 3,
     "pct": 35,
-    "working": [],
+    "working": [
+     "M2"
+    ],
     "byStage": {
      "R": {
       "total": 28,
@@ -5114,7 +5174,7 @@
   "done": 165,
   "pct": 63,
   "doneToday": 113,
-  "doneHour": 4,
+  "doneHour": 3,
   "counts": {
    "ready": 26,
    "waiting": 48,
@@ -5126,6 +5186,38 @@
  "changes": {
   "hour": {
    "done": [
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 7017,
+      "id": "AR-algebra-C09",
+      "book": "algebra",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:36:00.000Z",
+     "endedAt": "2026-10-16T00:46:00.000Z",
+     "minutes": 10,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 5999,
+      "id": "AR-geometry1-S",
+      "book": "geometry1",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:18:00.000Z",
+     "endedAt": "2026-10-16T00:36:00.000Z",
+     "minutes": 18,
+     "estimateMin": 20,
+     "ok": true
+    },
     {
      "seat": "M2",
      "task": {
@@ -5187,22 +5279,6 @@
      "startedAt": "2026-10-15T23:44:00.000Z",
      "endedAt": "2026-10-15T23:53:00.000Z",
      "minutes": 9,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 7011,
-      "id": "AR-algebra-C06",
-      "book": "algebra",
-      "stage": "C",
-      "n": 6,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T23:33:00.000Z",
-     "endedAt": "2026-10-15T23:44:00.000Z",
-     "minutes": 11,
      "estimateMin": 18,
      "ok": true
     }
@@ -6185,6 +6261,38 @@
      "startedAt": "2026-10-15T00:28:00.000Z",
      "endedAt": "2026-10-15T00:50:00.000Z",
      "minutes": 22,
+     "estimateMin": 20,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 7017,
+      "id": "AR-algebra-C09",
+      "book": "algebra",
+      "stage": "C",
+      "n": 9,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:36:00.000Z",
+     "endedAt": "2026-10-16T00:46:00.000Z",
+     "minutes": 10,
+     "estimateMin": 18,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": {
+      "prio": 5999,
+      "id": "AR-geometry1-S",
+      "book": "geometry1",
+      "stage": "S",
+      "n": 0,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-16T00:18:00.000Z",
+     "endedAt": "2026-10-16T00:36:00.000Z",
+     "minutes": 18,
      "estimateMin": 20,
      "ok": true
     },
