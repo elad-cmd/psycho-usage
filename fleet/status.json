@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T16:07:01.616Z",
+ "generatedAt": "2026-10-17T16:17:01.671Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 40:35 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 40:45 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 1% מהזמן (היעד 80%)"
+    "text": "עבד 0% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,7 +29,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 40:05 שעות"
+    "text": "הצבר לא התעדכן 40:15 שעות"
    }
   ],
   "doneToday": 0,
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 40:35 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 40:45 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 2435,
+   "minutesSinceHeartbeat": 2445,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T16:07:01.616Z",
+    "awakeFrom": "2026-10-16T16:17:01.671Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T16:07:01.616Z",
-     "to": "2026-10-17T16:07:01.616Z",
+     "from": "2026-10-16T16:17:01.671Z",
+     "to": "2026-10-17T16:17:01.671Z",
      "kind": "silent"
     }
    ],
@@ -1270,36 +1270,31 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 1% מהזמן (היעד 80%)"
+     "text": "עבד 0% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-17T12:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 247,
+   "minutesSinceHeartbeat": 257,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 1,
+   "doneToday": 0,
    "failedToday": 0,
    "util": {
-    "pct": 1,
-    "workMin": 10,
+    "pct": 0,
+    "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T16:07:01.616Z",
-    "sleepMin": 1370
+    "awakeFrom": "2026-10-16T16:17:01.671Z",
+    "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T16:07:01.616Z",
-     "to": "2026-10-16T16:17:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T16:17:00.000Z",
+     "from": "2026-10-16T16:17:01.671Z",
      "to": "2026-10-16T17:01:00.000Z",
-     "kind": "nowork"
+     "kind": "gap"
     },
     {
      "from": "2026-10-16T17:01:00.000Z",
@@ -1403,27 +1398,11 @@
     },
     {
      "from": "2026-10-17T12:00:00.000Z",
-     "to": "2026-10-17T16:07:01.616Z",
+     "to": "2026-10-17T16:17:01.671Z",
      "kind": "nowork"
     }
    ],
-   "history": [
-    {
-     "task": {
-      "prio": 8999,
-      "id": "AR-miluli-S",
-      "book": "miluli",
-      "stage": "S",
-      "n": 0,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T16:01:00.000Z",
-     "endedAt": "2026-10-16T16:17:00.000Z",
-     "minutes": 16,
-     "estimateMin": 20,
-     "ok": true
-    }
-   ],
+   "history": [],
    "doneFiles": [
     {
      "name": "1000-AR-tarshimim-R01-n1",
@@ -3465,7 +3444,7 @@
    "topLine": "דרוש טיפול: הצי לא עבד 12 שעות. M6 עצור מאתמול ב-02:22, ו-25 המשימות שנותרו בפרויקט חסומות כולן אחריו - הסרת קובץ אחד מחזירה את העבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 2405
+  "minutesSinceBacklog": 2415
  },
  "progress": {
   "books": [
@@ -3706,24 +3685,7 @@
    "backlogVersions": 0
   },
   "day": {
-   "done": [
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 8999,
-      "id": "AR-miluli-S",
-      "book": "miluli",
-      "stage": "S",
-      "n": 0,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T16:01:00.000Z",
-     "endedAt": "2026-10-16T16:17:00.000Z",
-     "minutes": 16,
-     "estimateMin": 20,
-     "ok": true
-    }
-   ],
+   "done": [],
    "flags": [
     {
      "file": "20261017-1805-manager-blocked.md",
