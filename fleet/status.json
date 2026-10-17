@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T11:37:01.406Z",
+ "generatedAt": "2026-10-17T11:47:01.428Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 36:05 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 36:15 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 16% מהזמן (היעד 80%)"
+    "text": "עבד 15% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,7 +29,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 35:35 שעות"
+    "text": "הצבר לא התעדכן 35:45 שעות"
    }
   ],
   "doneToday": 0,
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 36:05 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 36:15 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 2165,
+   "minutesSinceHeartbeat": 2175,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T11:37:01.406Z",
+    "awakeFrom": "2026-10-16T11:47:01.428Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T11:37:01.406Z",
-     "to": "2026-10-17T11:37:01.406Z",
+     "from": "2026-10-16T11:47:01.428Z",
+     "to": "2026-10-17T11:47:01.428Z",
      "kind": "silent"
     }
    ],
@@ -1270,39 +1270,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 16% מהזמן (היעד 80%)"
+     "text": "עבד 15% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-17T11:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 37,
+   "minutesSinceHeartbeat": 47,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 26,
+   "doneToday": 24,
    "failedToday": 0,
    "util": {
-    "pct": 16,
-    "workMin": 221,
+    "pct": 15,
+    "workMin": 211,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T11:37:01.406Z",
-    "sleepMin": 1159
+    "awakeFrom": "2026-10-16T11:47:01.428Z",
+    "sleepMin": 1169
    },
    "segments": [
     {
-     "from": "2026-10-16T11:37:01.406Z",
-     "to": "2026-10-16T11:39:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T11:39:00.000Z",
-     "to": "2026-10-16T11:46:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T11:46:00.000Z",
+     "from": "2026-10-16T11:47:01.428Z",
      "to": "2026-10-16T11:53:00.000Z",
      "kind": "work"
     },
@@ -1528,7 +1518,7 @@
     },
     {
      "from": "2026-10-17T11:00:00.000Z",
-     "to": "2026-10-17T11:37:01.406Z",
+     "to": "2026-10-17T11:47:01.428Z",
      "kind": "nowork"
     }
    ],
@@ -1890,36 +1880,6 @@
      "startedAt": "2026-10-16T11:46:00.000Z",
      "endedAt": "2026-10-16T11:53:00.000Z",
      "minutes": 7,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 8013,
-      "id": "AR-miluli-C07",
-      "book": "miluli",
-      "stage": "C",
-      "n": 7,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T11:39:00.000Z",
-     "endedAt": "2026-10-16T11:46:00.000Z",
-     "minutes": 7,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 8011,
-      "id": "AR-miluli-C06",
-      "book": "miluli",
-      "stage": "C",
-      "n": 6,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T11:30:00.000Z",
-     "endedAt": "2026-10-16T11:39:00.000Z",
-     "minutes": 9,
      "estimateMin": 18,
      "ok": true
     }
@@ -3965,7 +3925,7 @@
    "topLine": "דרוש טיפול: הצי לא עבד 12 שעות. M6 עצור מאתמול ב-02:22, ו-25 המשימות שנותרו בפרויקט חסומות כולן אחריו - הסרת קובץ אחד מחזירה את העבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 2135
+  "minutesSinceBacklog": 2145
  },
  "progress": {
   "books": [
@@ -4588,38 +4548,6 @@
      "startedAt": "2026-10-16T11:46:00.000Z",
      "endedAt": "2026-10-16T11:53:00.000Z",
      "minutes": 7,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 8013,
-      "id": "AR-miluli-C07",
-      "book": "miluli",
-      "stage": "C",
-      "n": 7,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T11:39:00.000Z",
-     "endedAt": "2026-10-16T11:46:00.000Z",
-     "minutes": 7,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 8011,
-      "id": "AR-miluli-C06",
-      "book": "miluli",
-      "stage": "C",
-      "n": 6,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T11:30:00.000Z",
-     "endedAt": "2026-10-16T11:39:00.000Z",
-     "minutes": 9,
      "estimateMin": 18,
      "ok": true
     }
