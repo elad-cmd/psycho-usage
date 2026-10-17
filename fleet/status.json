@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T12:57:01.476Z",
+ "generatedAt": "2026-10-17T13:07:01.493Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 37:25 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 37:35 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 10% מהזמן (היעד 80%)"
+    "text": "עבד 9% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,7 +29,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 36:55 שעות"
+    "text": "הצבר לא התעדכן 37:05 שעות"
    }
   ],
   "doneToday": 0,
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 37:25 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 37:35 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 2245,
+   "minutesSinceHeartbeat": 2255,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T12:57:01.476Z",
+    "awakeFrom": "2026-10-16T13:07:01.493Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T12:57:01.476Z",
-     "to": "2026-10-17T12:57:01.476Z",
+     "from": "2026-10-16T13:07:01.493Z",
+     "to": "2026-10-17T13:07:01.493Z",
      "kind": "silent"
     }
    ],
@@ -1270,34 +1270,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 10% מהזמן (היעד 80%)"
+     "text": "עבד 9% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-17T12:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 57,
+   "minutesSinceHeartbeat": 67,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 16,
+   "doneToday": 15,
    "failedToday": 0,
    "util": {
-    "pct": 10,
-    "workMin": 141,
+    "pct": 9,
+    "workMin": 131,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T12:57:01.476Z",
-    "sleepMin": 1239
+    "awakeFrom": "2026-10-16T13:07:01.493Z",
+    "sleepMin": 1249
    },
    "segments": [
     {
-     "from": "2026-10-16T12:57:01.476Z",
-     "to": "2026-10-16T13:02:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T13:02:00.000Z",
+     "from": "2026-10-16T13:07:01.493Z",
      "to": "2026-10-16T13:10:00.000Z",
      "kind": "work"
     },
@@ -1483,7 +1478,7 @@
     },
     {
      "from": "2026-10-17T12:00:00.000Z",
-     "to": "2026-10-17T12:57:01.476Z",
+     "to": "2026-10-17T13:07:01.493Z",
      "kind": "nowork"
     }
    ],
@@ -1710,21 +1705,6 @@
      "startedAt": "2026-10-16T13:02:00.000Z",
      "endedAt": "2026-10-16T13:10:00.000Z",
      "minutes": 8,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 8031,
-      "id": "AR-miluli-C16",
-      "book": "miluli",
-      "stage": "C",
-      "n": 16,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T12:53:00.000Z",
-     "endedAt": "2026-10-16T13:02:00.000Z",
-     "minutes": 9,
      "estimateMin": 18,
      "ok": true
     }
@@ -3770,7 +3750,7 @@
    "topLine": "דרוש טיפול: הצי לא עבד 12 שעות. M6 עצור מאתמול ב-02:22, ו-25 המשימות שנותרו בפרויקט חסומות כולן אחריו - הסרת קובץ אחד מחזירה את העבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 2215
+  "minutesSinceBacklog": 2225
  },
  "progress": {
   "books": [
@@ -4249,22 +4229,6 @@
      "startedAt": "2026-10-16T13:02:00.000Z",
      "endedAt": "2026-10-16T13:10:00.000Z",
      "minutes": 8,
-     "estimateMin": 18,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 8031,
-      "id": "AR-miluli-C16",
-      "book": "miluli",
-      "stage": "C",
-      "n": 16,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T12:53:00.000Z",
-     "endedAt": "2026-10-16T13:02:00.000Z",
-     "minutes": 9,
      "estimateMin": 18,
      "ok": true
     }
