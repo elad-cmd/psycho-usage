@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T05:57:02.196Z",
+ "generatedAt": "2026-10-17T06:07:01.218Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 30:25 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 30:35 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 30% מהזמן (היעד 80%)"
+    "text": "עבד 29% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,12 +29,12 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 29:55 שעות"
+    "text": "הצבר לא התעדכן 30:05 שעות"
    }
   ],
   "doneToday": 0,
   "working": 0,
-  "flags": 6,
+  "flags": 5,
   "decisions": 0
  },
  "seats": [
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 30:25 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 30:35 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 1825,
+   "minutesSinceHeartbeat": 1835,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T05:57:02.196Z",
+    "awakeFrom": "2026-10-16T06:07:01.218Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T05:57:02.196Z",
-     "to": "2026-10-17T05:57:02.196Z",
+     "from": "2026-10-16T06:07:01.218Z",
+     "to": "2026-10-17T06:07:01.218Z",
      "kind": "silent"
     }
    ],
@@ -1270,34 +1270,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 30% מהזמן (היעד 80%)"
+     "text": "עבד 29% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-17T05:00:00.000Z",
+   "lastHeartbeatAt": "2026-10-17T06:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 57,
+   "minutesSinceHeartbeat": 7,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 47,
+   "doneToday": 46,
    "failedToday": 0,
    "util": {
-    "pct": 30,
-    "workMin": 408,
+    "pct": 29,
+    "workMin": 398,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T05:57:02.196Z",
-    "sleepMin": 972
+    "awakeFrom": "2026-10-16T06:07:01.218Z",
+    "sleepMin": 982
    },
    "segments": [
     {
-     "from": "2026-10-16T05:57:02.196Z",
-     "to": "2026-10-16T06:07:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T06:07:00.000Z",
+     "from": "2026-10-16T06:07:01.218Z",
      "to": "2026-10-16T06:24:00.000Z",
      "kind": "work"
     },
@@ -1613,7 +1608,12 @@
     },
     {
      "from": "2026-10-17T05:00:00.000Z",
-     "to": "2026-10-17T05:57:02.196Z",
+     "to": "2026-10-17T06:00:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-17T06:00:00.000Z",
+     "to": "2026-10-17T06:07:01.218Z",
      "kind": "nowork"
     }
    ],
@@ -2305,21 +2305,6 @@
      "startedAt": "2026-10-16T06:07:00.000Z",
      "endedAt": "2026-10-16T06:24:00.000Z",
      "minutes": 17,
-     "estimateMin": 12,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 8038,
-      "id": "AR-miluli-R20",
-      "book": "miluli",
-      "stage": "R",
-      "n": 20,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T05:57:00.000Z",
-     "endedAt": "2026-10-16T06:07:00.000Z",
-     "minutes": 10,
      "estimateMin": 12,
      "ok": true
     }
@@ -4349,7 +4334,7 @@
   "backlogFile": "backlog-20261016-0302.md",
   "versions24h": 0,
   "versionsHour": 0,
-  "flagsOpen24h": 6,
+  "flagsOpen24h": 5,
   "lastFlag": {
    "file": "20261017-0105-manager-blocked.md",
    "at": "2026-10-16T22:05:00.000Z",
@@ -4365,7 +4350,7 @@
    "topLine": "דרוש טיפול: הצי לא עבד 12 שעות. M6 עצור מאתמול ב-02:22, ו-25 המשימות שנותרו בפרויקט חסומות כולן אחריו - הסרת קובץ אחד מחזירה את העבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1795
+  "minutesSinceBacklog": 1805
  },
  "progress": {
   "books": [
@@ -5342,22 +5327,6 @@
      "minutes": 17,
      "estimateMin": 12,
      "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 8038,
-      "id": "AR-miluli-R20",
-      "book": "miluli",
-      "stage": "R",
-      "n": 20,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T05:57:00.000Z",
-     "endedAt": "2026-10-16T06:07:00.000Z",
-     "minutes": 10,
-     "estimateMin": 12,
-     "ok": true
     }
    ],
    "flags": [
@@ -5395,13 +5364,6 @@
      "kind": "manager",
      "target": "blocked",
      "text": "# כתיבת הצבר לדרייב חסומה · 16.10.2026 10:05 (ריצת 10:02)"
-    },
-    {
-     "file": "20261016-0907-manager-blocked.md",
-     "at": "2026-10-16T06:07:00.000Z",
-     "kind": "manager",
-     "target": "blocked",
-     "text": "# המנהל · ריצת 09:02 (16.10.2026) · הצבר לא נכתב לדרייב - חסימה טכנית · שעה חמישית ברצף"
     }
    ],
    "backlogVersions": 0
