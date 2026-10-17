@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T08:57:01.314Z",
+ "generatedAt": "2026-10-17T09:07:01.315Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 33:25 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 33:35 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -29,12 +29,12 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 32:55 שעות"
+    "text": "הצבר לא התעדכן 33:05 שעות"
    }
   ],
   "doneToday": 0,
   "working": 0,
-  "flags": 3,
+  "flags": 2,
   "decisions": 0
  },
  "seats": [
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 33:25 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 33:35 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 2005,
+   "minutesSinceHeartbeat": 2015,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T08:57:01.314Z",
+    "awakeFrom": "2026-10-16T09:07:01.315Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T08:57:01.314Z",
-     "to": "2026-10-17T08:57:01.314Z",
+     "from": "2026-10-16T09:07:01.315Z",
+     "to": "2026-10-17T09:07:01.315Z",
      "kind": "silent"
     }
    ],
@@ -1274,10 +1274,10 @@
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-17T08:01:00.000Z",
+   "lastHeartbeatAt": "2026-10-17T09:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 56,
+   "minutesSinceHeartbeat": 7,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1287,19 +1287,14 @@
     "pct": 23,
     "workMin": 317,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T08:57:01.314Z",
+    "awakeFrom": "2026-10-16T09:07:01.315Z",
     "sleepMin": 1063
    },
    "segments": [
     {
-     "from": "2026-10-16T08:57:01.314Z",
-     "to": "2026-10-16T09:00:00.000Z",
-     "kind": "gap"
-    },
-    {
-     "from": "2026-10-16T09:00:00.000Z",
+     "from": "2026-10-16T09:07:01.315Z",
      "to": "2026-10-16T10:01:00.000Z",
-     "kind": "nowork"
+     "kind": "gap"
     },
     {
      "from": "2026-10-16T10:01:00.000Z",
@@ -1573,7 +1568,12 @@
     },
     {
      "from": "2026-10-17T08:01:00.000Z",
-     "to": "2026-10-17T08:57:01.314Z",
+     "to": "2026-10-17T09:00:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-17T09:00:00.000Z",
+     "to": "2026-10-17T09:07:01.315Z",
      "kind": "nowork"
     }
    ],
@@ -4144,7 +4144,7 @@
   "backlogFile": "backlog-20261016-0302.md",
   "versions24h": 0,
   "versionsHour": 0,
-  "flagsOpen24h": 3,
+  "flagsOpen24h": 2,
   "lastFlag": {
    "file": "20261017-0105-manager-blocked.md",
    "at": "2026-10-16T22:05:00.000Z",
@@ -4160,7 +4160,7 @@
    "topLine": "דרוש טיפול: הצי לא עבד 12 שעות. M6 עצור מאתמול ב-02:22, ו-25 המשימות שנותרו בפרויקט חסומות כולן אחריו - הסרת קובץ אחד מחזירה את העבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1975
+  "minutesSinceBacklog": 1985
  },
  "progress": {
   "books": [
@@ -4993,13 +4993,6 @@
      "kind": "manager",
      "target": "blocked",
      "text": "# דגל · 16.10.2026 19:05 · manager-blocked + M6 עצור / הצי מתרוקן"
-    },
-    {
-     "file": "20261016-1205-manager-blocked.md",
-     "at": "2026-10-16T09:05:00.000Z",
-     "kind": "manager",
-     "target": "blocked",
-     "text": "# כתיבת הצבר חסומה · ריצת 12:02 · 16.10.2026 12:06"
     }
    ],
    "backlogVersions": 0
