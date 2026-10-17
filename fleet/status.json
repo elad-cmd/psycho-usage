@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-17T00:17:01.945Z",
+ "generatedAt": "2026-10-17T00:27:01.947Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 24:45 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 24:55 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 49% מהזמן (היעד 80%)"
+    "text": "עבד 48% מהזמן (היעד 80%)"
    },
    {
     "seat": "מנהל",
@@ -29,7 +29,7 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 24:15 שעות"
+    "text": "הצבר לא התעדכן 24:25 שעות"
    }
   ],
   "doneToday": 0,
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 24:45 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 24:55 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 1485,
+   "minutesSinceHeartbeat": 1495,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T00:17:01.945Z",
+    "awakeFrom": "2026-10-16T00:27:01.947Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-16T00:17:01.945Z",
-     "to": "2026-10-17T00:17:01.945Z",
+     "from": "2026-10-16T00:27:01.947Z",
+     "to": "2026-10-17T00:27:01.947Z",
      "kind": "silent"
     }
    ],
@@ -1270,34 +1270,29 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 49% מהזמן (היעד 80%)"
+     "text": "עבד 48% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-17T00:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 17,
+   "minutesSinceHeartbeat": 27,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 74,
+   "doneToday": 73,
    "failedToday": 0,
    "util": {
-    "pct": 49,
-    "workMin": 676,
+    "pct": 48,
+    "workMin": 666,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-16T00:17:01.945Z",
-    "sleepMin": 704
+    "awakeFrom": "2026-10-16T00:27:01.947Z",
+    "sleepMin": 714
    },
    "segments": [
     {
-     "from": "2026-10-16T00:17:01.945Z",
-     "to": "2026-10-16T00:18:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T00:18:00.000Z",
+     "from": "2026-10-16T00:27:01.947Z",
      "to": "2026-10-16T00:36:00.000Z",
      "kind": "work"
     },
@@ -1728,7 +1723,7 @@
     },
     {
      "from": "2026-10-17T00:00:00.000Z",
-     "to": "2026-10-17T00:17:01.945Z",
+     "to": "2026-10-17T00:27:01.947Z",
      "kind": "nowork"
     }
    ],
@@ -2826,21 +2821,6 @@
      "endedAt": "2026-10-16T00:36:00.000Z",
      "minutes": 18,
      "estimateMin": 20,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 7048,
-      "id": "AR-algebra-R25",
-      "book": "algebra",
-      "stage": "R",
-      "n": 25,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T00:07:00.000Z",
-     "endedAt": "2026-10-16T00:18:00.000Z",
-     "minutes": 11,
-     "estimateMin": 12,
      "ok": true
     }
    ],
@@ -4885,7 +4865,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1455
+  "minutesSinceBacklog": 1465
  },
  "progress": {
   "books": [
@@ -6293,22 +6273,6 @@
      "endedAt": "2026-10-16T00:36:00.000Z",
      "minutes": 18,
      "estimateMin": 20,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 7048,
-      "id": "AR-algebra-R25",
-      "book": "algebra",
-      "stage": "R",
-      "n": 25,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-16T00:07:00.000Z",
-     "endedAt": "2026-10-16T00:18:00.000Z",
-     "minutes": 11,
-     "estimateMin": 12,
      "ok": true
     }
    ],
