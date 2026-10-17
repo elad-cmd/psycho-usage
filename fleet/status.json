@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-16T23:57:01.948Z",
+ "generatedAt": "2026-10-17T00:07:01.941Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 24:25 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 24:35 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -29,10 +29,10 @@
    {
     "seat": "מנהל",
     "kind": "manager-silent",
-    "text": "הצבר לא התעדכן 23:55 שעות"
+    "text": "הצבר לא התעדכן 24:05 שעות"
    }
   ],
-  "doneToday": 2,
+  "doneToday": 0,
   "working": 0,
   "flags": 9,
   "decisions": 0
@@ -48,7 +48,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 24:25 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 24:35 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -59,7 +59,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 1465,
+   "minutesSinceHeartbeat": 1475,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -154,13 +154,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T23:57:01.948Z",
+    "awakeFrom": "2026-10-16T00:07:01.941Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-15T23:57:01.948Z",
-     "to": "2026-10-16T23:57:01.948Z",
+     "from": "2026-10-16T00:07:01.941Z",
+     "to": "2026-10-17T00:07:01.941Z",
      "kind": "silent"
     }
    ],
@@ -1274,35 +1274,25 @@
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-16T23:01:00.000Z",
+   "lastHeartbeatAt": "2026-10-17T00:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 56,
+   "minutesSinceHeartbeat": 7,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 76,
+   "doneToday": 74,
    "failedToday": 0,
    "util": {
     "pct": 50,
-    "workMin": 696,
+    "workMin": 686,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-15T23:57:01.948Z",
-    "sleepMin": 684
+    "awakeFrom": "2026-10-16T00:07:01.941Z",
+    "sleepMin": 694
    },
    "segments": [
     {
-     "from": "2026-10-15T23:57:01.948Z",
-     "to": "2026-10-15T23:59:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-15T23:59:00.000Z",
-     "to": "2026-10-16T00:07:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-16T00:07:00.000Z",
+     "from": "2026-10-16T00:07:01.941Z",
      "to": "2026-10-16T00:18:00.000Z",
      "kind": "work"
     },
@@ -1733,7 +1723,12 @@
     },
     {
      "from": "2026-10-16T23:01:00.000Z",
-     "to": "2026-10-16T23:57:01.948Z",
+     "to": "2026-10-17T00:00:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-17T00:00:00.000Z",
+     "to": "2026-10-17T00:07:01.941Z",
      "kind": "nowork"
     }
    ],
@@ -2846,36 +2841,6 @@
      "endedAt": "2026-10-16T00:18:00.000Z",
      "minutes": 11,
      "estimateMin": 12,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 7046,
-      "id": "AR-algebra-R24",
-      "book": "algebra",
-      "stage": "R",
-      "n": 24,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T23:59:00.000Z",
-     "endedAt": "2026-10-16T00:07:00.000Z",
-     "minutes": 8,
-     "estimateMin": 12,
-     "ok": true
-    },
-    {
-     "task": {
-      "prio": 7015,
-      "id": "AR-algebra-C08",
-      "book": "algebra",
-      "stage": "C",
-      "n": 8,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T23:53:00.000Z",
-     "endedAt": "2026-10-15T23:59:00.000Z",
-     "minutes": 6,
-     "estimateMin": 18,
      "ok": true
     }
    ],
@@ -4902,7 +4867,7 @@
  "manager": {
   "lastBacklogAt": "2026-10-16T00:02:00.000Z",
   "backlogFile": "backlog-20261016-0302.md",
-  "versions24h": 1,
+  "versions24h": 0,
   "versionsHour": 0,
   "flagsOpen24h": 9,
   "lastFlag": {
@@ -4920,7 +4885,7 @@
    "topLine": "דורש פעולה: לבדוק את מושב M6 - מכסת Fable של החשבון שלו (claude4) עומדת על 100%, והמשימה האחרונה שלו (בעיות עמ' 261-280, נלקחה ב-06:00) לא הסתיימה. חוץ מזה הכול תקין: 72 משימות בוצעו ב-24 השעות, אף אחת לא נכשלה, ושני ספרים (תרשימים, ניהול זמנים) סיימו את כל השלבים ומחכים להכרעות שלך."
   },
   "starvation": null,
-  "minutesSinceBacklog": 1435
+  "minutesSinceBacklog": 1445
  },
  "progress": {
   "books": [
@@ -5092,7 +5057,7 @@
     "pages": 548,
     "total": 57,
     "done": 20,
-    "doneToday": 2,
+    "doneToday": 0,
     "doneHour": 0,
     "pct": 35,
     "working": [],
@@ -5144,7 +5109,7 @@
   "total": 264,
   "done": 165,
   "pct": 63,
-  "doneToday": 2,
+  "doneToday": 0,
   "doneHour": 0,
   "counts": {
    "ready": 26,
@@ -6345,38 +6310,6 @@
      "minutes": 11,
      "estimateMin": 12,
      "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 7046,
-      "id": "AR-algebra-R24",
-      "book": "algebra",
-      "stage": "R",
-      "n": 24,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T23:59:00.000Z",
-     "endedAt": "2026-10-16T00:07:00.000Z",
-     "minutes": 8,
-     "estimateMin": 12,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": {
-      "prio": 7015,
-      "id": "AR-algebra-C08",
-      "book": "algebra",
-      "stage": "C",
-      "n": 8,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-15T23:53:00.000Z",
-     "endedAt": "2026-10-15T23:59:00.000Z",
-     "minutes": 6,
-     "estimateMin": 18,
-     "ok": true
     }
    ],
    "flags": [
@@ -6444,7 +6377,7 @@
      "text": "# המנהל · ריצת 05:02 (16.10.2026) · הצבר לא נכתב - חסימה טכנית"
     }
    ],
-   "backlogVersions": 1
+   "backlogVersions": 0
   }
  },
  "rules": {
