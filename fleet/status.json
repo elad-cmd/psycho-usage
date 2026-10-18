@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T19:37:01.664Z",
+ "generatedAt": "2026-10-18T19:47:01.655Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -14,7 +14,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 7% מהזמן (היעד 80%)"
+    "text": "עבד 8% מהזמן (היעד 80%)"
    }
   ],
   "doneToday": 0,
@@ -38,30 +38,30 @@
    ],
    "current": {
     "task": null,
-    "startedAt": "2026-10-18T19:32:00.000Z",
-    "elapsedMin": 5,
+    "startedAt": "2026-10-18T19:39:00.000Z",
+    "elapsedMin": 8,
     "estimateMin": null,
     "ratio": null
    },
-   "lastHeartbeatAt": "2026-10-18T19:32:00.000Z",
+   "lastHeartbeatAt": "2026-10-18T19:39:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1010-CC-2309-q2-R-n1",
-   "minutesSinceHeartbeat": 5,
+   "lastHeartbeatDetail": "1030-CC-2309-v2-R-n1",
+   "minutesSinceHeartbeat": 8,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 13,
+   "doneToday": 14,
    "failedToday": 0,
    "util": {
     "pct": 9,
-    "workMin": 119,
+    "workMin": 129,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T19:37:01.664Z",
-    "sleepMin": 1261
+    "awakeFrom": "2026-10-17T19:47:01.655Z",
+    "sleepMin": 1251
    },
    "segments": [
     {
-     "from": "2026-10-17T19:37:01.664Z",
+     "from": "2026-10-17T19:47:01.655Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -187,18 +187,31 @@
     },
     {
      "from": "2026-10-18T19:32:00.000Z",
-     "to": "2026-10-18T19:37:01.664Z",
+     "to": "2026-10-18T19:39:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-18T19:39:00.000Z",
+     "to": "2026-10-18T19:47:01.655Z",
      "kind": "work"
     }
    ],
    "history": [
     {
      "task": null,
-     "startedAt": "2026-10-18T19:32:00.000Z",
+     "startedAt": "2026-10-18T19:39:00.000Z",
      "endedAt": null,
-     "minutes": 5,
+     "minutes": 8,
      "estimateMin": null,
      "ok": null
+    },
+    {
+     "task": null,
+     "startedAt": "2026-10-18T19:32:00.000Z",
+     "endedAt": "2026-10-18T19:39:00.000Z",
+     "minutes": 7,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": {
@@ -1657,35 +1670,35 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 7% מהזמן (היעד 80%)"
+     "text": "עבד 8% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
-    "startedAt": "2026-10-18T19:30:00.000Z",
-    "elapsedMin": 7,
+    "startedAt": "2026-10-18T19:41:00.000Z",
+    "elapsedMin": 6,
     "estimateMin": null,
     "ratio": null
    },
-   "lastHeartbeatAt": "2026-10-18T19:30:00.000Z",
+   "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1000-CC-2309-q1-R-n1",
-   "minutesSinceHeartbeat": 7,
+   "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
+   "minutesSinceHeartbeat": 6,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 12,
+   "doneToday": 13,
    "failedToday": 0,
    "util": {
-    "pct": 7,
-    "workMin": 101,
+    "pct": 8,
+    "workMin": 111,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T19:37:01.664Z",
-    "sleepMin": 1279
+    "awakeFrom": "2026-10-17T19:47:01.655Z",
+    "sleepMin": 1269
    },
    "segments": [
     {
-     "from": "2026-10-17T19:37:01.664Z",
+     "from": "2026-10-17T19:47:01.655Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1811,18 +1824,31 @@
     },
     {
      "from": "2026-10-18T19:30:00.000Z",
-     "to": "2026-10-18T19:37:01.664Z",
+     "to": "2026-10-18T19:41:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-18T19:41:00.000Z",
+     "to": "2026-10-18T19:47:01.655Z",
      "kind": "work"
     }
    ],
    "history": [
     {
      "task": null,
-     "startedAt": "2026-10-18T19:30:00.000Z",
+     "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 7,
+     "minutes": 6,
      "estimateMin": null,
      "ok": null
+    },
+    {
+     "task": null,
+     "startedAt": "2026-10-18T19:30:00.000Z",
+     "endedAt": "2026-10-18T19:41:00.000Z",
+     "minutes": 11,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": {
@@ -4188,7 +4214,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 25
+  "minutesSinceBacklog": 35
  },
  "progress": {
   "books": [
@@ -4427,6 +4453,15 @@
    "done": [
     {
      "seat": "M6",
+     "task": null,
+     "startedAt": "2026-10-18T19:32:00.000Z",
+     "endedAt": "2026-10-18T19:39:00.000Z",
+     "minutes": 7,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M6",
      "task": {
       "prio": 7999,
       "id": "AR-algebra-S",
@@ -4438,6 +4473,15 @@
      "startedAt": "2026-10-18T18:32:00.000Z",
      "endedAt": "2026-10-18T19:01:00.000Z",
      "minutes": 29,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": null,
+     "startedAt": "2026-10-18T19:30:00.000Z",
+     "endedAt": "2026-10-18T19:41:00.000Z",
+     "minutes": 11,
      "estimateMin": null,
      "ok": true
     }
@@ -4455,6 +4499,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": null,
+     "startedAt": "2026-10-18T19:32:00.000Z",
+     "endedAt": "2026-10-18T19:39:00.000Z",
+     "minutes": 7,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -4660,6 +4713,15 @@
      "startedAt": "2026-10-18T08:01:00.000Z",
      "endedAt": "2026-10-18T08:09:00.000Z",
      "minutes": 8,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": null,
+     "startedAt": "2026-10-18T19:30:00.000Z",
+     "endedAt": "2026-10-18T19:41:00.000Z",
+     "minutes": 11,
      "estimateMin": null,
      "ok": true
     },
