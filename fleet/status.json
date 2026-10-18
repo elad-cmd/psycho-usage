@@ -1,16 +1,11 @@
 {
  "build": 2,
- "generatedAt": "2026-10-18T07:57:01.450Z",
+ "generatedAt": "2026-10-18T08:07:01.425Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
   "ok": false,
   "problems": [
-   {
-    "seat": "M6",
-    "kind": "silent",
-    "text": "לא נותן סימן חיים 56:25 שעות ו-12 משימות מחכות לו"
-   },
    {
     "seat": "M6",
     "kind": "util",
@@ -20,15 +15,10 @@
     "seat": "M2",
     "kind": "util",
     "text": "עבד 0% מהזמן (היעד 80%)"
-   },
-   {
-    "seat": "מנהל",
-    "kind": "stop",
-    "text": "קובץ עצירה: STOP-M6.md"
    }
   ],
   "doneToday": 0,
-  "working": 0,
+  "working": 1,
   "flags": 2,
   "decisions": 0
  },
@@ -38,31 +28,33 @@
    "account": "essay@psycho.co.il",
    "color": "#2563eb",
    "colorName": "כחול",
-   "state": "silent",
-   "stateText": "לא נותן סימן חיים",
+   "state": "working",
+   "stateText": "עובד",
    "flags": [
-    {
-     "kind": "silent",
-     "text": "לא נותן סימן חיים 56:25 שעות ו-12 משימות מחכות לו"
-    },
     {
      "kind": "util",
      "text": "עבד 0% מהזמן (היעד 80%)"
     }
    ],
-   "current": null,
-   "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
-   "lastHeartbeatType": "סיום",
-   "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 3385,
-   "pending": [
-    {
-     "name": "7022-AR-algebra-R12-n1",
+   "current": {
+    "task": {
+     "prio": 7022,
      "id": "AR-algebra-R12",
      "book": "algebra",
      "stage": "R",
-     "n": 12
+     "n": 12,
+     "attempt": 1
     },
+    "startedAt": "2026-10-18T08:01:00.000Z",
+    "elapsedMin": 6,
+    "estimateMin": 12,
+    "ratio": 0.5
+   },
+   "lastHeartbeatAt": "2026-10-18T08:01:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "7022-AR-algebra-R12-n1",
+   "minutesSinceHeartbeat": 6,
+   "pending": [
     {
      "name": "7024-AR-algebra-R13-n1",
      "id": "AR-algebra-R13",
@@ -141,25 +133,46 @@
      "n": 23
     }
    ],
-   "pendingCount": 12,
-   "doingCount": 0,
+   "pendingCount": 11,
+   "doingCount": 1,
    "doneToday": 0,
    "failedToday": 0,
    "util": {
     "pct": 0,
-    "workMin": 0,
+    "workMin": 6,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T07:57:01.450Z",
-    "sleepMin": 1380
+    "awakeFrom": "2026-10-17T08:07:01.425Z",
+    "sleepMin": 1374
    },
    "segments": [
     {
-     "from": "2026-10-17T07:57:01.450Z",
-     "to": "2026-10-18T07:57:01.450Z",
+     "from": "2026-10-17T08:07:01.425Z",
+     "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
+    },
+    {
+     "from": "2026-10-18T08:01:00.000Z",
+     "to": "2026-10-18T08:07:01.425Z",
+     "kind": "work"
     }
    ],
-   "history": [],
+   "history": [
+    {
+     "task": {
+      "prio": 7022,
+      "id": "AR-algebra-R12",
+      "book": "algebra",
+      "stage": "R",
+      "n": 12,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T08:01:00.000Z",
+     "endedAt": null,
+     "minutes": 6,
+     "estimateMin": 12,
+     "ok": null
+    }
+   ],
    "doneFiles": [
     {
      "name": "1001-AR-tarshimim-C01-n1",
@@ -1269,10 +1282,10 @@
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-17T12:00:00.000Z",
+   "lastHeartbeatAt": "2026-10-18T08:01:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 1197,
+   "minutesSinceHeartbeat": 6,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1282,19 +1295,14 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T07:57:01.450Z",
+    "awakeFrom": "2026-10-17T08:07:01.425Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-17T07:57:01.450Z",
-     "to": "2026-10-17T08:01:00.000Z",
-     "kind": "gap"
-    },
-    {
-     "from": "2026-10-17T08:01:00.000Z",
+     "from": "2026-10-17T08:07:01.425Z",
      "to": "2026-10-17T09:00:00.000Z",
-     "kind": "nowork"
+     "kind": "gap"
     },
     {
      "from": "2026-10-17T09:00:00.000Z",
@@ -1313,7 +1321,12 @@
     },
     {
      "from": "2026-10-17T12:00:00.000Z",
-     "to": "2026-10-18T07:57:01.450Z",
+     "to": "2026-10-18T08:01:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-18T08:01:00.000Z",
+     "to": "2026-10-18T08:07:01.425Z",
      "kind": "nowork"
     }
    ],
@@ -3351,15 +3364,13 @@
    "target": "blocked",
    "text": "# דגל · 18.10.2026 01:05 · manager-blocked + M6 עצור / הצי בלי עבודה / דופק M2 נעצר"
   },
-  "stops": [
-   "STOP-M6.md"
-  ],
+  "stops": [],
   "report": {
    "file": "daily-20261018.md",
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 64
+  "minutesSinceBacklog": 74
  },
  "progress": {
   "books": [
@@ -3534,7 +3545,9 @@
     "doneToday": 0,
     "doneHour": 0,
     "pct": 0,
-    "working": [],
+    "working": [
+     "M6"
+    ],
     "byStage": {
      "R": {
       "total": 12,
