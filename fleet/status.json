@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T19:07:01.648Z",
+ "generatedAt": "2026-10-18T19:17:01.643Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -19,7 +19,7 @@
   ],
   "doneToday": 0,
   "working": 0,
-  "flags": 1,
+  "flags": 2,
   "decisions": 0
  },
  "seats": [
@@ -40,7 +40,7 @@
    "lastHeartbeatAt": "2026-10-18T19:01:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 6,
+   "minutesSinceHeartbeat": 16,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -50,12 +50,12 @@
     "pct": 8,
     "workMin": 114,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T19:07:01.648Z",
+    "awakeFrom": "2026-10-17T19:17:01.643Z",
     "sleepMin": 1266
    },
    "segments": [
     {
-     "from": "2026-10-17T19:07:01.648Z",
+     "from": "2026-10-17T19:17:01.643Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -176,7 +176,7 @@
     },
     {
      "from": "2026-10-18T19:01:00.000Z",
-     "to": "2026-10-18T19:07:01.648Z",
+     "to": "2026-10-18T19:17:01.643Z",
      "kind": "nowork"
     }
    ],
@@ -193,7 +193,7 @@
      "startedAt": "2026-10-18T18:32:00.000Z",
      "endedAt": "2026-10-18T19:01:00.000Z",
      "minutes": 29,
-     "estimateMin": 18,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -1645,7 +1645,7 @@
    "lastHeartbeatAt": "2026-10-18T18:29:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 38,
+   "minutesSinceHeartbeat": 48,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1655,12 +1655,12 @@
     "pct": 7,
     "workMin": 94,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T19:07:01.648Z",
+    "awakeFrom": "2026-10-17T19:17:01.643Z",
     "sleepMin": 1286
    },
    "segments": [
     {
-     "from": "2026-10-17T19:07:01.648Z",
+     "from": "2026-10-17T19:17:01.643Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1776,7 +1776,7 @@
     },
     {
      "from": "2026-10-18T18:29:00.000Z",
-     "to": "2026-10-18T19:07:01.648Z",
+     "to": "2026-10-18T19:17:01.643Z",
      "kind": "nowork"
     }
    ],
@@ -4127,17 +4127,17 @@
   }
  ],
  "manager": {
-  "lastBacklogAt": "2026-10-18T16:10:00.000Z",
-  "backlogFile": "backlog-20261018-1910.md",
-  "versions24h": 5,
-  "versionsHour": 0,
-  "flagsOpen24h": 1,
+  "lastBacklogAt": "2026-10-18T19:12:00.000Z",
+  "backlogFile": "backlog-20261018-2212.md",
+  "versions24h": 6,
+  "versionsHour": 1,
+  "flagsOpen24h": 2,
   "lastFlag": {
-   "file": "20261018-0105-manager-blocked.md",
-   "at": "2026-10-17T22:05:00.000Z",
-   "kind": "manager",
-   "target": "blocked",
-   "text": "# דגל · 18.10.2026 01:05 · manager-blocked + M6 עצור / הצי בלי עבודה / דופק M2 נעצר"
+   "file": "20261018-2212-finished-arabic-books-check.md",
+   "at": "2026-10-18T19:12:00.000Z",
+   "kind": "finished",
+   "target": "arabic-books-check",
+   "text": "# דגל - הפרויקט נגמר · arabic-books-check · 18.10.2026 22:12 (המנהל, ריצה שעתית)"
   },
   "stops": [],
   "report": {
@@ -4145,7 +4145,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 177
+  "minutesSinceBacklog": 5
  },
  "progress": {
   "books": [
@@ -4315,7 +4315,7 @@
     "code": "algebra",
     "name": "אלגברה",
     "pages": 548,
-    "total": 1,
+    "total": 0,
     "done": 0,
     "doneToday": 0,
     "doneHour": 0,
@@ -4331,7 +4331,7 @@
       "done": 0
      },
      "S": {
-      "total": 1,
+      "total": 0,
       "done": 0
      }
     },
@@ -4366,7 +4366,7 @@
     "decisions": 0
    }
   ],
-  "total": 1,
+  "total": 0,
   "done": 0,
   "pct": 0,
   "doneToday": 0,
@@ -4374,7 +4374,7 @@
   "counts": {
    "ready": 0,
    "waiting": 0,
-   "assigned": 1,
+   "assigned": 0,
    "failed": 0,
    "decisions": 0
   }
@@ -4395,12 +4395,20 @@
      "startedAt": "2026-10-18T18:32:00.000Z",
      "endedAt": "2026-10-18T19:01:00.000Z",
      "minutes": 29,
-     "estimateMin": 18,
+     "estimateMin": null,
      "ok": true
     }
    ],
-   "flags": [],
-   "backlogVersions": 0
+   "flags": [
+    {
+     "file": "20261018-2212-finished-arabic-books-check.md",
+     "at": "2026-10-18T19:12:00.000Z",
+     "kind": "finished",
+     "target": "arabic-books-check",
+     "text": "# דגל - הפרויקט נגמר · arabic-books-check · 18.10.2026 22:12 (המנהל, ריצה שעתית)"
+    }
+   ],
+   "backlogVersions": 1
   },
   "day": {
    "done": [
@@ -4417,7 +4425,7 @@
      "startedAt": "2026-10-18T18:32:00.000Z",
      "endedAt": "2026-10-18T19:01:00.000Z",
      "minutes": 29,
-     "estimateMin": 18,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4807,6 +4815,13 @@
    ],
    "flags": [
     {
+     "file": "20261018-2212-finished-arabic-books-check.md",
+     "at": "2026-10-18T19:12:00.000Z",
+     "kind": "finished",
+     "target": "arabic-books-check",
+     "text": "# דגל - הפרויקט נגמר · arabic-books-check · 18.10.2026 22:12 (המנהל, ריצה שעתית)"
+    },
+    {
      "file": "20261018-0105-manager-blocked.md",
      "at": "2026-10-17T22:05:00.000Z",
      "kind": "manager",
@@ -4814,7 +4829,7 @@
      "text": "# דגל · 18.10.2026 01:05 · manager-blocked + M6 עצור / הצי בלי עבודה / דופק M2 נעצר"
     }
    ],
-   "backlogVersions": 5
+   "backlogVersions": 6
   }
  },
  "rules": {
