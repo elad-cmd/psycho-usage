@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T13:27:01.716Z",
+ "generatedAt": "2026-10-18T13:37:01.661Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -14,11 +14,11 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 6% מהזמן (היעד 80%)"
+    "text": "עבד 7% מהזמן (היעד 80%)"
    }
   ],
   "doneToday": 0,
-  "working": 0,
+  "working": 1,
   "flags": 2,
   "decisions": 0
  },
@@ -37,10 +37,10 @@
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-18T12:31:00.000Z",
+   "lastHeartbeatAt": "2026-10-18T13:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 56,
+   "minutesSinceHeartbeat": 6,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -50,12 +50,12 @@
     "pct": 6,
     "workMin": 85,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T13:27:01.716Z",
+    "awakeFrom": "2026-10-17T13:37:01.661Z",
     "sleepMin": 1295
    },
    "segments": [
     {
-     "from": "2026-10-17T13:27:01.716Z",
+     "from": "2026-10-17T13:37:01.661Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -141,7 +141,12 @@
     },
     {
      "from": "2026-10-18T12:31:00.000Z",
-     "to": "2026-10-18T13:27:01.716Z",
+     "to": "2026-10-18T13:31:00.000Z",
+     "kind": "nowork"
+    },
+    {
+     "from": "2026-10-18T13:31:00.000Z",
+     "to": "2026-10-18T13:37:01.661Z",
      "kind": "nowork"
     }
    ],
@@ -1571,42 +1576,47 @@
    "account": "office@psycho.co.il",
    "color": "#ea580c",
    "colorName": "כתום",
-   "state": "idle",
-   "stateText": "בין השכמות",
+   "state": "working",
+   "stateText": "עובד",
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 6% מהזמן (היעד 80%)"
+     "text": "עבד 7% מהזמן (היעד 80%)"
     }
    ],
-   "current": null,
-   "lastHeartbeatAt": "2026-10-18T12:28:00.000Z",
-   "lastHeartbeatType": "סיום",
-   "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 59,
-   "pending": [
-    {
-     "name": "7045-AR-algebra-C23-n1",
+   "current": {
+    "task": {
+     "prio": 7045,
      "id": "AR-algebra-C23",
      "book": "algebra",
      "stage": "C",
-     "n": 23
-    }
-   ],
-   "pendingCount": 1,
-   "doingCount": 0,
+     "n": 23,
+     "attempt": 1
+    },
+    "startedAt": "2026-10-18T13:29:00.000Z",
+    "elapsedMin": 8,
+    "estimateMin": 10,
+    "ratio": 0.8
+   },
+   "lastHeartbeatAt": "2026-10-18T13:29:00.000Z",
+   "lastHeartbeatType": "לקחתי",
+   "lastHeartbeatDetail": "7045-AR-algebra-C23-n1",
+   "minutesSinceHeartbeat": 8,
+   "pending": [],
+   "pendingCount": 0,
+   "doingCount": 1,
    "doneToday": 11,
    "failedToday": 0,
    "util": {
-    "pct": 6,
-    "workMin": 86,
+    "pct": 7,
+    "workMin": 94,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T13:27:01.716Z",
-    "sleepMin": 1294
+    "awakeFrom": "2026-10-17T13:37:01.661Z",
+    "sleepMin": 1286
    },
    "segments": [
     {
-     "from": "2026-10-17T13:27:01.716Z",
+     "from": "2026-10-17T13:37:01.661Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1697,11 +1707,31 @@
     },
     {
      "from": "2026-10-18T12:28:00.000Z",
-     "to": "2026-10-18T13:27:01.716Z",
+     "to": "2026-10-18T13:29:00.000Z",
      "kind": "nowork"
+    },
+    {
+     "from": "2026-10-18T13:29:00.000Z",
+     "to": "2026-10-18T13:37:01.661Z",
+     "kind": "work"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 7045,
+      "id": "AR-algebra-C23",
+      "book": "algebra",
+      "stage": "C",
+      "n": 23,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T13:29:00.000Z",
+     "endedAt": null,
+     "minutes": 8,
+     "estimateMin": 10,
+     "ok": null
+    },
     {
      "task": {
       "prio": 7043,
@@ -4039,7 +4069,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 6
+  "minutesSinceBacklog": 16
  },
  "progress": {
   "books": [
@@ -4214,7 +4244,9 @@
     "doneToday": 0,
     "doneHour": 0,
     "pct": 0,
-    "working": [],
+    "working": [
+     "M2"
+    ],
     "byStage": {
      "R": {
       "total": 0,
