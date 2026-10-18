@@ -1,6 +1,6 @@
 {
  "build": 2,
- "generatedAt": "2026-10-18T07:47:01.370Z",
+ "generatedAt": "2026-10-18T07:57:01.450Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "silent",
-    "text": "לא נותן סימן חיים 56:15 שעות ו-12 משימות מחכות לו"
+    "text": "לא נותן סימן חיים 56:25 שעות ו-12 משימות מחכות לו"
    },
    {
     "seat": "M6",
@@ -43,7 +43,7 @@
    "flags": [
     {
      "kind": "silent",
-     "text": "לא נותן סימן חיים 56:15 שעות ו-12 משימות מחכות לו"
+     "text": "לא נותן סימן חיים 56:25 שעות ו-12 משימות מחכות לו"
     },
     {
      "kind": "util",
@@ -54,7 +54,7 @@
    "lastHeartbeatAt": "2026-10-15T23:32:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "STOP",
-   "minutesSinceHeartbeat": 3375,
+   "minutesSinceHeartbeat": 3385,
    "pending": [
     {
      "name": "7022-AR-algebra-R12-n1",
@@ -149,13 +149,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T07:47:01.370Z",
+    "awakeFrom": "2026-10-17T07:57:01.450Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-17T07:47:01.370Z",
-     "to": "2026-10-18T07:47:01.370Z",
+     "from": "2026-10-17T07:57:01.450Z",
+     "to": "2026-10-18T07:57:01.450Z",
      "kind": "silent"
     }
    ],
@@ -1272,7 +1272,7 @@
    "lastHeartbeatAt": "2026-10-17T12:00:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 1187,
+   "minutesSinceHeartbeat": 1197,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1282,12 +1282,12 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T07:47:01.370Z",
+    "awakeFrom": "2026-10-17T07:57:01.450Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-17T07:47:01.370Z",
+     "from": "2026-10-17T07:57:01.450Z",
      "to": "2026-10-17T08:01:00.000Z",
      "kind": "gap"
     },
@@ -1313,7 +1313,7 @@
     },
     {
      "from": "2026-10-17T12:00:00.000Z",
-     "to": "2026-10-18T07:47:01.370Z",
+     "to": "2026-10-18T07:57:01.450Z",
      "kind": "nowork"
     }
    ],
@@ -3342,7 +3342,7 @@
   "lastBacklogAt": "2026-10-18T06:53:00.000Z",
   "backlogFile": "backlog-20261018-0953.md",
   "versions24h": 1,
-  "versionsHour": 1,
+  "versionsHour": 0,
   "flagsOpen24h": 2,
   "lastFlag": {
    "file": "20261018-0105-manager-blocked.md",
@@ -3359,7 +3359,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 54
+  "minutesSinceBacklog": 64
  },
  "progress": {
   "books": [
@@ -3597,7 +3597,7 @@
   "hour": {
    "done": [],
    "flags": [],
-   "backlogVersions": 1
+   "backlogVersions": 0
   },
   "day": {
    "done": [],
