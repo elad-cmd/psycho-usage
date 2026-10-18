@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T17:37:01.547Z",
+ "generatedAt": "2026-10-18T17:47:01.550Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -40,7 +40,7 @@
    "lastHeartbeatAt": "2026-10-18T17:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 6,
+   "minutesSinceHeartbeat": 16,
    "pending": [
     {
      "name": "7999-AR-algebra-S-n1",
@@ -58,12 +58,12 @@
     "pct": 6,
     "workMin": 85,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T17:37:01.547Z",
+    "awakeFrom": "2026-10-17T17:47:01.550Z",
     "sleepMin": 1295
    },
    "segments": [
     {
-     "from": "2026-10-17T17:37:01.547Z",
+     "from": "2026-10-17T17:47:01.550Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -174,7 +174,7 @@
     },
     {
      "from": "2026-10-18T17:31:00.000Z",
-     "to": "2026-10-18T17:37:01.547Z",
+     "to": "2026-10-18T17:47:01.550Z",
      "kind": "nowork"
     }
    ],
@@ -1616,7 +1616,7 @@
    "lastHeartbeatAt": "2026-10-18T15:29:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 128,
+   "minutesSinceHeartbeat": 138,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1626,12 +1626,12 @@
     "pct": 7,
     "workMin": 94,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T17:37:01.547Z",
+    "awakeFrom": "2026-10-17T17:47:01.550Z",
     "sleepMin": 1286
    },
    "segments": [
     {
-     "from": "2026-10-17T17:37:01.547Z",
+     "from": "2026-10-17T17:47:01.550Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1742,7 +1742,7 @@
     },
     {
      "from": "2026-10-18T15:29:00.000Z",
-     "to": "2026-10-18T17:37:01.547Z",
+     "to": "2026-10-18T17:47:01.550Z",
      "kind": "nowork"
     }
    ],
@@ -4111,7 +4111,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 87
+  "minutesSinceBacklog": 97
  },
  "progress": {
   "books": [
