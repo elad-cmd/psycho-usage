@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T09:17:01.441Z",
+ "generatedAt": "2026-10-18T09:27:01.457Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -18,7 +18,7 @@
    }
   ],
   "doneToday": 0,
-  "working": 1,
+  "working": 0,
   "flags": 2,
   "decisions": 0
  },
@@ -28,55 +28,34 @@
    "account": "claude2.psycho.co.il@gmail.com",
    "color": "#2563eb",
    "colorName": "כחול",
-   "state": "working",
-   "stateText": "עובד",
+   "state": "empty",
+   "stateText": "אין לו משימות",
    "flags": [
     {
      "kind": "util",
      "text": "עבד 6% מהזמן (היעד 80%)"
     }
    ],
-   "current": {
-    "task": {
-     "prio": 7042,
-     "id": "AR-algebra-R22",
-     "book": "algebra",
-     "stage": "R",
-     "n": 22,
-     "attempt": 1
-    },
-    "startedAt": "2026-10-18T09:08:00.000Z",
-    "elapsedMin": 9,
-    "estimateMin": 12,
-    "ratio": 0.75
-   },
-   "lastHeartbeatAt": "2026-10-18T09:08:00.000Z",
-   "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "7042-AR-algebra-R22-n1",
-   "minutesSinceHeartbeat": 9,
-   "pending": [
-    {
-     "name": "7044-AR-algebra-R23-n1",
-     "id": "AR-algebra-R23",
-     "book": "algebra",
-     "stage": "R",
-     "n": 23
-    }
-   ],
-   "pendingCount": 1,
-   "doingCount": 1,
-   "doneToday": 10,
+   "current": null,
+   "lastHeartbeatAt": "2026-10-18T09:26:00.000Z",
+   "lastHeartbeatType": "סיום",
+   "lastHeartbeatDetail": "התיבה ריקה",
+   "minutesSinceHeartbeat": 1,
+   "pending": [],
+   "pendingCount": 0,
+   "doingCount": 0,
+   "doneToday": 12,
    "failedToday": 0,
    "util": {
     "pct": 6,
-    "workMin": 76,
+    "workMin": 85,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T09:17:01.441Z",
-    "sleepMin": 1304
+    "awakeFrom": "2026-10-17T09:27:01.457Z",
+    "sleepMin": 1295
    },
    "segments": [
     {
-     "from": "2026-10-17T09:17:01.441Z",
+     "from": "2026-10-17T09:27:01.457Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -132,11 +111,36 @@
     },
     {
      "from": "2026-10-18T09:08:00.000Z",
-     "to": "2026-10-18T09:17:01.441Z",
+     "to": "2026-10-18T09:18:00.000Z",
      "kind": "work"
+    },
+    {
+     "from": "2026-10-18T09:18:00.000Z",
+     "to": "2026-10-18T09:26:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-18T09:26:00.000Z",
+     "to": "2026-10-18T09:27:01.457Z",
+     "kind": "nowork"
     }
    ],
    "history": [
+    {
+     "task": {
+      "prio": 7044,
+      "id": "AR-algebra-R23",
+      "book": "algebra",
+      "stage": "R",
+      "n": 23,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T09:18:00.000Z",
+     "endedAt": "2026-10-18T09:26:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
     {
      "task": {
       "prio": 7042,
@@ -147,10 +151,10 @@
       "attempt": 1
      },
      "startedAt": "2026-10-18T09:08:00.000Z",
-     "endedAt": null,
-     "minutes": 9,
-     "estimateMin": 12,
-     "ok": null
+     "endedAt": "2026-10-18T09:18:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": {
@@ -164,7 +168,7 @@
      "startedAt": "2026-10-18T09:02:00.000Z",
      "endedAt": "2026-10-18T09:08:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -179,7 +183,7 @@
      "startedAt": "2026-10-18T08:56:00.000Z",
      "endedAt": "2026-10-18T09:02:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -194,7 +198,7 @@
      "startedAt": "2026-10-18T08:49:00.000Z",
      "endedAt": "2026-10-18T08:56:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -209,7 +213,7 @@
      "startedAt": "2026-10-18T08:43:00.000Z",
      "endedAt": "2026-10-18T08:49:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -224,7 +228,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:43:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -239,7 +243,7 @@
      "startedAt": "2026-10-18T08:28:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 8,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -1515,6 +1519,30 @@
       "kind": "בוצע",
       "minutes": 6
      }
+    },
+    {
+     "name": "7042-AR-algebra-R22-n1",
+     "id": "AR-algebra-R22",
+     "book": "algebra",
+     "stage": "R",
+     "n": 22,
+     "result": {
+      "at": "2026-10-18T09:18:00.000Z",
+      "kind": "בוצע",
+      "minutes": 9
+     }
+    },
+    {
+     "name": "7044-AR-algebra-R23-n1",
+     "id": "AR-algebra-R23",
+     "book": "algebra",
+     "stage": "R",
+     "n": 23,
+     "result": {
+      "at": "2026-10-18T09:26:00.000Z",
+      "kind": "בוצע",
+      "minutes": 7
+     }
     }
    ]
   },
@@ -1523,8 +1551,8 @@
    "account": "office@psycho.co.il",
    "color": "#ea580c",
    "colorName": "כתום",
-   "state": "empty",
-   "stateText": "אין לו משימות",
+   "state": "idle",
+   "stateText": "בין השכמות",
    "flags": [
     {
      "kind": "util",
@@ -1535,9 +1563,59 @@
    "lastHeartbeatAt": "2026-10-18T08:54:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 23,
-   "pending": [],
-   "pendingCount": 0,
+   "minutesSinceHeartbeat": 33,
+   "pending": [
+    {
+     "name": "7031-AR-algebra-C16-n1",
+     "id": "AR-algebra-C16",
+     "book": "algebra",
+     "stage": "C",
+     "n": 16
+    },
+    {
+     "name": "7033-AR-algebra-C17-n1",
+     "id": "AR-algebra-C17",
+     "book": "algebra",
+     "stage": "C",
+     "n": 17
+    },
+    {
+     "name": "7035-AR-algebra-C18-n1",
+     "id": "AR-algebra-C18",
+     "book": "algebra",
+     "stage": "C",
+     "n": 18
+    },
+    {
+     "name": "7037-AR-algebra-C19-n1",
+     "id": "AR-algebra-C19",
+     "book": "algebra",
+     "stage": "C",
+     "n": 19
+    },
+    {
+     "name": "7039-AR-algebra-C20-n1",
+     "id": "AR-algebra-C20",
+     "book": "algebra",
+     "stage": "C",
+     "n": 20
+    },
+    {
+     "name": "7041-AR-algebra-C21-n1",
+     "id": "AR-algebra-C21",
+     "book": "algebra",
+     "stage": "C",
+     "n": 21
+    },
+    {
+     "name": "7043-AR-algebra-C22-n1",
+     "id": "AR-algebra-C22",
+     "book": "algebra",
+     "stage": "C",
+     "n": 22
+    }
+   ],
+   "pendingCount": 7,
    "doingCount": 0,
    "doneToday": 4,
    "failedToday": 0,
@@ -1545,12 +1623,12 @@
     "pct": 2,
     "workMin": 24,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T09:17:01.441Z",
+    "awakeFrom": "2026-10-17T09:27:01.457Z",
     "sleepMin": 1356
    },
    "segments": [
     {
-     "from": "2026-10-17T09:17:01.441Z",
+     "from": "2026-10-17T09:27:01.457Z",
      "to": "2026-10-17T10:01:00.000Z",
      "kind": "gap"
     },
@@ -1601,7 +1679,7 @@
     },
     {
      "from": "2026-10-18T08:54:00.000Z",
-     "to": "2026-10-18T09:17:01.441Z",
+     "to": "2026-10-18T09:27:01.457Z",
      "kind": "nowork"
     }
    ],
@@ -1618,7 +1696,7 @@
      "startedAt": "2026-10-18T08:48:00.000Z",
      "endedAt": "2026-10-18T08:54:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -1633,7 +1711,7 @@
      "startedAt": "2026-10-18T08:42:00.000Z",
      "endedAt": "2026-10-18T08:48:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -1648,7 +1726,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:42:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -1663,7 +1741,7 @@
      "startedAt": "2026-10-18T08:30:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     }
    ],
@@ -3736,10 +3814,10 @@
   }
  ],
  "manager": {
-  "lastBacklogAt": "2026-10-18T08:31:00.000Z",
-  "backlogFile": "backlog-20261018-1131.md",
-  "versions24h": 2,
-  "versionsHour": 1,
+  "lastBacklogAt": "2026-10-18T09:19:00.000Z",
+  "backlogFile": "backlog-20261018-1219.md",
+  "versions24h": 3,
+  "versionsHour": 2,
   "flagsOpen24h": 2,
   "lastFlag": {
    "file": "20261018-0105-manager-blocked.md",
@@ -3754,7 +3832,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 46
+  "minutesSinceBacklog": 8
  },
  "progress": {
   "books": [
@@ -3924,21 +4002,19 @@
     "code": "algebra",
     "name": "אלגברה",
     "pages": 548,
-    "total": 21,
+    "total": 10,
     "done": 0,
     "doneToday": 0,
     "doneHour": 0,
     "pct": 0,
-    "working": [
-     "M6"
-    ],
+    "working": [],
     "byStage": {
      "R": {
-      "total": 8,
+      "total": 1,
       "done": 0
      },
      "C": {
-      "total": 12,
+      "total": 8,
       "done": 0
      },
      "S": {
@@ -3977,15 +4053,15 @@
     "decisions": 0
    }
   ],
-  "total": 21,
+  "total": 10,
   "done": 0,
   "pct": 0,
   "doneToday": 0,
   "doneHour": 0,
   "counts": {
    "ready": 0,
-   "waiting": 9,
-   "assigned": 12,
+   "waiting": 2,
+   "assigned": 8,
    "failed": 0,
    "decisions": 0
   }
@@ -3993,6 +4069,38 @@
  "changes": {
   "hour": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 7044,
+      "id": "AR-algebra-R23",
+      "book": "algebra",
+      "stage": "R",
+      "n": 23,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T09:18:00.000Z",
+     "endedAt": "2026-10-18T09:26:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 7042,
+      "id": "AR-algebra-R22",
+      "book": "algebra",
+      "stage": "R",
+      "n": 22,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T09:08:00.000Z",
+     "endedAt": "2026-10-18T09:18:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -4006,7 +4114,7 @@
      "startedAt": "2026-10-18T09:02:00.000Z",
      "endedAt": "2026-10-18T09:08:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4022,7 +4130,7 @@
      "startedAt": "2026-10-18T08:56:00.000Z",
      "endedAt": "2026-10-18T09:02:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4038,7 +4146,7 @@
      "startedAt": "2026-10-18T08:49:00.000Z",
      "endedAt": "2026-10-18T08:56:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4054,7 +4162,7 @@
      "startedAt": "2026-10-18T08:43:00.000Z",
      "endedAt": "2026-10-18T08:49:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4070,7 +4178,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:43:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4086,7 +4194,7 @@
      "startedAt": "2026-10-18T08:28:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 8,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4106,22 +4214,6 @@
      "ok": true
     },
     {
-     "seat": "M6",
-     "task": {
-      "prio": 7026,
-      "id": "AR-algebra-R14",
-      "book": "algebra",
-      "stage": "R",
-      "n": 14,
-      "attempt": 1
-     },
-     "startedAt": "2026-10-18T08:14:00.000Z",
-     "endedAt": "2026-10-18T08:21:00.000Z",
-     "minutes": 7,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
      "seat": "M2",
      "task": {
       "prio": 7029,
@@ -4134,7 +4226,7 @@
      "startedAt": "2026-10-18T08:48:00.000Z",
      "endedAt": "2026-10-18T08:54:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4150,7 +4242,7 @@
      "startedAt": "2026-10-18T08:42:00.000Z",
      "endedAt": "2026-10-18T08:48:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4166,7 +4258,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:42:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4182,15 +4274,47 @@
      "startedAt": "2026-10-18T08:30:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     }
    ],
    "flags": [],
-   "backlogVersions": 1
+   "backlogVersions": 2
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 7044,
+      "id": "AR-algebra-R23",
+      "book": "algebra",
+      "stage": "R",
+      "n": 23,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T09:18:00.000Z",
+     "endedAt": "2026-10-18T09:26:00.000Z",
+     "minutes": 8,
+     "estimateMin": 12,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": {
+      "prio": 7042,
+      "id": "AR-algebra-R22",
+      "book": "algebra",
+      "stage": "R",
+      "n": 22,
+      "attempt": 1
+     },
+     "startedAt": "2026-10-18T09:08:00.000Z",
+     "endedAt": "2026-10-18T09:18:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": {
@@ -4204,7 +4328,7 @@
      "startedAt": "2026-10-18T09:02:00.000Z",
      "endedAt": "2026-10-18T09:08:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4220,7 +4344,7 @@
      "startedAt": "2026-10-18T08:56:00.000Z",
      "endedAt": "2026-10-18T09:02:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4236,7 +4360,7 @@
      "startedAt": "2026-10-18T08:49:00.000Z",
      "endedAt": "2026-10-18T08:56:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4252,7 +4376,7 @@
      "startedAt": "2026-10-18T08:43:00.000Z",
      "endedAt": "2026-10-18T08:49:00.000Z",
      "minutes": 6,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4268,7 +4392,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:43:00.000Z",
      "minutes": 7,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4284,7 +4408,7 @@
      "startedAt": "2026-10-18T08:28:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 8,
-     "estimateMin": 12,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4364,7 +4488,7 @@
      "startedAt": "2026-10-18T08:48:00.000Z",
      "endedAt": "2026-10-18T08:54:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4380,7 +4504,7 @@
      "startedAt": "2026-10-18T08:42:00.000Z",
      "endedAt": "2026-10-18T08:48:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4396,7 +4520,7 @@
      "startedAt": "2026-10-18T08:36:00.000Z",
      "endedAt": "2026-10-18T08:42:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     },
     {
@@ -4412,7 +4536,7 @@
      "startedAt": "2026-10-18T08:30:00.000Z",
      "endedAt": "2026-10-18T08:36:00.000Z",
      "minutes": 6,
-     "estimateMin": 10,
+     "estimateMin": null,
      "ok": true
     }
    ],
@@ -4432,7 +4556,7 @@
      "text": "# דגל · 17.10.2026 18:05 · manager-blocked + M6 עצור / הצי בלי עבודה / דופק M2 נעצר"
     }
    ],
-   "backlogVersions": 2
+   "backlogVersions": 3
   }
  },
  "rules": {
