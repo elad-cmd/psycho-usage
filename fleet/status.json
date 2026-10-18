@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T20:37:01.690Z",
+ "generatedAt": "2026-10-18T20:47:01.677Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 13% מהזמן (היעד 80%)"
+    "text": "עבד 14% מהזמן (היעד 80%)"
    },
    {
     "seat": "M2",
@@ -33,35 +33,35 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 13% מהזמן (היעד 80%)"
+     "text": "עבד 14% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
     "startedAt": "2026-10-18T20:35:00.000Z",
-    "elapsedMin": 2,
+    "elapsedMin": 12,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T20:35:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1100-CC-2404-v1-R-n1",
-   "minutesSinceHeartbeat": 2,
+   "minutesSinceHeartbeat": 12,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 19,
    "failedToday": 0,
    "util": {
-    "pct": 13,
-    "workMin": 178,
+    "pct": 14,
+    "workMin": 188,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T20:37:01.690Z",
-    "sleepMin": 1202
+    "awakeFrom": "2026-10-17T20:47:01.677Z",
+    "sleepMin": 1192
    },
    "segments": [
     {
-     "from": "2026-10-17T20:37:01.690Z",
+     "from": "2026-10-17T20:47:01.677Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -222,7 +222,7 @@
     },
     {
      "from": "2026-10-18T20:35:00.000Z",
-     "to": "2026-10-18T20:37:01.690Z",
+     "to": "2026-10-18T20:47:01.677Z",
      "kind": "work"
     }
    ],
@@ -231,7 +231,7 @@
      "task": null,
      "startedAt": "2026-10-18T20:35:00.000Z",
      "endedAt": null,
-     "minutes": 2,
+     "minutes": 12,
      "estimateMin": null,
      "ok": null
     },
@@ -1746,14 +1746,14 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 56,
+    "elapsedMin": 66,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 56,
+   "minutesSinceHeartbeat": 66,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1761,14 +1761,14 @@
    "failedToday": 0,
    "util": {
     "pct": 12,
-    "workMin": 161,
+    "workMin": 171,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T20:37:01.690Z",
-    "sleepMin": 1219
+    "awakeFrom": "2026-10-17T20:47:01.677Z",
+    "sleepMin": 1209
    },
    "segments": [
     {
-     "from": "2026-10-17T20:37:01.690Z",
+     "from": "2026-10-17T20:47:01.677Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1899,7 +1899,7 @@
     },
     {
      "from": "2026-10-18T19:41:00.000Z",
-     "to": "2026-10-18T20:37:01.690Z",
+     "to": "2026-10-18T20:47:01.677Z",
      "kind": "work"
     }
    ],
@@ -1908,7 +1908,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 56,
+     "minutes": 66,
      "estimateMin": null,
      "ok": null
     },
@@ -4284,7 +4284,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 85
+  "minutesSinceBacklog": 95
  },
  "progress": {
   "books": [
@@ -4563,24 +4563,6 @@
      "startedAt": "2026-10-18T19:39:00.000Z",
      "endedAt": "2026-10-18T20:08:00.000Z",
      "minutes": 29,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": null,
-     "startedAt": "2026-10-18T19:32:00.000Z",
-     "endedAt": "2026-10-18T19:39:00.000Z",
-     "minutes": 7,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-18T19:30:00.000Z",
-     "endedAt": "2026-10-18T19:41:00.000Z",
-     "minutes": 11,
      "estimateMin": null,
      "ok": true
     }
