@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-18T21:37:01.719Z",
+ "generatedAt": "2026-10-18T21:47:01.740Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,12 +9,17 @@
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 14% מהזמן (היעד 80%)"
+    "text": "עבד 15% מהזמן (היעד 80%)"
+   },
+   {
+    "seat": "M2",
+    "kind": "silent",
+    "text": "לקח משימה ב-22:41 ולא סיים/דיווח מאז"
    },
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 16% מהזמן (היעד 80%)"
+    "text": "עבד 17% מהזמן (היעד 80%)"
    }
   ],
   "doneToday": 0,
@@ -33,35 +38,35 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 14% מהזמן (היעד 80%)"
+     "text": "עבד 15% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
-    "startedAt": "2026-10-18T21:31:00.000Z",
-    "elapsedMin": 6,
+    "startedAt": "2026-10-18T21:40:00.000Z",
+    "elapsedMin": 7,
     "estimateMin": null,
     "ratio": null
    },
-   "lastHeartbeatAt": "2026-10-18T21:31:00.000Z",
+   "lastHeartbeatAt": "2026-10-18T21:40:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1110-CC-2404-v2-R-n1",
-   "minutesSinceHeartbeat": 6,
+   "lastHeartbeatDetail": "1120-CC-2407-q1-R-n1",
+   "minutesSinceHeartbeat": 7,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 20,
+   "doneToday": 21,
    "failedToday": 0,
    "util": {
-    "pct": 14,
-    "workMin": 196,
+    "pct": 15,
+    "workMin": 206,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T21:37:01.719Z",
-    "sleepMin": 1184
+    "awakeFrom": "2026-10-17T21:47:01.740Z",
+    "sleepMin": 1174
    },
    "segments": [
     {
-     "from": "2026-10-17T21:37:01.719Z",
+     "from": "2026-10-17T21:47:01.740Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -232,18 +237,31 @@
     },
     {
      "from": "2026-10-18T21:31:00.000Z",
-     "to": "2026-10-18T21:37:01.719Z",
+     "to": "2026-10-18T21:40:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-18T21:40:00.000Z",
+     "to": "2026-10-18T21:47:01.740Z",
      "kind": "work"
     }
    ],
    "history": [
     {
      "task": null,
-     "startedAt": "2026-10-18T21:31:00.000Z",
+     "startedAt": "2026-10-18T21:40:00.000Z",
      "endedAt": null,
-     "minutes": 6,
+     "minutes": 7,
      "estimateMin": null,
      "ok": null
+    },
+    {
+     "task": null,
+     "startedAt": "2026-10-18T21:31:00.000Z",
+     "endedAt": "2026-10-18T21:40:00.000Z",
+     "minutes": 9,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": null,
@@ -1753,40 +1771,44 @@
    "account": "office@psycho.co.il",
    "color": "#ea580c",
    "colorName": "כתום",
-   "state": "working",
-   "stateText": "עובד",
+   "state": "silent",
+   "stateText": "לא נותן סימן חיים",
    "flags": [
     {
+     "kind": "silent",
+     "text": "לקח משימה ב-22:41 ולא סיים/דיווח מאז"
+    },
+    {
      "kind": "util",
-     "text": "עבד 16% מהזמן (היעד 80%)"
+     "text": "עבד 17% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 116,
+    "elapsedMin": 126,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 116,
+   "minutesSinceHeartbeat": 126,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 13,
    "failedToday": 0,
    "util": {
-    "pct": 16,
-    "workMin": 221,
+    "pct": 17,
+    "workMin": 231,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-17T21:37:01.719Z",
-    "sleepMin": 1159
+    "awakeFrom": "2026-10-17T21:47:01.740Z",
+    "sleepMin": 1149
    },
    "segments": [
     {
-     "from": "2026-10-17T21:37:01.719Z",
+     "from": "2026-10-17T21:47:01.740Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -1917,7 +1939,7 @@
     },
     {
      "from": "2026-10-18T19:41:00.000Z",
-     "to": "2026-10-18T21:37:01.719Z",
+     "to": "2026-10-18T21:47:01.740Z",
      "kind": "work"
     }
    ],
@@ -1926,7 +1948,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 116,
+     "minutes": 126,
      "estimateMin": null,
      "ok": null
     },
@@ -4302,7 +4324,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 145
+  "minutesSinceBacklog": 155
  },
  "progress": {
   "books": [
@@ -4542,6 +4564,15 @@
     {
      "seat": "M6",
      "task": null,
+     "startedAt": "2026-10-18T21:31:00.000Z",
+     "endedAt": "2026-10-18T21:40:00.000Z",
+     "minutes": 9,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": null,
      "startedAt": "2026-10-18T20:35:00.000Z",
      "endedAt": "2026-10-18T20:49:00.000Z",
      "minutes": 14,
@@ -4554,6 +4585,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": null,
+     "startedAt": "2026-10-18T21:31:00.000Z",
+     "endedAt": "2026-10-18T21:40:00.000Z",
+     "minutes": 9,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": null,
