@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-19T09:27:02.234Z",
+ "generatedAt": "2026-10-19T09:37:01.197Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 37% מהזמן (היעד 80%)"
+    "text": "עבד 38% מהזמן (היעד 80%)"
    },
    {
     "seat": "M2",
@@ -38,42 +38,37 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 37% מהזמן (היעד 80%)"
+     "text": "עבד 38% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
     "startedAt": "2026-10-19T09:15:00.000Z",
-    "elapsedMin": 12,
+    "elapsedMin": 22,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-19T09:15:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1410-CC-2604-q2-R-n1",
-   "minutesSinceHeartbeat": 12,
+   "minutesSinceHeartbeat": 22,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 41,
    "failedToday": 0,
    "util": {
-    "pct": 37,
-    "workMin": 517,
+    "pct": 38,
+    "workMin": 527,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T09:27:02.234Z",
-    "sleepMin": 863
+    "awakeFrom": "2026-10-18T09:37:01.197Z",
+    "sleepMin": 853
    },
    "segments": [
     {
-     "from": "2026-10-18T09:27:02.234Z",
-     "to": "2026-10-18T09:31:00.000Z",
-     "kind": "gap"
-    },
-    {
-     "from": "2026-10-18T09:31:00.000Z",
+     "from": "2026-10-18T09:37:01.197Z",
      "to": "2026-10-18T10:31:00.000Z",
-     "kind": "nowork"
+     "kind": "gap"
     },
     {
      "from": "2026-10-18T10:31:00.000Z",
@@ -372,7 +367,7 @@
     },
     {
      "from": "2026-10-19T09:15:00.000Z",
-     "to": "2026-10-19T09:27:02.234Z",
+     "to": "2026-10-19T09:37:01.197Z",
      "kind": "work"
     }
    ],
@@ -381,7 +376,7 @@
      "task": null,
      "startedAt": "2026-10-19T09:15:00.000Z",
      "endedAt": null,
-     "minutes": 12,
+     "minutes": 22,
      "estimateMin": null,
      "ok": null
     },
@@ -1992,14 +1987,14 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 826,
+    "elapsedMin": 836,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 826,
+   "minutesSinceHeartbeat": 836,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -2007,19 +2002,14 @@
    "failedToday": 0,
    "util": {
     "pct": 66,
-    "workMin": 907,
+    "workMin": 909,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T09:27:02.234Z",
-    "sleepMin": 473
+    "awakeFrom": "2026-10-18T09:37:01.197Z",
+    "sleepMin": 471
    },
    "segments": [
     {
-     "from": "2026-10-18T09:27:02.234Z",
-     "to": "2026-10-18T09:29:00.000Z",
-     "kind": "gap"
-    },
-    {
-     "from": "2026-10-18T09:29:00.000Z",
+     "from": "2026-10-18T09:37:01.197Z",
      "to": "2026-10-18T09:39:00.000Z",
      "kind": "work"
     },
@@ -2110,7 +2100,7 @@
     },
     {
      "from": "2026-10-18T19:41:00.000Z",
-     "to": "2026-10-19T09:27:02.234Z",
+     "to": "2026-10-19T09:37:01.197Z",
      "kind": "work"
     }
    ],
@@ -2119,7 +2109,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 826,
+     "minutes": 836,
      "estimateMin": null,
      "ok": null
     },
@@ -4435,7 +4425,7 @@
    "topLine": "דורש פעולה: מחשב M2 לא עובד מאתמול 22:41 (כנראה נגמרה מכסת Fable בחשבון office) - צריך להחליף בו חשבון; בלעדיו 46 בקרות של בדיקת זכויות היוצרים לא יכולות להתקדם."
   },
   "starvation": null,
-  "minutesSinceBacklog": 855
+  "minutesSinceBacklog": 865
  },
  "progress": {
   "books": [
@@ -4723,15 +4713,6 @@
      "startedAt": "2026-10-19T08:30:00.000Z",
      "endedAt": "2026-10-19T08:38:00.000Z",
      "minutes": 8,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": null,
-     "startedAt": "2026-10-19T08:10:00.000Z",
-     "endedAt": "2026-10-19T08:30:00.000Z",
-     "minutes": 20,
      "estimateMin": null,
      "ok": true
     }
