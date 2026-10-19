@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-19T03:57:01.989Z",
+ "generatedAt": "2026-10-19T04:07:01.991Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -40,7 +40,7 @@
    "lastHeartbeatAt": "2026-10-19T03:37:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 20,
+   "minutesSinceHeartbeat": 30,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -50,12 +50,12 @@
     "pct": 31,
     "workMin": 427,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T03:57:01.989Z",
+    "awakeFrom": "2026-10-18T04:07:01.991Z",
     "sleepMin": 953
    },
    "segments": [
     {
-     "from": "2026-10-18T03:57:01.989Z",
+     "from": "2026-10-18T04:07:01.991Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -341,7 +341,7 @@
     },
     {
      "from": "2026-10-19T03:37:00.000Z",
-     "to": "2026-10-19T03:57:01.989Z",
+     "to": "2026-10-19T04:07:01.991Z",
      "kind": "nowork"
     }
    ],
@@ -2009,14 +2009,14 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 496,
+    "elapsedMin": 506,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 496,
+   "minutesSinceHeartbeat": 506,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -2024,14 +2024,14 @@
    "failedToday": 0,
    "util": {
     "pct": 44,
-    "workMin": 601,
+    "workMin": 611,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T03:57:01.989Z",
-    "sleepMin": 779
+    "awakeFrom": "2026-10-18T04:07:01.991Z",
+    "sleepMin": 769
    },
    "segments": [
     {
-     "from": "2026-10-18T03:57:01.989Z",
+     "from": "2026-10-18T04:07:01.991Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -2162,7 +2162,7 @@
     },
     {
      "from": "2026-10-18T19:41:00.000Z",
-     "to": "2026-10-19T03:57:01.989Z",
+     "to": "2026-10-19T04:07:01.991Z",
      "kind": "work"
     }
    ],
@@ -2171,7 +2171,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 496,
+     "minutes": 506,
      "estimateMin": null,
      "ok": null
     },
@@ -4547,7 +4547,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 525
+  "minutesSinceBacklog": 535
  },
  "progress": {
   "books": [
