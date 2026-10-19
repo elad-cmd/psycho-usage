@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-19T03:27:01.963Z",
+ "generatedAt": "2026-10-19T03:37:01.981Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -19,7 +19,7 @@
    {
     "seat": "M2",
     "kind": "util",
-    "text": "עבד 41% מהזמן (היעד 80%)"
+    "text": "עבד 42% מהזמן (היעד 80%)"
    }
   ],
   "doneToday": 0,
@@ -42,25 +42,25 @@
     }
    ],
    "current": null,
-   "lastHeartbeatAt": "2026-10-19T02:54:00.000Z",
-   "lastHeartbeatType": "סיום",
-   "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 33,
+   "lastHeartbeatAt": "2026-10-19T03:36:00.000Z",
+   "lastHeartbeatType": "סיימתי",
+   "lastHeartbeatDetail": "1250-CC-2504-q2-R-n1 - בוצע",
+   "minutesSinceHeartbeat": 1,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 37,
+   "doneToday": 38,
    "failedToday": 0,
    "util": {
     "pct": 31,
-    "workMin": 422,
+    "workMin": 427,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T03:27:01.963Z",
-    "sleepMin": 958
+    "awakeFrom": "2026-10-18T03:37:01.981Z",
+    "sleepMin": 953
    },
    "segments": [
     {
-     "from": "2026-10-18T03:27:01.963Z",
+     "from": "2026-10-18T03:37:01.981Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -331,11 +331,29 @@
     },
     {
      "from": "2026-10-19T02:54:00.000Z",
-     "to": "2026-10-19T03:27:01.963Z",
+     "to": "2026-10-19T03:31:00.000Z",
      "kind": "nowork"
+    },
+    {
+     "from": "2026-10-19T03:31:00.000Z",
+     "to": "2026-10-19T03:36:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-19T03:36:00.000Z",
+     "to": "2026-10-19T03:37:01.981Z",
+     "kind": "gap"
     }
    ],
    "history": [
+    {
+     "task": null,
+     "startedAt": "2026-10-19T03:31:00.000Z",
+     "endedAt": "2026-10-19T03:36:00.000Z",
+     "minutes": 5,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "task": null,
      "startedAt": "2026-10-19T02:49:00.000Z",
@@ -1989,35 +2007,35 @@
     },
     {
      "kind": "util",
-     "text": "עבד 41% מהזמן (היעד 80%)"
+     "text": "עבד 42% מהזמן (היעד 80%)"
     }
    ],
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 466,
+    "elapsedMin": 476,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 466,
+   "minutesSinceHeartbeat": 476,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
    "doneToday": 13,
    "failedToday": 0,
    "util": {
-    "pct": 41,
-    "workMin": 571,
+    "pct": 42,
+    "workMin": 581,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-18T03:27:01.963Z",
-    "sleepMin": 809
+    "awakeFrom": "2026-10-18T03:37:01.981Z",
+    "sleepMin": 799
    },
    "segments": [
     {
-     "from": "2026-10-18T03:27:01.963Z",
+     "from": "2026-10-18T03:37:01.981Z",
      "to": "2026-10-18T08:01:00.000Z",
      "kind": "silent"
     },
@@ -2148,7 +2166,7 @@
     },
     {
      "from": "2026-10-18T19:41:00.000Z",
-     "to": "2026-10-19T03:27:01.963Z",
+     "to": "2026-10-19T03:37:01.981Z",
      "kind": "work"
     }
    ],
@@ -2157,7 +2175,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 466,
+     "minutes": 476,
      "estimateMin": null,
      "ok": null
     },
@@ -4533,7 +4551,7 @@
    "topLine": "דרוש טיפול: הצי עומד 36 שעות ושני המושבים אינם מסוגלים לעבוד - מכסת Fable של חשבון M2 (claude3) ושל חשבון M6 (essay@) עומדת על 100%, M6 גם עצור ב-STOP-M6 מ-16.10, וחשבון המנהל עצמו כבר ב-91%."
   },
   "starvation": null,
-  "minutesSinceBacklog": 495
+  "minutesSinceBacklog": 505
  },
  "progress": {
   "books": [
@@ -4773,6 +4791,15 @@
     {
      "seat": "M6",
      "task": null,
+     "startedAt": "2026-10-19T03:31:00.000Z",
+     "endedAt": "2026-10-19T03:36:00.000Z",
+     "minutes": 5,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M6",
+     "task": null,
      "startedAt": "2026-10-19T02:49:00.000Z",
      "endedAt": "2026-10-19T02:53:00.000Z",
      "minutes": 4,
@@ -4803,6 +4830,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M6",
+     "task": null,
+     "startedAt": "2026-10-19T03:31:00.000Z",
+     "endedAt": "2026-10-19T03:36:00.000Z",
+     "minutes": 5,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M6",
      "task": null,
