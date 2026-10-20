@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-20T10:37:01.420Z",
+ "generatedAt": "2026-10-20T10:47:01.428Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -9,7 +9,7 @@
    {
     "seat": "M6",
     "kind": "util",
-    "text": "עבד 1% מהזמן (היעד 80%)"
+    "text": "עבד 0% מהזמן (היעד 80%)"
    },
    {
     "seat": "M2",
@@ -33,41 +33,31 @@
    "flags": [
     {
      "kind": "util",
-     "text": "עבד 1% מהזמן (היעד 80%)"
+     "text": "עבד 0% מהזמן (היעד 80%)"
     }
    ],
    "current": null,
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 1206,
+   "minutesSinceHeartbeat": 1216,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 2,
+   "doneToday": 0,
    "failedToday": 0,
    "util": {
-    "pct": 1,
-    "workMin": 10,
+    "pct": 0,
+    "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-19T10:37:01.420Z",
-    "sleepMin": 1370
+    "awakeFrom": "2026-10-19T10:47:01.428Z",
+    "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-19T10:37:01.420Z",
-     "to": "2026-10-19T10:38:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-19T10:38:00.000Z",
-     "to": "2026-10-19T10:47:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-19T10:47:00.000Z",
+     "from": "2026-10-19T10:47:01.428Z",
      "to": "2026-10-19T11:31:00.000Z",
-     "kind": "nowork"
+     "kind": "gap"
     },
     {
      "from": "2026-10-19T11:31:00.000Z",
@@ -86,28 +76,11 @@
     },
     {
      "from": "2026-10-19T14:31:00.000Z",
-     "to": "2026-10-20T10:37:01.420Z",
+     "to": "2026-10-20T10:47:01.428Z",
      "kind": "nowork"
     }
    ],
-   "history": [
-    {
-     "task": null,
-     "startedAt": "2026-10-19T10:38:00.000Z",
-     "endedAt": "2026-10-19T10:47:00.000Z",
-     "minutes": 9,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "task": null,
-     "startedAt": "2026-10-19T10:28:00.000Z",
-     "endedAt": "2026-10-19T10:38:00.000Z",
-     "minutes": 10,
-     "estimateMin": null,
-     "ok": true
-    }
-   ],
+   "history": [],
    "doneFiles": [
     {
      "name": "1001-AR-tarshimim-C01-n1",
@@ -1375,14 +1348,14 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-18T19:41:00.000Z",
-    "elapsedMin": 2336,
+    "elapsedMin": 2346,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-18T19:41:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1020-CC-2309-v1-R-n1",
-   "minutesSinceHeartbeat": 2336,
+   "minutesSinceHeartbeat": 2346,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -1392,13 +1365,13 @@
     "pct": 100,
     "workMin": 1440,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-19T10:37:01.420Z",
+    "awakeFrom": "2026-10-19T10:47:01.428Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-19T10:37:01.420Z",
-     "to": "2026-10-20T10:37:01.420Z",
+     "from": "2026-10-19T10:47:01.428Z",
+     "to": "2026-10-20T10:47:01.428Z",
      "kind": "work"
     }
    ],
@@ -1407,7 +1380,7 @@
      "task": null,
      "startedAt": "2026-10-18T19:41:00.000Z",
      "endedAt": null,
-     "minutes": 2336,
+     "minutes": 2346,
      "estimateMin": null,
      "ok": null
     }
@@ -3595,7 +3568,7 @@
    "topLine": "דורש פעולה: מחשב M2 לא עובד מאתמול 22:41 (כנראה נגמרה מכסת Fable בחשבון office) - צריך להחליף בו חשבון; בלעדיו 46 בקרות של בדיקת זכויות היוצרים לא יכולות להתקדם."
   },
   "starvation": null,
-  "minutesSinceBacklog": 2365
+  "minutesSinceBacklog": 2375
  },
  "progress": {
   "books": [
@@ -3836,26 +3809,7 @@
    "backlogVersions": 0
   },
   "day": {
-   "done": [
-    {
-     "seat": "M6",
-     "task": null,
-     "startedAt": "2026-10-19T10:38:00.000Z",
-     "endedAt": "2026-10-19T10:47:00.000Z",
-     "minutes": 9,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M6",
-     "task": null,
-     "startedAt": "2026-10-19T10:28:00.000Z",
-     "endedAt": "2026-10-19T10:38:00.000Z",
-     "minutes": 10,
-     "estimateMin": null,
-     "ok": true
-    }
-   ],
+   "done": [],
    "flags": [
     {
      "file": "20261020-1111-silent-M2.md",
