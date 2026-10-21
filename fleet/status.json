@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-21T06:57:01.326Z",
+ "generatedAt": "2026-10-21T07:07:01.386Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -13,7 +13,7 @@
    }
   ],
   "doneToday": 0,
-  "working": 1,
+  "working": 0,
   "flags": 4,
   "decisions": 0
  },
@@ -35,7 +35,7 @@
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 2426,
+   "minutesSinceHeartbeat": 2436,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -45,13 +45,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T06:57:01.326Z",
+    "awakeFrom": "2026-10-20T07:07:01.386Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-20T06:57:01.326Z",
-     "to": "2026-10-21T06:57:01.326Z",
+     "from": "2026-10-20T07:07:01.386Z",
+     "to": "2026-10-21T07:07:01.386Z",
      "kind": "silent"
     }
    ],
@@ -1312,35 +1312,29 @@
    "account": "office@psycho.co.il",
    "color": "#ea580c",
    "colorName": "כתום",
-   "state": "working",
-   "stateText": "עובד",
+   "state": "empty",
+   "stateText": "אין לו משימות",
    "flags": [],
-   "current": {
-    "task": null,
-    "startedAt": "2026-10-21T06:49:00.000Z",
-    "elapsedMin": 8,
-    "estimateMin": null,
-    "ratio": null
-   },
-   "lastHeartbeatAt": "2026-10-21T06:49:00.000Z",
-   "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1035-CC-2309-v2-C-n1",
+   "current": null,
+   "lastHeartbeatAt": "2026-10-21T06:59:00.000Z",
+   "lastHeartbeatType": "סיום",
+   "lastHeartbeatDetail": "התיבה ריקה",
    "minutesSinceHeartbeat": 8,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 2,
+   "doneToday": 3,
    "failedToday": 1,
    "util": {
     "pct": 100,
-    "workMin": 1439,
+    "workMin": 1431,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T06:57:01.326Z",
+    "awakeFrom": "2026-10-20T07:07:01.386Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-20T06:57:01.326Z",
+     "from": "2026-10-20T07:07:01.386Z",
      "to": "2026-10-21T06:29:00.000Z",
      "kind": "work"
     },
@@ -1361,18 +1355,23 @@
     },
     {
      "from": "2026-10-21T06:49:00.000Z",
-     "to": "2026-10-21T06:57:01.326Z",
+     "to": "2026-10-21T06:59:00.000Z",
      "kind": "work"
+    },
+    {
+     "from": "2026-10-21T06:59:00.000Z",
+     "to": "2026-10-21T07:07:01.386Z",
+     "kind": "nowork"
     }
    ],
    "history": [
     {
      "task": null,
      "startedAt": "2026-10-21T06:49:00.000Z",
-     "endedAt": null,
-     "minutes": 8,
+     "endedAt": "2026-10-21T06:59:00.000Z",
+     "minutes": 10,
      "estimateMin": null,
-     "ok": null
+     "ok": true
     },
     {
      "task": null,
@@ -3582,7 +3581,7 @@
    "topLine": "דורש פעולה: אף מושב לא עבד ביממה האחרונה - M2 תקוע מ-18.10 22:41 על חשבון office שמכסת ה-Fable שלו מלאה (100%); צריך להחליף בו חשבון (ב-claude3, essay ו-claude.psycho המכסה התאפסה ל-0%), ובלעדיו 47 בקרות והדוח לאלעד לא זזים."
   },
   "starvation": null,
-  "minutesSinceBacklog": 3585
+  "minutesSinceBacklog": 3595
  },
  "progress": {
   "books": [
@@ -3822,6 +3821,15 @@
     {
      "seat": "M2",
      "task": null,
+     "startedAt": "2026-10-21T06:49:00.000Z",
+     "endedAt": "2026-10-21T06:59:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": null,
      "startedAt": "2026-10-21T06:35:00.000Z",
      "endedAt": "2026-10-21T06:49:00.000Z",
      "minutes": 14,
@@ -3852,6 +3860,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M2",
+     "task": null,
+     "startedAt": "2026-10-21T06:49:00.000Z",
+     "endedAt": "2026-10-21T06:59:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M2",
      "task": null,
