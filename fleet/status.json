@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-21T12:47:01.633Z",
+ "generatedAt": "2026-10-21T12:57:01.646Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -35,7 +35,7 @@
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 2776,
+   "minutesSinceHeartbeat": 2786,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -45,13 +45,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T12:47:01.633Z",
+    "awakeFrom": "2026-10-20T12:57:01.646Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-20T12:47:01.633Z",
-     "to": "2026-10-21T12:47:01.633Z",
+     "from": "2026-10-20T12:57:01.646Z",
+     "to": "2026-10-21T12:57:01.646Z",
      "kind": "silent"
     }
    ],
@@ -1317,30 +1317,30 @@
    "flags": [],
    "current": {
     "task": null,
-    "startedAt": "2026-10-21T12:31:00.000Z",
-    "elapsedMin": 16,
+    "startedAt": "2026-10-21T12:55:00.000Z",
+    "elapsedMin": 2,
     "estimateMin": null,
     "ratio": null
    },
-   "lastHeartbeatAt": "2026-10-21T12:31:00.000Z",
+   "lastHeartbeatAt": "2026-10-21T12:55:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1385-CC-2512-v1-C-n1",
-   "minutesSinceHeartbeat": 16,
+   "lastHeartbeatDetail": "1395-CC-2512-v2-C-n1",
+   "minutesSinceHeartbeat": 2,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 37,
+   "doneToday": 38,
    "failedToday": 1,
    "util": {
     "pct": 100,
     "workMin": 1405,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T12:47:01.633Z",
+    "awakeFrom": "2026-10-20T12:57:01.646Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-20T12:47:01.633Z",
+     "from": "2026-10-20T12:57:01.646Z",
      "to": "2026-10-21T06:29:00.000Z",
      "kind": "work"
     },
@@ -1566,18 +1566,31 @@
     },
     {
      "from": "2026-10-21T12:31:00.000Z",
-     "to": "2026-10-21T12:47:01.633Z",
+     "to": "2026-10-21T12:55:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-21T12:55:00.000Z",
+     "to": "2026-10-21T12:57:01.646Z",
      "kind": "work"
     }
    ],
    "history": [
     {
      "task": null,
-     "startedAt": "2026-10-21T12:31:00.000Z",
+     "startedAt": "2026-10-21T12:55:00.000Z",
      "endedAt": null,
-     "minutes": 16,
+     "minutes": 2,
      "estimateMin": null,
      "ok": null
+    },
+    {
+     "task": null,
+     "startedAt": "2026-10-21T12:31:00.000Z",
+     "endedAt": "2026-10-21T12:55:00.000Z",
+     "minutes": 24,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": null,
@@ -4067,7 +4080,7 @@
    "topLine": "דורש פעולה: אף מושב לא עבד ביממה האחרונה - M2 תקוע מ-18.10 22:41 על חשבון office שמכסת ה-Fable שלו מלאה (100%); צריך להחליף בו חשבון (ב-claude3, essay ו-claude.psycho המכסה התאפסה ל-0%), ובלעדיו 47 בקרות והדוח לאלעד לא זזים."
   },
   "starvation": null,
-  "minutesSinceBacklog": 3935
+  "minutesSinceBacklog": 3945
  },
  "progress": {
   "books": [
@@ -4307,6 +4320,15 @@
     {
      "seat": "M2",
      "task": null,
+     "startedAt": "2026-10-21T12:31:00.000Z",
+     "endedAt": "2026-10-21T12:55:00.000Z",
+     "minutes": 24,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": null,
      "startedAt": "2026-10-21T12:27:00.000Z",
      "endedAt": "2026-10-21T12:31:00.000Z",
      "minutes": 4,
@@ -4348,24 +4370,6 @@
      "minutes": 4,
      "estimateMin": null,
      "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T11:54:00.000Z",
-     "endedAt": "2026-10-21T11:57:00.000Z",
-     "minutes": 3,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T11:24:00.000Z",
-     "endedAt": "2026-10-21T11:53:00.000Z",
-     "minutes": 29,
-     "estimateMin": null,
-     "ok": true
     }
    ],
    "flags": [],
@@ -4373,6 +4377,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M2",
+     "task": null,
+     "startedAt": "2026-10-21T12:31:00.000Z",
+     "endedAt": "2026-10-21T12:55:00.000Z",
+     "minutes": 24,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M2",
      "task": null,
