@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-21T07:47:01.362Z",
+ "generatedAt": "2026-10-21T07:57:01.370Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -35,7 +35,7 @@
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 2476,
+   "minutesSinceHeartbeat": 2486,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -45,13 +45,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T07:47:01.362Z",
+    "awakeFrom": "2026-10-20T07:57:01.370Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-20T07:47:01.362Z",
-     "to": "2026-10-21T07:47:01.362Z",
+     "from": "2026-10-20T07:57:01.370Z",
+     "to": "2026-10-21T07:57:01.370Z",
      "kind": "silent"
     }
    ],
@@ -1317,30 +1317,30 @@
    "flags": [],
    "current": {
     "task": null,
-    "startedAt": "2026-10-21T07:39:00.000Z",
+    "startedAt": "2026-10-21T07:49:00.000Z",
     "elapsedMin": 8,
     "estimateMin": null,
     "ratio": null
    },
-   "lastHeartbeatAt": "2026-10-21T07:39:00.000Z",
+   "lastHeartbeatAt": "2026-10-21T07:49:00.000Z",
    "lastHeartbeatType": "לקחתי",
-   "lastHeartbeatDetail": "1065-CC-2312-v1-C-n1",
+   "lastHeartbeatDetail": "1075-CC-2312-v2-C-n1",
    "minutesSinceHeartbeat": 8,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 5,
+   "doneToday": 6,
    "failedToday": 1,
    "util": {
     "pct": 100,
     "workMin": 1409,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-20T07:47:01.362Z",
+    "awakeFrom": "2026-10-20T07:57:01.370Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-20T07:47:01.362Z",
+     "from": "2026-10-20T07:57:01.370Z",
      "to": "2026-10-21T06:29:00.000Z",
      "kind": "work"
     },
@@ -1386,18 +1386,31 @@
     },
     {
      "from": "2026-10-21T07:39:00.000Z",
-     "to": "2026-10-21T07:47:01.362Z",
+     "to": "2026-10-21T07:49:00.000Z",
+     "kind": "work"
+    },
+    {
+     "from": "2026-10-21T07:49:00.000Z",
+     "to": "2026-10-21T07:57:01.370Z",
      "kind": "work"
     }
    ],
    "history": [
     {
      "task": null,
-     "startedAt": "2026-10-21T07:39:00.000Z",
+     "startedAt": "2026-10-21T07:49:00.000Z",
      "endedAt": null,
      "minutes": 8,
      "estimateMin": null,
      "ok": null
+    },
+    {
+     "task": null,
+     "startedAt": "2026-10-21T07:39:00.000Z",
+     "endedAt": "2026-10-21T07:49:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
     },
     {
      "task": null,
@@ -3631,7 +3644,7 @@
    "topLine": "דורש פעולה: אף מושב לא עבד ביממה האחרונה - M2 תקוע מ-18.10 22:41 על חשבון office שמכסת ה-Fable שלו מלאה (100%); צריך להחליף בו חשבון (ב-claude3, essay ו-claude.psycho המכסה התאפסה ל-0%), ובלעדיו 47 בקרות והדוח לאלעד לא זזים."
   },
   "starvation": null,
-  "minutesSinceBacklog": 3635
+  "minutesSinceBacklog": 3645
  },
  "progress": {
   "books": [
@@ -3871,6 +3884,15 @@
     {
      "seat": "M2",
      "task": null,
+     "startedAt": "2026-10-21T07:39:00.000Z",
+     "endedAt": "2026-10-21T07:49:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
+    {
+     "seat": "M2",
+     "task": null,
      "startedAt": "2026-10-21T07:34:00.000Z",
      "endedAt": "2026-10-21T07:39:00.000Z",
      "minutes": 5,
@@ -3894,15 +3916,6 @@
      "minutes": 10,
      "estimateMin": null,
      "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T06:35:00.000Z",
-     "endedAt": "2026-10-21T06:49:00.000Z",
-     "minutes": 14,
-     "estimateMin": null,
-     "ok": true
     }
    ],
    "flags": [
@@ -3918,6 +3931,15 @@
   },
   "day": {
    "done": [
+    {
+     "seat": "M2",
+     "task": null,
+     "startedAt": "2026-10-21T07:39:00.000Z",
+     "endedAt": "2026-10-21T07:49:00.000Z",
+     "minutes": 10,
+     "estimateMin": null,
+     "ok": true
+    },
     {
      "seat": "M2",
      "task": null,
