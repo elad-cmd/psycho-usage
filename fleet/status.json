@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-22T12:57:01.675Z",
+ "generatedAt": "2026-10-22T13:07:01.682Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -40,7 +40,7 @@
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 4226,
+   "minutesSinceHeartbeat": 4236,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -50,13 +50,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-21T12:57:01.675Z",
+    "awakeFrom": "2026-10-21T13:07:01.682Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-21T12:57:01.675Z",
-     "to": "2026-10-22T12:57:01.675Z",
+     "from": "2026-10-21T13:07:01.682Z",
+     "to": "2026-10-22T13:07:01.682Z",
      "kind": "silent"
     }
    ],
@@ -1328,34 +1328,29 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-21T13:28:00.000Z",
-    "elapsedMin": 1409,
+    "elapsedMin": 1419,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-21T13:28:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1435-CC-2604-v2-C-n1",
-   "minutesSinceHeartbeat": 1409,
+   "minutesSinceHeartbeat": 1419,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 4,
+   "doneToday": 3,
    "failedToday": 0,
    "util": {
     "pct": 100,
     "workMin": 1440,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-21T12:57:01.675Z",
+    "awakeFrom": "2026-10-21T13:07:01.682Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-21T12:57:01.675Z",
-     "to": "2026-10-21T13:05:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-21T13:05:00.000Z",
+     "from": "2026-10-21T13:07:01.682Z",
      "to": "2026-10-21T13:13:00.000Z",
      "kind": "work"
     },
@@ -1371,7 +1366,7 @@
     },
     {
      "from": "2026-10-21T13:28:00.000Z",
-     "to": "2026-10-22T12:57:01.675Z",
+     "to": "2026-10-22T13:07:01.682Z",
      "kind": "work"
     }
    ],
@@ -1380,7 +1375,7 @@
      "task": null,
      "startedAt": "2026-10-21T13:28:00.000Z",
      "endedAt": null,
-     "minutes": 1409,
+     "minutes": 1419,
      "estimateMin": null,
      "ok": null
     },
@@ -1405,14 +1400,6 @@
      "startedAt": "2026-10-21T13:05:00.000Z",
      "endedAt": "2026-10-21T13:13:00.000Z",
      "minutes": 8,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "task": null,
-     "startedAt": "2026-10-21T12:55:00.000Z",
-     "endedAt": "2026-10-21T13:05:00.000Z",
-     "minutes": 10,
      "estimateMin": null,
      "ok": true
     }
@@ -3600,7 +3587,7 @@
    "topLine": "דורש פעולה: שני המושבים עומדים כי נגמרה מכסת Fable בחשבונות שלהם - M2 (office) מאתמול 16:28 ו-M6 (claude2) מ-19.10; צריך להחליף בשניהם חשבון (claude3 ו-essay על 0%), ואז נשארו רק 6 בקרות והדוח לאלעד - כשעתיים עבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 5385
+  "minutesSinceBacklog": 5395
  },
  "progress": {
   "books": [
@@ -3874,15 +3861,6 @@
      "startedAt": "2026-10-21T13:05:00.000Z",
      "endedAt": "2026-10-21T13:13:00.000Z",
      "minutes": 8,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T12:55:00.000Z",
-     "endedAt": "2026-10-21T13:05:00.000Z",
-     "minutes": 10,
      "estimateMin": null,
      "ok": true
     }
