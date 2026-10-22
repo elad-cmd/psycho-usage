@@ -1,6 +1,6 @@
 {
  "build": 3,
- "generatedAt": "2026-10-22T13:07:01.682Z",
+ "generatedAt": "2026-10-22T13:17:01.742Z",
  "generatedBy": "Elad_mini",
  "project": "arabic-books-check",
  "summary": {
@@ -40,7 +40,7 @@
    "lastHeartbeatAt": "2026-10-19T14:31:00.000Z",
    "lastHeartbeatType": "סיום",
    "lastHeartbeatDetail": "התיבה ריקה",
-   "minutesSinceHeartbeat": 4236,
+   "minutesSinceHeartbeat": 4246,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
@@ -50,13 +50,13 @@
     "pct": 0,
     "workMin": 0,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-21T13:07:01.682Z",
+    "awakeFrom": "2026-10-21T13:17:01.742Z",
     "sleepMin": 1380
    },
    "segments": [
     {
-     "from": "2026-10-21T13:07:01.682Z",
-     "to": "2026-10-22T13:07:01.682Z",
+     "from": "2026-10-21T13:17:01.742Z",
+     "to": "2026-10-22T13:17:01.742Z",
      "kind": "silent"
     }
    ],
@@ -1328,45 +1328,35 @@
    "current": {
     "task": null,
     "startedAt": "2026-10-21T13:28:00.000Z",
-    "elapsedMin": 1419,
+    "elapsedMin": 1429,
     "estimateMin": null,
     "ratio": null
    },
    "lastHeartbeatAt": "2026-10-21T13:28:00.000Z",
    "lastHeartbeatType": "לקחתי",
    "lastHeartbeatDetail": "1435-CC-2604-v2-C-n1",
-   "minutesSinceHeartbeat": 1419,
+   "minutesSinceHeartbeat": 1429,
    "pending": [],
    "pendingCount": 0,
    "doingCount": 0,
-   "doneToday": 3,
+   "doneToday": 1,
    "failedToday": 0,
    "util": {
     "pct": 100,
     "workMin": 1440,
     "awakeMin": 1380,
-    "awakeFrom": "2026-10-21T13:07:01.682Z",
+    "awakeFrom": "2026-10-21T13:17:01.742Z",
     "sleepMin": 0
    },
    "segments": [
     {
-     "from": "2026-10-21T13:07:01.682Z",
-     "to": "2026-10-21T13:13:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-21T13:13:00.000Z",
-     "to": "2026-10-21T13:15:00.000Z",
-     "kind": "work"
-    },
-    {
-     "from": "2026-10-21T13:15:00.000Z",
+     "from": "2026-10-21T13:17:01.742Z",
      "to": "2026-10-21T13:28:00.000Z",
      "kind": "work"
     },
     {
      "from": "2026-10-21T13:28:00.000Z",
-     "to": "2026-10-22T13:07:01.682Z",
+     "to": "2026-10-22T13:17:01.742Z",
      "kind": "work"
     }
    ],
@@ -1375,7 +1365,7 @@
      "task": null,
      "startedAt": "2026-10-21T13:28:00.000Z",
      "endedAt": null,
-     "minutes": 1419,
+     "minutes": 1429,
      "estimateMin": null,
      "ok": null
     },
@@ -1384,22 +1374,6 @@
      "startedAt": "2026-10-21T13:15:00.000Z",
      "endedAt": "2026-10-21T13:28:00.000Z",
      "minutes": 13,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "task": null,
-     "startedAt": "2026-10-21T13:13:00.000Z",
-     "endedAt": "2026-10-21T13:15:00.000Z",
-     "minutes": 2,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "task": null,
-     "startedAt": "2026-10-21T13:05:00.000Z",
-     "endedAt": "2026-10-21T13:13:00.000Z",
-     "minutes": 8,
      "estimateMin": null,
      "ok": true
     }
@@ -3587,7 +3561,7 @@
    "topLine": "דורש פעולה: שני המושבים עומדים כי נגמרה מכסת Fable בחשבונות שלהם - M2 (office) מאתמול 16:28 ו-M6 (claude2) מ-19.10; צריך להחליף בשניהם חשבון (claude3 ו-essay על 0%), ואז נשארו רק 6 בקרות והדוח לאלעד - כשעתיים עבודה."
   },
   "starvation": null,
-  "minutesSinceBacklog": 5395
+  "minutesSinceBacklog": 5405
  },
  "progress": {
   "books": [
@@ -3824,15 +3798,7 @@
  "changes": {
   "hour": {
    "done": [],
-   "flags": [
-    {
-     "file": "20261022-1514-silent-M2.md",
-     "at": "2026-10-22T12:14:00.000Z",
-     "kind": "silent",
-     "target": "M2",
-     "text": "# דגל: מושב שותק - M2 · 22.10.2026 15:14 (המנהל, ריצה שעתית)"
-    }
-   ],
+   "flags": [],
    "backlogVersions": 0
   },
   "day": {
@@ -3843,24 +3809,6 @@
      "startedAt": "2026-10-21T13:15:00.000Z",
      "endedAt": "2026-10-21T13:28:00.000Z",
      "minutes": 13,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T13:13:00.000Z",
-     "endedAt": "2026-10-21T13:15:00.000Z",
-     "minutes": 2,
-     "estimateMin": null,
-     "ok": true
-    },
-    {
-     "seat": "M2",
-     "task": null,
-     "startedAt": "2026-10-21T13:05:00.000Z",
-     "endedAt": "2026-10-21T13:13:00.000Z",
-     "minutes": 8,
      "estimateMin": null,
      "ok": true
     }
