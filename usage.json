@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1792998991095,
+  "savedAt": 1792999292265,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -635,15 +635,15 @@
         },
         "weeklyAll": {
           "pct": 69,
-          "resetsAt": "2026-10-28T06:00:00.975494+00:00"
+          "resetsAt": "2026-10-28T06:00:00.944185+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-10-28T05:59:59.975688+00:00"
+          "resetsAt": "2026-10-28T05:59:59.944323+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_015uGP22xVJ5XkUe485ZTFhF": 610,
         "https://claude.ai/cowork/cse_01WikhQJXhwwwaXpU2Rk122p": 360,
@@ -1321,19 +1321,19 @@
       "usage": {
         "session": {
           "pct": 3,
-          "resetsAt": "2026-10-26T11:39:59.634036+00:00"
+          "resetsAt": "2026-10-26T11:39:59.522738+00:00"
         },
         "weeklyAll": {
           "pct": 79,
-          "resetsAt": "2026-10-27T18:59:59.634057+00:00"
+          "resetsAt": "2026-10-27T18:59:59.522763+00:00"
         },
         "weeklyFable": {
           "pct": 35,
-          "resetsAt": "2026-10-27T18:59:59.634197+00:00"
+          "resetsAt": "2026-10-27T18:59:59.522938+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01FGzwJWMkeh45swHYuRR5i2": 170,
         "https://claude.ai/cowork/cse_017XocR2xy7g1yKNgMgf7bMm": 365,
@@ -2057,19 +2057,19 @@
       "usage": {
         "session": {
           "pct": 0,
-          "resetsAt": "2026-10-26T10:20:00.164561+00:00"
+          "resetsAt": "2026-10-26T10:20:00.126698+00:00"
         },
         "weeklyAll": {
           "pct": 3,
-          "resetsAt": "2026-11-01T04:00:00.164581+00:00"
+          "resetsAt": "2026-11-01T04:00:00.126722+00:00"
         },
         "weeklyFable": {
           "pct": 6,
-          "resetsAt": "2026-11-01T04:00:00.164741+00:00"
+          "resetsAt": "2026-11-01T04:00:00.126874+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Ro4izbmWZDN8T5MTTrQMbJ": 231,
         "https://claude.ai/cowork/cse_01GgqzJ1vk5oaB3BFnTLSQsS": 40,
@@ -2719,8 +2719,8 @@
           "resetsAt": "2026-10-27T12:00:00+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Az2nBjXGZujmMkA67FamCU": 410,
         "https://claude.ai/cowork/cse_01TLesX6QsoP8Y5nNsosNvew": 25,
@@ -2784,43 +2784,56 @@
       "notes": "",
       "sessions": [
         {
-          "t": "תיקונים רוחביים כמותי",
-          "u": "https://claude.ai/cowork/cse_01FV2AhAQ6qfbNKFDoSaCoHR",
+          "t": "Cross-cutting quantitative corrections QA",
+          "u": "https://claude.ai/cowork/cse_014Vb75fBUJ4qJ9M4ypHh7nW",
           "st": "active",
-          "sb": "completed",
-          "ev": "2026-10-26T07:10:25.061527Z",
-          "c": "2026-10-25T10:18:13.918709Z",
-          "ws": "idle",
+          "sb": "working",
+          "ev": "2026-10-26T07:17:59.736526Z",
+          "c": "2026-10-25T16:34:22.820478Z",
+          "ws": "running",
           "tag": "remote",
           "bd": "MacBook Air של Shira",
           "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
-          "wm": 435
+          "wm": 250
         },
         {
           "t": "תיקונים רוחביים - מילולי",
           "u": "https://claude.ai/cowork/cse_01CzueUH8HgJppQkpoMfmPPq",
           "st": "active",
-          "sb": "blocked",
-          "ev": "2026-10-26T07:08:54.078746Z",
+          "sb": "working",
+          "ev": "2026-10-26T07:17:37.129802Z",
           "c": "2026-10-25T07:25:03.006077Z",
-          "ws": "idle",
+          "ws": "running",
           "tag": "remote",
           "bd": "MacBook Air של Shira",
           "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
-          "wm": 635
+          "wm": 640
         },
         {
-          "t": "Cross-cutting quantitative corrections QA",
-          "u": "https://claude.ai/cowork/cse_014Vb75fBUJ4qJ9M4ypHh7nW",
+          "t": "תיקונים רוחביים כמותי",
+          "u": "https://claude.ai/cowork/cse_01FV2AhAQ6qfbNKFDoSaCoHR",
           "st": "active",
           "sb": "completed",
-          "ev": "2026-10-25T22:31:49.565318Z",
-          "c": "2026-10-25T16:34:22.820478Z",
+          "ev": "2026-10-26T07:17:17.878030Z",
+          "c": "2026-10-25T10:18:13.918709Z",
           "ws": "idle",
           "tag": "remote",
           "bd": "MacBook Air של Shira",
           "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
-          "wm": 245
+          "wm": 440
+        },
+        {
+          "t": "תיקונים נקודתיים בפרקים",
+          "u": "https://claude.ai/cowork/cse_01TLRgEb9LqgNjQTbcgpuyPQ",
+          "st": "active",
+          "sb": "working",
+          "ev": "2026-10-26T07:16:30.258057Z",
+          "c": "2026-10-25T06:28:42.064492Z",
+          "ws": "running",
+          "tag": "remote",
+          "bd": "MacBook Air של Shira",
+          "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
+          "wm": 230
         },
         {
           "t": "תיקונים רוחביים ביצוע",
@@ -2847,19 +2860,6 @@
           "bd": "MacBook Air של Shira",
           "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
           "wm": 220
-        },
-        {
-          "t": "תיקונים נקודתיים בפרקים",
-          "u": "https://claude.ai/cowork/cse_01TLRgEb9LqgNjQTbcgpuyPQ",
-          "st": "active",
-          "sb": "completed",
-          "ev": "2026-10-25T12:58:02.902582Z",
-          "c": "2026-10-25T06:28:42.064492Z",
-          "ws": "idle",
-          "tag": "remote",
-          "bd": "MacBook Air של Shira",
-          "bdid": "534db416-1fdf-4b76-b5fa-9f90fb336150",
-          "wm": 225
         },
         {
           "t": "Computer access permissions",
@@ -3430,20 +3430,20 @@
       ],
       "usage": {
         "session": {
-          "pct": 3,
-          "resetsAt": "2026-10-26T12:00:00.351245+00:00"
+          "pct": 7,
+          "resetsAt": "2026-10-26T12:00:00.173816+00:00"
         },
         "weeklyAll": {
-          "pct": 1,
-          "resetsAt": "2026-11-02T03:00:00.351269+00:00"
+          "pct": 3,
+          "resetsAt": "2026-11-02T03:00:00.173845+00:00"
         },
         "weeklyFable": {
-          "pct": 2,
-          "resetsAt": "2026-11-02T03:00:00.351432+00:00"
+          "pct": 4,
+          "resetsAt": "2026-11-02T03:00:00.174088+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773": 225,
         "https://claude.ai/cowork/cse_015b6tJ1GJqSXWDeaZytucXe": 10,
@@ -3516,10 +3516,10 @@
         "https://claude.ai/cowork/cse_01XsSssoUqELWPfGK8xmufwe": 180,
         "https://claude.ai/cowork/cse_01Hd8xhiTo7FGfXxLAGsKDUJ": 5,
         "https://claude.ai/cowork/cse_01YRTMtMA2JGSQMpFh7WkZQn": 220,
-        "https://claude.ai/cowork/cse_01TLRgEb9LqgNjQTbcgpuyPQ": 225,
-        "https://claude.ai/cowork/cse_01CzueUH8HgJppQkpoMfmPPq": 635,
-        "https://claude.ai/cowork/cse_01FV2AhAQ6qfbNKFDoSaCoHR": 435,
-        "https://claude.ai/cowork/cse_014Vb75fBUJ4qJ9M4ypHh7nW": 245,
+        "https://claude.ai/cowork/cse_01TLRgEb9LqgNjQTbcgpuyPQ": 230,
+        "https://claude.ai/cowork/cse_01CzueUH8HgJppQkpoMfmPPq": 640,
+        "https://claude.ai/cowork/cse_01FV2AhAQ6qfbNKFDoSaCoHR": 440,
+        "https://claude.ai/cowork/cse_014Vb75fBUJ4qJ9M4ypHh7nW": 250,
         "https://claude.ai/cowork/cse_01JKLThrbk8QjN8WXtzp3ktn": 115
       }
     },
@@ -3813,8 +3813,8 @@
           "resetsAt": "2026-11-01T01:00:00+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01NsNk8AYShhiM6QVBLCQ9vK": 70,
         "https://claude.ai/cowork/cse_018bchSLS1JtBnd6WvPMJdCy": 605,
@@ -4490,8 +4490,8 @@
           "resetsAt": "2026-10-27T09:00:00+00:00"
         }
       },
-      "lastSyncAt": 1792998991095,
-      "updatedAt": 1792998991095,
+      "lastSyncAt": 1792999292265,
+      "updatedAt": 1792999292265,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Dg4aaAG8CUzq2MVVL3nyEd": 75,
         "https://claude.ai/cowork/cse_01UqqSrY74uU7sPzTMYb2ckb": 280,
@@ -6708,35 +6708,35 @@
       "by": "poller:local"
     },
     "mailFeed": {
-      "at": 1792998991095,
+      "at": 1792999292265,
       "by": "poller:local"
     },
     "bookStates": {
-      "at": 1792998991095,
+      "at": 1792999292265,
       "by": "poller:local",
       "per": {
-        "algebra": 1792998991095,
+        "algebra": 1792999292265,
         "analogies1000": 1786914743357,
         "analogies_extra": 1786914743357,
-        "bchanim": 1792998991095,
-        "beayot": 1792998991095,
-        "geometry": 1792998991095,
-        "hibur": 1792998991095,
-        "kis": 1792998991095,
-        "maraton": 1792998991095,
-        "mikud700": 1792998991095,
-        "miluli": 1792998991095,
-        "psychometrit": 1792998991095,
-        "reading_maraton": 1792998991095,
-        "reading_sim": 1792998991095,
-        "reading_zmanim": 1792998991095,
-        "simulaziot": 1792998991095,
-        "tarshimim": 1792998991095,
-        "tirgul700": 1792998991095,
-        "tirgul_kamuti": 1792998991095,
-        "yesodot_a": 1792998991095,
-        "yesodot_b": 1792998991095,
-        "zmanim": 1792998991095,
+        "bchanim": 1792999292265,
+        "beayot": 1792999292265,
+        "geometry": 1792999292265,
+        "hibur": 1792999292265,
+        "kis": 1792999292265,
+        "maraton": 1792999292265,
+        "mikud700": 1792999292265,
+        "miluli": 1792999292265,
+        "psychometrit": 1792999292265,
+        "reading_maraton": 1792999292265,
+        "reading_sim": 1792999292265,
+        "reading_zmanim": 1792999292265,
+        "simulaziot": 1792999292265,
+        "tarshimim": 1792999292265,
+        "tirgul700": 1792999292265,
+        "tirgul_kamuti": 1792999292265,
+        "yesodot_a": 1792999292265,
+        "yesodot_b": 1792999292265,
+        "zmanim": 1792999292265,
         "mikud700-3-geometria": 1786915043431,
         "mikud700-2-beayot": 1786915043431,
         "sources_text-coverage": 1786915043431,
@@ -6750,19 +6750,19 @@
       }
     },
     "metrics": {
-      "at": 1792998991095,
+      "at": 1792999292265,
       "by": "poller:local"
     },
     "fleet": {
-      "at": 1792998991095,
+      "at": 1792999292265,
       "by": "poller:local"
     },
     "accounts": {
-      "at": 1792998991095,
+      "at": 1792999292265,
       "by": "poller:local"
     },
     "booksPublished": {
-      "at": 1792998978292,
+      "at": 1792999278299,
       "by": "poller:local",
       "sent": 0,
       "same": 20,
