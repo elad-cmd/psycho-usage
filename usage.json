@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "savedAt": 1795603603380,
+  "savedAt": 1795603901439,
   "savedBy": "poller:local",
   "accounts": [
     {
@@ -445,8 +445,8 @@
           "resetsAt": "2026-12-02T06:00:00+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_015uGP22xVJ5XkUe485ZTFhF": 610,
         "https://claude.ai/cowork/cse_01WikhQJXhwwwaXpU2Rk122p": 360,
@@ -866,8 +866,8 @@
           "resetsAt": "2026-12-01T19:00:00+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01FGzwJWMkeh45swHYuRR5i2": 170,
         "https://claude.ai/cowork/cse_017XocR2xy7g1yKNgMgf7bMm": 365,
@@ -926,15 +926,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 29,
-          "resetsAt": "2026-11-26T23:59:59.983219+00:00"
+          "resetsAt": "2026-11-27T00:00:00.084509+00:00"
         },
         "weeklyFable": {
           "pct": 37,
-          "resetsAt": "2026-11-26T23:59:59.983437+00:00"
+          "resetsAt": "2026-11-27T00:00:00.084652+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01DQjDob4F5LdU6JzShT6XuK": 145,
         "https://claude.ai/cowork/cse_01KnUFDWC9KPqQbqavtdfDtM": 25,
@@ -947,6 +947,15 @@
       "plan": "Max (20x)",
       "notes": "",
       "sessions": [
+        {
+          "t": "פסיכו - ערבית 09",
+          "u": "https://claude.ai/chat/0855ecd3-1ff0-4f0d-95a9-29ae7dcdef7f",
+          "st": "active",
+          "kind": "chat",
+          "ev": "2026-11-25T10:44:42.812531Z",
+          "c": "2026-11-25T08:38:49.155732Z",
+          "wm": 35
+        },
         {
           "t": "פסיכו - ערבית 04",
           "u": "https://claude.ai/chat/f7d19b15-cb43-45f8-80b1-41e0c89922f8",
@@ -982,15 +991,6 @@
           "ev": "2026-11-25T10:29:03.060032Z",
           "c": "2026-11-25T08:38:26.353143Z",
           "wm": 25
-        },
-        {
-          "t": "פסיכו - ערבית 09",
-          "u": "https://claude.ai/chat/0855ecd3-1ff0-4f0d-95a9-29ae7dcdef7f",
-          "st": "active",
-          "kind": "chat",
-          "ev": "2026-11-25T10:24:48.164100Z",
-          "c": "2026-11-25T08:38:49.155732Z",
-          "wm": 30
         },
         {
           "t": "הקלטות",
@@ -1524,15 +1524,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 14,
-          "resetsAt": "2026-11-29T04:00:00.164486+00:00"
+          "resetsAt": "2026-11-29T04:00:00.456828+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": "2026-11-29T04:00:00+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Ro4izbmWZDN8T5MTTrQMbJ": 231,
         "https://claude.ai/cowork/cse_01GgqzJ1vk5oaB3BFnTLSQsS": 40,
@@ -1563,7 +1563,7 @@
         "https://claude.ai/cowork/cse_01RX6YysUYrHdMaXg1Z9n3ws": 330,
         "https://claude.ai/cowork/cse_018uTdeA4CW4juF9kAZKMupy": 240,
         "https://claude.ai/chat/e8bf0818-028f-4cdb-9aea-c5c141a9c0f2": 65,
-        "https://claude.ai/chat/0855ecd3-1ff0-4f0d-95a9-29ae7dcdef7f": 30,
+        "https://claude.ai/chat/0855ecd3-1ff0-4f0d-95a9-29ae7dcdef7f": 35,
         "https://claude.ai/chat/89cc0812-8ffb-4b67-9d33-36d525b8c8bd": 30,
         "https://claude.ai/chat/517d9c75-9201-4253-87e5-111237f5aa5c": 25,
         "https://claude.ai/chat/f7d19b15-cb43-45f8-80b1-41e0c89922f8": 35
@@ -1748,15 +1748,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 84,
-          "resetsAt": "2026-12-01T11:59:59.965617+00:00"
+          "resetsAt": "2026-12-01T12:00:00.225263+00:00"
         },
         "weeklyFable": {
           "pct": 100,
-          "resetsAt": "2026-12-01T11:59:59.965815+00:00"
+          "resetsAt": "2026-12-01T12:00:00.225466+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Az2nBjXGZujmMkA67FamCU": 410,
         "https://claude.ai/cowork/cse_01TLesX6QsoP8Y5nNsosNvew": 25,
@@ -2222,15 +2222,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 2,
-          "resetsAt": "2026-11-30T03:00:00.922002+00:00"
+          "resetsAt": "2026-11-30T03:00:00.322693+00:00"
         },
         "weeklyFable": {
           "pct": 0,
           "resetsAt": "2026-11-30T03:00:00+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_012sMVj1MfrSYVpvrTLDt773": 225,
         "https://claude.ai/cowork/cse_015b6tJ1GJqSXWDeaZytucXe": 10,
@@ -2324,6 +2324,15 @@
       "notes": "",
       "sessions": [
         {
+          "t": "פסיכו - משולב 09",
+          "u": "https://claude.ai/chat/e4641112-99f5-45fe-8d07-fa2896779c2b",
+          "st": "active",
+          "kind": "chat",
+          "ev": "2026-11-25T10:47:22.016812Z",
+          "c": "2026-11-24T19:23:27.830571Z",
+          "wm": 55
+        },
+        {
           "t": "פסיכו - משולב 03",
           "u": "https://claude.ai/chat/57291ea0-b8c9-47e0-b7fa-ede6f0d47134",
           "st": "active",
@@ -2331,15 +2340,6 @@
           "ev": "2026-11-25T10:40:52.287172Z",
           "c": "2026-11-25T09:29:59.708296Z",
           "wm": 10
-        },
-        {
-          "t": "פסיכו - משולב 09",
-          "u": "https://claude.ai/chat/e4641112-99f5-45fe-8d07-fa2896779c2b",
-          "st": "active",
-          "kind": "chat",
-          "ev": "2026-11-25T10:40:29.298116Z",
-          "c": "2026-11-24T19:23:27.830571Z",
-          "wm": 50
         },
         {
           "t": "מנהל - משימות",
@@ -2465,15 +2465,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 63,
-          "resetsAt": "2026-11-29T00:59:59.577223+00:00"
+          "resetsAt": "2026-11-29T01:00:00.244234+00:00"
         },
         "weeklyFable": {
-          "pct": 13,
-          "resetsAt": "2026-11-29T00:59:59.577402+00:00"
+          "pct": 14,
+          "resetsAt": "2026-11-29T01:00:00.244451+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01NsNk8AYShhiM6QVBLCQ9vK": 70,
         "https://claude.ai/cowork/cse_018bchSLS1JtBnd6WvPMJdCy": 605,
@@ -2527,7 +2527,7 @@
         "https://claude.ai/chat/aeb43a3b-78b1-4160-8b09-d7c146a992f6": 210,
         "https://claude.ai/chat/27937d74-b0b9-434b-bf40-c7151d2b068b": 155,
         "https://claude.ai/chat/08d72a7e-0d2e-4558-899a-72e0008f89e4": 90,
-        "https://claude.ai/chat/e4641112-99f5-45fe-8d07-fa2896779c2b": 50,
+        "https://claude.ai/chat/e4641112-99f5-45fe-8d07-fa2896779c2b": 55,
         "https://claude.ai/chat/a8a6e464-fd9d-41fe-9140-c893d4b826be": 135,
         "https://claude.ai/chat/e772db83-fbee-4cb1-8371-350257bf49e1": 60,
         "https://claude.ai/chat/e6701ee8-6b95-4608-8d25-8d4050e01bc1": 15,
@@ -2549,39 +2549,40 @@
       "notes": "",
       "sessions": [
         {
-          "t": "מכתב מסירה handoff-model-pilot-ar-fable-20261125",
+          "t": "מכתב מסירה handoff-model-pilot",
           "u": "https://claude.ai/chat/987985ea-f74f-47aa-bf47-c0a7422356b9",
           "st": "active",
           "kind": "chat",
-          "ev": "2026-11-25T10:38:43.815967Z",
+          "ev": "2026-11-25T10:49:02.609755Z",
           "c": "2026-11-25T10:32:32.278696Z",
-          "wm": 5
+          "wm": 10
         },
         {
-          "t": "מכתב מסירה handoff-model-pilot",
-          "u": "https://claude.ai/chat/5425fa41-6a18-49fa-87f4-d115ef052383",
-          "st": "active",
-          "kind": "chat",
-          "ev": "2026-11-25T10:36:58.392225Z",
-          "c": "2026-11-25T10:31:00.134472Z",
-          "wm": 5
-        },
-        {
-          "t": "מכתב מסירה handoff-model-pilot",
+          "t": "Handoff letter pilot continuation",
           "u": "https://claude.ai/chat/c9c0ac79-ad34-4087-beae-cf6d070e7b84",
           "st": "active",
           "kind": "chat",
-          "ev": "2026-11-25T10:36:44.836214Z",
+          "ev": "2026-11-25T10:48:36.580113Z",
           "c": "2026-11-25T10:31:43.697823Z",
-          "wm": 5
+          "wm": 10
+        },
+        {
+          "t": "מכתב מסירה למודל פיילוט",
+          "u": "https://claude.ai/chat/5425fa41-6a18-49fa-87f4-d115ef052383",
+          "st": "active",
+          "kind": "chat",
+          "ev": "2026-11-25T10:48:33.337101Z",
+          "c": "2026-11-25T10:31:00.134472Z",
+          "wm": 10
         },
         {
           "t": "מכתב מסירה handoff-model-pilot",
           "u": "https://claude.ai/chat/d125545e-0021-41c9-a839-e576d859538b",
           "st": "active",
           "kind": "chat",
-          "ev": "2026-11-25T10:32:13.156504Z",
-          "c": "2026-11-25T10:32:12.679515Z"
+          "ev": "2026-11-25T10:48:18.649052Z",
+          "c": "2026-11-25T10:32:12.679515Z",
+          "wm": 5
         },
         {
           "t": "File content differences",
@@ -2612,16 +2613,16 @@
       "usage": {
         "session": null,
         "weeklyAll": {
-          "pct": 3,
-          "resetsAt": "2026-12-01T09:00:00.359552+00:00"
+          "pct": 4,
+          "resetsAt": "2026-12-01T08:59:59.516690+00:00"
         },
         "weeklyFable": {
-          "pct": 5,
-          "resetsAt": "2026-12-01T09:00:00.359739+00:00"
+          "pct": 6,
+          "resetsAt": "2026-12-01T08:59:59.516865+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01Dg4aaAG8CUzq2MVVL3nyEd": 75,
         "https://claude.ai/cowork/cse_01UqqSrY74uU7sPzTMYb2ckb": 280,
@@ -2689,9 +2690,10 @@
         "https://claude.ai/chat/fae43852-71ee-4f72-ad2f-429b56ec809c": 25,
         "https://claude.ai/chat/fad0f251-c677-470b-80f9-49a718e5989d": 25,
         "https://claude.ai/chat/844ae13c-6704-4efc-aca1-47d506dd2b2e": 100,
-        "https://claude.ai/chat/987985ea-f74f-47aa-bf47-c0a7422356b9": 5,
-        "https://claude.ai/chat/5425fa41-6a18-49fa-87f4-d115ef052383": 5,
-        "https://claude.ai/chat/c9c0ac79-ad34-4087-beae-cf6d070e7b84": 5
+        "https://claude.ai/chat/987985ea-f74f-47aa-bf47-c0a7422356b9": 10,
+        "https://claude.ai/chat/5425fa41-6a18-49fa-87f4-d115ef052383": 10,
+        "https://claude.ai/chat/c9c0ac79-ad34-4087-beae-cf6d070e7b84": 10,
+        "https://claude.ai/chat/d125545e-0021-41c9-a839-e576d859538b": 5
       }
     },
     {
@@ -2722,20 +2724,21 @@
       "sessions": [
         {
           "t": "קובץ דיונים",
+          "u": "https://claude.ai/chat/4694434a-e452-470a-96cb-680350486081",
+          "st": "active",
+          "kind": "chat",
+          "ev": "2026-11-25T10:47:51.094650Z",
+          "c": "2026-11-25T10:33:15.521589Z",
+          "wm": 5
+        },
+        {
+          "t": "קובץ דיונים",
           "u": "https://claude.ai/chat/2caa5ce3-d482-4e05-bc8d-0524c4757a57",
           "st": "active",
           "kind": "chat",
           "ev": "2026-11-25T10:36:45.327250Z",
           "c": "2026-11-24T14:36:23.447098Z",
           "wm": 15
-        },
-        {
-          "t": "קובץ דיונים",
-          "u": "https://claude.ai/chat/4694434a-e452-470a-96cb-680350486081",
-          "st": "active",
-          "kind": "chat",
-          "ev": "2026-11-25T10:33:15.999795Z",
-          "c": "2026-11-25T10:33:15.521589Z"
         },
         {
           "t": "קובץ דיונים",
@@ -3135,15 +3138,15 @@
         "session": null,
         "weeklyAll": {
           "pct": 18,
-          "resetsAt": "2026-11-27T22:00:00.323628+00:00"
+          "resetsAt": "2026-11-27T21:59:59.654500+00:00"
         },
         "weeklyFable": {
           "pct": 35,
-          "resetsAt": "2026-11-27T22:00:00.323753+00:00"
+          "resetsAt": "2026-11-27T21:59:59.654710+00:00"
         }
       },
-      "lastSyncAt": 1795603603380,
-      "updatedAt": 1795603603380,
+      "lastSyncAt": 1795603901439,
+      "updatedAt": 1795603901439,
       "wmMemo": {
         "https://claude.ai/cowork/cse_01ED9Vui5nSzLtKWGZYTADwL": 25,
         "https://claude.ai/cowork/cse_013tbdQmroSq6fFEkRMmLnUg": 5,
@@ -3200,7 +3203,8 @@
         "https://claude.ai/chat/bd01d2a0-0cc1-46d0-9e77-2a43c5e63cf4": 5,
         "https://claude.ai/chat/cf4a3422-3870-48e9-a444-b733df82b702": 15,
         "https://claude.ai/chat/452d25f0-228f-4edd-a177-c8f3765882f1": 10,
-        "https://claude.ai/chat/2caa5ce3-d482-4e05-bc8d-0524c4757a57": 15
+        "https://claude.ai/chat/2caa5ce3-d482-4e05-bc8d-0524c4757a57": 15,
+        "https://claude.ai/chat/4694434a-e452-470a-96cb-680350486081": 5
       }
     }
   ],
@@ -4416,11 +4420,11 @@
       "by": "poller:local"
     },
     "fleet": {
-      "at": 1795603603380,
+      "at": 1795603901439,
       "by": "poller:local"
     },
     "accounts": {
-      "at": 1795603603380,
+      "at": 1795603901439,
       "by": "poller:local"
     },
     "booksPublished": {
